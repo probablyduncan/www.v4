@@ -1,0 +1,56 @@
+body { 
+	background-image: url('stories/landing/vertical.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#text {
+	font-family: Arial;
+	font-weight: 1600;
+	font-size: 16px;
+	margin-top: 128px;
+	width: 100%;
+	margin-left: 0;
+	text-align: center;
+}
+
+#name {
+	color: rgb(213 75 75);
+	display: inline;
+	line-height: 1.2em;
+}
+#photo {
+	display: inline;
+	line-height: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(213 75 75);
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: 1000;
+	line-height: 1.6em;
+	text-decoration: underline;
+	background-color: 
+}
+
+a:hover{
+	color: rgb(284 100 100);
+}
+
+@media (orientation: landscape){
+	body{
+		background-image: url('stories/landing/horizontal.jpg');
+	}
+	#text{
+		margin-left: 96px;
+		width: 256px;
+		text-align: left;
+	}
+}
