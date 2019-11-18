@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orchard</title>
+	<link rel="stylesheet" type="text/css" href="article.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<script type="text/javascript">
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown menu if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		} 
+	</script>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+
+	<div id="navbar">
+
+		<div id="nameContainer">
+			<p class="duncanpetrie">Duncan Petrie</p>
+			<p class="photography">PHOTOGRAPHY</p>
+		</div>
+
+		<div id="linkContainer">
+			<ul>
+				<a id="navbar1" href="stories.html#featured">Stories |</a>
+				<a id="navbar2" href="mailto:duncanpetrie1@gmail.com"> Email |</a>
+				<a id="navbar3" href="https://www.instagram.com/probablyduncan/">Instagram |</a>
+				<a id="navbar4" href="stories.html">Stories</a>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- HEADER -->
+
+	<header id="header" style="background-image: url('stories/smallworld/1.jpg');">
+		<div id="titleText" style="
+			padding-top: 240px;
+			padding-bottom: 240px;
+			padding-left: 10%;
+			color: white;
+			width: 90%;
+			text-align: left;">
+			<h1>Small World</h1>
+			<h4><br>Photographed and<br>Written Autumn 2019</h4>
+		</div>
+	</header>
+	<br><br>
+
+	<!-- ARTICLE -->
+
+	<div id="body">
+
+		<div class="container">
+			<p class="firstLetter">S</p>
+			<p>ometime in October of 2019 I got my hands on a macro lens. I hadn't really used one seriously before, and so I decided to take it out to the garden and see what I could stumble upon. Little did I know, I'd find what I was looking for long before I got there.</p>
+			<p>I stopped, out of curiosity, in a small pocket of bramble and discarded herbs and flowers and looked around. All it took was a closer look, and the leaves revealed to me a whole new world. Shield bugs and caterpillars, snails and spiders and ants all of the sudden surrounded me. They had always been there, of course, I just hadn't taken the time to notice them.</p>
+			<p>I frantically got out my camera and started snapping, and after many failed practice shots I got a few I was happy with. Here are they.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/smallworld/2.jpg">
+				<p class="captionLeft">I found this little dude on the smallest blade of grass, resting in the sun.</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/smallworld/3.jpg">
+				<p class="captionRight">A fly pauses to rub its forelegs together, seemingly scheming.</p>
+			</div>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/smallworld/4.jpg">
+			<p class="caption">Woah there! A dock bug climbs around the corner to find my lens looking straight at him.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/smallworld/5.jpg">
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/smallworld/6.jpg">
+			</div>
+			<p class="caption">After the rain, twigs and leaves are verdant and dewy, and the law of cohesion rules the garden. If you squint and look closely at these water droplets, you still can't see my reflection.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/smallworld/7.jpg">
+			<p class="caption">A black ant journeys across the nectar-rich blooms in search of sustenance.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/smallworld/8.jpg">
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/smallworld/9.jpg">
+			</div>
+			<p class="caption">A hoverfly searches for nectar in the garden. Below: a ghost crab spider contemplates its impending leap of faith.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/smallworld/10.jpg">
+		</div>
+
+	</div>
+
+	<!-- FOOTER -->
+
+	<br><br>
+	<footer id="footer">
+		<p id="copy1">Copyright 2019</p>
+		<p id="copy2">Duncan Petrie Photography<p>
+	</footer>
+</body>
+</html>

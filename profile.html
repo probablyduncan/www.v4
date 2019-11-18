@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="article.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<script type="text/javascript">
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown menu if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		} 
+	</script>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+
+	<div id="navbar">
+
+		<div id="nameContainer">
+			<p class="duncanpetrie">Duncan Petrie</p>
+			<p class="photography">PHOTOGRAPHY</p>
+		</div>
+
+		<div id="linkContainer">
+			<ul>
+				<a id="navbar1" href="stories.html#featured">Stories |</a>
+				<a id="navbar2" href="mailto:duncanpetrie1@gmail.com"> Email |</a>
+				<a id="navbar3" href="https://www.instagram.com/probablyduncan/">Instagram |</a>
+				<a id="navbar4" href="stories.html">Stories</a>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- HEADER -->
+
+	<header id="header" style="background-image: url('stories/profile/1.jpg');">
+		<div id="titleText" style="
+			padding-top: 460px;
+			padding-bottom: 100px;
+			color: white;">
+			<h1>Profile:<br>A Wildlife Photographer In His<br>Natural Habitat</h1>
+			<h4>Written/Photographed<br>Summer 2018</h4>
+		</div>
+	</header>
+	<br><br>
+
+	<!-- ARTICLE -->
+
+	<div id="body">
+		<div class="container">
+			<p class="firstLetter">M</p>
+			<p>ilwaukee, WI, Summer 2018 — The sky is a low-hanging grey as we wade through the marsh’s waving cattails. To the east, fields of black-eyed Susans and dry, stiff grasses undulate in the breeze; to the west, beyond this thin stand of trees, is our destination: the lagoon.</p>
+			<p>When he reaches a patch of gravel-speckled bare dirt, Duncan Petrie, a local wildlife photographer, holds up his hand, and I stop. He scans the canopy. While we hear their chirping, the birds are nowhere to be seen, hidden behind the green leaves of summer.</p>
+			<p>A loud rustle permeates the trees behind us. Petrie turns, slowly, to face a fawn, white spots like thick tufts of pollen, ears as big as pancakes, staring up at him. He looks it straight in its eyes, unmoving. Then, without averting his gaze, he instinctively lifts the camera. A minute later, the fawn has had enough, and it spins about, bouncing back into the woods. Petrie catches his breath. He got the shot.</p>
+		</div>
+		
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/profile/2.jpg">
+				<p class="captionLeft">A fawn, ears as big as pancakes, stares up at Petrie.</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/profile/3.jpg">
+				<p class="captionRight">An eastern kingbird perches above the shimmering marsh.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<p>We stalk the marsh for a few more hours, then head back to Petrie’s office. A world map the size of his bed throngs the wall across from his desk, and books pile up like a dragon’s gold in every corner. “I used to love fantasy—Tolkien, Pratchett, and the like—because in boring Wisconsin, escapism appealed to me,” he tells me, “but now I read about our world. I have to get ready to see it.” National Geographics flank such prophets as Kerouac, Salinger, Annie Dillard, and Pirsig’s Zen and the Art of Motorcycle Maintenance. Ishiguro and Bradbury also sit high on the shelves. ”I grew up with the whole world fighting for my attention,” he says. “I started with dinosaur board-books and kids’ encyclopedias of spaceflight and never looked back.”</p>
+			<p>Steinbeck, Márquez, and Hemingway sit like paving stones at the foot of his stacks. The Grapes of Wrath is prominently placed, as is Cien Años de Soledad and For Whom the Bell Tolls. “Hemingway writes like a photographer,” says Petrie when I pick up the latter. “He’s raw, and he shows by telling. All the detail is there, the vibrancy and contrast, but you have to extrapolate the emotion yourself.”</p>
+			<p>The afternoon’s haul finishes backing up, and we return to Petrie’s computer. The shot of the fawn is there, as well as some chickadees, an egret, and an eastern kingbird. “They’re not the most exciting birds,” he admits, “but that doesn’t matter. I’d rather photograph a robin in beautiful light than a kingfisher under the harsh sun.” Petrie doesn't just want to capture the animal, he wants to "put it in its place. The relationship between the bird and its environment is extremely important, and most photographers forget that.”</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<div>
+				<img src="stories/profile/4.jpg">
+				<p class="caption"><i>“Photography is all about enunciating. I have this vision, this specific way of looking at the world, and my goal is to show the world that vision. When the light hits the leaves in a particular way, I see it, and if I can get the viewer to see that too, then I’ve succeeded.”</i></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<p>He shows me some of his other projects. One, called <a href="yardbirds.html">Yardbirds</a>, is composed of various creatures perched on telephone lines. They’re mostly birds, but the odd squirrel pops up every now and again. “Most people forget these birds exist. They’re ubiquitous, but that doesn’t take away their beauty. I’ve found a way to give them new light, in the hopes that they won’t continue to go unnoticed.”</p>
+			<p>He edits the day’s catch in a few hours. As he sits back in his chair, I can tell he’s proud. He’s created something today, ventured vulnerable into the woods and scooped up a bit of its soul. Photography is never passive; it’s a communion. In order to see, you have to stick your eye out into the bramble and hope that the world performs. It’s risky, yes, but extremely rewarding.</p>
+		</div>
+		<br>
+		<p class="caption"><i>I wrote this third-person personal essay to get into university back in 2018. I haven't changed it since.</i></p>
+
+
+	</div>
+	<br><br>
+	<footer id="footer">
+		<p id="copy1">Copyright 2019</p>
+		<p id="copy2">Duncan Petrie Photography<p>
+	</footer>
+</body>
+</html>

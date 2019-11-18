@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Street Level</title>
+	<link rel="stylesheet" type="text/css" href="article.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<script type="text/javascript">
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown menu if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		} 
+	</script>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+
+	<div id="navbar">
+
+		<div id="nameContainer">
+			<p class="duncanpetrie">Duncan Petrie</p>
+			<p class="photography">PHOTOGRAPHY</p>
+		</div>
+
+		<div id="linkContainer">
+			<ul>
+				<a id="navbar1" href="stories.html#featured">Stories |</a>
+				<a id="navbar2" href="mailto:duncanpetrie1@gmail.com"> Email |</a>
+				<a id="navbar3" href="https://www.instagram.com/probablyduncan/">Instagram |</a>
+				<a id="navbar4" href="stories.html">Stories</a>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- HEADER -->
+
+	<div id="header" style="background-image: url('stories/streetlevel/1.jpg');">
+		<div id="titleText" style="
+			padding-top: 420px;
+			padding-bottom: 80px;
+			color: white;">
+			<h1>Street Level</h1>
+			<h4><br>Photographed / Written<br>Summer 2018</h4>
+		</div>
+	</div>
+	<p class="caption">A bus flies down Amsterdame Avenue after a hard rain.</p>
+	<br><br>
+
+	<!-- ARTICLE -->
+
+	<div id="body">
+
+		<div class="singleImgContainer">
+			<img src="stories/streetlevel/2.jpg">
+			<p class="caption">In a rare moment of serenity, a New Yorker pauses his commute, waiting for traffic.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/streetlevel/3.jpg">
+			<p class="caption">Many feet cross puddles left by a recent rainstorm. On the road, taxi drivers, commuters, and police vie for dominance.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/streetlevel/4.jpg">
+			<p class="caption">The sun, doubly reflected off of two Lincoln Center windows, shines through rainclouds.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/streetlevel/5.jpg">
+			<p class="caption">A pedestrian crosses 62nd street.</p>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/streetlevel/6.jpg">
+			<p class="caption">Two men pass the time.</p>
+		</div>
+
+	</div>
+
+	<!-- FOOTER -->
+
+	<br><br>
+	<footer id="footer">
+		<p id="copy1">Copyright 2019</p>
+		<p id="copy2">Duncan Petrie Photography<p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/*
+	FOOTER HTML / UNDER BODY, AT THE VERY END
+
+<br><br>
+	<footer id="footer">
+		<p id="copy1">Copyright 2019</p>
+		<p id="copy2">Duncan Petrie Photography<p>
+	</footer>
+
+*/
+
+#footer{
+	background: black;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 16px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 800;
+	line-height: 0.2em;
+	color: white;
+}
+
+#copy1{
+	color: rgb(213 75 75);
+	text-align: left;
+	padding-left: 10%;
+	width: 30%;
+	display: inline;
+}
+
+#copy2{
+	text-align: left;
+	padding-left: 10%;
+	width: 210px;
+	letter-spacing: 1px;
+	line-height: 12px;
+}

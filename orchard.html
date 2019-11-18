@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orchard</title>
+	<link rel="stylesheet" type="text/css" href="article.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<script type="text/javascript">
+		function myFunction() {
+		  document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown menu if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		} 
+	</script>
+</head>
+<body>
+
+	<!-- NAVBAR -->
+
+	<div id="navbar">
+
+		<div id="nameContainer">
+			<p class="duncanpetrie">Duncan Petrie</p>
+			<p class="photography">PHOTOGRAPHY</p>
+		</div>
+
+		<div id="linkContainer">
+			<ul>
+				<a id="navbar1" href="stories.html#featured">Stories |</a>
+				<a id="navbar2" href="mailto:duncanpetrie1@gmail.com"> Email |</a>
+				<a id="navbar3" href="https://www.instagram.com/probablyduncan/">Instagram |</a>
+				<a id="navbar4" href="stories.html">Stories</a>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- HEADER -->
+
+	<header id="header" style="background-image: url('stories/orchard/1.jpg');">
+		<div id="titleText" style="
+			padding-top: 120px;
+			padding-bottom: 420px;
+			color: white;">
+			<h1>The Orchard</h1>
+			<h4><br>Photographed and<br>Written Autumn 2019</h4>
+		</div>
+	</header>
+	<br><br>
+
+	<!-- ARTICLE -->
+
+	<div id="body">
+
+		<div class="container">
+			<p class="firstLetter">P</p>
+			<p>enryn Campus' walled garden is host to a plethora of life, and every time I'm there I ignore it all and focus on the birds. A few stout, hardy apple trees are often host to feathered visitors from the neighboring woodland, and you bet I'm there to see it all happen.</p>
+			<p>I've taken many photos here, but the ones that stand out are the ones that isolate their subject, whether by their bokeh or by their character. The colors of blurred autumn leaves and ripe apples create a wreath which highlights the colors of the subject. Whether subtle like a simple head tilt or pronounced like a call or wing-flap, actions characterize the subject, giving the frame personality and telling a story. </p>
+			<p>Here are just a few of my favorites from so many days in the orchard.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/orchard/2.jpg">
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/orchard/3.jpg">
+			</div>
+			<p class="caption">A blackbird pauses its hunt for food among windfall apples. These were the first photos I took in Cornwall, back in November of 2018.</p>
+		</div>
+
+
+		<div class="singleImgContainer">
+			<img src="stories/orchard/4.jpg">
+			<p class="caption">Hello! A blue tit peeks out from a shroud of Leaves and Ripe Apples, which, coincidentally, is the name of my soon-to-be-created 1960's tree-hugger singer/songwriter duo.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/orchard/5.jpg">
+				<p class="captionLeft">A territorial firecrest announces its presence.</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/orchard/6.jpg">
+				<p class="captionRight">The firecrest takes flight, bound for different branches.</p>
+			</div>
+		</div>
+
+		<div class="singleImgContainer">
+			<img src="stories/orchard/7.jpg">
+			<p class="caption">A chaffinch stares out across the garden, shrouded by apple boughs.</p>
+		</div>
+
+		<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/orchard/8.jpg">
+				<p class="captionLeft">A long-tailed tit stands atop an apple tree in hazy morning light.</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/orchard/9.jpg">
+				<p class="captionRight">A coal tit eyes birdseed from a stategic vantage point.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- FOOTER -->
+
+	<br><br>
+	<footer id="footer">
+		<p id="copy1">Copyright 2019</p>
+		<p id="copy2">Duncan Petrie Photography<p>
+	</footer>
+</body>
+</html>

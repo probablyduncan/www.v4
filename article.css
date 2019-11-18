@@ -1,0 +1,349 @@
+/*
+
+
+SINGLE IMAGE CONTAINER
+
+<div class="singleImgContainer">
+			<img src="stories/.jpg">
+			<p class="caption">caption!</p>
+		</div>
+
+
+DOUBLE IMAGE CONTAINER
+
+<div class="doubleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/.jpg">
+				<p class="captionLeft">caption!</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/.jpg">
+				<p class="captionRight">caption!</p>
+			</div>
+			<p class="caption">caption!</p>
+		</div>
+
+TRIPLE IMAGE CONTAINER
+
+<div class="tripleImgContainer">
+			<div class="left">
+				<img class="imgLeft" src="stories/.jpg">
+				<p class="captionLeft">caption!</p>
+			</div>
+			<div class="mid">
+				<img class="imgMid" src="stories/.jpg">
+				<p class="captionMid">caption!</p>
+			</div>
+			<div class="right">
+				<img class="imgRight" src="stories/.jpg">
+				<p class="captionRight">caption!</p>
+			</div>
+			<p class="caption">caption!</p>
+		</div>
+
+
+	————————————————————————CSS———————————————————————
+*/
+
+body{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #333;
+	margin: 0;
+	font-size: 18px;
+	letter-spacing: 1.2px;
+	line-height: 24px;
+	text-align: justify;
+}
+
+img{
+	pointer-events: none;
+}
+
+.caption{
+	text-decoration: none;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.container{
+	width: 60%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.container a{
+	color: rgb(90 140 68);
+}
+
+.container a:hover{
+	color: rgb(213 75 75);
+}
+
+.bigLetter::first-letter{
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.firstLetter::first-letter{
+	font-size: 56px;
+	float: left;
+	padding-bottom: 4px;
+	padding-right: 4px;
+}
+
+.note{
+	font-size: 14px;
+}
+
+
+/*
+	SINGLE IMAGE CONTAINER
+*/
+
+
+.singleImgContainer{
+	width: 100%;
+	margin: 10px 0;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+
+.singleImgContainer img{
+	width: 100%;
+}
+
+.singleImgContainer .caption{
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 17px;
+	text-align: center;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+
+/*
+
+	DOUBLE IMAGE CONTAINER
+
+*/
+
+
+.doubleImgContainer{
+	width: 100%;
+	margin: 0 0;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.doubleImgContainer .left{
+	width: 49%;
+	float: left;
+	margin-right: 1%;
+}
+
+.doubleImgContainer .right{
+	width: 49%;
+	float: right;
+	margin-left: 1%;
+}
+
+.doubleImgContainer .imgLeft, .doubleImgContainer .imgRight{
+	width: 100%;
+}
+
+.doubleImgContainer .captionLeft{
+	float:left;
+	width: 90%;
+	margin-left: 10%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: right;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.doubleImgContainer .captionRight{
+	float: left;
+	width: 90%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: left;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.doubleImgContainer .caption{
+	float: left;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top: 1px solid black;
+}
+
+
+/*
+
+	TRIPLE IMAGE CONTAINER
+
+*/
+
+
+.tripleImgContainer{
+	width: 100%;
+	margin: 0 0;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.tripleImgContainer .left{
+	width: 32%;
+	float: left;
+	margin-right: 0;
+}
+
+.tripleImgContainer .mid{
+	width: 32%;
+	float: left;
+	margin: 0 2%;
+}
+
+.tripleImgContainer .right{
+	width: 32%;
+	float: left;
+	margin-right: 0;
+}
+
+.tripleImgContainer .imgLeft{
+	width: 100%;
+}
+
+.tripleImgContainer .imgMid{
+	width: 100%;
+}
+
+.tripleImgContainer .imgRight{
+	width: 100%;
+}
+
+.tripleImgContainer .captionLeft{
+	float:left;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.tripleImgContainer .captionMid{
+	float:left;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.tripleImgContainer .captionRight{
+	float:left;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top:  1px solid black;
+}
+
+.tripleImgContainer .caption{
+	float: left;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 16px;
+	margin-top: 6px;
+	line-height: 24px;
+	text-align: center;
+	padding-top: 8px;
+	border-top: 1px solid black;
+}
+
+/*
+
+	IMG LINKS
+
+*/
+
+
+.singleImgContainer a, .doubleImgContainer a, .tripleImgContainer a{
+	color: rgb(90 140 68);
+	text-decoration: underline;
+}
+
+.singleImgContainer a:hover, .doubleImgContainer a:hover, .tripleImgContainer a:hover{
+	color: rgb(213 75 75);
+}
+/*
+
+	PANORAMA
+
+*/
+
+.carousel p{
+	width: 5%;
+	float: left;
+	text-align: center;
+}
+
+.carousel img{
+	float: left;
+	width: 90%;
+}
+
+@media (max-width: 1024px){
+
+	.doubleImgContainer .left, .doubleImgContainer .right{
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+
+	.doubleImgContainer .captionLeft, .doubleImgContainer .captionRight{
+		width: 90%;
+		margin-left: 5%;
+		text-align: center;
+	}
+
+	.tripleImgContainer .left, .tripleImgContainer .mid, .tripleImgContainer .right{
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+
+	.tripleImgContainer .captionLeft, .tripleImgContainer .captionMid, .tripleImgContainer .captionRight{
+		width: 90%;
+		margin-left: 5%;
+		text-align: center;
+	}
+
+}
