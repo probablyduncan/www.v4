@@ -301,7 +301,7 @@ img{
 
 }
 
-@media (max-width: 500px) and (orientation: portrait){
+@media (orientation: portrait){
 	body{
 		font-size: 1.4em;
 	}
