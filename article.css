@@ -1,58 +1,23 @@
-/*
-
-
-SINGLE IMAGE CONTAINER
-
-<div class="singleImgContainer">
-			<img src="stories/.jpg">
-			<p class="caption">caption!</p>
-		</div>
-
-
-DOUBLE IMAGE CONTAINER
-
-<div class="doubleImgContainer">
-			<div class="left">
-				<img class="imgLeft" src="stories/.jpg">
-				<p class="captionLeft">caption!</p>
-			</div>
-			<div class="right">
-				<img class="imgRight" src="stories/.jpg">
-				<p class="captionRight">caption!</p>
-			</div>
-			<p class="caption">caption!</p>
-		</div>
-
-TRIPLE IMAGE CONTAINER
-
-<div class="tripleImgContainer">
-			<div class="left">
-				<img class="imgLeft" src="stories/.jpg">
-				<p class="captionLeft">caption!</p>
-			</div>
-			<div class="mid">
-				<img class="imgMid" src="stories/.jpg">
-				<p class="captionMid">caption!</p>
-			</div>
-			<div class="right">
-				<img class="imgRight" src="stories/.jpg">
-				<p class="captionRight">caption!</p>
-			</div>
-			<p class="caption">caption!</p>
-		</div>
-
-
-	————————————————————————CSS———————————————————————
-*/
-
 body{
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	color: #333;
 	margin: 0;
-	font-size: 18px;
-	letter-spacing: 1.2px;
-	line-height: 24px;
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+	line-height: 1.3em;
 	text-align: justify;
+}
+
+.bigLetter::first-letter{
+	font-size: 1.4;
+	font-weight: 800;
+}
+
+.firstLetter::first-letter{
+	font-size: 3.3em;
+	float: left;
+	padding-bottom: 4px;
+	padding-right: 4px;
 }
 
 img{
@@ -63,9 +28,9 @@ img{
 	text-decoration: none;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 1em;
 	margin-top: 6px;
-	line-height: 24px;
+	line-height: 1.2em;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -83,18 +48,6 @@ img{
 
 .container a:hover{
 	color: rgb(213 75 75);
-}
-
-.bigLetter::first-letter{
-	font-size: 20px;
-	font-weight: 800;
-}
-
-.firstLetter::first-letter{
-	font-size: 56px;
-	float: left;
-	padding-bottom: 4px;
-	padding-right: 4px;
 }
 
 .note{
@@ -121,9 +74,9 @@ img{
 .singleImgContainer .caption{
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 17px;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -164,9 +117,9 @@ img{
 	float:left;
 	width: 90%;
 	margin-left: 10%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: right;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -175,9 +128,9 @@ img{
 .doubleImgContainer .captionRight{
 	float: left;
 	width: 90%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: left;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -187,9 +140,9 @@ img{
 	float: left;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: center;
 	padding-top: 8px;
 	border-top: 1px solid black;
@@ -244,9 +197,9 @@ img{
 	float:left;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -256,9 +209,9 @@ img{
 	float:left;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -268,9 +221,9 @@ img{
 	float:left;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -280,9 +233,9 @@ img{
 	float: left;
 	width: 90%;
 	margin-left: 5%;
-	font-size: 16px;
+	font-size: 0.8em;
+	line-height: 1.2em;
 	margin-top: 6px;
-	line-height: 24px;
 	text-align: center;
 	padding-top: 8px;
 	border-top: 1px solid black;

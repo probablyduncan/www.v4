@@ -234,64 +234,10 @@ img{
 	}
 }
 
-/*@media (min-width: 720px){
-	#navbar{
-		display: none;
-	}
 
-	#navbar ul{
-		display: none;
-	}
-
-	#footer{
-		display: none;
-	}
-
-	#tbn{
-		display: none;
-	}
-}
-
-@media (max-width: 719px){
-	#sidebar{
-		display: none;
-	}
-
-	#tbw{
-		display: none;
-	}
-
-	body{
-		margin-top: 0;
-		margin-left: 0;
-
-	}
-
-	#stories{
-		padding-top: 92px;
-		width: 98%;
-		margin-left: 2%;
-		padding-left: 0;
-	}
-
-	.section{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media (max-width: 502px){
-	.section{
-		grid-template-columns: 1fr 1fr;
-	}
-}*/
-
-
-
-/*
 
 	NAVBAR STUFF
 
-*/
 
 @media (min-width: 601px){
 	ul #navbar4{
