@@ -301,7 +301,7 @@ img{
 
 }
 
-@media (max-aspect-ratio: 4/5){
+@media (max-aspect-ratio: 1/1){
 	body{
 		font-size: 2em;
 	}
