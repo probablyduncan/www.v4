@@ -301,7 +301,7 @@ img{
 
 }
 
-@media (orientation: portrait){
+@media only screen and (orientation: portrait){
 	body{
 		font-size: 1.4em;
 	}
