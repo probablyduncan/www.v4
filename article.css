@@ -300,3 +300,17 @@ img{
 	}
 
 }
+
+@media (max-width: 500px) and (orientation: portrait){
+	body{
+		font-size: 1.4em;
+	}
+	
+	.caption, .singleImgContainer .caption, .doubleImgContainer .caption, .doubleImgContainer .captionLeft, .doubleImgContainer .captionRight, .tripleImgContainer .caption, .tripleImgContainer .captionLeft, .tripleImgContainer .captionMid, .tripleImgContainer .captionRight{
+		font-size: 1em;
+	}
+
+	.container{
+		width: 80%;
+	}
+}
