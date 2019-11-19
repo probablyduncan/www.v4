@@ -301,16 +301,16 @@ img{
 
 }
 
-@media (max-aspect-ratio: 1/1){
+@media (max-aspect-ratio: 4/5){
 	body{
-		font-size: 1.4em;
+		font-size: 2em;
 	}
 	
 	.caption, .singleImgContainer .caption, .doubleImgContainer .caption, .doubleImgContainer .captionLeft, .doubleImgContainer .captionRight, .tripleImgContainer .caption, .tripleImgContainer .captionLeft, .tripleImgContainer .captionMid, .tripleImgContainer .captionRight{
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 
 	.container{
-		width: 80%;
+		width: 90%;
 	}
 }
