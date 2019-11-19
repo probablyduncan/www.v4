@@ -301,7 +301,7 @@ img{
 
 }
 
-/* @media only screen and (orientation: portrait){
+@media (max-aspect-ratio: 2/3){
 	body{
 		font-size: 1.4em;
 	}
@@ -313,4 +313,4 @@ img{
 	.container{
 		width: 80%;
 	}
-} */
+}
