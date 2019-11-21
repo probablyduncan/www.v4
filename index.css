@@ -54,3 +54,9 @@ a:hover{
 		text-align: left;
 	}
 }
+
+@media (max-aspect-ratio: 3/4){
+	#text{
+		margin-top: 72px;
+	}
+}
