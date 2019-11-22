@@ -273,7 +273,7 @@ img{
 	width: 90%;
 }
 
-@media (max-aspect-ratio: 2/3){
+@media (orientation: portrait){
 
 	.doubleImgContainer .left, .doubleImgContainer .right{
 		float: none;
