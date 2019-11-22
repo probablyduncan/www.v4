@@ -40,6 +40,31 @@
 	});
 	</script> 
 
+	<!-- RANDOM PAGE SCRIPT -->
+	<!-- http://www.javascriptkit.com/javatutors/random2.shtml -->
+
+	<script type="text/javascript">
+		function randomStory(){
+			var myrandom = Math.round(Math.random() * 11);
+			var links=new Array();
+				links[0]="statement.html";
+				links[1]="profile.html";
+				links[2]="blue.html";
+				links[3]="fire.html";
+				links[4]="treetops.html";
+				links[5]="falbay.html";
+				links[6]="cart.html";
+				links[7]="harbor.html";
+				links[8]="island.html";
+				links[9]="horicon.html";
+				links[10]="stillwater.html";
+				links[11]="nebraska.html";
+
+			window.location = links[myrandom];
+
+			}
+	</script>
+
 </head>
 <body id="body">
 
@@ -78,6 +103,7 @@
 			<li><a href="#heartlandHeader">— Heartland</a></li>
 			<li><a href="#travelHeader">— Travels</a></li>
 			<li><a href="#newYorkHeader">— New York</a></li>
+			<li><a href="" onclick="randomStory()">Random Page</a></li>
 			<li><a href="#aboutHeader">About</a></li>
 			<li><a href="https://www.instagram.com/probablyduncan/" target="blank">Instagram</a></li>
 			<li><a href="mailto:duncanpetrie1@gmail.com"> Email Me</a></li>
@@ -136,7 +162,7 @@
 		<div id="aboutHeader" class="sectionHeader">About</div>
 		<div id="about" class="container">
 			<img src="stories/about/cov.jpg">
-			<p>Hi! I'm Duncan Petrie. I grew up in <a href="https://www.google.com/maps/place/Milwaukee,+WI,+USA/@43.0580565,-88.1078577,11z/data=!3m1!4b1!4m5!3m4!1s0x880502d7578b47e7:0x445f1922b5417b84!8m2!3d43.0389025!4d-87.9064736" target="blank">Milwaukee</a>, but I'm currently in <a href="https://www.google.com/maps/place/Falmouth/@50.150563,-5.0920148,14z/data=!3m1!4b1!4m5!3m4!1s0x486b23280fb96b55:0xf3e3f00bb4ab2328!8m2!3d50.152571!4d-5.06627" target="blank">Falmouth</a>, studying Marine & Natural History Photography. I've been writing all my life and photographing plants and birds and rocks and things since 2016. In the autumn of 2019, I taught myself HTML, CSS, and Javascript to build this website. Look <a href="profile.html" target="blank">here</a> for a look into my photographic process, <a href="statement.html" target="blank">here</a> for my artist statement, or <a href="cart.html" target="blank">here</a> for a good story.</p>
+			<p>Hi! I'm Duncan Petrie. I grew up in Milwaukee, Wisconsin, but I'm currently in Falmouth, Cornwall, studying Marine & Natural History Photography. I've been writing all my life and photographing plants and birds and rocks and things since 2016. In the autumn of 2019, I taught myself HTML, CSS, and Javascript to build this website. Look <a href="profile.html" target="blank">here</a> for a look into my photographic process, <a href="statement.html" target="blank">here</a> for my artist statement, or <a href="cart.html" target="blank">here</a> for a good story.</p>
 			<p>For prints or business inqueries, or if you're one capable dude short of an adventure, email me at <a href="mailto:duncanpetrie1@gmail.com">duncanpetrie1@gmail.com</a>, or message me on Instagram <a href="https://www.instagram.com/probablyduncan/" target="blank">@probablyduncan</a>.</p>
 			<p>And if I don't see you, good afternoon, good evening, and goodnight!</p>
 		</div>
