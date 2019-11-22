@@ -275,7 +275,7 @@ img{
 
 @media (orientation: portrait){
 
-	.doubleImgContainer .left, .doubleImgContainer .right{
+	/* .doubleImgContainer .left, .doubleImgContainer .right{
 		float: none;
 		width: 100%;
 		margin: 0;
@@ -297,7 +297,7 @@ img{
 		width: 90%;
 		margin-left: 5%;
 		text-align: center;
-	}
+	} */
 
 	body not #navbar{
 		font-size: 1.6em;
