@@ -36,7 +36,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 	padding: 0px 10%;
 	font-family: Arial;
 	font-weight: 1000;
-	font-size: 18px;
+	font-size: 1em;
 	line-height: 0.4em;
 	letter-spacing: 1px;
 	color: black;
@@ -51,11 +51,12 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 }
 
 #nameContainer{
-	width: 135px;
+	text-align: left;
+	width: 143px;
 	float: left;
 	font-family: Arial;
 	font-weight: 1000;
-	font-size: 18px;
+	font-size: 1em;
 	line-height: 0.4em;
 	letter-spacing: 1px;
 }
@@ -74,7 +75,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 }
 
 #navbar a{
-	font-size: 18px;
+	font-size: 1em;
 	float: left;
 	padding-left: 10px;
 	display: inline;
@@ -89,13 +90,13 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 	color: rgb(213 75 75);
 }
 
-@media (min-width: 601px){
+@media (min-width: 631px){
 	ul #navbar4{
 		display: none;
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 630px){
 	#navbar ul #navbar1, #navbar ul #navbar2, #navbar ul #navbar3{
 		display: none;
 	}

@@ -299,7 +299,7 @@ img{
 		text-align: center;
 	}
 
-	body{
+	body not #navbar{
 		font-size: 1.6em;
 	}
 	
