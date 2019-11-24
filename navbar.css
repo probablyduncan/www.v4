@@ -107,7 +107,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 	}
 }
 
-/* @media (orientation: portrait){
+@media (orientation: portrait) and (max-width: 400px){
 	#navbar{
 		font-size: 1.4em;
 	}
@@ -126,6 +126,5 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 
 	#nameContainer{
 		width: 200px;
-	} */
+	}
 }
-
