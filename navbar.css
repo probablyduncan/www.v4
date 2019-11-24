@@ -105,25 +105,3 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 		width: 70px;
 	}
 }
-
-@media (orientation: portrait){
-	#navbar{
-		font-size: 1.4em;
-	}
-
-	#navbar ul #navbar1, #navbar ul #navbar2, #navbar ul #navbar3{
-		display: none;
-	}
-
-	#navbar ul{
-		width: 70px;
-	}
-
-	ul #navbar4{
-		display: inline;
-	}
-
-	#nameContainer{
-		width: 200px;
-	}
-}
