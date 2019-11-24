@@ -28,7 +28,7 @@ img{
 	text-decoration: none;
 	color: black;
 	line-height: 1.6em;
-	font-size: 16px;
+	font-size: 1.1em;
 	font-weight: 1000px;
 }
 
@@ -49,9 +49,9 @@ img{
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	width: 90%;
 	margin-left: 4%;
-	font-size: 16px;
+	font-size: 1em;
 	margin-top: 6px;
-	line-height: 17px;
+	line-height: 1.2em;
 	text-align: center;
 	padding-top: 8px;
 	border-top:  1px solid black;
@@ -63,7 +63,7 @@ img{
 	font-family: Arial;
 	margin-bottom: 32px;
 	padding-top: 8px;
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: 600;
 }
 
@@ -83,9 +83,9 @@ img{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	color: #333;
 	margin: 0;
-	font-size: 18px;
+	font-size: 1.2em;
 	letter-spacing: 1.2px;
-	line-height: 24px;
+	line-height: 1.4em;
 	text-align: justify;
 	width: 90%;
 	max-width: 94%;
@@ -98,9 +98,9 @@ img{
 	color: #333;
 	color: rgb(90 140 68);
 	margin: 0;
-	font-size: 18px;
+	font-size: 1em;
 	letter-spacing: 1.2px;
-	line-height: 24px;
+	line-height: 1em;
 	text-align: justify;
 }
 
@@ -115,7 +115,7 @@ img{
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 	color: #333;
 	text-align: center;
-	font-size: 18px;
+	font-size: 1.2em;
 	letter-spacing: 1.2px;
 	border: 1px solid black;
 	width: 10%;
