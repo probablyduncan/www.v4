@@ -4,19 +4,19 @@ body{
 	margin: 0;
 	font-size: 1.2em;
 	letter-spacing: 0.1em;
-	line-height: 1.5em;
+	line-height: 1.6em;
 	text-align: justify;
 }
 
 .bigLetter::first-letter{
-	font-size: 1.4;
+	font-size: 1.6em;
 	font-weight: 800;
 }
 
 .firstLetter::first-letter{
-	font-size: 3.3em;
+	font-size: 3.6em;
 	float: left;
-	padding-bottom: 4px;
+	padding-bottom: 0px;
 	padding-right: 4px;
 }
 
@@ -299,17 +299,15 @@ img{
 		margin-left: 5%;
 		text-align: center;
 	} */
-
-	body not #navbar{
-		font-size: 1.6em;
-	}
 	
 	.caption, .singleImgContainer .caption, .doubleImgContainer .caption, .doubleImgContainer .captionLeft, .doubleImgContainer .captionRight, .tripleImgContainer .caption, .tripleImgContainer .captionLeft, .tripleImgContainer .captionMid, .tripleImgContainer .captionRight{
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 
 	.container{
-		width: 90%;
+		width: 80%;
+		font-size: 1.2em;
+		line-height: 2em;
 	}
 
 }
