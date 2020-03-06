@@ -70,7 +70,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 }
 
 #navbar ul{
-	width: 305px;
+	/* width: 305px; */
 	float: right;
 }
 
@@ -102,6 +102,6 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 	}
 
 	#navbar ul{
-		width: 70px;
+		/* width: 70px; */
 	}
 }
