@@ -54,6 +54,19 @@ img{
 	font-size: 14px;
 }
 
+/*
+	VIDEO CONTAINER
+*/
+
+
+.videoContainer{
+	width: 70%;
+	padding-left: 15%;
+	margin: 10px 0px;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+
 
 /*
 	SINGLE IMAGE CONTAINER
@@ -62,7 +75,7 @@ img{
 
 .singleImgContainer{
 	width: 100%;
-	margin: 10px 0;
+	margin: 10px 0px;
 	overflow: hidden;
 	margin-bottom: 0px;
 }
@@ -308,6 +321,11 @@ img{
 		width: 80%;
 		font-size: 1.2em;
 		line-height: 2em;
+	}
+
+	.videoContainer{
+		width: 100%;
+		padding-left: 0%;
 	}
 
 }
