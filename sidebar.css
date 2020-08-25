@@ -42,7 +42,7 @@ SIDEBAR HTML
 }
 
 #sidebar .duncanpetrie {
-	color: rgb(213 75 75);
+	color: rgb(255 75 75);
 	font-size: 24px;
 	display: inline;
 }
@@ -84,7 +84,7 @@ SIDEBAR HTML
 }
 
 #sidebar a:active{
-	color: rgb(213 75 75);
+	color: rgb(255 75 75);
 }
 
 /*#currentPage{

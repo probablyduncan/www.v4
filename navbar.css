@@ -62,7 +62,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 }
 
 #navbar .duncanpetrie {
-	color: rgba(213 75 75);
+	color: rgba(255 75 75);
 }
 
 #navbar .photography {
@@ -87,7 +87,7 @@ NAVBAR & DROPDOWN HTML / UNDER BODY
 }
 
 #navbar a:hover{
-	color: rgb(213 75 75);
+	color: rgb(255 75 75);
 }
 
 @media (min-width: 631px){
