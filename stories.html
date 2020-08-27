@@ -184,5 +184,28 @@
 		<div id="footer" class="copyright" style="width: 100%; text-align: center;">Text & Images Copyright &copy2019 Duncan Petrie. All Rights Reserved</div>
 
 	</div>
+
+	<script type="text/javascript">
+		<!-- https://www.includehelp.com/code-snippets/javascript-to-detect-whether-page-is-load-on-mobile-or-desktop.aspx -->
+			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+			if(isMobile){
+				document.getElementById('navbar').style.fontSize = '2em';
+				document.getElementById('navbar1').style.display = 'none';
+
+				var numSections = document.getElementsByClassName('section').length;
+				for(var i = 0; i < numSections; i++){
+					document.getElementsByClassName('section')[i].style.fontSize = '1.6em';
+				}
+
+				var numSectionHeaders = document.getElementsByClassName('sectionHeader').length;
+				for(var i = 0; i < numSectionHeaders; i++){
+					document.getElementsByClassName('sectionHeader')[i].style.fontSize = '2.4em';
+				}
+
+				document.getElementById('stories').style.paddingTop = '144px';
+				
+
+			}
+		</script>
 </body>
 </html>
