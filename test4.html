@@ -21,7 +21,7 @@ $(document).ready(function(){
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
+        scrollLeft: $(hash).offset().left
       }, 800, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
@@ -34,6 +34,7 @@ $(document).ready(function(){
 
 <style>
 body{
+    overflow-y: hidden;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -45,10 +46,10 @@ body{
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
-    background-image: url('stories/landing/horizontal.jpg');
+    background-image: url('horizontal.jpg');
     background-size: cover;
     background-attachment:scroll;
-    background-position: center center;
+    background-position: bottom;
     background-repeat: no-repeat;
     grid-column: 1;
 }
