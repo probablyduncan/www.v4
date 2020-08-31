@@ -82,6 +82,10 @@ a{
     text-decoration: none;
     color: unset;
 }
+img{
+    width: 100%;
+    pointer-events: none;
+}
 
 /* INTRO STUFF */
 
@@ -153,7 +157,7 @@ a{
 #about{
     width: 100vw;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     
 }
 
@@ -169,8 +173,8 @@ a{
     text-align: justify;
 }
 #about-body a{
-    color:rgb(200, 75, 75);
-    /* color: rgb(90 140 68); */
+    /* color:rgb(200, 75, 75); */
+    color: rgb(90, 140, 68);
     text-decoration-line: underline;
 }
 #about-body p{
@@ -194,7 +198,6 @@ a{
     height: auto;
     padding-bottom: 120px;
 }
-#gallery img{width: 100%;}
 
 .gallery-card{
     margin-left: 5vw;
@@ -271,23 +274,28 @@ a{
         <div id="about">
             
             <div id="about-navbar" class="navbar">
-                <a id="about-back" href="#main">&#60 gallery</a>
+                <a id="about-back" href="#main">gallery</a>
                 <a id="about-email" href="mailto:duncanpetrie1@gmail.com" style="text-align: right;">email me</a>
             </div>
 
             <div id="about-img">
-                <img src="stories/about/cov.jpg" style="width: 100%;">
+                <!-- <img src="stories/about/cov.jpg" style="width: 100%;"> -->
+                <img src="cov.jpg" style="width: 100%;">
             </div>
 
             <div id="about-body">
-                <div style="display: grid; grid-template-columns: auto 1fr auto; margin-top: 1em;">
+                <div id="about-desktop-hello" style="display: grid; grid-template-columns: auto 1fr auto; margin-top: 1em; margin-bottom: 1em;">
                     <p style="border-top: 2px solid black; padding-right: 1em;">Hello!</p>
                     <div></div>
                     <p style="text-align: right; padding-left: 1em; border-bottom: 2px solid black;"><i>above: Terceira, Portugal, 2018</i></p>
                 </div>
-                <p>I'm Duncan Petrie. I grew up in Milwaukee, Wisconsin, but I'm currently in Cornwall, studying Marine & Natural History Photography at Falmouth University. I've been writing all my life and photographing plants and birds and rocks and things for just about 5 years. Late in 2019, I taught myself HTML, CSS, and Javascript to build this website.</p>
-                <p>For prints or business inqueries, or if you're one capable dude short of an adventure, email me at <a href="mailto:duncanpetrie1@gmail.com" target="blank">duncanpetrie1@gmail.com</a>, or message me on Instagram <a href="https://www.instagram.com/probablyduncan/ " target="blank">@probablyduncan</a>.</p>
-                <p>ok that's all for now you can get back to whatever you were doing</p>
+                <div id="about-mobile-hello" style="display: none; grid-template-columns: auto 1fr; margin: 1em 0 0.5em 0;">
+                    <p style="width:auto; padding-right: 1em; border-top: 2px solid black;">Hello!</p>
+                    <div></div>
+                </div>
+                <p style="margin-bottom: 1em;">I'm Duncan Petrie. I grew up in Milwaukee, Wisconsin, but I'm currently in Cornwall, studying Marine & Natural History Photography at Falmouth University. I've been writing all my life and photographing plants and birds and rocks and things for just about 5 years. Late in 2019, I taught myself HTML, CSS, and Javascript to build this website.</p>
+                <p style="margin-bottom: 1em;">For prints or business inqueries, or if you're one capable dude short of an adventure, email me at <a href="mailto:duncanpetrie1@gmail.com" target="blank">duncanpetrie1@gmail.com</a>, or message me on Instagram <a href="https://www.instagram.com/probablyduncan/ " target="blank">@probablyduncan</a>.</p>
+                <p style="margin-bottom: 1em;">ok that's all for now you can get back to whatever you were doing</p>
             </div>
 
         </div>
@@ -306,6 +314,11 @@ a{
             document.getElementById('name').style.paddingTop = '45vh';
 
             document.getElementById('gallery').style.paddingBottom = '200px';
+
+            document.getElementById('about-desktop-hello').style.display = 'none';
+            document.getElementById('about-mobile-hello').style.display = 'grid';
+            document.getElementById('about-body').style.textAlign = 'left';
+            document.getElementById('about-body').style.fontSize = '1.4em';
         }
 
     </script>
