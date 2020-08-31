@@ -34,9 +34,7 @@ $(document).ready(function(){
 
 <style>
     html{
-        height: -webkit-fill-available;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 body{
     margin: 0;
@@ -45,13 +43,11 @@ body{
     display: grid;
     grid-template-columns: 100vw 100vw;
     overflow: hidden;
-    min-height: -webkit-fill-available;
 }
 
 #intro{
-    margin-top: 10vh;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background-image: url('horizontal.jpg');
     background-size: cover;
     background-attachment:scroll;
@@ -147,6 +143,19 @@ body{
             </div>
         </div>
     </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if(isMobile){
+            document.getElementById('intro').style.height = '90vh';
+        }
+
+    </script>
 
 </body>
 </html>
