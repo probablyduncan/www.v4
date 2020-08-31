@@ -49,7 +49,7 @@ body{
     background-image: url('horizontal.jpg');
     background-size: cover;
     background-attachment:scroll;
-    background-position: bottom;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     grid-column: 1;
 }
@@ -85,12 +85,25 @@ body{
 }
 
 #body{
-    background-color: aliceblue;
+    background-color: white;
     width: 100vw;
     height: 100vh;
     grid-column: 2;
 }
 
+
+
+@media (min-aspect-ratio : 16/9) {
+    #intro{
+        background-position: 100% 40%;
+    }
+}
+
+@media (max-aspect-ratio : 1.2/1) {
+    #intro{
+        background-position: 70% 100%;
+    }
+}
 
 </style>
 </head>
@@ -103,7 +116,9 @@ body{
 		<a href="#body">enter</a>
     </div>
     <div id="body">
-        
+        <div id="sidebar">
+
+        </div>
     </div>
 
 </body>
