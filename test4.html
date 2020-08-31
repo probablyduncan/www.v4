@@ -36,32 +36,9 @@
                 800)}))});
 
 </script>
-<!-- <script> /*this is the smooth scrolling script*/
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollLeft: $(hash).offset().left
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>  -->
 
 <style>
 
@@ -92,7 +69,7 @@ img{
 #intro{
     width: 100vw;
     height: 100vh;
-    background-image: url('horizontal.jpg');
+    background-image: url('huzzah/horizontal.jpg');
     background-size: cover;
     background-attachment:scroll;
     background-position: 100% 100%;
@@ -208,37 +185,30 @@ img{
     margin-bottom: 3vw;
 }
 
-#card-works{
-    margin-left: 5vw;
+.gallery-card-orientation{
+    /* margin-left: 5vw; */
     width: 90vw;
     height: 60vw;
     margin-bottom: 3vw;
-    background-image: url('cov-works-desktop.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
 } @media (orientation : portrait){
-    #card-works{
-        background-image: url('cov-works-mobile.jpg');
+    .gallery-card-orientation{
         height: 112.5vw;
     }
 }
-/* #card-works:hover{
-    opacity: 80%;
-    cursor: pointer;
-} */
-#card-works a{
-    font-size: 5.4em;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding-top: 20%;
-    opacity: 0;
+
+#card1{background-image: url('huzzah/cov-works-desktop.jpg');}
+@media screen and (orientation: portrait) {
+    #card1{background-image: url('huzzah/cov-works-mobile.jpg');}
+}
+
+.gallery-link-container{
     display: block;
-    z-index: 1000;
-} #card-works a:hover{
-    opacity: 100;
+    width: 90vw;
+    margin-left: 5vw;
 }
 
 
@@ -277,9 +247,7 @@ img{
     <div id="intro">
         <p id="name">Duncan Petrie</p><br>
 		<p id="photo">PHOTOGRAPHY</p><br>
-		<a id="enter" href="#main">enter
-            <!-- <p style="text-decoration-line: none; margin: 0 0 0 2px;">&#62</p> -->
-        </a>
+		<a id="enter" href="#main">enter</a>
     </div>
 
     <div id="main">
@@ -290,17 +258,16 @@ img{
                     <a id="main-about" href="" style="text-align: right;">about/contact</a>
             </div>
 
-            <div id="card-works">
-                <!-- <div class="card-text">Works</div> -->
-                <a href="test4.html">Works</a>
+            <a class="gallery-link-container" href="test4.html"><div id="card1" class="gallery-card-orientation"></div></a>
+
+            <div id="works" class="gallery-link-container"></div>
+
+            <div class="gallery-card">
+                <img src="huzzah/1.jpg">
             </div>
 
             <div class="gallery-card">
-                <img src="1.jpg">
-            </div>
-
-            <div class="gallery-card">
-                <img src="3.jpg">
+                <img src="huzzah/3.jpg">
             </div>
 
             <div class="gallery-card">
