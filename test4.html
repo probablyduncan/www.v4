@@ -34,18 +34,17 @@ $(document).ready(function(){
 
 <style>
 body{
-    overflow-y: hidden;
     margin: 0;
     width: 100vw;
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 100vw 100vw;
+    overflow: hidden;
 }
 
 #intro{
     width: 100vw;
-    height: 100%;
-    overflow-y: hidden;
+    height: auto;
     background-image: url('horizontal.jpg');
     background-size: cover;
     background-attachment:scroll;
@@ -84,11 +83,24 @@ body{
     margin-left: 10vw;
 }
 
-#body{
-    background-color: white;
+#main-container{
+    background-color:whitesmoke;
     width: 100vw;
     height: 100vh;
     grid-column: 2;
+    overflow-y:scroll;
+    display: block;
+}
+#main{
+    width: 100%;
+    height: auto;
+}
+.main-card{
+    margin-left: 5vw;
+    margin-top: 5vh;
+    width: 90vw;
+    height: 60vh;
+    background-color:white;
 }
 
 
@@ -113,11 +125,19 @@ body{
     <div id="intro">
         <p id="name">Duncan Petrie</p><br>
 		<p id="photo">PHOTOGRAPHY</p><br>
-		<a href="#body">enter</a>
+		<a href="#main-container">enter</a>
     </div>
-    <div id="body">
-        <div id="sidebar">
-
+    <div id="main-container">
+        <div id="main">
+            <div class="main-card">
+                huzzah!
+            </div>
+            <div class="main-card">
+                yeehaw!
+            </div>
+            <div class="main-card">
+                wahoo!
+            </div>
         </div>
     </div>
 
