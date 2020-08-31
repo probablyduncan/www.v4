@@ -8,7 +8,35 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script> /*this is the smooth scrolling script*/
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $('#enter').on('click', (function(event) {
+            event.preventDefault();
+            $('html,body').animate(
+                {scrollLeft: $('#main').offset().left},
+                800)}))});
+    $(document).ready(function() {
+        $('#navbar-back').on('click', (function(event) {
+            event.preventDefault();
+            $('html,body').animate(
+                {scrollLeft: $('#intro').offset().left},
+                800)}))});
+    $(document).ready(function() {
+        $('#navbar-about').on('click', (function(event) {
+            event.preventDefault();
+            $('html,body').animate(
+                {scrollLeft: $('#about').offset().left},
+                800)}))});
+    $(document).ready(function() {
+        $('#about-back').on('click', (function(event) {
+            event.preventDefault();
+            $('html,body').animate(
+                {scrollLeft: $('#main').offset().left},
+                800)}))});
+
+</script>
+<!-- <script> /*this is the smooth scrolling script*/
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -33,7 +61,7 @@ $(document).ready(function(){
     } // End if
   });
 });
-</script> 
+</script>  -->
 
 <style>
 
@@ -46,7 +74,7 @@ body{
     height: auto;
     display: grid;
     grid-template-columns: 100vw 100vw 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 700;
 }
@@ -83,7 +111,7 @@ body{
     padding-top: 16px;
     font-size: 1em;
 }
-#intro a {
+#enter {
 	text-decoration: none;
 	color: rgb(255 75 75);
 	font-family: Arial;
@@ -108,7 +136,7 @@ body{
 
 /* MAIN STUFF */
 
-#main-container{
+#main{
     background-color:white;
     width: 100vw;
     height: 100vh;
@@ -116,12 +144,12 @@ body{
     overflow-y:scroll;
     display: block;
 }
-#main{
+#gallery{
     width: 100%;
     height: auto;
 }
 
-#main img{width: 100%;}
+#gallery img{width: 100%;}
 
 #navbar{
     width: 90vw;
@@ -134,13 +162,13 @@ body{
     text-align: right;
 }
 
-.main-card{
+.gallery-card{
     margin-left: 5vw;
     margin-top: 20px;
     width: 90vw;
     height: 60vw;
 }
-#main a{
+#gallery a{
     text-decoration: none;
     color: unset;
     font-size: 1.2em;
@@ -182,28 +210,28 @@ body{
     <div id="intro">
         <p id="name">Duncan Petrie</p><br>
 		<p id="photo">PHOTOGRAPHY</p><br>
-		<a href="#main-container">enter
+		<a id="enter" href="#main">enter
             <!-- <p style="text-decoration-line: none; margin: 0 0 0 2px;">&#62</p> -->
         </a>
     </div>
 
-    <div id="main-container">
-        <div id="main">
+    <div id="main">
+        <div id="gallery">
 
             <div id="navbar">
-                    <a id="navbar-back" href="#intro">&#60 back</a>
-                    <a id="navbar-about" href="#about" >about &#62</a>
+                    <a id="navbar-back" href="#intro">duncan/petrie</a>
+                    <a id="navbar-about" href="#about" >about/contact &#62</a>
             </div>
 
-            <div class="main-card" style="background-color:ghostwhite ;">
+            <div class="gallery-card" style="background-color:ghostwhite ;">
                 
             </div>
 
-            <div class="main-card" style="background-color:floralwhite;">
+            <div class="gallery-card" style="background-color:floralwhite;">
                 
             </div>
 
-            <div class="main-card" style="background-color:aliceblue;">
+            <div class="gallery-card" style="background-color:aliceblue;">
                 
             </div>
 
@@ -211,7 +239,7 @@ body{
     </div>
 
     <div id="about">
-        <a href="#main-container">huzzah! back to the middle</a>
+        <a id="about-back" href="#main">huzzah! back to the middle</a>
     </div>
 
 
@@ -225,6 +253,13 @@ body{
             document.getElementById('intro').style.backgroundPosition = '80% 100%';
             document.getElementById('intro').style.fontSize = '1.6em';
             document.getElementById('name').style.paddingTop = '45vh';
+            document.getElementById('navbar').style.fontSize = '1.6em';
+
+            //document.body.style.overflow = 'hidden';
+            
+            //document.getElementById
+
+            // document.getElementById('gallery').style.marginBottom = '200px';
         }
 
     </script>
