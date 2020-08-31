@@ -17,13 +17,13 @@
                 {scrollLeft: $('#main').offset().left},
                 800)}))});
     $(document).ready(function() {
-        $('#navbar-back').on('click', (function(event) {
+        $('#main-navbar-back').on('click', (function(event) {
             event.preventDefault();
             $('html,body').animate(
                 {scrollLeft: $('#intro').offset().left},
                 800)}))});
     $(document).ready(function() {
-        $('#navbar-about').on('click', (function(event) {
+        $('#main-navbar-about').on('click', (function(event) {
             event.preventDefault();
             $('html,body').animate(
                 {scrollLeft: $('#about').offset().left},
@@ -78,6 +78,10 @@ body{
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 700;
 }
+a{
+    text-decoration: none;
+    color: unset;
+}
 
 /* INTRO STUFF */
 
@@ -123,21 +127,58 @@ body{
     margin-left: 10vw;
 }
 
+/* NAVBAR STUFF */
+
+.navbar{
+    width: 90vw;
+    margin: 30px 0 30px 5vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+} .navbar a{
+    font-size: 1.2em;
+}
+
 
 /* ABOUT STUFF */
 
-#about{
+#about-container{
     width: 100vw;
     height: 100vh;
     grid-column: 3;
-    background-color: thistle;
+    background-color: aliceblue;
+    overflow-y: scroll;
+}
+
+#about{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 20px;
+    
+}
+
+#about-img{
+    margin-left: 5vw;
+    width: 90vw;
+}
+#about-body{
+    margin-left: 5vw;
+    width: 90vw;
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: justify;
+}
+#about-body a{
+    color:rgb(200, 75, 75);
+    color: rgb(90 140 68);
+    text-decoration-line: underline;
 }
 
 
 /* MAIN STUFF */
 
 #main{
-    background-color:white;
+    background-color:ghostwhite;
     width: 100vw;
     height: 100vh;
     grid-column: 2;
@@ -147,31 +188,15 @@ body{
 #gallery{
     width: 100%;
     height: auto;
+    padding-bottom: 120px;
 }
-
 #gallery img{width: 100%;}
-
-#navbar{
-    width: 90vw;
-    margin: 30px 0 30px 5vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-#navbar-about{
-    text-align: right;
-}
 
 .gallery-card{
     margin-left: 5vw;
     margin-top: 20px;
     width: 90vw;
     height: 60vw;
-}
-#gallery a{
-    text-decoration: none;
-    color: unset;
-    font-size: 1.2em;
 }
 
 
@@ -218,28 +243,57 @@ body{
     <div id="main">
         <div id="gallery">
 
-            <div id="navbar">
-                    <a id="navbar-back" href="#intro">duncan/petrie</a>
-                    <a id="navbar-about" href="#about" >about/contact</a>
+            <div id="main-navbar" class="navbar">
+                    <a id="main-navbar-back" href="#intro">duncan/petrie</a>
+                    <a id="main-navbar-about" href="#about" style="text-align: right;">about/contact</a>
             </div>
 
-            <div class="gallery-card" style="background-color:ghostwhite ;">
+            <div class="gallery-card">
                 <img src="1.jpg">
             </div>
 
-            <div class="gallery-card" style="background-color:floralwhite;">
+            <div class="gallery-card">
                 <img src="3.jpg">
             </div>
 
-            <div class="gallery-card" style="background-color:aliceblue;">
+            <div class="gallery-card">
 
             </div>
 
         </div>
     </div>
 
-    <div id="about">
-        <a id="about-back" href="#main">huzzah! back to the middle</a>
+    <div id="about-container">
+        <div id="about">
+            
+            <div id="about-navbar" class="navbar">
+                <a id="about-back" href="#main">&#60 gallery</a>
+                <a id="about-email" href="mailto:duncanpetrie1@gmail.com" style="text-align: right;">email me</a>
+            </div>
+
+            <div id="about-img">
+                <img src="stories/about/cov.jpg" style="width: 100%;">
+            </div>
+
+            <div id="about-body">
+                <div style="display: grid; grid-template-columns: auto 1fr auto; margin-top: 1em;">
+                    <p style="
+                        margin: 0; border-top: 2px solid black; padding-right: 1em;"
+                    >Hello!</p>
+                    <div></div>
+                    <p style="
+                        text-align: right; 
+                        margin: 0; 
+                        padding-left: 1em;
+                        border-bottom: 2px solid black;"
+                    ><i>above: Terceira, Portugal, 2018</i></p>
+                </div>
+                <p>I'm Duncan Petrie. I grew up in Milwaukee, Wisconsin, but I'm currently in Cornwall, studying Marine & Natural History Photography at Falmouth University. I've been writing all my life and photographing plants and birds and rocks and things for just about 5 years. Late in 2019, I taught myself HTML, CSS, and Javascript to build this website.</p>
+                <p>For prints or business inqueries, or if you're one capable dude short of an adventure, email me at <a href="mailto:duncanpetrie1@gmail.com" target="blank">duncanpetrie1@gmail.com</a>, or message me on Instagram <a href="https://www.instagram.com/probablyduncan/ " target="blank">@probablyduncan</a>.</p>
+                <p>ok that's all for now you can get back to whatever you were doing</p>
+            </div>
+
+        </div>
     </div>
 
 
