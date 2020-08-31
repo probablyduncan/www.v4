@@ -17,13 +17,13 @@
                 {scrollLeft: $('#main').offset().left},
                 800)}))});
     $(document).ready(function() {
-        $('#main-navbar-back').on('click', (function(event) {
+        $('#main-back').on('click', (function(event) {
             event.preventDefault();
             $('html,body').animate(
                 {scrollLeft: $('#intro').offset().left},
                 800)}))});
     $(document).ready(function() {
-        $('#main-navbar-about').on('click', (function(event) {
+        $('#main-about').on('click', (function(event) {
             event.preventDefault();
             $('html,body').animate(
                 {scrollLeft: $('#about').offset().left},
@@ -251,8 +251,8 @@ img{
         <div id="gallery">
 
             <div id="main-navbar" class="navbar">
-                    <a id="main-navbar-back" href="#intro">duncan/petrie</a>
-                    <a id="main-navbar-about" href="#about" style="text-align: right;">about/contact</a>
+                    <a id="main-back" href="#intro">duncan/petrie</a>
+                    <a id="main-about" href="#about" style="text-align: right;">about/contact</a>
             </div>
 
             <div class="gallery-card">
@@ -309,16 +309,32 @@ img{
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if(isMobile){
+
+
+            //intro
+
             document.getElementById('intro').style.backgroundPosition = '80% 100%';
             document.getElementById('intro').style.fontSize = '1.6em';
             document.getElementById('name').style.paddingTop = '45vh';
 
+
+            //main
+
             document.getElementById('gallery').style.paddingBottom = '200px';
+
+
+            //about
 
             document.getElementById('about-desktop-hello').style.display = 'none';
             document.getElementById('about-mobile-hello').style.display = 'grid';
             document.getElementById('about-body').style.textAlign = 'left';
             document.getElementById('about-body').style.fontSize = '1.4em';
+            
+            document.getElementById('main-back').style.fontSize = '1.4em';
+            document.getElementById('main-about').style.fontSize = '1.4em';
+            document.getElementById('about-back').style.fontSize = '1.4em';
+            document.getElementById('about-email').style.fontSize = '1.4em';
+
         }
 
     </script>
