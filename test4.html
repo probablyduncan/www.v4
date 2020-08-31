@@ -87,7 +87,7 @@ body{
 }
 
 #main-container{
-    background-color:whitesmoke;
+    background-color:white;
     width: 100vw;
     height: 100vh;
     grid-column: 2;
@@ -103,7 +103,6 @@ body{
     margin-top: 5vh;
     width: 90vw;
     height: 60vh;
-    background-color:white;
 }
 
 
@@ -132,13 +131,13 @@ body{
     </div>
     <div id="main-container">
         <div id="main">
-            <div class="main-card">
-                huzzah!
+            <div class="main-card" style="background-color:ghostwhite ;">
+                <a href="#intro">huzzah!</a>
             </div>
-            <div class="main-card">
+            <div class="main-card" style="background-color:floralwhite;">
                 yeehaw!
             </div>
-            <div class="main-card">
+            <div class="main-card" style="background-color:aliceblue;">
                 wahoo!
             </div>
         </div>
@@ -152,7 +151,8 @@ body{
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if(isMobile){
-            document.getElementById('intro').style.height = '90vh';
+            document.getElementById('intro').style.backgroundPosition = '80% 100%';
+            document.getElementById('name').style.paddingTop = '45vh';
         }
 
     </script>
