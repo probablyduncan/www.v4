@@ -36,17 +36,22 @@ $(document).ready(function(){
 </script> 
 
 <style>
-    html{
-        overflow: hidden;
-    }
+
+html{
+    overflow: hidden;
+}
 body{
     margin: 0;
     width: 100vw;
     height: auto;
     display: grid;
-    grid-template-columns: 100vw 100vw;
+    grid-template-columns: 100vw 100vw 100vw;
     overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 700;
 }
+
+/* INTRO STUFF */
 
 #intro{
     width: 100vw;
@@ -86,9 +91,22 @@ body{
 	font-weight: 800;
     text-decoration: underline;
     margin: 0;
-    padding: 16px 0 0 0;
+    padding: 0;
     margin-left: 10vw;
 }
+
+
+/* ABOUT STUFF */
+
+#about{
+    width: 100vw;
+    height: 100vh;
+    grid-column: 3;
+    background-color: thistle;
+}
+
+
+/* MAIN STUFF */
 
 #main-container{
     background-color:white;
@@ -102,12 +120,35 @@ body{
     width: 100%;
     height: auto;
 }
+
+#main img{width: 100%;}
+
+#navbar{
+    width: 90vw;
+    margin: 30px 0 30px 5vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#navbar-about{
+    text-align: right;
+}
+
 .main-card{
     margin-left: 5vw;
-    margin-top: 5vh;
+    margin-top: 20px;
     width: 90vw;
-    height: 60vh;
+    height: 60vw;
 }
+#main a{
+    text-decoration: none;
+    color: unset;
+    font-size: 1.2em;
+}
+
+
+
+/* intro resizing media queries */
 
 @media (max-width : 920px) {
     #intro{
@@ -141,20 +182,36 @@ body{
     <div id="intro">
         <p id="name">Duncan Petrie</p><br>
 		<p id="photo">PHOTOGRAPHY</p><br>
-		<a href="#main-container">enter</a>
+		<a href="#main-container">enter
+            <!-- <p style="text-decoration-line: none; margin: 0 0 0 2px;">&#62</p> -->
+        </a>
     </div>
+
     <div id="main-container">
         <div id="main">
+
+            <div id="navbar">
+                    <a id="navbar-back" href="#intro">&#60 back</a>
+                    <a id="navbar-about" href="#about" >about &#62</a>
+            </div>
+
             <div class="main-card" style="background-color:ghostwhite ;">
-                <a href="#intro">huzzah!</a>
+                
             </div>
+
             <div class="main-card" style="background-color:floralwhite;">
-                yeehaw!
+                
             </div>
+
             <div class="main-card" style="background-color:aliceblue;">
-                wahoo!
+                
             </div>
+
         </div>
+    </div>
+
+    <div id="about">
+        <a href="#main-container">huzzah! back to the middle</a>
     </div>
 
 
