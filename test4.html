@@ -159,6 +159,8 @@ img{
     /* color:rgb(200, 75, 75); */
     color: rgb(90, 140, 68);
     text-decoration-line: underline;
+} #about-body a:hover{
+    color: slategrey;
 }
 
 
@@ -253,6 +255,16 @@ img{
     font-size: 1.8em;
     height: 58%;
 }}
+#works-link-mobile{
+    height: 58%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-right: 4px;
+    font-size: 1.8em;
+    overflow-y: visible;
+    border-bottom: 8px solid salmon;
+}
 
 
 #icons{
@@ -315,14 +327,15 @@ img{
 
             <div id="card1" class="gallery-card-orientation"></div>
             <div id="works-caption-container">
-                <a id="works-link" class="gallery-link" href="works.html">selected works.</a>
+                <a id="works-link" class="gallery-link" href="works.html">view selected works.</a>
+                <a id="works-link-mobile" class="gallery-link" href="works.html" style="display: none;">selected works.</a>
                 <div></div>
                 <p id="works-caption" class="gallery-caption"><b>above: Yellow #2</b><br>2020</p>
             </div>
 
-            <div class="break"></div>
+            <!-- <div class="break"></div> -->
 
-            <div class="gallery-card">
+            <!-- <div class="gallery-card">
                 <img src="huzzah/1.jpg">
             </div>
 
@@ -330,7 +343,7 @@ img{
                 <img src="huzzah/3.jpg">
             </div>
 
-            <div class="gallery-card">
+            <div class="gallery-card"> -->
 
             </div>
 
@@ -402,7 +415,8 @@ img{
             document.getElementById('main-back').style.fontSize = '1.4em';
             document.getElementById('main-about').style.fontSize = '1.4em';
             //works link
-            //document.getElementById('works-link').style.height = '89%';
+            document.getElementById('works-link').style.display = 'none';
+            document.getElementById('works-link-mobile').style.display = 'inline';
 
             //ABOUT
 
