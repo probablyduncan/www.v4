@@ -65,7 +65,7 @@
     margin: 24px 0 0 0;
     padding: 4vw 5vw 0 5vw;
     height: auto;
-    background-color: seashell;
+    background-color: azure;
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
 }
@@ -144,7 +144,10 @@
         font-size: 1.2em;
     }
     .spacer{
-        height: 6px;
+        height: 4px;
+    }
+    #works-caption{
+        display: none;
     }
 }
 
