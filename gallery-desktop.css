@@ -22,9 +22,10 @@
     border-top: 2px solid black;
     margin-top: 10px;
     font-weight: 500;
-    margin-bottom: 8px;
 }
-
+.spacer{
+    height: 20px;
+}
 
 
 
@@ -49,6 +50,7 @@
 #works-caption{
     text-align: right;
     padding-left: 8px;
+    margin-bottom: -8px;
 }
 
 
@@ -63,7 +65,7 @@
     margin: 24px 0 0 0;
     padding: 4vw 5vw 0 5vw;
     height: auto;
-    background-color: whitesmoke;
+    background-color: seashell;
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
 }
@@ -75,6 +77,7 @@
 #oldhoriz-caption{
     padding-right: 8px;
     text-align: left;
+    margin-bottom: 8px;
 }
 
 
@@ -99,6 +102,7 @@
 #simpforms-caption{
     padding-left: 8px;
     text-align: right;
+    margin-bottom: 8px;
 }
 
 
@@ -123,6 +127,9 @@
     #oldhoriz-link, #simpforms-link{
         margin-bottom: 8px;
     }
+    .spacer{
+        height: 8px;
+    }
 }
 @media (max-width: 560px){
     .gallery-link-desktop{
@@ -135,6 +142,9 @@
     }
     #oldhoriz-link, #simpforms-link{
         font-size: 1.2em;
+    }
+    .spacer{
+        height: 6px;
     }
 }
 
