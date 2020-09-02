@@ -55,7 +55,6 @@
 
 
 
-
 /* OLD HORIZONS */
 
 
@@ -64,14 +63,14 @@
     margin: 24px 0 0 0;
     padding: 4vw 5vw 0 5vw;
     height: auto;
-    background-color: seashell;
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
 }
 #oldhoriz-link{
     text-align: left;
     padding-right: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 #oldhoriz-caption{
     padding-right: 8px;
@@ -87,14 +86,15 @@
     margin: 20vw 0 0 0;
     padding: 4vw 5vw 4vw 5vw;
     height: auto;
-    background-color: azure;
+    background-color: seashell;
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
 }
 #simpforms-link{
-    text-align: right;
-    padding-left: 4px;
-    margin-bottom: 10px;
+    text-align: left;
+    padding-right: 4px;
+    margin-bottom: 20px;
+    margin-top: -12px;
 }
 #simpforms-caption{
     padding-left: 8px;
@@ -117,6 +117,12 @@
         border-bottom-width: 6px;
     }
     .gallery-caption-desktop{font-size: 0.8em;}
+    #old-horizons-desktop, #simplest-forms-desktop{
+        grid-template-columns: 1fr 8px 1fr;
+    }
+    #oldhoriz-link, #simpforms-link{
+        margin-bottom: 8px;
+    }
 }
 @media (max-width: 560px){
     .gallery-link-desktop{
