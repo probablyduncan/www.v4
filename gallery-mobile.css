@@ -1,0 +1,17 @@
+#gallery-mobile{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+
+#works-link-mobile{
+    height: 58%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-right: 4px;
+    font-size: 1.8em;
+    overflow-y: visible;
+    border-bottom: 8px solid salmon;
+}

@@ -1,0 +1,33 @@
+#about-container{
+    width: 100vw;
+    height: 100vh;
+    grid-column: 3;
+    background-color: aliceblue;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#about{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 60px;
+}
+
+#about-img{
+    margin-left: 5vw;
+    width: 90vw;
+}
+#about-body{
+    margin-left: 5vw;
+    width: 90vw;
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: justify;
+}
+#about-body a{
+    /* color:rgb(200, 75, 75); */
+    color: rgb(90, 140, 68);
+    text-decoration-line: underline;
+} #about-body a:hover{
+    color: slategrey;
+}

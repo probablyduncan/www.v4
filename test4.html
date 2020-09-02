@@ -37,347 +37,11 @@
 
 </script>
 
+<link rel="stylesheet" type="text/css" href="intro.css">
+<link rel="stylesheet" type="text/css" href="gallery-desktop.css">
+<link rel="stylesheet" type="text/css" href="gallery-mobile.css">
+<link rel="stylesheet" type="text/css" href="about.css">
 
-
-
-<style>
-
-html{
-    overflow: hidden;
-}
-body{
-    margin: 0;
-    width: 100vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: 100vw 100vw 100vw;
-    /* overflow: hidden; */
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-weight: 700;
-}
-a{
-    text-decoration: none;
-    color: unset;
-    margin: 0;
-    padding: 0;
-}
-p{
-    margin: 0;
-    padding: 0;
-}
-img{
-    width: 100%;
-    pointer-events: none;
-}
-
-/* INTRO STUFF */
-
-#intro{
-    width: 100vw;
-    height: 100vh;
-    background-image: url('huzzah/horizontal.jpg');
-    background-size: cover;
-    background-attachment:scroll;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    grid-column: 1;
-    font-size: 3.3em;
-}
-#intro p, #intro a{
-    font-family: Arial;
-	font-weight: 800;
-	width: auto;
-    text-align: left;
-    display: inline-block;
-    margin-left: 10vw;
-}
-#name {
-    padding-top: 35vh;
-    color: rgb(255 75 75);
-    margin: 0;
-    font-size: 1em;
-}
-#photo {
-    margin: 0;
-    padding-top: 0em;
-    font-size: 1em;
-}
-#enter {
-	text-decoration: none;
-	color: rgb(255 75 75);
-	font-family: Arial;
-	font-size: 0.8em;
-	font-weight: 800;
-    text-decoration: underline;
-    margin: 0;
-    padding: 0;
-    margin-left: 10vw;
-} #enter:hover{
-    color: rgb(255 150 150);
-}
-
-/* NAVBAR STUFF */
-
-.navbar{
-    width: 90vw;
-    margin: 30px 0 30px 5vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto;
-} .navbar a{
-    font-size: 1.2em;
-}
-
-
-/* ABOUT STUFF */
-
-#about-container{
-    width: 100vw;
-    height: 100vh;
-    grid-column: 3;
-    background-color: aliceblue;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#about{
-    width: 100vw;
-    height: auto;
-    padding-bottom: 60px;
-}
-
-#about-img{
-    margin-left: 5vw;
-    width: 90vw;
-}
-#about-body{
-    margin-left: 5vw;
-    width: 90vw;
-    font-size: 1.2em;
-    line-height: 2em;
-    text-align: justify;
-}
-#about-body a{
-    /* color:rgb(200, 75, 75); */
-    color: rgb(90, 140, 68);
-    text-decoration-line: underline;
-} #about-body a:hover{
-    color: slategrey;
-}
-
-
-/* MAIN STUFF */
-
-#main{
-    background-color:ghostwhite;
-    width: 100vw;
-    height: 100vh;
-    grid-column: 2;
-    overflow-y:scroll;
-    overflow-x: hidden;
-    display: block;
-}
-#gallery{
-    width: 100%;
-    height: auto;
-    margin-bottom: 100vh;
-}
-
-#icons{
-    width: 5vw;
-    height: 100%;
-    position: fixed;
-    bottom: 20px;
-    left: 0;
-    height: auto;
-    display: grid;
-    grid-template-rows: auto 12vh auto 2vh auto;
-    place-items: center;
-    background-color: springgreen;
-}
-
-#works-card{
-    margin-left: 5vw;
-    width: 90vw;
-    height: 60vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-} @media (orientation : portrait){
-    #works-card{
-        height: 112.5vw;
-    }
-}
-
-#works-card{background-image: url('huzzah/cov-works-desktop.jpg');}
-@media screen and (orientation: portrait) {
-    #works-card{background-image: url('huzzah/cov-works-mobile.jpg');}
-}
-
-#works-caption-container{
-    margin-left: 5vw;
-    width: 90vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    /* place-items: center; */
-}
-
-#works-link{
-    height: 68%;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    padding-right: 4px;
-    font-size: 4em;
-    overflow-y: visible;
-    border-bottom: 8px solid salmon;
-} #works-link:hover{
-    color: slategrey;
-}
-#works-link2-container{
-    margin-left: 5vw;
-    width: 90vw;
-    display: grid;
-    grid-template-columns: 1fr auto;
-}
-#works-link2{
-    height: 68%;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    padding-left: 4px;
-    font-size: 4em;
-    overflow-y: visible;
-    border-bottom: 8px solid salmon;
-    text-align: right;
-} #works-link2:hover{
-    color: slategrey;
-}
-#works-caption{
-    margin: 0;
-    padding: 0;
-    border-top: 2px solid black;
-    margin-top: 10px;
-    padding-left: 8px;
-    text-align: right;
-    font-weight: 500;
-}
-@media (max-width: 923px){
-    #works-link, #works-link2{
-        font-size: 3em;
-        height: 64%;
-    }
-}
-@media (max-width: 747px){
-    #works-link, #works-link2{
-        font-size: 2em;
-        border-bottom: 6px solid salmon;
-    }
-    #works-caption{font-size: 0.8em;}
-}
-@media (max-width: 529px){#works-link, #works-link2{
-    font-size: 1.8em;
-    height: 58%;
-}}
-#works-link-mobile{
-    height: 58%;
-    width: auto;
-    margin: 0;
-    padding: 0;
-    padding-right: 4px;
-    font-size: 1.8em;
-    overflow-y: visible;
-    border-bottom: 8px solid salmon;
-}
-
-#film-container{
-    width: 80vw;
-    height: 6em;
-    padding: 0vw 10vw 0vw 10vw;
-    display: grid;
-    grid-template-columns: 1fr auto;
-}
-#film-edge-img{
-    width: 100%;
-}
-#film-link:hover{
-    color: slategrey;
-}
-#film-link p{
-    border-bottom: 4px solid salmon;
-    font-size: 1.6em;
-    height: 0.9em;
-    margin-left: 12px;
-    padding-right: 4px;
-}
-
-.double-card-container{
-    margin-left: 5vw;
-    width: 90vw;
-    display: grid;
-    grid-template-columns: 1fr 20px 1fr;
-}
-.double-card-caption-container-left, .double-card-caption-container-right{
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-.double-card-caption-container-right{
-    grid-template-columns: 1fr auto;
-}
-.double-card-caption-right, .double-card-caption-left{
-    margin: 0;
-    padding: 0;
-    border-top: 2px solid black;
-    margin-top: 10px;
-    padding-left: 8px;
-    text-align: right;
-    font-weight: 500;
-}
-.double-card-caption-left{
-    text-align: left;
-    padding-left: 0;
-    padding-right: 8px;
-}
-.double-card-left-portrait-container{
-    margin-left: 5vw;
-    width: 90vw;
-    display: grid;
-    grid-template-columns: 4fr 20px 9fr;
-}
-
-
-
-
-
-/* INTRO desktop media queries */
-
-@media (max-width : 920px) {
-    #intro{
-        font-size: 2.6em;
-    }
-}
-
-@media (max-width : 820px) {
-    #intro{
-        font-size: 2em;
-    }
-}
-
-@media (min-aspect-ratio : 16/9) {
-    #intro{
-        background-position: 100% 40%;
-    }
-}
-
-@media (max-aspect-ratio : 1.2/1) {
-    #intro{
-        background-position: 70% 100%;
-    }
-}
-
-</style>
 </head>
 
 <body>
@@ -393,80 +57,87 @@ img{
     <!-- MAIN -->
 
     <div id="main">
-        <div id="gallery">
+        <div id="gallery-desktop">
 
-            <div id="main-navbar" class="navbar">
+            <div class="navbar">
                     <a id="main-back" href="">duncan/petrie</a>
                     <a id="main-about" href="" style="text-align: right;">about/contact</a>
             </div>
 
             <!-- WORKS -->
 
-            <div id="works-card" class="gallery-card-orientation"></div>
+            <img id="works-card" src="huzzah/cov-works-desktop.jpg">
             <div id="works-caption-container">
-                <a id="works-link" class="gallery-link" href="works.html">works.</a>
+                <a id="works-link" class="gallery-link-desktop" href="works.html">view all works.</a>
+                <div></div>
+                <p id="works-caption" class="gallery-caption-desktop"><b>Daybreak IV</b><br><i>from Old Horizons</i></p>
+            </div>
+
+            <!-- OLD HORIZONS -->
+
+            <div id="old-horizons-desktop">
+                <div>
+                    <img src="huzzah/cirrustracks.jpg">
+                    <br><br>
+                    <img src="huzzah/fire.jpg" style="margin-bottom: -18vw;">
+                    
+                </div>
+                <div></div>
+                <div>
+                    <div style="display: grid; grid-template-columns: auto 1fr;"><a id="oldhoriz-link" class="gallery-link-desktop" href="oldhoriz.html">old horizons.</a></div>
+                    <img src="huzzah/ripple.jpg">
+                    <br><br>
+                    <img src="huzzah/magenta.jpg">
+                    <br>
+                    <div id="oldhoriz-caption-container" style="display: grid; grid-template-columns: auto 1fr;">
+                        <p id="oldhoriz-caption" class="gallery-caption-desktop">
+                            <i>clockwise from top left:</i><b> Cirrus Tracks I,<br>Ripple III, Magenta I, Fire VI</b>
+                        </p>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIMPLEST FORMS -->
+
+            <div id="simplest-forms-desktop">
                 
-                <div></div>
-                <p id="works-caption" class="gallery-caption"><b>Daybreak IV</b><br>Lake Michigan, 2020</p>
-            </div>
-
-            <div style="height: 15px;"></div>
-
-            <div class="double-card-container">
-                <div class="double-card-left">
-                    <img src="huzzah/cedar.jpg">
-                    <!-- <div class="double-card-caption-container-left">
-                        <p class="double-card-caption-left"><b>White Pine III</b><br>North Woods, 2020</p>
+                <div>
+                    <div style="display: grid; grid-template-columns: 1fr auto;"><div></div><a id="simpforms-link" class="gallery-link-desktop" href="simpforms.html">simplest forms</a></div>
+                    <img src="huzzah/flock.jpg">
+                    <br><br>
+                    <img src="huzzah/pine.jpg">
+                    <div id="simpforms-caption-container" style="display: grid; grid-template-columns: 1fr auto;">
                         <div></div>
-                    </div> -->
+                        <p id="simpforms-caption" class="gallery-caption-desktop">
+                            <i>clockwise from top left:</i><b> Susurrus II,<br>Homeward, Last Call I, White Pine III</b>
+                        </p>
+                    </div>
                 </div>
                 <div></div>
-                <div class="double-card-right">
+                <div>
+                    <img src="huzzah/homeward.jpg" style="margin-top: -22vw;">
+                    <br><br>
                     <img src="huzzah/call.jpg">
-                    <!-- <div class="double-card-caption-container-right">
-                        <div></div>
-                        <p class="double-card-caption-right"><b>Last Call I</b><br>Heartland, 2020</p>
-                    </div> -->
                 </div>
-            </div>
-
-            <div style="height: 15px;"></div>
-
-            <div class="double-card-left-portrait-container">
-                <div class="double-card-left">
-                    <img src="huzzah/homeward.jpg">
-                    <!-- <div class="double-card-caption-container-left">
-                        <p class="double-card-caption-left"><b>Homeward</b><br>Heartland, 2020</p>
-                        <div></div>
-                    </div> -->
-                </div>
-                <div></div>
-                <div class="double-card-right">
-                    <img src="huzzah/1.jpg">
-                    <!-- <div class="double-card-caption-container-right">
-                        <div></div>
-                        <p class="double-card-caption-right"><b>Ripple III</b><br>Lake Michigan, 2020</p>
-                    </div> -->
-                </div>
-            </div>
-
-            <div id="works-link2-container">
-                <div></div>
-                <a id="works-link2" class="gallery-link" href="works.html">view all</a>
             </div>
             
-            <!-- <div id="film-container">
-                <img id="film-abs-img" src="huzzah/film1.jpg" style="display: none;">
-                <img id="film-edge-img" src="huzzah/film2.jpg">
-                <div><a href="film.html"><div id="film-link">
-                    <p>photographs</p>
-                    <p>from the edge</p>
-                    <p>of the sidewalk.</p>
-                </div></a></div>
-            </div> -->
+            <!-- THE EDGE OF THE PAVEMENT -->
 
-            
 
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div id="gallery-mobile">
 
         </div>
 
@@ -479,7 +150,7 @@ img{
     <div id="about-container">
         <div id="about">
             
-            <div id="about-navbar" class="navbar">
+            <div class="navbar">
                 <a id="about-back" href="">gallery</a>
                 <a id="about-email" href="mailto:duncanpetrie1@gmail.com" style="text-align: right;">email me</a>
             </div>
@@ -523,20 +194,17 @@ img{
         if(isMobile){
 
 
-            //intro
-
+            //INTRO
             document.getElementById('intro').style.backgroundPosition = '80% 100%';
             document.getElementById('intro').style.fontSize = '1.6em';
             document.getElementById('name').style.paddingTop = '45vh';
-
-
-            //main
-
-            //bottom padding
-            document.getElementById('gallery').style.paddingBottom = '200px';
             //navbar bigger text
             document.getElementById('main-back').style.fontSize = '1.4em';
             document.getElementById('main-about').style.fontSize = '1.4em';
+
+            //MAIN
+            //document.getElementById('gallery-desktop').style.display = 'none';
+            //document.getElementById('gallery-mobile').style.display = 'block';
 
             //ABOUT
 
