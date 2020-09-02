@@ -180,20 +180,23 @@ img{
 #gallery{
     width: 100%;
     height: auto;
-    margin-bottom: 120px;
-}
-.break{
-    width: 100vw;
-    height: 5vw;
+    margin-bottom: 100vh;
 }
 
-.gallery-card{
-    margin-left: 5vw;
-    width: 90vw;
-    height: 60vw;
+#icons{
+    width: 5vw;
+    height: 100%;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto 12vh auto 2vh auto;
+    place-items: center;
+    background-color: springgreen;
 }
 
-.gallery-card-orientation{
+#works-card{
     margin-left: 5vw;
     width: 90vw;
     height: 60vw;
@@ -202,7 +205,7 @@ img{
     background-size: cover;
     z-index: 1;
 } @media (orientation : portrait){
-    .gallery-card-orientation{
+    #works-card{
         height: 112.5vw;
     }
 }
@@ -268,19 +271,28 @@ img{
     border-bottom: 8px solid salmon;
 }
 
-
-#icons{
-    width: 5vw;
-    height: 100%;
-    position: fixed;
-    bottom: 20px;
-    left: 0;
-    height: auto;
+#film-container{
+    width: 80vw;
+    height: 6em;
+    padding: 0vw 10vw 0vw 10vw;
     display: grid;
-    grid-template-rows: auto 12vh auto 2vh auto;
-    place-items: center;
-    background-color: springgreen;
+    grid-template-columns: 1fr auto;
 }
+#film-edge-img{
+    width: 100%;
+}
+#film-link:hover{
+    color: slategrey;
+}
+#film-link p{
+    border-bottom: 4px solid salmon;
+    font-size: 1.6em;
+    height: 0.9em;
+    margin-left: 12px;
+    padding-right: 4px;
+}
+
+
 
 /* INTRO desktop media queries */
 
@@ -335,20 +347,18 @@ img{
                 <p id="works-caption" class="gallery-caption"><b>Daybreak IV</b><br>Wisconsin, 2020</p>
             </div>
             
-
-            <!-- <div class="break"></div> -->
-
-            <!-- <div class="gallery-card">
-                <img src="huzzah/1.jpg">
+            <div id="film-container">
+                <img id="film-abs-img" src="huzzah/film1.jpg" style="display: none;">
+                <img id="film-edge-img" src="huzzah/film2.jpg">
+                <div><a href="film.html"><div id="film-link">
+                    <p>photographs</p>
+                    <p>from the edge</p>
+                    <p>of the sidewalk.</p>
+                </div></a></div>
             </div>
 
-            <div class="gallery-card">
-                <img src="huzzah/3.jpg">
-            </div>
+            
 
-            <div class="gallery-card"> -->
-
-            </div>
 
         </div>
 
