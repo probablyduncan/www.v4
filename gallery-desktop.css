@@ -37,12 +37,18 @@
     margin-left: 5vw;
     width: 90vw;
 }
+#works-card-mobile{
+    margin-left: 5vw;
+    width: 90vw;
+    display: none;
+}
 #works-caption-container{
     margin-left: 5vw;
     width: 90vw;
     height: auto;
     display: grid;
     grid-template-columns: auto 1fr auto;
+    /* display: none; */
 }
 #works-link{
     padding-right: 4px;
@@ -151,9 +157,14 @@
     }
 }
 
-
-
-
+@media (max-aspect-ratio:2/3){
+    #works-card{
+        display: none;
+    }
+    #works-card-mobile{
+        display: block;
+    }
+}
 
 /* @media (min-aspect-ratio : 3/2){
     #works-card{
