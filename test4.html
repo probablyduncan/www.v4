@@ -206,9 +206,11 @@
 
         function cvShow(){
             document.getElementById('about-cv-container').style.display = 'block';
+            document.getElementById('about-cv-link').style.display = 'none';
         }
         function cvHide(){
             document.getElementById('about-cv-container').style.display = 'none';
+            document.getElementById('about-cv-link').style.display = 'block';
         }
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
