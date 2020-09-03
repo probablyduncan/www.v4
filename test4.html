@@ -68,11 +68,20 @@
 
             <img id="works-card" src="huzzah/cov-works-desktop.jpg">
             <img id="works-card-mobile" src="huzzah/cov-works-mobile.jpg">
-            <div id="works-caption-container">
+            <!-- <div id="works-caption-container">
                 <a id="works-link" class="gallery-link-desktop" href="works.html">works.</a>
                 <div></div>
                 <p id="works-caption" class="gallery-caption-desktop"><b>Daybreak IV</b><br><i>from Old Horizons</i></p>
-            </div>
+            </div> -->
+
+
+            <!-- THIS TEXT STUFF NEEDS TO BE DONE -->
+
+
+            <!-- <div id="projects-text">
+                <p id="projects-text-desktop">click on a project title to view more</p>
+                <p id="projects-text-mobile" style="display: none;">tap a project title to view more</p>
+            </div> -->
 
             <!-- OLD HORIZONS -->
 
@@ -124,21 +133,56 @@
             </div>
             
             <!-- CURBSIDE -->
-            <!-- PHOTOS FROM THE EDGE OF THE PAVEMENT -->
 
             <div id="curbside-desktop">
                 <a id="curbside-link" class="gallery-link-desktop" href="curbside.html">curbside.</a>
                 <p id="curbside-text">photographs from the edge<br>of the pavement</p>
             </div>
 
-            <!-- STORIES:
-                A LA CART, ISLAND, ETC -->
+            <div id="mini-gallery-desktop">
 
-            <!-- PIZZA -->
-            <div id="pizza-desktop">
-                <img src="huzzah/pizza.gif">
-                <a id="pizza-link" class="gallery-link-desktop" href="pizza.html">pizza.</a>
+
+                <!-- STILLWATER -->
+
+                <div id="stillwater-desktop">
+                    <a id="stillwater-link" class="gallery-link-desktop" href="stillwater.html">stillwater.</a>
+                </div>
+
+                <!-- PIZZA -->
+                <div id="pizza-desktop">
+                    <img src="huzzah/pizza.gif">
+                    <a id="pizza-link" class="gallery-link-desktop" href="pizza.html">pizza.</a>
+                </div>
+
+                <!-- CART -->
+
+                <div id="cart-desktop-container">
+                    <div id="cart-desktop">
+                        <a id="cart-link" class="gallery-link-desktop" href="cart.html">a la cart.</a>
+                    </div>
+                    <div></div>
+                    <img src="huzzah/cart2.jpg">
+                </div>
+
+
+                <!-- ACCIDENTALS -->
+                <!-- so for this i think i should have a big grid of a bunch of them,
+                    flat on top but maybe stalagtite-y on the bottom 
+                    it can be falling out of the mini-gallery -->
+
+                <!-- <div id="accidentals-desktop">
+                    <div></div>
+                    <img src="huzzah/accidentals2.jpg">
+                    <a id="accidentals-link" class="gallery-link-desktop" href="accidentals.html">accidentals.</a>
+                </div> -->
+
+
             </div>
+
+            
+
+
+            <!-- NEW YORK? OTHER WILDLIFE? -->
 
         </div>
 
@@ -182,6 +226,7 @@
                         <p><i>Ecelectic Magazine</i> featured artist 2020;</p>
                         <p><i>Life Magazine</i> contriburing photographer 2020;</p>
                         <p><i>NatureWatch</i> nature documentary camera operator 2020;</p>
+                        <p><i>Washington Island Observer</i> published photo essay <i>Vulpes Vulpes</i> 2020;</p>
                         <p><i>British Conference of Undergraduate Research</i> accepted thesis 2020;</p>
                         <p><i>Scholastic Art & Writing Awards</i> 2 gold & 5 silver keys, 6 hon. mentions 2019, 2018;</p>
                         <p><i>Washington Island Observer</i> annual photo contest award winner 2020, 2019, 2018;</p>
@@ -240,6 +285,8 @@
             document.getElementById('main-about').style.fontSize = '1.4em';
 
             //MAIN
+            document.getElementById('projects-text-desktop').style.display = 'none';
+            document.getElementById('projects-text-mobile').style.display = 'block';
             //document.getElementById('gallery-desktop').style.display = 'none';
             //document.getElementById('gallery-mobile').style.display = 'block';
 

@@ -61,6 +61,11 @@
     margin-bottom: -8px;
 }
 
+#projects-text{
+    margin-left: 5vw;
+    width: 90vw;
+}
+
 
 
 
@@ -70,7 +75,7 @@
 
 #old-horizons-desktop{
     width: 90vw;
-    margin: 24px 0 0 0;
+    margin: 4vw 0 0 0;
     padding: 4vw 5vw 0 5vw;
     height: auto;
     background-color: lavenderblush;
@@ -127,7 +132,7 @@
 #curbside-desktop{
     width: 90vw;
     height: 60vw;
-    margin: 4vw 0 6vw 5vw;
+    margin: 4vw 0 0vw 5vw;
     background-image: url('huzzah/film3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -160,6 +165,46 @@
 
 
 
+/* MINI GALLERY */
+
+
+#mini-gallery-desktop{
+    background-color: linen;
+    margin-top: 16vw;
+    padding-top: 8vw;
+    padding-bottom: 4vw;
+}
+
+
+
+
+/* STILLWATER */
+
+
+#stillwater-desktop{
+    margin-top: -20vw;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 40vw;
+    background-image: url('huzzah/stillwater.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+#stillwater-link{
+    float: left;
+    border-bottom-color: slategrey;
+    color: white;
+    padding-left: 40px;
+    padding-right: 4px;
+    margin-top: 20px;
+} #stillwater-link:hover{
+    color: rgb(233, 245, 255);
+}
+
+
+
+
 /* PIZZA */
 
 
@@ -174,10 +219,66 @@
     margin-left: -220px;
     color: ghostwhite;
     border-bottom-color: rgb(255, 183, 0);
+    padding-left: 4px;
+    margin-top: 20px;
 }#pizza-link:hover{
-    color: rgb(188, 188, 207);
-    cursor: pointer;
+    color: rgb(255, 245, 217);
 }
+
+
+
+/* CART */
+
+
+#cart-desktop-container{
+    margin-top: 4vw;
+    margin-left: 5vw;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+}
+#cart-desktop{
+    background-image: url('huzzah/cart1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#cart-link{
+    color: white;
+    border-bottom-color: tomato;
+    display: inline-block;
+    padding-right: 4px;
+    padding-left: 40px;
+    margin-top: 20px;
+} #cart-link:hover{
+    color: rgb(255, 229, 223);
+}
+
+
+
+
+
+
+/* ACCIDENTALS */
+
+
+#accidentals-desktop{
+    margin-top: -20vw;
+    margin-left: 5vw;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 60vw auto;
+}
+#accidentals-link{
+    margin-left: -410px;
+    padding-left: 4px;
+    margin-top: 20px;
+    color: ghostwhite;
+    border-bottom-color: yellowgreen;
+} #accidentals-link:hover{
+    color: rgb(237, 255, 202);
+}
+
+
 
 
 
@@ -185,13 +286,21 @@
 @media (max-width: 1080px){
     .gallery-link-desktop{
         font-size: 3em;
-        height: 1em;
     }
     #pizza-link{
         margin-left: -160px;
+        margin-top: 0;
+    }
+    #accidentals-link{
+        margin-left: -310px;
+        margin-top: 0;
     }
     #curbside-text{
         font-size: 1em;
+    }
+    #stillwater-link, #cart-link{
+        padding-left: 30px;
+        margin-top: 0;
     }
 }
 @media (max-width: 820px){
@@ -201,7 +310,7 @@
         border-bottom-width: 6px;
     }
     .gallery-caption-desktop{font-size: 0.8em;}
-    #old-horizons-desktop, #simplest-forms-desktop{
+    #old-horizons-desktop, #simplest-forms-desktop, #cart-desktop-container{
         grid-template-columns: 1fr 8px 1fr;
     }
     #curbside-text{
@@ -213,6 +322,12 @@
     #pizza-link{
         margin-left: -100px;
     }
+    #accidentals-link{
+        margin-left: -200px;
+    }
+    #stillwater-link, #cart-link{
+        padding-left: 16px;
+    }
     .spacer{
         height: 8px;
     }
@@ -220,7 +335,7 @@
 @media (max-width: 560px){
     .gallery-link-desktop{
         font-size: 1.4em;
-        height: 0.9em;
+        height: 0.92em;
         border-bottom-width: 4px;
     }
     #curbside-text{
@@ -234,6 +349,17 @@
     }
     #pizza-link{
         margin-left: -70px;
+    }
+    #accidentals-link{
+        margin-left: -145px;
+    }
+    #stillwater-link{
+        padding-left: 16px;
+        height: 0.95em;
+    }
+    #cart-link{
+        padding-left: 16px;
+        height: 0.94;
     }
     .spacer{
         height: 4px;
