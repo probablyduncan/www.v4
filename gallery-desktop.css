@@ -12,7 +12,7 @@
     padding: 0;
     font-size: 4em;
     overflow-y: visible;
-    border-bottom: 8px solid rgb(255, 160, 160);
+    border-bottom: 8px solid rgb(255, 140, 140);
 } .gallery-link-desktop:hover{
     color: slategrey;
 }
@@ -147,7 +147,7 @@
         display: none;
     }
     #oldhoriz-link, #simpforms-link{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     .spacer{
         height: 4px;

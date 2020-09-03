@@ -161,15 +161,28 @@
             </div>
 
             <div id="about-body">
+
+                <div id="about-cv-container" onclick="cvHide()">
+                    <div id="about-cv-text">
+                        <div id="about-cv-x"><p>x</p></div>
+                        <p><i>Ecelectic Magazine</i> featured artist 2020;</p>
+                        <p><i>Life Magazine</i> contriburing photographer 2020;</p>
+                        <p><i>NatureWatch</i> nature documentary camera operator 2020</p>
+                        <p><i>British Conference of Undergraduate Research</i> accepted thesis 2020;</p>
+                        <p><i>Scholastic Art & Writing Awards</i> 2 gold & 5 silver keys, 6 hon. mentions 2019, 2018</p>
+                        <p><i>Washington Island Observer</i> annual photo contest award winner 2020, 2019, 2018</p>
+                        <p><i>Falmouth University</i> student representitive, student mentor 2020</p>
+                        <p><i>University School of Milwaukee</i> english award, scholar athlete award, suma cum laude 2019</p>
+                        <p><i>University School of Milwaukee</i> summer camp photographer 2019</p>
+                        <p><i>I won this really cool wooden spoon in a photo contest it isn't anything I should put on a  cv but it's definitely the best thing I've won for a photo before</i> 2019</p>
+                    </div>
+                    
+                </div>
                 
                 <div id="about-desktop-hello" style="display: grid; grid-template-columns: auto 1fr auto; margin-top: 1em; margin-bottom: 1em;">
                     <p style="border-top: 2px solid black; padding-right: 1em;">Hello!</p>
                     <div></div>
-                    <p style="text-align: right; padding-left: 1em; border-top: 2px solid black;"><i>above: Terceira, Portugal, 2018</i></p>
-                </div>
-                <div id="about-mobile-hello" style="display: none; grid-template-columns: auto 1fr; margin: 1em 0 0.5em 0;">
-                    <p style="width:auto; padding-right: 1em; border-top: 2px solid black;">Hello!</p>
-                    <div></div>
+                    <p id="about-cv-link" onclick="cvShow()">CV</p>
                 </div>
                 
                 <p id="about-desktop-paragraphs" style="margin-bottom: 1em;">I'm Duncan Petrie. I grew up in Milwaukee, Wisconsin, but I'm currently in Cornwall, studying Marine & Natural History Photography at Falmouth University. I've been writing all my life and photographing plants and birds and rocks and things for just about 5 years. Late in 2019, I taught myself HTML, CSS, and Javascript to build this website.</p>
@@ -191,6 +204,13 @@
 
     <script type="text/javascript">
 
+        function cvShow(){
+            document.getElementById('about-cv-container').style.display = 'block';
+        }
+        function cvHide(){
+            document.getElementById('about-cv-container').style.display = 'none';
+        }
+
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if(isMobile){
 
@@ -210,8 +230,8 @@
             //ABOUT
 
             //text right below image
-            document.getElementById('about-desktop-hello').style.display = 'none';
-            document.getElementById('about-mobile-hello').style.display = 'grid';
+            //document.getElementById('about-desktop-hello').style.display = 'none';
+            //document.getElementById('about-mobile-hello').style.display = 'grid';
             //bigger text
             document.getElementById('about-body').style.textAlign = 'left';
             document.getElementById('about-body').style.fontSize = '1.4em';
