@@ -124,10 +124,10 @@
     display: grid;
     grid-template-columns: 50vw auto 1fr;
 }
-#pizza-text{
+#pizza-link{
     margin-left: -220px;
     color: lavender;
-}#pizza-text:hover{
+}#pizza-link:hover{
     color: lavenderblush;
     cursor: pointer;
 }
@@ -139,6 +139,9 @@
     .gallery-link-desktop{
         font-size: 3em;
         height: 1em;
+    }
+    #pizza-link{
+        margin-left: -160px;
     }
 }
 @media (max-width: 820px){
@@ -154,6 +157,9 @@
     #oldhoriz-link, #simpforms-link{
         margin-bottom: 8px;
     }
+    #pizza-link{
+        margin-left: -100px;
+    }
     .spacer{
         height: 8px;
     }
@@ -167,8 +173,11 @@
     #oldhoriz-caption, #simpforms-caption{
         display: none;
     }
-    #oldhoriz-link, #simpforms-link{
+    #oldhoriz-link, #simpforms-link, #pizza-link{
         font-size: 1.3em;
+    }
+    #pizza-link{
+        margin-left: -70px;
     }
     .spacer{
         height: 4px;
