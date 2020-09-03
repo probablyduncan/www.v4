@@ -114,6 +114,27 @@
 
 
 
+/* PIZZA */
+
+
+#pizza-desktop{
+    margin-top: 4vw;
+    width: 90vw;
+    margin-left: 5vw;
+    display: grid;
+    grid-template-columns: 50vw auto 1fr;
+}
+#pizza-text{
+    margin-left: -220px;
+    color: lavender;
+}#pizza-text:hover{
+    color: lavenderblush;
+    cursor: pointer;
+}
+
+
+
+
 @media (max-width: 1080px){
     .gallery-link-desktop{
         font-size: 3em;
