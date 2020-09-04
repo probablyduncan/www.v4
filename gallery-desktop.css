@@ -367,7 +367,7 @@
         font-size: 1em;
     }
     #stillwater-link, #cart-link{
-        padding-left: 30px;
+        padding-left: 24px;
         margin-top: 0;
     }
     #wildlife-link{
@@ -407,7 +407,7 @@
         padding-left: 16px;
     }
     #wildlife-link{
-        padding-left: 14px;
+        padding-left: 16px;
         margin-bottom: 12px;
     }
     .spacer{
@@ -436,11 +436,11 @@
         margin-left: -145px;
     }
     #stillwater-link{
-        padding-left: 16px;
+        padding-left: 8px;
         height: 0.95em;
     }
     #cart-link{
-        padding-left: 16px;
+        padding-left: 8px;
         height: 0.94;
     }
     #wildlife-link{
