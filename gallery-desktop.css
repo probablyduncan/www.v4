@@ -108,6 +108,8 @@
     padding-right: 8px;
     text-align: left;
     margin-bottom: 8px;
+    width: 95%;
+    max-width: 400px;
 }
 
 
@@ -136,6 +138,8 @@
     padding-left: 8px;
     text-align: right;
     margin-bottom: 8px;
+    width: 95%;
+    max-width: 400px;
 }
 
 
@@ -447,10 +451,14 @@
         border-bottom-width: 4px;
     }
     #curbside-text{
-        display: none;
+        /* display: none; */
+        font-size: 0.7em;
+        margin-top: -58px;
     }
     #oldhoriz-caption, #simpforms-caption{
-        display: none;
+        /* display: none; */
+        font-size: 0.4em;
+        margin-top: 0;
     }
     #oldhoriz-link, #simpforms-link, #pizza-link{
         font-size: 1.3em;
