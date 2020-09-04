@@ -171,7 +171,7 @@
 
 #mini-gallery-desktop{
     background-color: linen;
-    margin-top: 16vw;
+    margin-top: 12vw;
     padding-top: 8vw;
     padding-bottom: 4vw;
 }
@@ -282,27 +282,27 @@
 
 
 #wildlife-desktop{
-    margin-top: -20vw;
+    margin-top: -16vw;
     margin-left: 5vw;
     width: 90vw;
     display: grid;
-    grid-template-columns: 2fr 20px 5fr;
+    grid-template-columns: 5fr 20px 2fr;
 }
 #wildlife-link-container{
     background-image: url('huzzah/vulpes.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns:auto 1fr;
     grid-template-rows: 1fr auto;
 }
 #wildlife-link{
     text-align: right;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     margin-bottom: 40px;
-    padding-left: 4px;
-    padding-right: 32px;
+    padding-right: 4px;
+    padding-left: 32px;
     color: white;
     border-bottom-color: sienna;
     border-bottom-color: goldenrod;
@@ -313,15 +313,28 @@
 
 
 
+
+/* SONYT */
+
+
+#sonyt-desktop{
+    margin-left: 5vw;
+    width: 90vw;
+
+}
+
+
+
 /* ACCIDENTALS */
 
 
 #accidentals-desktop{
-    margin-top: -20vw;
+    margin-top: 4vw;
     margin-left: 5vw;
+    margin-bottom: -35vw;
     width: 90vw;
     display: grid;
-    grid-template-columns: 1fr 60vw auto;
+    grid-template-columns: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr;
 }
 #accidentals-link{
     margin-left: -410px;
@@ -358,7 +371,7 @@
         margin-top: 0;
     }
     #wildlife-link{
-        padding-right: 24px;
+        padding-left: 24px;
         margin-bottom: 24px;
     }
 }
@@ -373,7 +386,7 @@
         grid-template-columns: 1fr 8px 1fr;
     }
     #wildlife-desktop{
-        grid-template-columns: 2fr 8px 5fr;
+        grid-template-columns: 5fr 8px 2fr;
     }
     #all-works-container{
         margin-right: 8px;
@@ -394,7 +407,7 @@
         padding-left: 16px;
     }
     #wildlife-link{
-        padding-right: 14px;
+        padding-left: 14px;
         margin-bottom: 12px;
     }
     .spacer{
@@ -431,7 +444,7 @@
         height: 0.94;
     }
     #wildlife-link{
-        padding-right: 8px;
+        padding-left: 8px;
         margin-bottom: 8px;
     }
     .spacer{
