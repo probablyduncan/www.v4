@@ -178,5 +178,9 @@ img width is dictated by width */
         margin: 0;
         margin-top: -40px;
     }
+    .curbside-link:hover{
+        background: none;
+        color: unset;
+    }
 
 }
