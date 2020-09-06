@@ -140,25 +140,38 @@ img width is dictated by width */
         display: block;
     }
     #curbside-text-container{
+        max-width: unset;
         display: grid;
-        grid-template-columns: 160px 1fr 160px;
-        grid-template-rows: 1fr;
+        grid-template-columns: 140px 1fr 140px;
     }
     #caption-container{
+        height: 90px;
+        max-width: 140px;
         grid-column: 1;
-        height: 120px;
     }
-    #curbside-statement{
-        display: 1;
+    #imgCount{
+        grid-column: 2;
+        text-align: center;
     }
     #curbside-prev{
         grid-column: 3;
+        text-align: right;
+        height: 16.5px;
+        margin-top: -78px;
     }
     #curbside-next{
         grid-column: 3;
+        text-align: right;
+        height: 16.5px;
     }
-    #imgCount{
+    #curbside-back{
         grid-column: 1;
+    }
+    #curbside-statement{
+        grid-column: 3;
+        text-align: right;
+        height: 16.5px;
+        margin-top: -42px;
     }
 
 }
