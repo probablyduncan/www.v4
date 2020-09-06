@@ -39,7 +39,7 @@
     <div id="curbside-text-container">
         
 
-        <div id="caption-container">
+        <div id="caption-container" class="curbside-text">
             <p id="cap1">
                 <b>Sky #2</b> Pigeons dance above a crowded square
             </p>
@@ -49,14 +49,27 @@
             <p id="cap3" style="display: none;">
                 <b>Sky #1</b> A magpie skims an industrial estate
             </p>
+            <p id="cap4" style="display: none;">
+                <b>Water #3</b> Ripples undulate beneath a strong concrete pier
+            </p>
+            <p id="cap5" style="display: none;">
+                <b>Sky #3</b> Crows perch between wires and the subtle moon
+            </p>
+            <p id="cap6" style="display: none;">
+                <b>Water #5</b> Water freely flows from a century-old drainpipe
+            </p>
+            <p id="cap7" style="display: none;">
+                <b>Sky #4</b> The low sun cuts a slanted shadow across decapitated cedars
+            </p>
+            <p id="cap8" style="display: none;">
+                <b>Water #4</b> The ocean surges against the frigid beach
+            </p>
         </div>
 
-        <div></div>
-
-        <p id="imgCount">1/8</p>
-        <a id="curbside-next" onclick="next()">_next</a>
-        <a id="curbside-prev" onclick="prev()">_prev</a>
-        <a id="curbside-statement" onclick="statementShow()">_statement</a>
+        <p id="imgCount" class="curbside-text">1/8</p>
+        <a id="curbside-next" class="curbside-link" onclick="next()">_next</a>
+        <a id="curbside-prev" class="curbside-link" onclick="prev()">_prev</a>
+        <a id="curbside-statement" class="curbside-link" onclick="statementShow()">_statement</a>
         
 
     </div>
@@ -72,7 +85,7 @@
             document.getElementById('curbside-statement').style.display = 'block';
         }
 
-        var numImg = 3;
+        var numImg = 8;
 
         //returns current number
         function getImg(){
@@ -86,7 +99,7 @@
         function prev(){
             //CHANGE IMG
             var current = getImg();
-            var nextNum = 3
+            var nextNum = numImg;
             if(current != 1){
                 nextNum = current - 1;
             }

@@ -21,35 +21,55 @@ body{
 
 /* CAPTION CONTAINER */
 
-
-#caption-container{
+#curbside-text-container{
     width: 100%;
     max-width: 140px;
-    height: 80px;
+}
+
+.curbside-text{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 24px;
+}
+
+#caption-container{
+    margin: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 120px;
     grid-column: 2;
     display: grid;
+    border-top: 2px solid black;
     grid-template-columns: auto 1fr;
 }
 #caption-container p{
     margin: 0;
+    margin-top: 4px;
     padding: 0;
     width: auto;
-    border-top: 2px solid black;
     padding-right: 12px;
-    font-size: 0.9em;
-    font-weight: 500;
-    font-family: 'Courier New', Courier, monospace;
 }
 
-#curbside-statement, #curbside-next, #curbside-prev, #imgCount{
-    margin-top: 40px;
+.curbside-link{
+    margin-bottom: 24px;
     font-size: 0.9em;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
-    /* border-left: 2px solid black; */
     display: block;
     cursor: pointer;
     max-width: 140px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+.curbside-link:hover{
+    background-color: black;
+    color: white;
 }
 
 
@@ -82,47 +102,55 @@ body{
 }
 
 
-
-
-/* NAVBAR */
-
-/* #navbar{
-    width: 100%;
-    height: auto;
-}
-#navbar a{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 1.2em;
-    color: unset;
-    cursor: pointer;
-    line-height: 1em;
-} */
-
-/* @media (max-height: 650px){
-    #img-container{
-        
-    }
-} */
-
 /* so if the aspect ratio is wider than 16/9 then
 img width is dictated by height
 and if the aspect ratio is narrower than 16/9 then
 img width is dictated by width */
 
-/* @media (max-aspect-ratio : 16/9){
-    #curbside-container{
+@media (max-aspect-ratio : 16/10){
+    body{
+        grid-template-columns: 120vh 10px 1fr;
+    }
+}
+@media (max-aspect-ratio : 3/2){
+    body{
+        grid-template-columns: 105vh 10px 1fr;
+    }
+}
+@media (max-aspect-ratio : 4/3){
+    body{
+        grid-template-columns: 90vh 10px 1fr;
+    }
+}
+@media (max-aspect-ratio : 8/7){
+    body{
+        grid-template-columns: 81vh 10px 1fr;
+    }
+}
+@media (max-aspect-ratio : 1/1){
+    body{
+        display: block;
+    }
+    #curbside-text-container{
         display: grid;
-        grid-template-rows: auto auto;
+        grid-template-columns: 160px 1fr 160px;
+        grid-template-rows: 1fr;
     }
-    #img-container{
-        width: 90vw;
-        height: 60vw;
+    #caption-container{
+        grid-column: 1;
+        height: 120px;
     }
-    #caption-container p{
-        font-size: 0.9em;
+    #curbside-statement{
+        display: 1;
     }
-} */
+    #curbside-prev{
+        grid-column: 3;
+    }
+    #curbside-next{
+        grid-column: 3;
+    }
+    #imgCount{
+        grid-column: 1;
+    }
+
+}
