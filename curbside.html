@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Curbside - Duncan Petrie Photography</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="curbside.css">
+
+</head>
+<body>
+
+
+    
+
+    <div id="statement-container" onclick="statementHide()">
+        <div id='statement-text'>
+            <p>Before this project, I had never picked up a film camera. I wanted to do something different, to escape, for a moment, from the aesthetic and technical perfection of digital photography and create genuinely.</p>
+            <p>If digital photography exists to highlight the extraordinary, then film, or at least the choice of film in the digital era, exists to enunciate the ordinary. Its idiosyncratic scratches and grain and fuzz elude the perfectionism required of Lake Moraine or the Old Man of Storr. 35mm film in the age of digital photography is just as much about what is behind the lens as what is in front of it.</p>
+            <p>Working from two shots I took at the end of December 2019--Cart #1 and Sky #1--I assembled a project which tells the story of an edge: the often destitute space between town and country, between the landscape and the landscaped. On one side are the great expanses: the sea and the sky. On the other is the world we have built, of strong facades and jarring lines and angles. I have photographed that which is caught in the middle: pigeons which thrive on the scraps of Falmouth despite their wings, salty water in the shadows of piers despite its membership of the sea, cedars which glow despite their decapitation. This middle ground is not pretty, nor is it particularly ugly. It is, by nature, overlooked; it is an afterthought.</p>
+            <p>When making each individual image, I did not know how they all connected. At first I thought I was photographing the forgotten and abandoned places in Penryn, but that seemed an inexact description. It was more than that. I had grasped a tone I wanted to explore, but I did not know how to accurately explain it. Often, I do not fully understand my photos until I write about them.</p>
+            <p>So, I gave the portfolio captions. I tried to show the images’ connection to the portfolio while mirroring their sparse style. The captions’ prepositions--against, between, across--emphasise the edges and contrast in the images. In Water #3, the undulating ripples of the water exist “beneath a strong concrete pier.” In Sky #3, crows exist “between wires and the subtle moon,” between the town and the natural expanse above. I used the location as another device to highlight this contrast. Each image was taken in Falmouth, but also in Cornwall. While Falmouth is cobbled streets and student flats, Cornwall connotes rolling hills and cliffs by the sea and a sky full of stars. Each photograph exists in both places, exists where the two overlap.</p>
+        </div>
+    </div>
+
+
+    
+    <!-- <div id="navbar">
+        <a id="curbside-back" href="index.html#main">back</a><br>
+    </div> -->
+    
+
+    <div id="img-container">
+        <img id="currentImg" src="huzzah/film1.jpg">
+    </div>
+
+    <div></div>
+
+    <div id="curbside-text-container">
+        
+
+        <div id="caption-container">
+            <p id="cap1">
+                <b>Sky #2</b> Pigeons dance above a crowded square
+            </p>
+            <p id="cap2" style="display: none;">
+                <b>Cart #1</b> A trolley waits in a shop's dark shadow 
+            </p>
+            <p id="cap3" style="display: none;">
+                <b>Sky #1</b> A magpie skims an industrial estate
+            </p>
+        </div>
+
+        <div></div>
+
+        <p id="imgCount">1/8</p>
+        <a id="curbside-next" onclick="next()">_next</a>
+        <a id="curbside-prev" onclick="prev()">_prev</a>
+        <a id="curbside-statement" onclick="statementShow()">_statement</a>
+        
+
+    </div>
+
+    <script type="text/javascript">
+
+        function statementShow(){
+            document.getElementById('statement-container').style.display = 'block';
+            document.getElementById('curbside-statement').style.display = 'none';
+        }
+        function statementHide(){
+            document.getElementById('statement-container').style.display = 'none';
+            document.getElementById('curbside-statement').style.display = 'block';
+        }
+
+        var numImg = 3;
+
+        //returns current number
+        function getImg(){
+            var currentImg = document.getElementById('currentImg').getAttributeNode('src').value;
+            var index = currentImg.indexOf('.jpg');
+            return currentImg.substring(11,index);
+        }
+
+        
+
+        function prev(){
+            //CHANGE IMG
+            var current = getImg();
+            var nextNum = 3
+            if(current != 1){
+                nextNum = current - 1;
+            }
+            document.getElementById('currentImg').getAttributeNode('src').value = 'huzzah/film' + nextNum + '.jpg';
+
+            //CHANGE CAPTION
+            document.getElementById('cap' + current).style.display = 'none';
+            document.getElementById('cap' + nextNum).style.display = 'inline';
+
+            //CHANGE COUNT
+            document.getElementById('imgCount').innerHTML = nextNum + '/8';
+        }
+
+        function next(){
+            //CHANGE IMG
+            var current = getImg();
+            var nextNum = 1
+            if(current != numImg){
+                nextNum = current - (-1);
+            }
+            document.getElementById('currentImg').getAttributeNode('src').value = 'huzzah/film' + nextNum + '.jpg';
+
+            //CHANGE CAPTION
+            document.getElementById('cap' + current).style.display = 'none';
+            document.getElementById('cap' + nextNum).style.display = 'inline-block';
+
+            //CHANGE COUNT
+            document.getElementById('imgCount').innerHTML = nextNum + '/8';
+        }
+    
+    </script>
+
+
+</body>
+</html>
