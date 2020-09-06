@@ -142,7 +142,7 @@ img width is dictated by width */
     #curbside-text-container{
         max-width: unset;
         display: grid;
-        grid-template-columns: 140px 1fr 140px;
+        grid-template-columns: 140px 1fr 90px;
     }
     #caption-container{
         height: 90px;
@@ -151,7 +151,7 @@ img width is dictated by width */
     }
     #imgCount{
         grid-column: 2;
-        text-align: right;
+        text-align: center;
     }
     #curbside-prev{
         grid-column: 3;
@@ -178,9 +178,12 @@ img width is dictated by width */
         margin: 0;
         margin-top: -40px;
     }
+
+}
+
+@media (max-aspect-ratio: 2/3){
     .curbside-link:hover{
         background: none;
         color: unset;
     }
-
 }
