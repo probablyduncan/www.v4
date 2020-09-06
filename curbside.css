@@ -42,7 +42,7 @@ body{
     height: 120px;
     grid-column: 2;
     display: grid;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     grid-template-columns: auto 1fr;
 }
 #caption-container p{
@@ -151,27 +151,32 @@ img width is dictated by width */
     }
     #imgCount{
         grid-column: 2;
-        text-align: center;
+        text-align: right;
     }
     #curbside-prev{
         grid-column: 3;
         text-align: right;
         height: 16.5px;
+        margin: 0;
         margin-top: -78px;
     }
     #curbside-next{
         grid-column: 3;
         text-align: right;
+        margin: 0;
         height: 16.5px;
     }
     #curbside-back{
-        grid-column: 1;
+        grid-column: 3;
+        text-align: right;
+        margin-top: -4px;
     }
     #curbside-statement{
         grid-column: 3;
         text-align: right;
         height: 16.5px;
-        margin-top: -42px;
+        margin: 0;
+        margin-top: -40px;
     }
 
 }
