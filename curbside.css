@@ -148,6 +148,10 @@ img width is dictated by width */
         height: 90px;
         max-width: 140px;
         grid-column: 1;
+        border-top: none;
+    }
+    #caption-container p{
+        margin-top: 0;
     }
     #imgCount{
         grid-column: 2;
