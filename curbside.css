@@ -75,6 +75,10 @@ body{
     background-color: black;
     color: white;
 }
+.curbside-link:visited{
+    background: none;
+    color: unset;
+}
 
 
 /* STATEMENT */
