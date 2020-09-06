@@ -65,7 +65,8 @@ body{
     display: none;
 }
 #statement-text{
-    margin: 10vh 5vw 10vh 5vw;
+    margin: 10vh 0vw 10vh 5vw;
+    padding-right: 5vw;
     width: 90vw;
     height: 80vh;
     color: white;
