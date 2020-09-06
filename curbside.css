@@ -180,10 +180,3 @@ img width is dictated by width */
     }
 
 }
-
-@media (max-aspect-ratio: 2/3){
-    .curbside-link:hover{
-        background: none;
-        color: unset;
-    }
-}
