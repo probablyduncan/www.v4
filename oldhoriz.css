@@ -1,0 +1,16 @@
+html{
+    overflow: hidden;
+}
+body{
+    margin: 0;
+    padding: 5vh 2vw 5vh 2vw;
+    width: 96vw;
+    height: 90vh;
+    overflow: hidden;
+    background-color: tomato;
+}
+#horiz-scroll-container{
+    background-color: turquoise;
+    width: 100%;
+    height: 100%;
+}

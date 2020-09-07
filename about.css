@@ -30,7 +30,7 @@
     color: rgb(255, 75, 75);
     text-decoration-line: underline;
 } #about-body a:hover{
-    opacity: 60%;
+    color: rgb(255, 120, 120);
 }
 #about-cv-link{
     text-align: right; 
@@ -40,7 +40,7 @@
     color: rgb(90, 140, 68);
     color: rgb(255, 75, 75);
 } #about-cv-link:hover{
-    opacity: 60%;
+    color: rgb(255, 120, 120);
 }
 #about-cv-container{
     display: none;
