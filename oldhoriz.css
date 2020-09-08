@@ -32,6 +32,7 @@ img{
     font-weight: 500;
     height: 0.93em;
     border-bottom: 8px solid rgb(255, 205, 155);
+    border-bottom-color: rgb(50, 85, 115);
 }
 #nav{
     display: grid;
@@ -40,7 +41,7 @@ img{
     left: 10vw;
     top: 30px;
     width: 80vw;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
@@ -50,7 +51,7 @@ img{
     text-decoration: none;
     color: unset;
     cursor: pointer;
-    height: 0.8em;
+    height: 1em;
 }
 #nav a:hover{
     color: white;
@@ -74,8 +75,8 @@ img{
     text-align: left;
     overflow-y: scroll;
     font-weight: 400;
-    font-size: 1.4em;
-    line-height: 2em;
+    font-size: 1.2em;
+    line-height: 1.8em;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -122,17 +123,18 @@ img{
 }
 
 .text-container{
+    margin-left: 20px;
     margin-right: 20px;
-    width: 70vh;
+    padding-right: 20px;
+    width: 64vh;
     display: block;
     scroll-snap-align: start;
-    scroll-margin-left: 20px;
+    scroll-margin-left: 40px;
     border-top: 1px solid black;
 }
 .text-container p{
-    width: 70vh;
-    font-size: 1.2em;
+    width: 64vh;
+    font-size: 1em;
     line-height: 2em;
     font-family: 'Courier New', Courier, monospace;
-    text-align: justify;
 }
