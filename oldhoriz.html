@@ -21,15 +21,25 @@
     <div id="nav">
         <a href="index.html#main" style="width: 8em;">back</a>
         <div></div>
-        <a style="text-align: right; width: 8em;" onclick="showStatement()">statement</a>
+        <a style="text-align: right;" onclick="showStatement()">statement</a>
+        <!-- <a style="text-align: right;" onclick="filter()">filter</a> -->
     </div>
     <div id="horiz-scroll-container" onscroll="titleFade()">
 
         <div id="first-container" class="img-container-horiz" style="margin-top: 13vh;">
             <img src="huzzah/cirrustracks.jpg">
+            <!-- <div class="caption-container-right">
+                <p class="caption">above: <b>Cirrus Tracks I</b><br>left: <b>Blue I</b></p>
+            </div> -->
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 51vh;">
+        <div class="img-container-horiz" style="margin-top: 31vh;">
+            <div class="caption-container-above">
+                <p class="caption">
+                    early works<br>
+                    left to right: Cirrus <br>Tracks I, Blue I, Afterglow I
+                </p>
+            </div>
             <img src="huzzah/blue.jpg" style="width: 69vh;">
         </div>
 
@@ -41,12 +51,49 @@
             <p>For years I struggled to photograph the large bodies of water in my life. Lakes and oceans have always been my refuge and my solace, and they never fail to attract my lens. However, time and time again I failed to capture the water; my photos were much too busy, seeing everything while capturing nothing.</p>
         </div>
 
+        <!-- FIRE -->
+
+        <div class="img-container-horiz" style="margin-top: 24.5vh;">
+            <img src="huzzah/firelong.jpg">
+        </div>
+
+        <div class="img-container-vert" style="margin-top: 27.2vh;">
+            <img src="huzzah/fire2.jpg">
+        </div>
+
+        <div class="img-container-horiz" style="margin-top: 10.4vh;">
+            <img src="huzzah/firelong2.jpg">
+            <div class="caption-container">
+                <p class="caption">fire: Ice on a Rolling Lake</p>
+            </div>
+        </div>
+
+        <div class="img-container-horiz" style="margin-top: 3.7vh;">
+            <img src="huzzah/firelong3.jpg">
+        </div>
+
+        <div class="img-container-vert" style="margin-top: 27.2vh;">
+            <img src="huzzah/fire.jpg">
+        </div>
+
         
+
+        <div class="text-container" style="margin-top: 20vh;">
+            <p>Now, I distill the water into its simplest form, making abstract what is too big to capture conventionally. By panning the camera while holding down its shutter, I create blurred abstracts of the water’s most distinctive qualities: color and texture. I strip away the busy imperfections, the out-of-place waves and clouds and flotsam. After the pan, only the essence of the subject is left.</p>
+        </div>
+
+        <div class="img-container-horiz" style="margin-top: 25.2vh;">
+            <img src="huzzah/copper3.jpg">
+        </div>
+
+        <div class="img-container-horiz" style="margin-top: -0.4vh;">
+            <img src="huzzah/copper5.jpg">
+        </div>
 
         <div class="img-container-horiz" style="margin-top: 6vh;">
             <img src="huzzah/gloaming1.jpg">
-            <div id="gloaming-caption" class="caption-container" style="grid-template-columns: 1fr auto;">
-                <p class="caption" style="grid-column: 2; text-align: right;">above: <b>Gloaming I</b><br>right: <b>Gloaming III</b></p>
+            <div id="gloaming-caption" class="caption-container-right">
+                <p class="caption">yee haw</p>
             </div>
         </div>
 
@@ -54,8 +101,12 @@
             <img src="huzzah/gloaming3.jpg">
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 20.5vh;">
-            <img src="huzzah/rainshadow.jpg">
+        <div class="img-container-horiz" style="margin-top: 23.9vh;">
+            <img src="huzzah/sunken.jpg">
+        </div>
+
+        <div class="text-container" style="margin-top: 20vh;">
+            <p></p>
         </div>
 
     </div>
@@ -74,6 +125,14 @@
         function hideStatement(){
             document.getElementById('statement-container').style.display = 'none';
         }
+        // function filter(str){
+
+        // }
+
+
+
+
+
     </script>
 
 </body>

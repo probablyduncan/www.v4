@@ -52,6 +52,7 @@ img{
     color: unset;
     cursor: pointer;
     height: 1em;
+    width: 8em;
 }
 #nav a:hover{
     color: white;
@@ -90,13 +91,38 @@ img{
     margin: 0;
     padding: 0;
     padding-right: 8px;
+    margin-top: 4px;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
+    border-top: 1px solid black;
 }
 .caption-container{
     display: grid;
     grid-template-columns: auto 1fr;
+}
+.caption-container-right{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.caption-container-right .caption{
+    grid-column: 2;
+    text-align: right;
+    padding-right: 0;
+    padding-left: 8px;
+}
+.caption-container-above{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    height: 20vh;
+}
+.caption-container-above .caption{
+    grid-row: 2;
+    grid-column: 1;
+    border-top: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.4em;
 }
 
 .img-container-horiz{
@@ -107,10 +133,6 @@ img{
 }
 .img-container-horiz img{
     width: 90vh;
-}
-.img-container-horiz .caption{
-    margin-top: 10px;
-    border-top: 2px solid black;
 }
 .img-container-vert{
     margin-right: 20px;
