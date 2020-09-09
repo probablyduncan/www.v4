@@ -158,18 +158,32 @@
                     prevPos = contCount;
                 }
             }
-            document.getElementById('horiz-scroll-container').scrollTo({
-                top: 0,
-                left: document.getElementById('cont' + prevPos).offsetLeft,
-                behavior: 'smooth'
-            });
+            if(prevPos == 1){
+                document.getElementById('horiz-scroll-container').scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                document.getElementById('horiz-scroll-container').scrollTo({
+                    top: 0,
+                    left: document.getElementById('cont' + prevPos).offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
         }
 
         document.addEventListener('keyup', (e) => {
-            if (e.code === "ArrowDown") nextSnap();
+            if (e.code === "ArrowUp"){
+                e.preventDefault();
+                nextSnap();
+            }
         });
         document.addEventListener('keyup', (e) => {
-            if (e.code === "ArrowUp") prevSnap();
+            if (e.code === "ArrowDown"){
+                e.preventDefault();
+                prevSnap();
+            }
         });
         document.addEventListener('keydown', (e) => {
             if (e.code === "ArrowRight"){
