@@ -12,7 +12,6 @@ img{
 }
 
 #horiz-scroll-container{
-    
     width: auto;
     height: 100vh;
     padding-left: 10vw;
@@ -34,7 +33,9 @@ img{
     border-bottom-color: rgb(50, 85, 115);
 }
 #instructions{
-    width: auto;
+    text-align: center;
+    border-top: none;
+    color: darkgrey;
 }
 #nav{
     display: grid;
@@ -47,14 +48,15 @@ img{
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
-    
 }
 #nav a{
     text-decoration: none;
     color: unset;
     cursor: pointer;
     height: 1em;
-    width: 8em;
+    width: 6em;
+    user-select: none;
+    touch-action: manipulation;
 }
 #nav a:hover{
     color: white;
@@ -91,7 +93,9 @@ img{
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
+    line-height: 1.2em;
     border-top: 1px solid black;
+    color: rgb(100, 100, 100);
 }
 .caption-container{
     display: grid;
@@ -118,7 +122,7 @@ img{
     grid-column: 1;
     border-top: none;
     border-bottom: 1px solid black;
-    margin-bottom: 0.4em;
+    margin-bottom: 12px;
 }
 
 .img-container-horiz{
@@ -141,16 +145,21 @@ img{
 }
 
 .text-container{
-    margin-left: 20px;
+    height: 40vh;
+    padding-left: 20px;
     margin-right: 20px;
     padding-right: 20px;
+    padding-top: 8px;
     width: 64vh;
     display: block;
     scroll-snap-align: start;
-    scroll-margin-left: 40px;
+    scroll-margin-left: 20px;
     border-top: 1px solid black;
+    border-left: 1px solid black;
 }
 .text-container p{
+    padding: 0;
+    margin: 0;
     width: 64vh;
     font-size: 1em;
     line-height: 2em;

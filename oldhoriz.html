@@ -19,17 +19,27 @@
 
     <div id="horiz-title">old horizons.</div>
     <div id="nav">
-        <a href="index.html#main" style="width: 8em;">back</a>
+        <div style="width: 6em; display: grid;">
+            <a href="index.html#main">&#60 back</a><br>
+            <a onclick="showStatement()">statement</a>
+        </div>
         <div></div>
-        <a style="text-align: right;" onclick="showStatement()">statement</a>
-        <!-- <a style="text-align: right;" onclick="filter()">filter</a> -->
+        <div style="width: 6em; display: grid; place-items: right;">
+            <a onclick="nextSnap()" style="text-align: right">next</a><br style="margin-top: 2px;">
+            <a onclick="prevSnap()" style="text-align: right;">prev</a>
+        </div>
     </div>
-    <div id="horiz-scroll-container" onscroll="titleFade()" tabindex="-1">
+    <!-- <div id="controls">
+        
+        <div></div>
+        
+    </div> -->
+    <div id="horiz-scroll-container" onscroll="titleFade(), instruFade()" tabindex="-1">
 
         <div id="cont1" class="img-container-horiz" style="margin-top: 13vh;">
             <img src="oldhoriz/cirrustracks.jpg">
-            <div id="instructions">
-                
+            <div id="instructions" class="caption">
+                <p>use arrow keys or buttons in top right to navigate</p>
             </div>
         </div>
 
@@ -37,7 +47,7 @@
             <div class="caption-container-above">
                 <p class="caption">
                     early works<br>
-                    left to right: Cirrus <br>Tracks I, Blue I, Afterglow I
+                    left to right: Cirrus<br>Tracks I, Blue I, Afterglow I
                 </p>
             </div>
             <img src="oldhoriz/blue.jpg" style="width: 69vh;">
@@ -48,7 +58,9 @@
         </div>
 
         <div id="cont4" class="text-container" style="margin-top: 30vh;">
-            <p>For years I struggled to photograph the large bodies of water in my life. Lakes and oceans have always been my refuge and my solace, and they never fail to attract my lens. However, time and time again I failed to capture the water; my photos were much too busy, seeing everything while capturing nothing.</p>
+            <p>For years I struggled to photograph the large bodies of water in my life. Lakes and oceans have always been my refuge and my solace, and they never fail to attract my lens.</p>
+            <br>
+            <p>However, time and time again I failed to capture the water; my photos were much too busy, seeing everything while capturing nothing.</p>
         </div>
 
         <!-- FIRE -->
@@ -78,7 +90,8 @@
         
 
         <div id="cont10" class="text-container" style="margin-top: 32vh;">
-            <p>Now, I distill the water into its simplest form, making abstract what is too big to capture conventionally. By panning the camera while holding down its shutter, I create blurred abstracts of the water’s most distinctive qualities: color and texture. I strip away the busy imperfections, the out-of-place waves and clouds and flotsam. After the pan, only the essence of the subject is left.</p>
+            <p>Now, I distill the water into its simplest form, making abstract what is too big to capture conventionally. By panning the camera while holding down its shutter, I create blurred abstracts of the water’s most distinctive qualities: color and texture.</p><br>
+            <p>I strip away the busy imperfections, the out-of-place waves and clouds and flotsam. After the pan, only the essence of the subject is left.</p>
         </div>
 
         <div id="cont11" class="img-container-horiz" style="margin-top: 25.2vh;">
@@ -101,7 +114,8 @@
         </div> -->
 
         <div id="cont14" class="text-container" style="margin-top: 20vh;">
-            <p>My work makes the bold case for photography not as a manifestation of what the camera sees but rather what we see. Rather than capture water objectively, my images capture water as we humans see and feel it. I aim to distill the essence of that rich and varied vastness; by veiling its dizzying busyness, I unveil the water.</p>
+            <p>My work makes the bold case for photography not as a manifestation of what the camera sees but rather what we see. Rather than capture water objectively, my images capture water as we humans see and feel it.</p><br>
+            <p>I aim to distill the essence of that rich and varied vastness; by veiling its dizzying busyness, I unveil the water.</p>
         </div>
 
     </div>
@@ -118,8 +132,11 @@
 
         function titleFade(){
             var scrollLeft = document.getElementById('horiz-scroll-container').scrollLeft;
-            //18.359% scroll
             document.getElementById('horiz-title').style.opacity = 1 - scrollLeft / (235);
+        }
+        function instruFade(){
+            var scrollLeft = document.getElementById('horiz-scroll-container').scrollLeft
+            document.getElementById('instructions').style.opacity = 1 - scrollLeft / 100;
         }
         function showStatement(){
             document.getElementById('statement-container').style.display = 'block';
