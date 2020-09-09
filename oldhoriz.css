@@ -83,12 +83,6 @@ img{
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-
-#cont1{
-    scroll-margin-left: 10vw;
-}
-
 .caption{
     margin: 0;
     padding: 0;
@@ -161,4 +155,8 @@ img{
     font-size: 1em;
     line-height: 2em;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#cont1{
+    scroll-margin-left: 10vw;
 }
