@@ -24,95 +24,98 @@
         <a style="text-align: right;" onclick="showStatement()">statement</a>
         <!-- <a style="text-align: right;" onclick="filter()">filter</a> -->
     </div>
-    <div id="horiz-scroll-container" onscroll="titleFade()">
+    <div id="horiz-scroll-container" onscroll="titleFade()" tabindex="-1">
 
-        <div id="first-container" class="img-container-horiz" style="margin-top: 13vh;">
-            <img src="huzzah/cirrustracks.jpg">
-            <!-- <div class="caption-container-right">
-                <p class="caption">above: <b>Cirrus Tracks I</b><br>left: <b>Blue I</b></p>
-            </div> -->
+        <div id="cont1" class="img-container-horiz" style="margin-top: 13vh;">
+            <img src="oldhoriz/cirrustracks.jpg">
+            <div id="instructions">
+                
+            </div>
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 31vh;">
+        <div id="cont2" class="img-container-horiz" style="margin-top: 31vh;">
             <div class="caption-container-above">
                 <p class="caption">
                     early works<br>
                     left to right: Cirrus <br>Tracks I, Blue I, Afterglow I
                 </p>
             </div>
-            <img src="huzzah/blue.jpg" style="width: 69vh;">
+            <img src="oldhoriz/blue.jpg" style="width: 69vh;">
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 27.2vh;">
-            <img src="huzzah/afterglow1.jpg">
+        <div id="cont3" id="img" class="img-container-horiz" style="margin-top: 27.2vh;">
+            <img src="oldhoriz/afterglow1.jpg">
         </div>
 
-        <div class="text-container" style="margin-top: 30vh;">
+        <div id="cont4" class="text-container" style="margin-top: 30vh;">
             <p>For years I struggled to photograph the large bodies of water in my life. Lakes and oceans have always been my refuge and my solace, and they never fail to attract my lens. However, time and time again I failed to capture the water; my photos were much too busy, seeing everything while capturing nothing.</p>
         </div>
 
         <!-- FIRE -->
 
-        <div class="img-container-horiz" style="margin-top: 24.5vh;">
-            <img src="huzzah/firelong.jpg">
+        <div id="cont5" class="img-container-horiz" style="margin-top: 24.5vh;">
+            <img src="oldhoriz/firelong.jpg">
         </div>
 
-        <div class="img-container-vert" style="margin-top: 27.2vh;">
-            <img src="huzzah/fire2.jpg">
+        <div id="cont6" class="img-container-vert" style="margin-top: 22.2vh;">
+            <img src="oldhoriz/fire.jpg">
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 10.4vh;">
-            <img src="huzzah/firelong2.jpg">
+        <div id="cont7" class="img-container-horiz" style="margin-top: 3.7vh;">
+            <img src="oldhoriz/firelong3.jpg">
             <div class="caption-container">
-                <p class="caption">fire: Ice on a Rolling Lake</p>
+                <p class="caption" style="max-width: 440px;">In the finger-gnawing air of winter evenings, tranquility prevails over ice on the gently rolling lake. Left to right: Fire III, VI, II, I, V</p>
             </div>
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 3.7vh;">
-            <img src="huzzah/firelong3.jpg">
+        <div id="cont8" class="img-container-horiz" style="margin-top: 10.4vh;">
+            <img src="oldhoriz/firelong2.jpg">
         </div>
 
-        <div class="img-container-vert" style="margin-top: 27.2vh;">
-            <img src="huzzah/fire.jpg">
+        <div id="cont9" class="img-container-vert" style="margin-top: 22.2vh;">
+            <img src="oldhoriz/fire2.jpg">
         </div>
-
         
 
-        <div class="text-container" style="margin-top: 20vh;">
+        <div id="cont10" class="text-container" style="margin-top: 32vh;">
             <p>Now, I distill the water into its simplest form, making abstract what is too big to capture conventionally. By panning the camera while holding down its shutter, I create blurred abstracts of the water’s most distinctive qualities: color and texture. I strip away the busy imperfections, the out-of-place waves and clouds and flotsam. After the pan, only the essence of the subject is left.</p>
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 25.2vh;">
-            <img src="huzzah/copper3.jpg">
+        <div id="cont11" class="img-container-horiz" style="margin-top: 25.2vh;">
+            <img src="oldhoriz/copper3.jpg">
         </div>
 
-        <div class="img-container-horiz" style="margin-top: -0.4vh;">
-            <img src="huzzah/copper5.jpg">
-        </div>
-
-        <div class="img-container-horiz" style="margin-top: 6vh;">
-            <img src="huzzah/gloaming1.jpg">
+        <div id="cont12" class="img-container-horiz" style="margin-top: 6vh;">
+            <img src="oldhoriz/gloaming1.jpg">
             <div id="gloaming-caption" class="caption-container-right">
                 <p class="caption">yee haw</p>
             </div>
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 25vh;">
-            <img src="huzzah/gloaming3.jpg">
+        <div id="cont13" class="img-container-horiz" style="margin-top: 25vh;">
+            <img src="oldhoriz/gloaming3.jpg">
         </div>
 
-        <div class="img-container-horiz" style="margin-top: 23.9vh;">
-            <img src="huzzah/sunken.jpg">
-        </div>
+        <!-- <div class="img-container-horiz" style="margin-top: 23.9vh;">
+            <img src="oldhoriz/sunken.jpg">
+        </div> -->
 
-        <div class="text-container" style="margin-top: 20vh;">
-            <p></p>
+        <div id="cont14" class="text-container" style="margin-top: 20vh;">
+            <p>My work makes the bold case for photography not as a manifestation of what the camera sees but rather what we see. Rather than capture water objectively, my images capture water as we humans see and feel it. I aim to distill the essence of that rich and varied vastness; by veiling its dizzying busyness, I unveil the water.</p>
         </div>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script type="text/javascript">
+        
+        //document.getElementById('horiz-scroll-container').focus();
+        const numConts = 14;
+
+
+
         function titleFade(){
             var scrollLeft = document.getElementById('horiz-scroll-container').scrollLeft;
             //18.359% scroll
@@ -125,15 +128,61 @@
         function hideStatement(){
             document.getElementById('statement-container').style.display = 'none';
         }
-        //function scrollRight(event){
-            //alert(document.getElementById('horiz-scroll-container').scrollLeft);
-            //alert(event.deltaY);
-            //var x = event.deltaY * 30.0;
-            //document.getElementById('horiz-scroll-container').scrollLeft += x;
-            //alert('aah');
-        //}
 
 
+        //returns the id of the next container
+        function nextSnap(){
+            var scrollPos = document.getElementById('horiz-scroll-container').scrollLeft;
+            var nextPos = 0;
+            var contCount = 0;
+            while(nextPos == 0){
+                contCount ++;
+                if(document.getElementById('cont' + contCount).offsetLeft > scrollPos){
+                    nextPos = contCount + 1;
+                }
+            }
+            document.getElementById('horiz-scroll-container').scrollTo({
+                top: 0,
+                left: document.getElementById('cont' + nextPos).offsetLeft,
+                behavior: 'smooth'
+            });
+        }
+
+        function prevSnap(){
+            var scrollPos = document.getElementById('horiz-scroll-container').scrollLeft;
+            var prevPos = numConts;
+            var contCount = numConts;
+            while(prevPos == numConts){
+                contCount --;
+                if(document.getElementById('cont' + contCount).offsetLeft < scrollPos){
+                    prevPos = contCount;
+                }
+            }
+            document.getElementById('horiz-scroll-container').scrollTo({
+                top: 0,
+                left: document.getElementById('cont' + prevPos).offsetLeft,
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('keyup', (e) => {
+            if (e.code === "ArrowDown") nextSnap();
+        });
+        document.addEventListener('keyup', (e) => {
+            if (e.code === "ArrowUp") prevSnap();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.code === "ArrowRight"){
+                e.preventDefault();
+                nextSnap();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.code === "ArrowLeft"){
+                e.preventDefault();
+                prevSnap();
+            }
+        });
 
 
 
