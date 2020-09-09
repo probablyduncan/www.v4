@@ -15,7 +15,8 @@ img{
     width: auto;
     height: 100vh;
     padding-left: 10vw;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: inherit;
     display: flex;
     flex-flow: row;
     scroll-snap-type: x mandatory;
@@ -89,10 +90,12 @@ img{
     margin: 0;
     padding: 0;
     padding-right: 8px;
+    padding-top: 4px;
     margin-top: 4px;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
+    font-style: italic;
     line-height: 1.2em;
     border-top: 1px solid black;
     color: rgb(100, 100, 100);
@@ -118,6 +121,8 @@ img{
     height: 20vh;
 }
 .caption-container-above .caption{
+    padding-top: 0;
+    padding-bottom: 4px;
     grid-row: 2;
     grid-column: 1;
     border-top: none;
@@ -145,12 +150,11 @@ img{
 }
 
 .text-container{
-    height: 40vh;
+    height: 36vh;
     padding-left: 20px;
     margin-right: 20px;
     padding-right: 20px;
     padding-top: 8px;
-    width: 64vh;
     display: block;
     scroll-snap-align: start;
     scroll-margin-left: 20px;
@@ -160,7 +164,7 @@ img{
 .text-container p{
     padding: 0;
     margin: 0;
-    width: 64vh;
+    width: 500px;
     font-size: 1em;
     line-height: 2em;
     font-family: 'Courier New', Courier, monospace;
