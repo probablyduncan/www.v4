@@ -157,6 +157,7 @@ img{
     margin-right: 20px;
     padding-right: 20px;
     padding-top: 8px;
+    margin-top: 50vh;
     display: block;
     scroll-snap-align: start;
     scroll-margin-left: 20px;
@@ -185,11 +186,11 @@ img{
 #cont3{
     margin-top: 27.2vh;
 }
-/* ISLAND */
 #cont4{
-    margin-top: 50vh;
     height: 260px;
 }
+
+/* ISLAND */
 #cont5{
     margin-top: 19.7vh;
 }
@@ -206,9 +207,9 @@ img{
     margin-top: 19.8vh;
 }
 #cont10{
-    margin-top: 50vh;
     height: 235px;
 }
+
 /* STORM */
 #cont11{
     margin-top: 20.2vh;
@@ -226,9 +227,9 @@ img{
     margin-top: 15.5vh;
 }
 #cont16{
-    margin-top: 50vh;
     height: 115px;
 }
+
 /* FIRE */
 #cont17{
     margin-top: 27.5vh;
@@ -246,9 +247,9 @@ img{
     margin-top: 27.2vh;
 }#cont21 img{width: 45vh;}
 #cont22{
-    margin-top: 50vh;
     height: 200px;
 }
+
 /* COPPER */
 #cont23{
     margin-top: 25.2vh;
@@ -263,9 +264,9 @@ img{
     margin-top: 18vh;
 }
 #cont27{
-    margin-top: 50vh;
     height: 110px;
 }
+
 /* FAL */
 #cont28{
     margin-top: 38.7vh;
@@ -296,6 +297,140 @@ img{
     #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 35vh;}
 }
 
+/* 
+    I need to change the width of horiz/vert image and text containers
+    Also adjust the margins, in terms of vw
+    I need to change the text containers' heights based on the new widths
+    I think that's it actually but idk
+*/
 @media (orientation: portrait){
+    #horiz-title{
+        font-size: 2em;
+        border-bottom-width: 4px;
+        height: 0.95em;
+    }
+    .img-container-horiz img{
+        width: 80vw;
+    }
+    .img-container-vert img{
+        width: 70vw;
+    }
+    .text-container{
+        margin-top: 53.3vw;
+    }
+    .text-container p{
+        width: 80vw;
+    }
+
+
+
+    /* OLD */
+    #cont1{
+        scroll-margin-left: 10vw;
+        scroll-snap-margin-left: 10vw;
+        margin-top: 20.6vw;
+    }
+    #cont2{
+        margin-top: 19.6vw;
+    }#cont2 img{
+        width: 60vw;
+    }
+    #cont3{
+        margin-top: 32.9vw;
+    }
+    #cont4{
+        height: 380px;
+    }
+
+    /* ISLAND */
     
+    #cont5{
+        margin-top: 26.5vw;
+    }
+    #cont6{
+        margin-top: 11.2vw;
+    }
+    #cont7{
+        margin-top: 26vw;
+    }
+    #cont8{
+        margin-top: 19.6vw;
+    }#cont8 img{
+        width: 60vw;
+    }
+    #cont9{
+        margin-top: 26.5vw;
+    }
+    #cont10{
+        height: 320px;
+    }
+
+    /* STORM */
+    #cont11{
+        margin-top: 26.8vw;
+    }
+    #cont12{
+        margin-top: 25.2vw;
+    }
+    #cont13{
+        margin-top: 0.4vw;
+    }
+    #cont14{
+        margin-top: 27.4vw;
+    }
+    #cont15{
+        margin-top: 22.6vw;
+    }
+    #cont16{
+        height: 170px;
+    }
+
+    /* FIRE */
+    #cont17{
+        margin-top: 33.1vw;
+    }
+    #cont18{
+        margin-top: 18.1vw;
+    } #cont18 img{width: 70vw;}
+    #cont19{
+        margin-top: 14.8vw;
+    }
+    #cont20{
+        margin-top: 20.4vw;
+    }
+    #cont21{
+        margin-top: 18.3vw;
+    } #cont21 img{width: 70vw;}
+    #cont22{
+        height: 290px;
+    }
+
+    /* COPPER */
+    #cont23{
+        margin-top: 31.3vw;
+    }
+    #cont24{
+        margin-top: 14.2vw;
+    }
+    #cont25{
+        margin-top: 31.3vw;
+    }
+    #cont26{
+        margin-top: 25vw;
+    }
+    #cont27{
+        height: 140px;
+    }
+
+    /* FAL */
+    #cont28{
+        margin-top: 17.5vw;
+    } #cont28 img{width: 70vw;}
+    #cont29{
+        margin-top: 34vw;
+    } #cont29 img{width: 70vw;}
+    #cont30{
+        margin-top: 34vw;
+    }
+
 }
