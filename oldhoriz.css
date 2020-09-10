@@ -173,3 +173,7 @@ img{
 #cont1{
     scroll-margin-left: 10vw;
 }
+
+@media (orientation: portrait){
+    
+}
