@@ -38,7 +38,7 @@ img{
     border-top: none;
     color: darkgrey;
 }
-#nav{
+#nav-desktop, #nav-mobile{
     display: grid;
     grid-template-columns: auto 1fr auto;
     position: fixed;
@@ -50,7 +50,7 @@ img{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
 }
-#nav a{
+#nav-desktop a, #nav-mobile a{
     text-decoration: none;
     color: unset;
     cursor: pointer;
@@ -59,7 +59,7 @@ img{
     user-select: none;
     touch-action: manipulation;
 }
-#nav a:hover{
+#nav-desktop a:hover, #nav-mobile a:hover{
     color: white;
     background-color: black;
 }

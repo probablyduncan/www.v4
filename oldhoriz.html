@@ -22,7 +22,7 @@
 
 
     <div id="horiz-title">old horizons.</div>
-    <div id="nav">
+    <div id="nav-desktop">
         <div style="width: 6em; display: grid;">
             <a href="index.html#main">&#60 back</a>
             <br>
@@ -33,6 +33,15 @@
             <a onclick="nextSnap()" style="text-align: right">next</a>
             <br style="margin-top: 2px;">
             <a onclick="prevSnap()" style="text-align: right;">prev</a>
+        </div>
+    </div>
+    <div id="nav-mobile" style="display: none;">
+        <div style="width: 6em; display: grid;">
+            <a href="index.html#main">&#60 back</a>
+        </div>
+        <div></div>
+        <div style="width: 6em; display: grid; place-items: right;">
+            <a onclick="showStatement()">statement</a>
         </div>
     </div>
 
@@ -240,6 +249,8 @@
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if(isMobile){
             document.getElementById('instructions').style.display = 'none';
+            document.getElementById('nav-desktop').style.display = 'none';
+            document.getElementById('nav-mobile').style.display = 'grid';
             // document.getElementById('cont4').style.display = 'none';
             // document.getElementById('cont10').style.display = 'none';
             // document.getElementById('cont16').style.display = 'none';
