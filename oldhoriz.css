@@ -127,7 +127,7 @@ img{
     grid-column: 1;
     border-top: none;
     border-bottom: 1px solid black;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
 }
 
 .img-container-horiz{
@@ -170,8 +170,126 @@ img{
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* OLD */
 #cont1{
     scroll-margin-left: 10vw;
+    margin-top: 13vh;
+}
+#cont2{
+    margin-top: 31vh;
+}#cont2 img{width: 69vh;}
+#cont3{
+    margin-top: 27.2vh;
+}
+/* ISLAND */
+#cont4{
+    margin-top: 50vh;
+    height: 260px;
+}
+#cont5{
+    margin-top: 19.7vh;
+}
+#cont6{
+    margin-top: 2vh;
+}
+#cont7{
+    margin-top: 19vh;
+}
+#cont8{
+    margin-top: 31vh;
+}#cont8 img{width: 69vh;}
+#cont9{
+    margin-top: 19.8vh;
+}
+#cont10{
+    margin-top: 50vh;
+    height: 235px;
+}
+/* STORM */
+#cont11{
+    margin-top: 20.2vh;
+}
+#cont12{
+    margin-top: 18.4vh;
+}
+#cont13{
+    margin-top: 10.8vh;
+}
+#cont14{
+    margin-top: 21vh;
+}
+#cont15{
+    margin-top: 15.5vh;
+}
+#cont16{
+    margin-top: 50vh;
+    height: 115px;
+}
+/* FIRE */
+#cont17{
+    margin-top: 27.5vh;
+}
+#cont18{
+    margin-top: 27.5vh;
+}#cont18 img{width: 45vh;}
+#cont19{
+    margin-top: 6.3vh;
+}
+#cont20{
+    margin-top: 13vh;
+}
+#cont21{
+    margin-top: 27.2vh;
+}#cont21 img{width: 45vh;}
+#cont22{
+    margin-top: 50vh;
+    height: 200px;
+}
+/* COPPER */
+#cont23{
+    margin-top: 25.2vh;
+}
+#cont24{
+    margin-top: 5.4vh;
+}
+#cont25{
+    margin-top: 24.6vh;
+}
+#cont26{
+    margin-top: 18vh;
+}
+#cont27{
+    margin-top: 50vh;
+    height: 110px;
+}
+/* FAL */
+#cont28{
+    margin-top: 38.7vh;
+}#cont28 img{width: 40vh;}
+#cont29{
+    margin-top: 28.2vh;
+}
+#cont30{
+    margin-top: 24.3vh;
+}
+
+@media (max-height: 560px){
+    #horiz-title{
+        font-size: 2em;
+        border-bottom-width: 4px;
+    }
+    .caption{
+        font-size: 0.8em;
+    }
+    .text-container p{
+        font-size: 0.8em;
+    }
+    #cont4{height: 185px;}
+    #cont10{height: 160px;}
+    #cont16{height: 90px;}
+    #cont22{height: 140px;}
+    #cont27{height: 65px;}
+    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 35vh;}
 }
 
 @media (orientation: portrait){
