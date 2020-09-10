@@ -269,13 +269,13 @@ img{
 
 /* FAL */
 #cont28{
-    margin-top: 38.7vh;
+    margin-top: 29.4vh;
 }#cont28 img{width: 40vh;}
 #cont29{
-    margin-top: 28.2vh;
-}
+    margin-top: 38.4vh;
+}#cont29 img{width: 40vh;}
 #cont30{
-    margin-top: 24.3vh;
+    margin-top: 27.8vh;
 }
 
 @media (max-height: 560px){
@@ -303,11 +303,14 @@ img{
     I need to change the text containers' heights based on the new widths
     I think that's it actually but idk
 */
+
+
 @media (orientation: portrait){
     #horiz-title{
         font-size: 2em;
         border-bottom-width: 4px;
         height: 0.95em;
+        top: 24vw;
     }
     .img-container-horiz img{
         width: 80vw;
@@ -315,13 +318,16 @@ img{
     .img-container-vert img{
         width: 70vw;
     }
+    .caption-container-above{
+        height: 35vw;
+    }
     .text-container{
         margin-top: 53.3vw;
     }
     .text-container p{
         width: 80vw;
     }
-
+    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 53.3vw;}
 
 
     /* OLD */
@@ -433,4 +439,32 @@ img{
         margin-top: 34vw;
     }
 
+}
+
+
+@media (min-aspect-ratio: 2/3) and (max-aspect-ratio: 1/1){
+    .img-container-vert img{
+        width: 40vw;
+    }
+    #cont4{
+        height: 370px;
+    }
+    #cont10{
+        height: 310px;
+    }
+    #cont18 img, #cont21 img, #cont28 img, #cont29 img{
+        width: 40vw;
+    }
+    #cont18, #cont21{
+        margin-top: 33.3vw;
+    }
+    #cont28{
+        margin-top: 32.6vw;
+    }
+    #cont29{
+        margin-top: 41.7vw;
+    }
+    #cont30{
+        margin-top: 33.5vw;
+    }
 }
