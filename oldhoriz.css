@@ -135,6 +135,7 @@ img{
     display: inline;
     scroll-snap-align: start;
     scroll-margin-left: 20px;
+    scroll-snap-margin-left: 20px;
 }
 .img-container-horiz img{
     width: 90vh;
@@ -144,6 +145,7 @@ img{
     display: inline;
     scroll-snap-align: start;
     scroll-margin-left: 20px;
+    scroll-snap-margin-left: 20px;
 }
 .img-container-vert img{
     width: 50vh;
@@ -158,6 +160,7 @@ img{
     display: block;
     scroll-snap-align: start;
     scroll-margin-left: 20px;
+    scroll-snap-margin-left: 20px;
     border-top: 1px solid black;
     border-left: 1px solid black;
 }
@@ -173,6 +176,7 @@ img{
 /* OLD */
 #cont1{
     scroll-margin-left: 10vw;
+    scroll-snap-margin-left: 10vw;
     margin-top: 13vh;
 }
 #cont2{
