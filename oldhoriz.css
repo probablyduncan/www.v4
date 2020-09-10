@@ -33,7 +33,7 @@ img{
     border-bottom: 8px solid rgb(255, 205, 155);
     border-bottom-color: rgb(50, 85, 115);
 }
-#instructions{
+#instructions, #instructions-mobile{
     text-align: center;
     border-top: none;
     color: darkgrey;
