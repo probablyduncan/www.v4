@@ -56,6 +56,7 @@ img{
     cursor: pointer;
     height: 1em;
     width: 6em;
+    margin-bottom: 4px;
     user-select: none;
     touch-action: manipulation;
 }
@@ -152,7 +153,7 @@ img{
 }
 
 .text-container{
-    height: 36vh;
+    height: 48vh;
     padding-left: 20px;
     margin-right: 20px;
     padding-right: 20px;
@@ -187,7 +188,7 @@ img{
     margin-top: 27.2vh;
 }
 #cont4{
-    height: 260px;
+    
 }
 
 /* ISLAND */
@@ -207,7 +208,7 @@ img{
     margin-top: 19.8vh;
 }
 #cont10{
-    height: 235px;
+    
 }
 
 /* STORM */
@@ -218,7 +219,7 @@ img{
     margin-top: 18.4vh;
 }
 #cont13{
-    margin-top: 10.8vh;
+    margin-top: 30.8vh;
 }
 #cont14{
     margin-top: 21vh;
@@ -227,7 +228,7 @@ img{
     margin-top: 15.5vh;
 }
 #cont16{
-    height: 115px;
+    
 }
 
 /* FIRE */
@@ -247,7 +248,7 @@ img{
     margin-top: 27.2vh;
 }#cont21 img{width: 45vh;}
 #cont22{
-    height: 200px;
+    
 }
 
 /* COPPER */
@@ -264,21 +265,15 @@ img{
     margin-top: 18vh;
 }
 #cont27{
-    height: 110px;
+    
 }
-
-/* FAL */
 #cont28{
-    margin-top: 29.4vh;
-}#cont28 img{width: 40vh;}
-#cont29{
-    margin-top: 38.4vh;
-}#cont29 img{width: 40vh;}
-#cont30{
-    margin-top: 27.8vh;
+    margin-top: 10vh;
+}#cont28 img{
+    width: 120vh;
 }
 
-@media (max-height: 560px){
+@media (max-height: 640px){
     #horiz-title{
         font-size: 2em;
         border-bottom-width: 4px;
@@ -287,22 +282,12 @@ img{
         font-size: 0.8em;
     }
     .text-container p{
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
-    #cont4{height: 185px;}
-    #cont10{height: 160px;}
-    #cont16{height: 90px;}
-    #cont22{height: 140px;}
-    #cont27{height: 65px;}
-    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 35vh;}
+    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 35vh; height: 63vh;}
 }
 
-/* 
-    I need to change the width of horiz/vert image and text containers
-    Also adjust the margins, in terms of vw
-    I need to change the text containers' heights based on the new widths
-    I think that's it actually but idk
-*/
+
 
 
 @media (orientation: portrait){
@@ -321,13 +306,17 @@ img{
     .caption-container-above{
         height: 35vw;
     }
+    .caption{
+        font-size: 0.8em;
+    }
     .text-container{
         margin-top: 53.3vw;
     }
     .text-container p{
         width: 80vw;
+        font-size: 0.85em;
     }
-    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 53.3vw;}
+    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 53.3vw; height: 100%;;}
 
 
     /* OLD */
@@ -343,9 +332,6 @@ img{
     }
     #cont3{
         margin-top: 32.9vw;
-    }
-    #cont4{
-        height: 380px;
     }
 
     /* ISLAND */
@@ -367,9 +353,6 @@ img{
     #cont9{
         margin-top: 26.5vw;
     }
-    #cont10{
-        height: 320px;
-    }
 
     /* STORM */
     #cont11{
@@ -379,16 +362,13 @@ img{
         margin-top: 25.2vw;
     }
     #cont13{
-        margin-top: 0.4vw;
+        margin-top: 35.4vw;
     }
     #cont14{
         margin-top: 27.4vw;
     }
     #cont15{
         margin-top: 22.6vw;
-    }
-    #cont16{
-        height: 170px;
     }
 
     /* FIRE */
@@ -407,9 +387,7 @@ img{
     #cont21{
         margin-top: 18.3vw;
     } #cont21 img{width: 70vw;}
-    #cont22{
-        height: 290px;
-    }
+    
 
     /* COPPER */
     #cont23{
@@ -423,20 +401,10 @@ img{
     }
     #cont26{
         margin-top: 25vw;
+        margin-right: ;
     }
-    #cont27{
-        height: 140px;
-    }
-
-    /* FAL */
     #cont28{
-        margin-top: 17.5vw;
-    } #cont28 img{width: 70vw;}
-    #cont29{
-        margin-top: 34vw;
-    } #cont29 img{width: 70vw;}
-    #cont30{
-        margin-top: 34vw;
+        display: none
     }
 
 }
@@ -446,7 +414,7 @@ img{
     .img-container-vert img{
         width: 40vw;
     }
-    #cont4{
+    #cont4, #cont10, #cont{
         height: 370px;
     }
     #cont10{
