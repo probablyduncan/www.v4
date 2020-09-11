@@ -287,14 +287,17 @@ img{
     #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 35vh; height: 63vh;}
 }
 
-
-
-
-@media (orientation: portrait){
+@media (max-width:560px){
     #horiz-title{
-        font-size: 2em;
-        border-bottom-width: 4px;
-        height: 0.95em;
+        font-size: 3em;
+        border-bottom-width: 6px;
+        height: 0.94em;
+    }
+}
+
+
+@media (orientation: portrait) {
+    #horiz-title{
         top: 24vw;
     }
     .img-container-horiz img{
@@ -314,9 +317,9 @@ img{
     }
     .text-container p{
         width: 80vw;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
-    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 53.3vw; height: 100%;;}
+    #cont4, #cont10, #cont16, #cont22, #cont27{margin-top: 53.3vw; height: auto;;}
     #cont27{margin-top: 43.3vw;}
 
 

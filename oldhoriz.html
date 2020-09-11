@@ -239,16 +239,27 @@
         //mobile?
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if(isMobile){
+            //instructions
             document.getElementById('instructions').style.display = 'none';
             document.getElementById('instructions-mobile').style.display = 'block';
+            //navbar
             document.getElementById('nav-desktop').style.display = 'none';
             document.getElementById('nav-mobile').style.display = 'grid';
-            // document.getElementById('cont4').style.display = 'none';
-            // document.getElementById('cont10').style.display = 'none';
-            // document.getElementById('cont16').style.display = 'none';
-            // document.getElementById('cont22').style.display = 'none';
-            // document.getElementById('cont27').style.display = 'none';
+            //title size
+            document.getElementById('horiz-title').style.fontSize = '2em';
+            document.getElementById('horiz-title').style.borderBottomWidth = '4px';
+            //text-container height
+            document.getElementById('cont4').style.height = '100%';
+            document.getElementById('cont10').style.height = '100%';
+            document.getElementById('cont16').style.height = '100%';
+            document.getElementById('cont22').style.height = '100%';
+            document.getElementById('cont27').style.height = '100%';
+            //prevent vert scrolling
             document.getElementById('horiz-scroll-container').style.overflowY = 'hidden';
+            //text-container font size
+            for(var i = 0; i < document.getElementsByClassName('text-container').length; i++){
+                document.getElementsByClassName('text-container')[i].style.fontSize = '0.8em';
+            }
         }
 
         //title and instructions fade with scroll
