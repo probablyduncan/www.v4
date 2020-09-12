@@ -35,7 +35,14 @@
     
 
     <div id="img-container">
-        <img id="currentImg" src="curbside/film1.jpg">
+        <img id="img1" src="curbside/film1.jpg">
+        <img id="img2" src="curbside/film2.jpg" style="display: none;">
+        <img id="img3" src="curbside/film3.jpg" style="display: none;">
+        <img id="img4" src="curbside/film4.jpg" style="display: none;">
+        <img id="img5" src="curbside/film5.jpg" style="display: none;">
+        <img id="img6" src="curbside/film6.jpg" style="display: none;">
+        <img id="img7" src="curbside/film7.jpg" style="display: none;">
+        <img id="img8" src="curbside/film8.jpg" style="display: none;">
     </div>
 
     <div></div>
@@ -91,41 +98,17 @@
         }
 
         const numImg = 8;
+        var current = 1;
 
-        //returns current number
-        function getImg(){
-            var currentImg = document.getElementById('currentImg').getAttributeNode('src').value;
-            var index = currentImg.indexOf('.jpg');
-            return currentImg.substring(13,index);
-        }
-
-        
 
         function prev(){
             //CHANGE IMG
-            var current = getImg();
             var nextNum = numImg;
             if(current != 1){
                 nextNum = current - 1;
             }
-            document.getElementById('currentImg').getAttributeNode('src').value = 'curbside/film' + nextNum + '.jpg';
-
-            //CHANGE CAPTION
-            document.getElementById('cap' + current).style.display = 'none';
-            document.getElementById('cap' + nextNum).style.display = 'inline';
-
-            //CHANGE COUNT
-            document.getElementById('imgCount').innerHTML = nextNum + '/' + numImg;
-        }
-
-        function next(){
-            //CHANGE IMG
-            var current = getImg();
-            var nextNum = 1
-            if(current != numImg){
-                nextNum = current - (-1);
-            }
-            document.getElementById('currentImg').getAttributeNode('src').value = 'curbside/film' + nextNum + '.jpg';
+            document.getElementById('img' + current).style.display = 'none';
+            document.getElementById('img' + nextNum).style.display = 'grid';
 
             //CHANGE CAPTION
             document.getElementById('cap' + current).style.display = 'none';
@@ -133,6 +116,29 @@
 
             //CHANGE COUNT
             document.getElementById('imgCount').innerHTML = nextNum + '/' + numImg;
+
+            //update current
+            current = nextNum;
+        }
+
+        function next(){
+            //CHANGE IMG
+            var nextNum = 1
+            if(current != numImg){
+                nextNum = current - (-1);
+            }
+            document.getElementById('img' + current).style.display = 'none';
+            document.getElementById('img' + nextNum).style.display = 'grid';
+
+            //CHANGE CAPTION
+            document.getElementById('cap' + current).style.display = 'none';
+            document.getElementById('cap' + nextNum).style.display = 'inline-block';
+
+            //CHANGE COUNT
+            document.getElementById('imgCount').innerHTML = nextNum + '/' + numImg;
+
+            //update current
+            current = nextNum;
         }
     
     </script>
