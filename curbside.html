@@ -2,10 +2,14 @@
 <html>
 <head>
 
-    <title>Curbside - Duncan Petrie Photography</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="curbside.css">
+<title>Curbside - Duncan Petrie Photography</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+<meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+<meta name="author" content="Duncan Petrie">
+
+<link rel="stylesheet" type="text/css" href="curbside.css">
 
 </head>
 <body>
@@ -86,7 +90,7 @@
             document.getElementById('curbside-statement').style.display = 'block';
         }
 
-        var numImg = 8;
+        const numImg = 8;
 
         //returns current number
         function getImg(){
@@ -111,7 +115,7 @@
             document.getElementById('cap' + nextNum).style.display = 'inline';
 
             //CHANGE COUNT
-            document.getElementById('imgCount').innerHTML = nextNum + '/8';
+            document.getElementById('imgCount').innerHTML = nextNum + '/' + numImg;
         }
 
         function next(){
@@ -128,7 +132,7 @@
             document.getElementById('cap' + nextNum).style.display = 'inline-block';
 
             //CHANGE COUNT
-            document.getElementById('imgCount').innerHTML = nextNum + '/8';
+            document.getElementById('imgCount').innerHTML = nextNum + '/' + numImg;
         }
     
     </script>
