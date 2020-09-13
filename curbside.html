@@ -140,6 +140,31 @@
             //update current
             current = nextNum;
         }
+
+        document.addEventListener('keydown', (e) => {
+            if(e.code === "ArrowRight"){
+                e.preventDefault();
+                next();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if(e.code === "ArrowLeft"){
+                e.preventDefault();
+                prev();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if(e.code === "ArrowDown"){
+                e.preventDefault();
+                next();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if(e.code === "ArrowUp"){
+                e.preventDefault();
+                prev();
+            }
+        });
     
     </script>
 
