@@ -174,3 +174,9 @@ img width is dictated by width */
         margin-top: -40px;
     }
 }
+
+@media(max-height: 390px){
+    #caption-container{
+        margin-bottom: 0;
+    }
+}
