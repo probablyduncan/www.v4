@@ -15,9 +15,11 @@
 </head>
 <body>
 
+    <a id="works-back" href="index.html#main">back</a>
+
     <div id="list-container">
-        <ul>
-            <li id="title-" onclick="select(this)"><a class="img-link">
+        <ul id="list">
+            <!-- <li id="title-" onclick="select(this)"><a class="img-link">
                 <b></b> 
             </a></li>
             <li id="title-" onclick="select(this)"><a class="img-link">
@@ -34,67 +36,104 @@
             </a></li>
             <li id="title-" onclick="select(this)"><a class="img-link">
                 <b></b> 
-            </a></li>
+            </a></li> -->
             <li id="title-iceland5" onclick="select(this)"><a class="img-link">
-                <b>Skaftafell I-II</b> Iceland, 2018
+                <b>Skaftafell II</b> 2018
             </a></li>
             <li id="title-iceland4" onclick="select(this)"><a class="img-link">
-                <b>Sólheimasandur I-II</b> Iceland, 2018
+                <b>Sólheimasandur I-II</b> 2018
             </a></li>
             <li id="title-iceland3" onclick="select(this)"><a class="img-link">
-                <b>Vik III</b> Iceland, 2018
+                <b>Vik III</b> 2018
             </a></li>
             <li id="title-iceland2" onclick="select(this)"><a class="img-link">
-                <b>Stöng</b> Iceland, 2018
+                <b>Stöng</b> 2018
             </a></li>
             <li id="title-seattle3" onclick="select(this)"><a class="img-link">
-                <b>Kalaloch III</b> Olympia, 2018
+                <b>Kalaloch III</b> 2018
             </a></li>
             <li id="title-seattle2" onclick="select(this)"><a class="img-link">
-                <b>Kalaloch II</b> Olympia, 2018
+                <b>Kalaloch II</b> 2018
             </a></li>
             <li id="title-iw8" onclick="select(this)"><a class="img-link">
-                <b>Icewater VIII</b> Lake Michigan, 2018
+                <b>Icewater VIII</b> 2018
             </a></li>
             <li id="title-iw7" onclick="select(this)"><a class="img-link">
-                <b>Icewater VII</b> Lake Michigan, 2018
+                <b>Icewater VII</b> 2018
             </a></li>
             <li id="title-iw6" onclick="select(this)"><a class="img-link">
-                <b>Icewater VI</b> Lake Michigan, 2018
+                <b>Icewater VI</b> 2018
             </a></li>
             <li id="title-iw5" onclick="select(this)"><a class="img-link">
-                <b>Icewater V</b> Lake Michigan, 2018
+                <b>Icewater V</b> 2018
             </a></li>
             <li id="title-iceland1" onclick="select(this)"><a class="img-link">
-                <b>Kjalarnes</b> Iceland, 2017
+                <b>Kjalarnes</b> 2017
             </a></li>
             <li id="title-iw4" onclick="select(this)"><a class="img-link">
-                <b>Icewater IV</b> Lake Michigan, 2017
+                <b>Icewater IV</b> 2017
             </a></li>
             <li id="title-seattle1" onclick="select(this)"><a class="img-link">
-                <b>Union Pacific II</b> Seattle, 2017
+                <b>Union Pacific II</b> 2017
             </a></li>
             <li id="title-iw1" onclick="select(this)"><a class="img-link">
-                <b>Icewater I</b> Lake Michigan, 2017
+                <b>Icewater I</b> 2017
             </a></li>
         </ul>
     </div>
 
     <div id="viewer">
         <div id="img-" class="img-container">
-            <img src="">
+            <img src="works">
             <p class="caption"></p>
         </div>
         <div id="img-" class="img-container">
-            <img src="">
+            <img src="works">
             <p class="caption"></p>
         </div>
-        <div id="img-" class="img-container">
-            <img src="">
+        <div id="img-iceland5" class="img-container">
+            <img src="works/iceland5.jpg">
             <p class="caption"></p>
         </div>
-        <div id="img-" class="img-container">
-            <img src="">
+        <div id="img-iceland4" class="img-container">
+            <img src="works/iceland4.jpg">
+            <img src="works/iceland4-2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iceland3" class="img-container">
+            <img src="works/iceland3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iceland2" class="img-container">
+            <img src="works/iceland2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-seattle3" class="img-container">
+            <img src="works/seattle3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-seattle2" class="img-container">
+            <img src="works/seattle2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iw8" class="img-container">
+            <img src="works/iw8.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iw7" class="img-container">
+            <img src="works/iw7.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iw6" class="img-container">
+            <img src="works/iw6.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iw5" class="img-container">
+            <img src="works/iw5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iceland1" class="img-container">
+            <img src="works/iceland1.jpg">
             <p class="caption"></p>
         </div>
         <div id="img-iw4" class="img-container">
@@ -112,21 +151,70 @@
     </div>
 
     <script type="text/javascript">
+
+        var current = document.getElementById('list').children[0].id.substring(6);
+        select(document.getElementById('title-' + current));
+        document.getElementById('list-container').scrollTop = '0';
+
+        //document.getElementById('title-' + current).style.fontSize = '1.4em';
+        document.getElementById('title-' + current).style.borderRight = '4px solid black';
+
+
         function select(e){
+
+            //change img
             var id = e.id;
             id = id.substring(6);
-            id = 'img-' + id;
+            imgurl = 'img-' + id;
             hideImg();
-            document.getElementById(id).style.display = 'block';
-            //alert(id);
+            document.getElementById(imgurl).style.display = 'block';
+
+            //title styles
+            resetTitles();
+            //e.style.fontSize = '1.4em';
+            e.style.borderRight = '4px solid black';
+
+            //scroll list
+            //document.getElementById('list-container').scrollTop = e.offsetTop - window.innerHeight * 0.4;
+            document.getElementById('list-container').scrollTo({
+                top: e.offsetTop - window.innerHeight * 0.4,
+                left: 0,
+                behavior: 'smooth'
+            });
+
+            //set current
+            current = id;
         }
         function hideImg(){
             var imgs = document.getElementById('viewer').children;
             for(var i = 0; i < imgs.length; i++)
                 if(imgs[i].style.display != 'none')
                     imgs[i].style.display = 'none';
-            
         }
+        function resetTitles(){
+            var titles = document.getElementById('list').children;
+            for(var i = 0; i < titles.length; i++)
+                if(titles[i].style.borderRight != 'none'){
+                    //titles[i].style.fontSize = '1.1em';
+                    titles[i].style.borderRight = 'none';
+                }
+        }
+
+
+        document.addEventListener('keydown', (e) => {
+            if(e.code === 'ArrowDown'){
+                e.preventDefault();
+                var currentTitle = document.getElementById('title-' + current);
+                select(currentTitle.nextElementSibling);
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if(e.code === 'ArrowUp'){
+                e.preventDefault();
+                var currentTitle = document.getElementById('title-' + current);
+                select(currentTitle.previousElementSibling);
+            }
+        });
     </script>
 
 </body>
