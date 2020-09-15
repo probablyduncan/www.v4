@@ -3,9 +3,131 @@
     
 <head>
     <title>Works - Duncan Petrie Photography</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+    <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+    <meta name="author" content="Duncan Petrie">
+
+    <link rel="stylesheet" type="text/css" href="works.css">
+
 </head>
 <body>
 
-</body>
+    <div id="list-container">
+        <ul>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-" onclick="select(this)"><a class="img-link">
+                <b></b> 
+            </a></li>
+            <li id="title-iceland5" onclick="select(this)"><a class="img-link">
+                <b>Skaftafell I-II</b> Iceland, 2018
+            </a></li>
+            <li id="title-iceland4" onclick="select(this)"><a class="img-link">
+                <b>Sólheimasandur I-II</b> Iceland, 2018
+            </a></li>
+            <li id="title-iceland3" onclick="select(this)"><a class="img-link">
+                <b>Vik III</b> Iceland, 2018
+            </a></li>
+            <li id="title-iceland2" onclick="select(this)"><a class="img-link">
+                <b>Stöng</b> Iceland, 2018
+            </a></li>
+            <li id="title-seattle3" onclick="select(this)"><a class="img-link">
+                <b>Kalaloch III</b> Olympia, 2018
+            </a></li>
+            <li id="title-seattle2" onclick="select(this)"><a class="img-link">
+                <b>Kalaloch II</b> Olympia, 2018
+            </a></li>
+            <li id="title-iw8" onclick="select(this)"><a class="img-link">
+                <b>Icewater VIII</b> Lake Michigan, 2018
+            </a></li>
+            <li id="title-iw7" onclick="select(this)"><a class="img-link">
+                <b>Icewater VII</b> Lake Michigan, 2018
+            </a></li>
+            <li id="title-iw6" onclick="select(this)"><a class="img-link">
+                <b>Icewater VI</b> Lake Michigan, 2018
+            </a></li>
+            <li id="title-iw5" onclick="select(this)"><a class="img-link">
+                <b>Icewater V</b> Lake Michigan, 2018
+            </a></li>
+            <li id="title-iceland1" onclick="select(this)"><a class="img-link">
+                <b>Kjalarnes</b> Iceland, 2017
+            </a></li>
+            <li id="title-iw4" onclick="select(this)"><a class="img-link">
+                <b>Icewater IV</b> Lake Michigan, 2017
+            </a></li>
+            <li id="title-seattle1" onclick="select(this)"><a class="img-link">
+                <b>Union Pacific II</b> Seattle, 2017
+            </a></li>
+            <li id="title-iw1" onclick="select(this)"><a class="img-link">
+                <b>Icewater I</b> Lake Michigan, 2017
+            </a></li>
+        </ul>
+    </div>
 
+    <div id="viewer">
+        <div id="img-" class="img-container">
+            <img src="">
+            <p class="caption"></p>
+        </div>
+        <div id="img-" class="img-container">
+            <img src="">
+            <p class="caption"></p>
+        </div>
+        <div id="img-" class="img-container">
+            <img src="">
+            <p class="caption"></p>
+        </div>
+        <div id="img-" class="img-container">
+            <img src="">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iw4" class="img-container">
+            <img src="works/iw4.jpg">
+            <p class="caption">ahh this is a photograph</p>
+        </div>
+        <div id="img-seattle1" class="img-container">
+            <img src="works/seattle1.jpg">
+            <p class="caption">yee haw now that's what i call a photograph</p>
+        </div>
+        <div id="img-iw1" class="img-container">
+            <img src="stories/stillwater/1.jpg">
+            <p class="caption">The earliest photograph I took which still stands among my current work, <i>Icewater I</i> brings me back to a time when I did not know to obsess over technical perfection, when I only wanted to make images.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function select(e){
+            var id = e.id;
+            id = id.substring(6);
+            id = 'img-' + id;
+            hideImg();
+            document.getElementById(id).style.display = 'block';
+            //alert(id);
+        }
+        function hideImg(){
+            var imgs = document.getElementById('viewer').children;
+            for(var i = 0; i < imgs.length; i++)
+                if(imgs[i].style.display != 'none')
+                    imgs[i].style.display = 'none';
+            
+        }
+    </script>
+
+</body>
 </html>

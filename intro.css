@@ -29,6 +29,9 @@ img{
     width: 100%;
     pointer-events: none;
 }
+#intro{
+    opacity: 1;
+}
 #main{
     background-color:ghostwhite;
     width: 100vw;
