@@ -15,10 +15,9 @@ body{
 }
 
 /* IMG CONTAINER */
-/* WIDTH should be 45% for vertical images */
 #img-container img{
     width: 100%;
-    background-color: rgb(126, 149, 157);
+    /* background-color: rgb(126, 149, 157); */
 }
 
 /* CAPTION CONTAINER */
