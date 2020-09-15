@@ -15,7 +15,9 @@
 </head>
 <body>
 
+    <!-- i should probably put both of these above the viewer instead of over the list -->
     <a id="works-back" href="index.html#main">back</a>
+    <!-- <a id="works-filter" onclick="filterMenu()">filter</a> -->
 
     <div id="list-container">
         <ul id="list">
@@ -96,7 +98,7 @@
             <p class="caption"></p>
         </div>
         <div id="img-iceland4" class="img-container">
-            <img src="works/iceland4.jpg">
+            <img src="works/iceland4.jpg" style="margin-bottom: 1em;">
             <img src="works/iceland4-2.jpg">
             <p class="caption"></p>
         </div>
@@ -152,30 +154,33 @@
 
     <script type="text/javascript">
 
-        var current = document.getElementById('list').children[0].id.substring(6);
-        select(document.getElementById('title-' + current));
+        //return list to top because a reload doesn't do this automatically for some reason
         document.getElementById('list-container').scrollTop = '0';
 
-        //document.getElementById('title-' + current).style.fontSize = '1.4em';
+        //set first image as selected
+        var current = document.getElementById('list').children[0].id.substring(6);
+        select(document.getElementById('title-' + current));
+
+        //set first title style
         document.getElementById('title-' + current).style.borderRight = '4px solid black';
 
 
+        //select new image for #viewer
         function select(e){
 
-            //change img
+            //get id without 'title-'
             var id = e.id;
             id = id.substring(6);
-            imgurl = 'img-' + id;
-            hideImg();
-            document.getElementById(imgurl).style.display = 'block';
 
-            //title styles
-            resetTitles();
-            //e.style.fontSize = '1.4em';
+            //change img
+            document.getElementById('img-' + current).style.display = 'none';
+            document.getElementById('img-' + id).style.display = 'block';
+
+            //change border style
+            document.getElementById('title-' + current).style.borderRight = 'none';
             e.style.borderRight = '4px solid black';
 
-            //scroll list
-            //document.getElementById('list-container').scrollTop = e.offsetTop - window.innerHeight * 0.4;
+            //scroll
             document.getElementById('list-container').scrollTo({
                 top: e.offsetTop - window.innerHeight * 0.4,
                 left: 0,
@@ -185,36 +190,21 @@
             //set current
             current = id;
         }
-        function hideImg(){
-            var imgs = document.getElementById('viewer').children;
-            for(var i = 0; i < imgs.length; i++)
-                if(imgs[i].style.display != 'none')
-                    imgs[i].style.display = 'none';
-        }
-        function resetTitles(){
-            var titles = document.getElementById('list').children;
-            for(var i = 0; i < titles.length; i++)
-                if(titles[i].style.borderRight != 'none'){
-                    //titles[i].style.fontSize = '1.1em';
-                    titles[i].style.borderRight = 'none';
-                }
-        }
 
-
+        //arrow key listeners
         document.addEventListener('keydown', (e) => {
             if(e.code === 'ArrowDown'){
                 e.preventDefault();
                 var currentTitle = document.getElementById('title-' + current);
                 select(currentTitle.nextElementSibling);
             }
-        });
-        document.addEventListener('keydown', (e) => {
             if(e.code === 'ArrowUp'){
                 e.preventDefault();
                 var currentTitle = document.getElementById('title-' + current);
                 select(currentTitle.previousElementSibling);
             }
         });
+
     </script>
 
 </body>

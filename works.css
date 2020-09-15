@@ -55,8 +55,9 @@ li{
 
 }
 li:hover{
-    color: white;
-    background-color: rgb(36, 36, 36);
+    /* color: white;
+    background-color: rgb(36, 36, 36); */
+    border-right: 2px solid black;
 }
 li b{
     font-weight: 700;
