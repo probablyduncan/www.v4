@@ -17,33 +17,273 @@
 
 <!-- i should probably put both of these above the viewer instead of over the list -->
     <a id="works-back" href="index.html#main">back</a>
-    <!-- <a id="works-filter" onclick="filterMenu()">filter</a> -->
 
 <!-- ALSO add a 'use arrow keys or mouse to navigate up and down' message that fades when you scroll -->
 
 
 
-
-    <div id="list-container">
+    <div id="list-container" onscroll="instruFade()">
+        <p id="instructions">scroll or use arrow keys to explore works</p>
         <ul id="list">
-            <!-- <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
+            <li id="title-filter" class="unselected" onclick="select(this)"><a class="img-link">filter</a></li>
+            <li id="title-whitepine3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>White Pine III</b> 2020
             </a></li>
-            <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
+            <li id="title-tallgrass1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Tallgrass I</b> 2020
             </a></li>
-            <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
+            <li id="title-lightningfodder1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Lightningfodder I</b> 2020
             </a></li>
-            <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
+            <li id="title-gloaming3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Gloaming III</b> 2020
             </a></li>
-            <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
+            <li id="title-gloaming1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Gloaming I</b> 2020
             </a></li>
-            <li id="title-" onclick="select(this)"><a class="img-link">
-                <b></b> 
-            </a></li> -->
+            <li id="title-contrails" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Contrails</b> 2020
+            </a></li>
+            <li id="title-sunken3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Sunken III</b> 2020
+            </a></li>
+            <li id="title-redwater5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Redwater V</b> 2020
+            </a></li>
+            <li id="title-glasswater" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Glasswater</b> 2020
+            </a></li>
+            <li id="title-coppersky3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Copper Sky III</b> 2020
+            </a></li>
+            <li id="title-shorebirch1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Shore Birch I</b> 2020
+            </a></li>
+            <li id="title-riverbirch1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>River Birch I</b> 2020
+            </a></li>
+            <li id="title-whitepine1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>White Pine I</b> 2020
+            </a></li>
+            <li id="title-dawnforest3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Dawn Forest III</b> 2020
+            </a></li>
+            <li id="title-stormlight3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Stormlight III</b> 2020
+            </a></li>
+            <li id="title-stratus4" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Stratus Dance IV</b> 2020
+            </a></li>
+            <li id="title-emberwater2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ember Water II</b> 2020
+            </a></li>
+            <li id="title-magenta1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Magenta I</b> 2020
+            </a></li>
+            <li id="title-rainshadow5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Rainshadow V</b> 2020
+            </a></li>
+            <li id="title-rainshadow1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Rainshadow I</b> 2020
+            </a></li>
+            <li id="title-ripple5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ripple V</b> 2020
+            </a></li>
+            <li id="title-daybreak4" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Daybreak IV</b> 2020
+            </a></li>
+            <li id="title-daybreak3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Daybreak III</b> 2020
+            </a></li>
+            <li id="title-ripple4" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ripple IV</b> 2020
+            </a></li>
+            <li id="title-daybreak2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Daybreak II</b> 2020
+            </a></li>
+            <li id="title-ripple3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ripple III</b> 2020
+            </a></li>
+            <li id="title-ripple2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ripple II</b> 2020
+            </a></li>
+            <li id="title-deepsky" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Deek Sky</b> 2020
+            </a></li>
+            <li id="title-mistripples" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Mistripples</b> 2020
+            </a></li>
+            <li id="title-homeward" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Homeward</b> 2020
+            </a></li>
+            <li id="title-lastcall2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Last Call II</b> 2020
+            </a></li>
+            <li id="title-meadowlarkening" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Meadowlarkening</b> 2020
+            </a></li>
+            <li id="title-breakwall2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Breakwall II</b> 2020
+            </a></li>
+            <li id="title-waterline2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Waterline II</b> 2020
+            </a></li>
+            <li id="title-ship3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Shipping Lane III</b> 2020
+            </a></li>
+            <li id="title-darkwater1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Darkwater I</b> 2020
+            </a></li>
+            <li id="title-leaf9" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Leaf IX</b> 2020
+            </a></li>
+            <li id="title-tideline5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Tideline V</b> 2020
+            </a></li>
+            <li id="title-cirrus1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Cirrus Tracks I</b> 2020
+            </a></li>
+            <li id="title-ag5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Afterglow V</b> 2019
+            </a></li>
+            <li id="title-ag3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Afterglow III</b> 2019
+            </a></li>
+            <li id="title-startouch3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Startouch III</b> 2019
+            </a></li>
+            <li id="title-eddy2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Eddy II</b> 2019
+            </a></li>
+            <li id="title-eddy1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Eddy I</b> 2019
+            </a></li>
+            <li id="title-leaf5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Leaf V</b> 2019
+            </a></li>
+            <li id="title-leaf2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Leaf II</b> 2019
+            </a></li>
+            <li id="title-haytor" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Haytor</b> 2019
+            </a></li>
+            <li id="title-wingbeat5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Wingbeat V</b> 2019
+            </a></li>
+            <li id="title-wingbeat3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Wingbeat III</b> 2019
+            </a></li>
+            <li id="title-goldenbough4" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Goldenbough IV</b> 2019
+            </a></li>
+            <li id="title-sessile2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Sessile II</b> 2019
+            </a></li>
+            <li id="title-sessile1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Sessile I</b> 2019
+            </a></li>
+            <li id="title-cloudprints" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Cloudprints</b> 2019
+            </a></li>
+            <li id="title-banana5" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Banana V</b> 2019
+            </a></li>
+            <li id="title-ant2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Ant II</b> 2019
+            </a></li>
+            <li id="title-tideline3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Tideline III</b> 2019
+            </a></li>
+            <li id="title-orchard2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Orchard II</b> 2019
+            </a></li>
+            <li id="title-hedgerows2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Hedgerows II</b> 2019
+            </a></li>
+            <li id="title-wingbeat2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Wingbeat II</b> 2019
+            </a></li>
+            <li id="title-cycling" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Cycling</b> 2019
+            </a></li>
+            <li id="title-maple1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Maple I</b> 2019
+            </a></li>
+            <li id="title-meadowbird1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Meadowbird I</b> 2019
+            </a></li>
+            <li id="title-russet" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Russet</b> 2019
+            </a></li>
+            <li id="title-wake2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Wake II</b> 2019
+            </a></li>
+            <li id="title-yellow" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Yellow Warbler I</b> 2019
+            </a></li>
+            <li id="title-muledeer" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Mule Deer I</b> 2019
+            </a></li>
+            <li id="title-silent" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Silent Wing</b> 2019
+            </a></li>
+            <li id="title-fire6" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Fire VI</b> 2019
+            </a></li>
+            <li id="title-fire3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Fire III</b> 2019
+            </a></li>
+            <li id="title-downy" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Downy I</b> 2019
+            </a></li>
+            <li id="title-ag2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Afterglow II</b> 2018
+            </a></li>
+            <li id="title-ag1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Afterglow I</b> 2018
+            </a></li>
+            <li id="title-whitetail" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Whitetail II</b> 2018
+            </a></li>
+            <li id="title-blue" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Blue I</b> 2018
+            </a></li>
+            <li id="title-sus3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Susurrus III</b> 2018
+            </a></li>
+            <li id="title-sus2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Susurrus II</b> 2018
+            </a></li>
+            <li id="title-cattails" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Cattails</b> 2018
+            </a></li>
+            <li id="title-sus1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Susurrus I</b> 2018
+            </a></li>
+            <li id="title-ny3" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Broadway, NY</b> 2018
+            </a></li>
+            <li id="title-ny2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Queens, NY</b> 2018
+            </a></li>
+            <li id="title-ny1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Lincoln Square, NY</b> 2018
+            </a></li>
+            <li id="title-yardbirds" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Yardbirds</b> 2018
+            </a></li>
+            <li id="title-biscoitos" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Biscoitos I</b> 2018
+            </a></li>
+            <li id="title-vineyard2" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Vineyard II</b> 2018
+            </a></li>
+            <li id="title-vineyard1" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Vineyard I</b> 2018
+            </a></li>
+            <li id="title-iceland6" class="unselected" onclick="select(this)"><a class="img-link">
+                <b>Hitchhikers I</b> 2018
+            </a></li>
             <li id="title-iceland5" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Skaftafell II</b> 2018
             </a></li>
@@ -84,11 +324,351 @@
     </div>
 
     <div id="viewer">
-        <div id="img-" class="img-container">
-            <img src="works">
+        <div id="img-filter" class="img-container">
+            <a onclick="filter(woodland)">woodland</a>
+            <a onclick="filter(water)">water</a>
+        </div>
+        <div id="img-whitepine3" class="img-container">
+            <img src="works/whitepine3.jpg">
             <p class="caption"></p>
         </div>
-        <div id="img-" class="img-container">
+        <div id="img-tallgrass1" class="img-container">
+            <img src="works/tallgrass1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-lightningfodder1" class="img-container">
+            <img src="works/lighningfodder1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-gloaming3" class="img-container">
+            <img src="works/gloaming3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-gloaming1" class="img-container">
+            <img src="works/gloaming1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-contrails" class="img-container">
+            <img src="works/contrails.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sunken3" class="img-container">
+            <img src="works/sunken3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-redwater5" class="img-container">
+            <img src="works/redwater5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-glasswater" class="img-container">
+            <img src="works/glasswater.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-coppersky3" class="img-container">
+            <img src="works/coppersky3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-shorebirch1" class="img-container">
+            <img src="works/shorebirch1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-riverbirch1" class="img-container">
+            <img src="works/riverbirch1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-whitepine1" class="img-container">
+            <img src="works/whitepine1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-dawnforest3" class="img-container">
+            <img src="works/dawnforest3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-stormlight3" class="img-container">
+            <img src="works/stormlight3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-stratus4" class="img-container">
+            <img src="works/stratus4.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-emberwater2" class="img-container">
+            <img src="works/emberwater2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-magenta1" class="img-container">
+            <img src="works/magenta1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-rainshadow5" class="img-container">
+            <img src="works/rainshadow5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-rainshadow1" class="img-container">
+            <img src="works/rainshadow1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ripple5" class="img-container">
+            <img src="works/ripple5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-daybreak4" class="img-container">
+            <img src="works/daybreak4.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-daybreak3" class="img-container">
+            <img src="works/daybreak3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ripple4" class="img-container">
+            <img src="works/ripple4.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-daybreak2" class="img-container">
+            <img src="works/daybreak2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ripple3" class="img-container">
+            <img src="works/ripple3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ripple2" class="img-container">
+            <img src="works/ripple2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-deepsky" class="img-container">
+            <img src="works/deepsky.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-mistripples" class="img-container">
+            <img src="works/mistripples.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-homeward" class="img-container-vert">
+            <img src="works/homeward.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-lastcall2" class="img-container">
+            <img src="works/lastcall2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-meadowlarkening" class="img-container">
+            <img src="works/meadowlarkening.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-breakwall2" class="img-container-vert">
+            <img src="works/breakwall2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-waterline2" class="img-container">
+            <img src="works/waterline2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ship3" class="img-container">
+            <img src="works/ship3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-darkwater1" class="img-container">
+            <img src="works/darkwater1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-leaf9" class="img-container">
+            <img src="works/leaf9.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-tideline5" class="img-container">
+            <img src="works/tideline5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-cirrus1" class="img-container">
+            <img src="works/cirrus1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ag5" class="img-container">
+            <img src="works/ag5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ag3" class="img-container">
+            <img src="works/ag3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-startouch3" class="img-container">
+            <img src="works/startouch3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-eddy2" class="img-container">
+            <img src="works/eddy2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-eddy1" class="img-container-vert">
+            <img src="works/eddy1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-leaf5" class="img-container-vert">
+            <img src="works/leaf5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-leaf2" class="img-container-vert">
+            <img src="works/leaf2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-haytor" class="img-container">
+            <img src="works/haytor.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-wingbeat5" class="img-container">
+            <img src="works/wingbeat5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-wingbeat3" class="img-container">
+            <img src="works/wingbeat3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-goldenbough4" class="img-container">
+            <img src="works/goldenbough4.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sessile2" class="img-container-vert">
+            <img src="works/sessile2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sessile1" class="img-container-vert">
+            <img src="works/sessile1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-cloudprints" class="img-container-vert">
+            <img src="works/cloudprints.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-banana5" class="img-container">
+            <img src="works/banana5.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ant2" class="img-container">
+            <img src="works/ant2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-tideline3" class="img-container-vert">
+            <img src="works/tideline3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-orchard2" class="img-container">
+            <img src="works/orchard2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-hedgerows2" class="img-container-vert">
+            <img src="works/hedgerows2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-wingbeat2" class="img-container">
+            <img src="works/wingbeat2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-cycling" class="img-container">
+            <img src="works/cycling.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-maple1" class="img-container">
+            <img src="works/maple1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-meadowbird1" class="img-container">
+            <img src="works/meadowbird1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-russet" class="img-container">
+            <img src="works/russet.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-wake2" class="img-container">
+            <img src="works/wake2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-yellow" class="img-container">
+            <img src="works/yellow.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-muledeer" class="img-container">
+            <img src="works/muledeer.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-silent" class="img-container">
+            <img src="works/silent.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-fire6" class="img-container-vert">
+            <img src="works/fire6.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-fire3" class="img-container">
+            <img src="works/fire3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-downy" class="img-container">
+            <img src="works/downy.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ag2" class="img-container-vert">
+            <img src="works/ag2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ag1" class="img-container">
+            <img src="works/ag1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-whitetail" class="img-container">
+            <img src="works/whitetail.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-blue" class="img-container">
+            <img src="works/blue.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sus3" class="img-container">
+            <img src="works/sus3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sus2" class="img-container">
+            <img src="works/sus2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-cattails" class="img-container">
+            <img src="works/cattails.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-sus1" class="img-container">
+            <img src="works/sus1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ny3" class="img-container">
+            <img src="works/ny3.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ny2" class="img-container">
+            <img src="works/ny2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-ny1" class="img-container">
+            <img src="works/ny1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-yardbirds" class="img-container">
+            <img src="works/yardbirds.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-biscoitos" class="img-container">
+            <img src="works/biscoitos.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-vineyard2" class="img-container">
+            <img src="works/vineyard2.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-vineyard1" class="img-container">
+            <img src="works/vineyard1.jpg">
+            <p class="caption"></p>
+        </div>
+        <div id="img-iceland6" class="img-container-vert">
             <img src="works/iceland6.jpg">
             <p class="caption">hitchhikers!</p>
         </div>
@@ -149,11 +729,8 @@
         document.getElementById('list-container').scrollTop = '0';
 
         //set first image as selected
-        var current = document.getElementById('list').children[0].id.substring(6);
+        var current = document.getElementById('list').children[1].id.substring(6);
         select(document.getElementById('title-' + current));
-
-        //set first title style
-        document.getElementById('title-' + current).classList.add('selected');
 
 
         //select new image for #viewer
@@ -184,19 +761,60 @@
             current = id;
         }
 
+        function filter(array){
+            showHide(0);
+            for(var i = 0; i < array.length; i++){
+                console.log(i);
+                document.getElementById('title-' + array[i]).style.display = 'block';
+            }
+        }
+
+        //0 hides all titles and 1 shows all titles
+        function showHide(i){
+            var dis = 'none';
+            if(i == 1) dis = 'block';
+
+            for(var i = 1; i < document.getElementById('list').children.length; i++){
+                document.getElementById('list').children[i].style.display = dis;
+            }
+        }
+
+        function instruFade(){
+            scroll = document.getElementById('list-container').scrollTop;
+            if(scroll >= 35) document.getElementById('instructions').style.opacity = 1.5 - scroll/70;
+            else if(scroll < 35) document.getElementById('instructions').style.opacity = 1 - (35 - scroll)/35
+            //console.log(document.getElementById('list-container').scrollTop);
+        }
+
+        function nextTitle(){
+            var currentTitle = document.getElementById('title-' + current);
+            var nextTitle = currentTitle.nextElementSibling;
+            while(nextTitle.style.display == 'none') nextTitle = nextTitle.nextElementSibling;
+            select(nextTitle);
+        }
+        function prevTitle(){
+            var currentTitle = document.getElementById('title-' + current);
+            var prevTitle = currentTitle.previousElementSibling;
+            while(prevTitle.style.display == 'none') prevTitle = prevTitle.previousElementSibling;
+            select(prevTitle);
+        }
+
         //arrow key listeners
         document.addEventListener('keydown', (e) => {
             if(e.code === 'ArrowDown'){
                 e.preventDefault();
-                var currentTitle = document.getElementById('title-' + current);
-                select(currentTitle.nextElementSibling);
+                nextTitle();
             }
             if(e.code === 'ArrowUp'){
                 e.preventDefault();
-                var currentTitle = document.getElementById('title-' + current);
-                select(currentTitle.previousElementSibling);
+                prevTitle();
             }
         });
+
+        //filter arrays
+        const water = ['blue','ag1','ag2','fire3','fire6','wake2','tideline3','cloudprints','ag3','ag5','cirrus1','tideline5','darkwater1','ship3','waterline2','breakwall2','ripple2','ripple3','ripple4','daybreak4','ripple5','rainshadow1','rainshadow5','magenta1','emberwater2','stratus4','stormlight3','coppersky3','glasswater','redwater5','sunken3','gloaming1','gloaming3'];
+        const woodland = ['whitetail','downy','maple1','cycling','sessile1','sessile2','goldenbough4','dawnforest3','whitepine1','riverbirch1','shorebirch1','whitepine3'];
+        const prairie = ['sus1','cattails','sus2','sus3','silent','muledeer','yellow','russet','meadowbird1','wingbeat','hedgerows2','orchard2','ant2','meadowlarkening','lastcall2','homeward','lightningfodder1','tallgrass1'];
 
     </script>
 
