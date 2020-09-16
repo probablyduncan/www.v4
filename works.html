@@ -44,46 +44,40 @@
             <li id="title-" onclick="select(this)"><a class="img-link">
                 <b></b> 
             </a></li> -->
-            <li id="title-iceland5" onclick="select(this)"><a class="img-link">
+            <li id="title-iceland5" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Skaftafell II</b> 2018
             </a></li>
-            <li id="title-iceland4" onclick="select(this)"><a class="img-link">
+            <li id="title-iceland4" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Sólheimasandur I-II</b> 2018
             </a></li>
-            <li id="title-iceland3" onclick="select(this)"><a class="img-link">
+            <li id="title-iceland3" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Vik III</b> 2018
             </a></li>
-            <li id="title-iceland2" onclick="select(this)"><a class="img-link">
+            <li id="title-iceland2" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Stöng</b> 2018
             </a></li>
-            <li id="title-seattle3" onclick="select(this)"><a class="img-link">
+            <li id="title-seattle3" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Kalaloch III</b> 2018
             </a></li>
-            <li id="title-seattle2" onclick="select(this)"><a class="img-link">
+            <li id="title-seattle2" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Kalaloch II</b> 2018
             </a></li>
-            <li id="title-iw8" onclick="select(this)"><a class="img-link">
-                <b>Icewater VIII</b> 2018
-            </a></li>
-            <li id="title-iw7" onclick="select(this)"><a class="img-link">
-                <b>Icewater VII</b> 2018
-            </a></li>
-            <li id="title-iw6" onclick="select(this)"><a class="img-link">
+            <li id="title-iw6" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Icewater VI</b> 2018
             </a></li>
-            <li id="title-iw5" onclick="select(this)"><a class="img-link">
+            <li id="title-iw5" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Icewater V</b> 2018
             </a></li>
-            <li id="title-iceland1" onclick="select(this)"><a class="img-link">
+            <li id="title-iceland1" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Kjalarnes</b> 2017
             </a></li>
-            <li id="title-iw4" onclick="select(this)"><a class="img-link">
+            <li id="title-iw4" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Icewater IV</b> 2017
             </a></li>
-            <li id="title-seattle1" onclick="select(this)"><a class="img-link">
+            <li id="title-seattle1" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Union Pacific II</b> 2017
             </a></li>
-            <li id="title-iw1" onclick="select(this)"><a class="img-link">
+            <li id="title-iw1" class="unselected" onclick="select(this)"><a class="img-link">
                 <b>Icewater I</b> 2017
             </a></li>
         </ul>
@@ -123,14 +117,6 @@
             <img src="works/seattle2.jpg">
             <p class="caption"></p>
         </div>
-        <div id="img-iw8" class="img-container">
-            <img src="works/iw8.jpg">
-            <p class="caption"></p>
-        </div>
-        <div id="img-iw7" class="img-container">
-            <img src="works/iw7.jpg">
-            <p class="caption"></p>
-        </div>
         <div id="img-iw6" class="img-container">
             <img src="works/iw6.jpg">
             <p class="caption"></p>
@@ -167,7 +153,7 @@
         select(document.getElementById('title-' + current));
 
         //set first title style
-        document.getElementById('title-' + current).style.borderRight = '4px solid black';
+        document.getElementById('title-' + current).classList.add('selected');
 
 
         //select new image for #viewer
@@ -182,8 +168,10 @@
             document.getElementById('img-' + id).style.display = 'block';
 
             //change border style
-            document.getElementById('title-' + current).style.borderRight = 'none';
-            e.style.borderRight = '4px solid black';
+            document.getElementById('title-' + current).classList.remove('selected');
+            e.classList.add('selected');
+            //document.getElementById('title-' + current).style.borderRight = 'none';
+            //e.style.borderRight = '4px solid black';
 
             //scroll
             document.getElementById('list-container').scrollTo({

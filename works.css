@@ -37,16 +37,15 @@ body{
     margin: 40vh 0 calc(60vh - 1.35em) 0;
     padding: 0;
 }
-li{
+.unselected{
     list-style: none;
-    margin: 0;
+    margin: 0 0 0.8em 0;
     padding: 0;
     cursor: pointer;
     font-size: 1.1em;
     font-family: 'Archivo Narrow', 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 300;
     line-height: 1.2em;
-    margin-bottom: 0.8em;
     -webkit-user-select: none;
     -moz-user-select: none; 
     -ms-user-select: none;
@@ -54,11 +53,13 @@ li{
     touch-action: manipulation;
 
 }
-li:hover{
-    /* color: white;
-    background-color: rgb(36, 36, 36); */
+.unselected:hover{
     border-right: 2px solid black;
 }
+.selected{
+    border-right: 4px solid black;
+}
+
 li b{
     font-weight: 700;
 }
