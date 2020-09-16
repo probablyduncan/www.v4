@@ -16,7 +16,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1em;
     cursor: pointer;
-    padding-right: 0.4em;
+    padding-right: 1.6em;
 } #works-back:hover{
     color: white;
     background-color: black;
@@ -66,6 +66,10 @@ body{
 }
 .selected:hover{
     border-right: 4px solid black;
+}
+#title-filter{
+    color: rgb(131, 131, 131);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 li b{
