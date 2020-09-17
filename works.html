@@ -323,19 +323,25 @@
         </ul>
     </div>
 
-    <div id="viewer">
+    <div id="viewer" class="viewer-desktop" onclick="closeViewer()">
+
+        <div id="viewer-x">x</div>
         <div id="img-filter" class="img-container">
             <a onclick="filter(woodland)">woodland</a>
             <a onclick="filter(water)">water</a>
             <a onclick="filter(prairie)">prairie</a>
         </div>
+
+
+
+
         <div id="img-whitepine3" class="img-container">
             <img src="works/whitepine3.jpg">
             <p class="caption">A stand of white pines overhang a cornfield at woodland's edge as the last arcs of light bend over distant hills.</p>
         </div>
         <div id="img-tallgrass1" class="img-container">
             <img src="works/tallgrass1.jpg">
-            <p class="caption"></p>
+            <p class="caption">Wild grasses dance in evening light.</p>
         </div>
         <div id="img-lightningfodder1" class="img-container">
             <img src="works/lighningfodder1.jpg">
@@ -740,13 +746,17 @@
             document.getElementById('instructions').style.display = 'none';
         }
         //offset for centered title
-        var topMargin = 0.4;
-        if(isMobile) topMargin = 0;
+        var topMargin = 0.45;
+        if(isMobile && window.innerHeight > window.innerWidth) topMargin = 0;
 
 
         //select new image for #viewer
         function select(e){
+            if(isMobile) selectMobile(e);
+            else selectDesktop(e);
+        }
 
+        function selectDesktop(e){
             //get id without 'title-'
             var id = e.id;
             id = id.substring(6);
@@ -772,6 +782,26 @@
             current = id;
         }
 
+        function selectMobile(e){
+            var id = e.id;
+            id = id.substring(6);
+
+            document.getElementById('img-' + current).style.display = 'none';
+            
+            //display img and viewer
+            //document.getElementById('viewer').style.display = 'grid';
+            document.getElementById('img-' + id).style.display = 'block';
+            //document.getElementById('viewer-x').style.display = 'block';
+
+            current = id;
+        }
+
+        // function closeViewer(){
+        //     document.getElementById('img-' + current).style.display = 'none';
+        //     document.getElementById('viewer').style.display = 'none';
+        //     //document.getElementById('viewer-x').style.display = 'none';
+        // }
+
         function filter(array){
             showHide(0);
             for(var i = 0; i < array.length; i++){
@@ -791,12 +821,10 @@
         }
 
         function instruFade(){
-            if(document.getElementById('instructions').style.opacity == '0')
-                document.getElementById('instructions').style.display = 'none';
-            else {
-                scroll = document.getElementById('list-container').scrollTop;
-                document.getElementById('instructions').style.opacity = 1 - Math.abs(scroll - 35) / 35;
-            }
+            
+            scroll = document.getElementById('list-container').scrollTop;
+            console.log(scroll);
+            document.getElementById('instructions').style.opacity = 1 - Math.abs(scroll) / 35;
             
         }
 
