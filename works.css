@@ -103,21 +103,7 @@ li b{
 .img-container-vert img{
     width: 45%;
 }
-#viewer-x{
-    display: none;
-    position: fixed;
-    top: 3vh;
-    right: 5vw;
-    font-size: 2em;
-    font-weight: 300;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-    touch-action: manipulation;
-    cursor: pointer;
-}
+
 .caption{
     margin: 1em 0 0 0;
     /* max-width: 400px; */
@@ -155,7 +141,22 @@ li b{
 
 /* maybe i should do a thing where none of the images are shown and when you tap on a title it shows the viewer which is a 100vw x 100vh card over everything with the caption there and if you tap it again it goes back to the list of titles*/
 
-
+#viewer-x{
+    display: none;
+    position: fixed;
+    top: 3vh;
+    right: 5vw;
+    font-size: 1.6em;
+    font-weight: 300;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    color: darkgrey;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+}
 .viewer-mobile{
     display: none;
     position:fixed;
