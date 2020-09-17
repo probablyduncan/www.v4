@@ -85,6 +85,7 @@ li b{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 5vh auto 1fr;
+    max-width: 410px;
 }
 .img-container{
     grid-row: 2;
@@ -151,7 +152,6 @@ li b{
 }
 
 /* maybe i should do a thing where none of the images are shown and when you tap on a title it shows the viewer which is a 100vw x 100vh card over everything with the caption there and if you tap it again it goes back to the list of titles*/
-
 
 
 .viewer-mobile{

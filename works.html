@@ -733,6 +733,7 @@
     <script type="text/javascript">
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var aspectRatio = window.innerWidth > window.innerHeight;
 
         //return list to top because a reload doesn't do this automatically for some reason
         document.getElementById('list-container').scrollTop = '0';
@@ -747,7 +748,7 @@
         }
         //offset for centered title
         var topMargin = 0.45;
-        if(isMobile && window.innerHeight > window.innerWidth) topMargin = 0;
+        if(isMobile && aspectRatio < 1) topMargin = 0;
 
 
         //select new image for #viewer
