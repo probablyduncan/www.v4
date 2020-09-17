@@ -331,7 +331,7 @@
         </div>
         <div id="img-whitepine3" class="img-container">
             <img src="works/whitepine3.jpg">
-            <p class="caption"></p>
+            <p class="caption">A stand of white pines overhang a cornfield at woodland's edge as the last arcs of light bend over distant hills.</p>
         </div>
         <div id="img-tallgrass1" class="img-container">
             <img src="works/tallgrass1.jpg">
@@ -383,7 +383,7 @@
         </div>
         <div id="img-dawnforest3" class="img-container">
             <img src="works/dawnforest3.jpg">
-            <p class="caption"></p>
+            <p class="caption">Portrait of the smell of a crisp and solitary morning.</p>
         </div>
         <div id="img-stormlight3" class="img-container">
             <img src="works/stormlight3.jpg">
@@ -726,12 +726,22 @@
 
     <script type="text/javascript">
 
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
         //return list to top because a reload doesn't do this automatically for some reason
         document.getElementById('list-container').scrollTop = '0';
 
         //set first image as selected
         var current = document.getElementById('list').children[1].id.substring(6);
         select(document.getElementById('title-' + current));
+
+        //mobile style stuff
+        if(isMobile){
+            document.getElementById('instructions').style.display = 'none';
+        }
+        //offset for centered title
+        var topMargin = 0.4;
+        if(isMobile) topMargin = 0;
 
 
         //select new image for #viewer
@@ -753,7 +763,7 @@
 
             //scroll
             document.getElementById('list-container').scrollTo({
-                top: e.offsetTop - window.innerHeight * 0.4,
+                top: e.offsetTop - window.innerHeight * topMargin,
                 left: 0,
                 behavior: 'smooth'
             });
@@ -781,10 +791,13 @@
         }
 
         function instruFade(){
-            scroll = document.getElementById('list-container').scrollTop;
-            if(scroll >= 35) document.getElementById('instructions').style.opacity = 1.5 - scroll/70;
-            else if(scroll < 35) document.getElementById('instructions').style.opacity = 1 - (35 - scroll)/35
-            //console.log(document.getElementById('list-container').scrollTop);
+            if(document.getElementById('instructions').style.opacity == '0')
+                document.getElementById('instructions').style.display = 'none';
+            else {
+                scroll = document.getElementById('list-container').scrollTop;
+                document.getElementById('instructions').style.opacity = 1 - Math.abs(scroll - 35) / 35;
+            }
+            
         }
 
         function nextTitle(){
@@ -807,6 +820,14 @@
                 nextTitle();
             }
             if(e.code === 'ArrowUp'){
+                e.preventDefault();
+                prevTitle();
+            }
+            if(e.code === 'ArrowRight'){
+                e.preventDefault();
+                nextTitle();
+            }
+            if(e.code === 'ArrowLeft'){
                 e.preventDefault();
                 prevTitle();
             }

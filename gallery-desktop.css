@@ -76,6 +76,7 @@
 #works-link{
     padding-right: 4px;
     border-bottom-color: tomato;
+    border-bottom-color: rgb(51, 201, 116);
 }
 #works-caption{
     text-align: right;
