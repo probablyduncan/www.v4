@@ -85,7 +85,6 @@ li b{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 5vh auto 1fr;
-    max-width: 410px;
 }
 .img-container{
     grid-row: 2;
@@ -117,6 +116,7 @@ li b{
     font-family: 'Courier New', Courier, monospace;
     margin: 1em;
     cursor: pointer;
+    text-align: center;
 }
 #img-filter a:hover{
     color: white;
@@ -170,6 +170,7 @@ li b{
     grid-template-rows: 5vh auto 1fr;
     background-color: white;
     z-index: 100;
+    max-width: 410px;
 }
 .viewer-mobile .img-container-vert{
     width: 80vw;

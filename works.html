@@ -741,10 +741,10 @@
 
         //set first image as selected
         var current = document.getElementById('list').children[1].id.substring(6);
-
+        if(!isMobile) document.getElementById('list').focus();
         if(isMobile && aspectRatio < 1) document.getElementById('list').style.width = '90vw';
 
-        if(isMobile && aspectRatio > 1) select(document.getElementById('title-' + current));
+        if(!isMobile || aspectRatio > 1) select(document.getElementById('title-' + current));
         
 
         //mobile style stuff
