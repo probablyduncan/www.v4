@@ -96,10 +96,12 @@ li b{
     grid-row: 2;
     grid-column: 2;
     display: none;
-    width: 50vh;
 }
-#viewer img{
+.img-container img{
     width: 100%;
+}
+.img-container-vert img{
+    width: 45%;
 }
 #viewer-x{
     display: none;
@@ -157,11 +159,24 @@ li b{
 .viewer-mobile{
     display: none;
     position:fixed;
+    width: 90vw;
+    height: 90vh;
     top: 0;
     left: 0;
     margin: 0;
-    padding: 0;
+    padding: 5vh 5vw 5vh 5vw;
     display: grid;
+    grid-template-rows: 5vh auto 1fr;
     background-color: white;
     z-index: 100;
+}
+.viewer-mobile .img-container-vert{
+    width: 80vw;
+}
+.viewer-mobile .img-container-vert img{
+    width: 100%;
+    
+}
+.viewer-mobile .caption{
+    margin: 0;
 }

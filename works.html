@@ -330,6 +330,7 @@
             <a onclick="filter(woodland)">woodland</a>
             <a onclick="filter(water)">water</a>
             <a onclick="filter(prairie)">prairie</a>
+            <a onclick="showHide(1)">show all</a>
         </div>
 
 
@@ -453,7 +454,7 @@
         </div>
         <div id="img-homeward" class="img-container-vert">
             <img src="works/homeward.jpg">
-            <p class="caption"></p>
+            <p class="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio incidunt quas placeat delectus? Dolore rem hic pariatur doloribus nesciunt voluptatem</p>
         </div>
         <div id="img-lastcall2" class="img-container">
             <img src="works/lastcall2.jpg">
@@ -740,7 +741,8 @@
 
         //set first image as selected
         var current = document.getElementById('list').children[1].id.substring(6);
-        select(document.getElementById('title-' + current));
+        if(isMobile && aspectRatio > 1)
+            select(document.getElementById('title-' + current));
 
         //mobile style stuff
         if(isMobile){
@@ -753,6 +755,7 @@
 
         //select new image for #viewer
         function select(e){
+            aspectRatio = window.innerWidth > window.innerHeight;
             if(isMobile) selectMobile(e);
             else selectDesktop(e);
         }
@@ -788,20 +791,30 @@
             id = id.substring(6);
 
             document.getElementById('img-' + current).style.display = 'none';
+            document.getElementById('img-' + id).style.display = 'block';
             
             //display img and viewer
-            //document.getElementById('viewer').style.display = 'grid';
-            document.getElementById('img-' + id).style.display = 'block';
-            //document.getElementById('viewer-x').style.display = 'block';
-
+            if(aspectRatio < 1){
+                document.getElementById('viewer').classList.add('viewer-mobile');
+                document.getElementById('viewer').classList.remove('viewer-desktop');
+                document.getElementById('list-container').style.display = 'none';
+                document.getElementById('viewer').style.display = 'grid';
+                document.getElementById('viewer-x').style.display = 'block';
+            }
+            
+            //set current
             current = id;
         }
 
-        // function closeViewer(){
-        //     document.getElementById('img-' + current).style.display = 'none';
-        //     document.getElementById('viewer').style.display = 'none';
-        //     //document.getElementById('viewer-x').style.display = 'none';
-        // }
+        function closeViewer(){
+            aspectRatio = window.innerWidth > window.innerHeight;
+            if(isMobile && aspectRatio < 1/1){
+                document.getElementById('img-' + current).style.display = 'none';
+                document.getElementById('viewer').style.display = 'none';
+                document.getElementById('viewer-x').style.display = 'none';
+                document.getElementById('list-container').style.display = 'block';
+            }
+        }
 
         function filter(array){
             showHide(0);
@@ -822,11 +835,9 @@
         }
 
         function instruFade(){
-            
             scroll = document.getElementById('list-container').scrollTop;
             console.log(scroll);
             document.getElementById('instructions').style.opacity = 1 - Math.abs(scroll) / 35;
-            
         }
 
         function nextTitle(){
