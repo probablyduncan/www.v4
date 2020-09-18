@@ -110,7 +110,48 @@ body{
 }
 
 
-
+@media (max-height: 640px){
+    #caption-container{
+        height: 300px;
+    }
+}
+@media (max-height: 560px){
+    #caption-container{
+        height: 260px;
+    }
+}
+@media (max-height: 515px){
+    #cart-text-container{
+        max-width: 180px;
+    }
+    #caption-container{
+        height: 200px;
+    }
+}
+@media (max-height: 445px){
+    #cart-text-container{
+        max-width: 200px;
+    }
+    #caption-container{
+        height: 170px;
+    }
+}
+@media (max-height: 415px){
+    #cart-text-container{
+        max-width: 240px;
+    }
+    #caption-container{
+        height: 140px;
+    }
+}
+@media (max-height: 380px){
+    #cart-text-container{
+        max-width: 260px;
+    }
+    #caption-container{
+        height: 120px;
+    }
+}
 
 /* so if the aspect ratio is wider than 16/9 then
 img width is dictated by height
@@ -141,7 +182,7 @@ img width is dictated by width */
     #cart-text-container{
         max-width: unset;
         display: grid;
-        grid-template-columns: 260px 1fr 90px;
+        grid-template-columns: 200px 1fr 80px;
     }
     #caption-container{
         height: 90px;
