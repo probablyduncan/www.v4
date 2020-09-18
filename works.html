@@ -769,8 +769,8 @@
             //change img
             document.getElementById('img-' + current).style.display = 'none';
             document.getElementById('img-' + id).style.display = 'block';
-            document.getElementById('img-' + id).children[0].getAttributeNode('src').value = 'works/' + id + '.jpg';
             if(id == 'filter') document.getElementById('img-' + id).style.display = 'grid';
+            else document.getElementById('img-' + id).children[0].getAttributeNode('src').value = 'works/' + id + '.jpg';
 
             //change border style
             document.getElementById('title-' + current).classList.remove('selected');
