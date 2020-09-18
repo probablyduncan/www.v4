@@ -342,7 +342,7 @@
         </div>
         <div id="img-tallgrass1" class="img-container">
             <img src="works/tallgrass1.jpg">
-            <p class="caption">Wild grasses dance in evening light.</p>
+            <p class="caption"></p>
         </div>
         <div id="img-lightningfodder1" class="img-container">
             <img src="works/lighningfodder1.jpg">
@@ -678,7 +678,7 @@
         </div>
         <div id="img-iceland6" class="img-container-vert">
             <img src="works/iceland6.jpg">
-            <p class="caption">hitchhikers!</p>
+            <p class="caption"></p>
         </div>
         <div id="img-iceland5" class="img-container">
             <img src="works/iceland5.jpg">
@@ -719,11 +719,11 @@
         </div>
         <div id="img-iw4" class="img-container">
             <img src="works/iw4.jpg">
-            <p class="caption">ahh this is a photograph</p>
+            <p class="caption"></p>
         </div>
         <div id="img-seattle1" class="img-container">
             <img src="works/seattle1.jpg">
-            <p class="caption">yee haw now that's what i call a photograph</p>
+            <p class="caption"></p>
         </div>
         <div id="img-iw1" class="img-container">
             <img src="stories/stillwater/1.jpg">
@@ -734,7 +734,6 @@
     <script type="text/javascript">
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        var aspectRatio = window.innerWidth / window.innerHeight;
 
         //return list to top because a reload doesn't do this automatically for some reason
         document.getElementById('list-container').scrollTop = '0';
@@ -742,9 +741,9 @@
         //set first image as selected
         var current = document.getElementById('list').children[1].id.substring(6);
         if(!isMobile) document.getElementById('list').focus();
-        if(isMobile && aspectRatio < 1) document.getElementById('list').style.width = '90vw';
+        if(isMobile && aspectRatio() < 1) document.getElementById('list').style.width = '90vw';
 
-        if(!isMobile || aspectRatio > 1) select(document.getElementById('title-' + current));
+        if(!isMobile || aspectRatio() > 1) select(document.getElementById('title-' + current));
         
 
         //mobile style stuff
@@ -752,12 +751,12 @@
         
         //offset for centered title
         var topMargin = 0.45;
-        if(isMobile && aspectRatio < 1) topMargin = 0;
+        if(isMobile && aspectRatio() < 1) topMargin = 0;
 
 
         //select new image for #viewer
         function select(e){
-            aspectRatio = window.innerWidth > window.innerHeight;
+            
             if(isMobile) selectMobile(e);
             else selectDesktop(e);
         }
@@ -770,6 +769,7 @@
             //change img
             document.getElementById('img-' + current).style.display = 'none';
             document.getElementById('img-' + id).style.display = 'block';
+            if(id == 'filter') document.getElementById('img-' + id).style.display = 'grid';
 
             //change border style
             document.getElementById('title-' + current).classList.remove('selected');
@@ -791,12 +791,12 @@
         function selectMobile(e){
             var id = e.id;
             id = id.substring(6);
-
             document.getElementById('img-' + current).style.display = 'none';
             document.getElementById('img-' + id).style.display = 'block';
+            if(id == 'filter') document.getElementById('img-' + id).style.display = 'grid';
             
             //display img and viewer
-            if(aspectRatio < 1){
+            if(aspectRatio() < 1){
                 document.getElementById('viewer').classList.add('viewer-mobile');
                 document.getElementById('viewer').classList.remove('viewer-desktop');
                 document.getElementById('list').style.width = '90vw';
@@ -804,7 +804,9 @@
                 document.getElementById('viewer').style.display = 'grid';
                 document.getElementById('viewer-x').style.display = 'block';
             }
-            if(aspectRatio > 1){
+            else{
+                document.getElementById('viewer').classList.add('viewer-desktop');
+                document.getElementById('viewer').classList.remove('viewer-mobile');
                 document.getElementById('list').style.width = '220px';
             }
             
@@ -813,8 +815,7 @@
         }
 
         function closeViewer(){
-            aspectRatio = window.innerWidth > window.innerHeight;
-            if(isMobile && aspectRatio < 1){
+            if(isMobile && aspectRatio() < 1){
                 document.getElementById('img-' + current).style.display = 'none';
                 document.getElementById('viewer').style.display = 'none';
                 document.getElementById('viewer-x').style.display = 'none';
@@ -857,6 +858,10 @@
             var prevTitle = currentTitle.previousElementSibling;
             while(prevTitle.style.display == 'none') prevTitle = prevTitle.previousElementSibling;
             select(prevTitle);
+        }
+
+        function aspectRatio(){
+            return window.innerWidth / window.innerHeight;
         }
 
         //arrow key listeners
