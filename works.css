@@ -127,22 +127,6 @@ li b{
     background-color: black;
 }
 
-
-/* @media (max-height: 680px){
-    #instructions{
-        display: none;
-    }
-    #list-container{
-        margin-top: calc(30px + 1.4em);
-        padding-right: 0;
-        height: calc(100vh - 30px);
-    }
-    #viewer{
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 2vh auto 1fr;
-    }
-} */
-
 @media (min-aspect-ratio: 1.9/1){
     #instructions{
         display: none;
