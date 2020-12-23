@@ -36,7 +36,7 @@
         <div id="works-caption-container">
             <a id="works-link" class="gallery-link-desktop" href="works.html">all works.</a>
             <div></div>
-            <p id="works-caption" class="gallery-caption-desktop"><b>Daybreak IV</b><br><i>from Old Horizons</i></p>
+            <p id="works-caption" class="gallery-caption-desktop"></p>
         </div>
 
         <!-- OLD HORIZONS -->
@@ -168,6 +168,11 @@
 
         const projects = ['old-horizons-desktop','simplest-forms-desktop','curbside-desktop','pizza-desktop','wildlife-desktop','cart-desktop-container'];
 
+        const coverImgs = ['cloudparade9','mistwater2','rainshadow5','daybreak4'];
+        const coverImgNames = ['Cloud Parade IX','Mistwater II','Rainshadow V','Daybreak IV'];
+
+        pickCoverPhoto();
+
         function nameFade(){
             scroll = window.scrollY;
             for(var i = 0; i < projects.length; i++){
@@ -188,6 +193,18 @@
             //footer
             document.getElementById('footer-main').innerHTML = '© 2020 Duncan Petrie';
             document.getElementById('gallery-desktop').style.marginBottom = '60px';
+        }
+
+        function pickCoverPhoto(){
+            //pick random index
+            var index = Math.floor(Math.random() * coverImgs.length);
+
+            //set cover img
+            document.getElementById('works-card').getAttributeNode('src').value = 'works/' + coverImgs[index]  + '.jpg';
+
+            //set caption
+            document.getElementById('works-caption').innerHTML = '<b>' + coverImgNames[index] + '</b><br><i>from Old Horizons</i>';
+            
         }
 
     </script>
