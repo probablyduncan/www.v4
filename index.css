@@ -86,6 +86,7 @@ img{
     display: inline-block;
 } .gallery-link-desktop:hover{
     color: slategrey;
+    cursor: pointer;
 }
 .gallery-caption-desktop{
     margin: 0;
@@ -198,6 +199,28 @@ img{
 }
 
 
+/* ADRIFT */
+
+#adrift-desktop{
+    width: 90vw;
+    height: 45vw;
+    margin: 4vw 0 0vw 5vw;
+    background-image: url(adrift/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#adrift-link{
+    width: 3.5em;
+    margin-left: calc(90vw - 3.5em);
+    margin-top: 0.5em;
+    color: snow;
+    border-bottom-color: rgb(140, 153, 166);
+}
+#adrift-link:hover{
+    color: rgb(216, 210, 210);
+}
 
 
 /* FILM */
