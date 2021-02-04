@@ -26,14 +26,41 @@
         <p id="instructions">scroll or use arrow keys to explore works</p>
         <ul id="list">
             <li id="title-filter" class="unselected" onclick="select(this)">filter</li>
+            <li id="title-tideline13" class="unselected" onclick="select(this)">
+                <b>Tideline XIII</b> 2021
+            </li>
+            <li id="title-windfleet4" class="unselected" onclick="select(this)">
+                <b>Windfleet IV</b> 2021
+            </li>
+            <li id="title-tideline12" class="unselected" onclick="select(this)">
+                <b>Tideline XII</b> 2021
+            </li>
+            <li id="title-softsurge1" class="unselected" onclick="select(this)">
+                <b>Softsurge I</b> 2021
+            </li>
+            <li id="title-windtossed2" class="unselected" onclick="select(this)">
+                <b>Windtossed II</b> 2021
+            </li>
+            <li id="title-moonsliver1" class="unselected" onclick="select(this)">
+                <b>Moonsliver I</b> 2021
+            </li>
+            <li id="title-nightrollers3" class="unselected" onclick="select(this)">
+                <b>Nightrollers III</b> 2021
+            </li>
+            <li id="title-cloudswells2" class="unselected" onclick="select(this)">
+                <b>Cloudswells II</b> 2021
+            </li>
+            <li id="title-ag8" class="unselected" onclick="select(this)">
+                <b>Afterglow VIII</b> 2021
+            </li>
+            <li id="title-adrift" class="unselected" onclick="select(this)">
+                <b>A Drift</b> 2020
+            </li>
             <li id="title-cloudparade9" class="unselected" onclick="select(this)">
                 <b>Cloud Parade IX</b> 2020
             </li>
             <li id="title-waterlines9" class="unselected" onclick="select(this)">
                 <b>Waterlines IX</b> 2020
-            </li>
-            <li id="title-cloudparade4" class="unselected" onclick="select(this)">
-                <b>Cloud Parade IV</b> 2020
             </li>
             <li id="title-darkwater4" class="unselected" onclick="select(this)">
                 <b>Darkwater IV</b> 2020
@@ -49,9 +76,6 @@
             </li>
             <li id="title-waterlines3" class="unselected" onclick="select(this)">
                 <b>Waterlines III</b> 2020
-            </li>
-            <li id="title-waterlines1" class="unselected" onclick="select(this)">
-                <b>Waterlines I</b> 2020
             </li>
             <li id="title-watermarch2" class="unselected" onclick="select(this)">
                 <b>Watermarch II</b> 2020
@@ -374,9 +398,46 @@
             <a onclick="filter(prairie)">prairie</a><br>
             <a onclick="showHide(1)">show all</a>
         </div>
-
-
-
+        <div id="img-tideline13" class="img-container">
+            <img src="">
+            <p class="caption">Subtle waves caress the tide-polished sand.</p>
+        </div>
+        <div id="img-windfleet4" class="img-container">
+            <img src="">
+            <p class="caption">The cloud wall marches into dusk.</p>
+        </div>
+        <div id="img-tideline12" class="img-container-vert">
+            <img src="">
+            <p class="caption">The lapping Atlantic brushes the shore.</p>
+        </div>
+        <div id="img-softsurge1" class="img-container">
+            <img src="">
+            <p class="caption">Gentle waves emerge from the mist with the consistency of breath.</p>
+        </div>
+        <div id="img-windtossed2" class="img-container">
+            <img src="">
+            <p class="caption">A pair of crows, tossed by the wind, hurry to rejoin the flock.</p>
+        </div>
+        <div id="img-moonsliver1" class="img-container">
+            <img src="">
+            <p class="caption">The toenail moon glows above wind-rustled tussocks.</p>
+        </div>
+        <div id="img-nightrollers3" class="img-container">
+            <img src="">
+            <p class="caption">The Atlantic seethes and heaves in the silent night.</p>
+        </div>
+        <div id="img-cloudswells2" class="img-container">
+            <img src="">
+            <p class="caption">The sunset curls around a wall of clouds.</p>
+        </div>
+        <div id="img-ag8" class="img-container">
+            <img src="">
+            <p class="caption">Evening's pastels stripe the sea.</p>
+        </div>
+        <div id="img-adrift" class="img-container">
+            <img src="">
+            <p class="caption">Afternoon light weaves through the woodland to rest upon a sloping snowdrift.</p>
+        </div>
         <div id="img-cloudparade9" class="img-container">
             <img src="">
             <p class="caption">The heavy hands of the gloaming dusk descend over rippling tracks of wind. As the sky grows dark, evening wind draws jaunty curves on the soft surface of the water.</p>
@@ -384,10 +445,6 @@
         <div id="img-waterlines9" class="img-container">
             <img src="">
             <p class="caption">Surf breaks on its march ashore, surging over smooth and sun-stained sand.</p>
-        </div>
-        <div id="img-cloudparade4" class="img-container">
-            <img src="">
-            <p class="caption">Clouds cast streaking shadows across the wide darkening sea.</p>
         </div>
         <div id="img-darkwater4" class="img-container">
             <img src="">
@@ -408,10 +465,6 @@
         <div id="img-waterlines3" class="img-container">
             <img src="">
             <p class="caption">Waves fall into a still evening.</p>
-        </div>
-        <div id="img-waterlines1" class="img-container">
-            <img src="">
-            <p class="caption">Thin waves mimic the cool horizon.</p>
         </div>
         <div id="img-watermarch2" class="img-container">
             <img src="">
@@ -988,9 +1041,9 @@
 
 
         //filter arrays
-        const horizons = ['ag1','fire6','fire3','tideline3','cloudprints','ag5','tideline5','cirrus1','ag3','darkwater1','ship3','breakwall2','ripple3','daybreak4','ripple5','rainshadow1','rainshadow5','magenta1','emberwater2','stormlight3','stratus4','glasswater','coppersky3','redwater5','sunken3','gloaming1','gloaming3','sweetwater4','dayglow1','waterlines1','waterlines3','mistwater2','darkwater4','cloudparade4','waterlines9','cloudparade9'];
+        const horizons = ['ag1','fire6','fire3','tideline3','cloudprints','ag5','tideline5','cirrus1','ag3','darkwater1','ship3','breakwall2','ripple3','daybreak4','ripple5','rainshadow1','rainshadow5','magenta1','emberwater2','stormlight3','stratus4','glasswater','coppersky3','redwater5','sunken3','gloaming1','gloaming3','sweetwater4','dayglow1','waterlines1','waterlines3','mistwater2','darkwater4','waterlines9','cloudparade9','ag8','nightrollers3','softsurge1','tideline12','windfleet4'];
 
-        const woodland = ['whitetail','downy','maple1','cycling','sessile1','sessile2','goldenbough4','dawnforest3','whitepine1','riverbirch1','shorebirch1','whitepine3'];
+        const woodland = ['whitetail','downy','maple1','cycling','sessile1','sessile2','goldenbough4','dawnforest3','whitepine1','riverbirch1','shorebirch1','whitepine3','adrift'];
 
         const prairie = ['sus1','cattails','sus2','sus3','silent','muledeer','yellow','russet','meadowbird1','wingbeat2','hedgerows2','orchard2','ant2','meadowlarkening','lastcall2','homeward','lightningfodder1','tallgrass1'];
 
