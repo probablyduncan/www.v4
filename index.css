@@ -33,15 +33,36 @@ p{
 img{
     width: 100%;
     pointer-events: none;
-    animation-name: fadeIn;
-    animation-duration: 1s;
+
+    -webkit-animation: 1s fadeIn;
+    -moz-animation: 1s fadeIn;
+    -ms-animation: 1s fadeIn;
+    animation: 1s fadeIn;
+
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+
 }
 
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
 
 /* #name{
     position: fixed;
