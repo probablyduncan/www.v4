@@ -33,6 +33,10 @@ p{
 img{
     width: 100%;
     pointer-events: none;
+    opacity: 0;
+}
+.img-div{
+    opacity: 0;
 }
 
 
