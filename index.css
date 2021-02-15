@@ -33,35 +33,8 @@ p{
 img{
     width: 100%;
     pointer-events: none;
-
-    -webkit-animation: 1s fadeIn;
-    -moz-animation: 1s fadeIn;
-    -ms-animation: 1s fadeIn;
-    animation: 1s fadeIn;
-
-    -webkit-animation-timing-function: ease-in;
-    -moz-animation-timing-function: ease-in;
-    -ms-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-
 }
 
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@-moz-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@-ms-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
 
 /* #name{
@@ -590,4 +563,43 @@ img{
     #footer p, #footer a{
         font-size: 0.5em;
     }
+}
+
+
+
+
+
+
+/* ANIMATIONS */
+
+
+
+
+.fadeIn{
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-moz-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
