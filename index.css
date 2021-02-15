@@ -3,6 +3,7 @@ body{
     font-weight: 700;
     margin: 0;
     background-color:ghostwhite;
+    opacity: 0;
 }
 
 #main{
@@ -576,8 +577,6 @@ img{
 
 
 .fadeIn{
-    opacity: 0;
-
     -webkit-animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
