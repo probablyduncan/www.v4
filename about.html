@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="about.css">
 
 </head>
-<body>
+<body onload="loadAnimate()">
 
 
     <div id="about-container">
@@ -79,6 +79,13 @@
         function cvHide(){
             document.getElementById('about-cv-container').style.display = 'none';
             document.getElementById('about-cv-link').style.display = 'block';
+        }
+
+        function loadAnimate(){
+            document.body.className = 'fadeIn';
+            var time = Date.getTime;
+            while(Date.getTime < time + 100){}
+            document.body.style.opacity = '1';
         }
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
