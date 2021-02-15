@@ -576,6 +576,8 @@ img{
 
 
 .fadeIn{
+    opacity: 0;
+
     -webkit-animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
@@ -585,6 +587,11 @@ img{
     -moz-animation-timing-function: ease-in;
     -ms-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeIn {

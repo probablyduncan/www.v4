@@ -90,13 +90,13 @@
 
         <!-- A DRIFT -->
 
-        <div id="adrift-desktop">
+        <div id="adrift-desktop" class="img-div">
             <a id="adrift-link" class="gallery-link-desktop" href="adrift.html">a drift.</a>
         </div>
         
         <!-- CURBSIDE -->
 
-        <div id="curbside-desktop">
+        <div id="curbside-desktop" class="img-div">
             <a id="curbside-link" class="gallery-link-desktop" href="curbside.html">curbside.</a>
             <p id="curbside-text">photographs from the edge<br>of the pavement</p>
         </div>
@@ -110,7 +110,7 @@
                 <p class="gallery-link-desktop">by date.</p>
             </a></div>
             <img src="pizza/pizza.gif">
-            <a id="pizza-link" class="gallery-link-desktop" href="pizza.html">pizza.</a>
+            <a id="pizza-link" class="gallery-link-desktop" href="pizza.html" style="z-index: 1000;">pizza.</a>
         </div>
 
 
@@ -120,7 +120,7 @@
             <!-- WILDLIFE -->
 
             <div id="wildlife-desktop">
-                <div id="wildlife-link-container"><div></div><a id="wildlife-link" class="gallery-link-desktop" href="wildlife.html">wildlife.</a></div>
+                <div id="wildlife-link-container" class="img-div"><div></div><a id="wildlife-link" class="gallery-link-desktop" href="wildlife.html">wildlife.</a></div>
                 <br>
                 <img src="wildlife/peli1.jpg">
             </div>
@@ -130,7 +130,7 @@
             <div id="cart-desktop-container">
                 <img src="cart/2.jpg">
                 <div></div>
-                <div id="cart-desktop">
+                <div id="cart-desktop" class="img-div">
                     <a id="cart-link" class="gallery-link-desktop" href="cart.html">a la cart.</a>
                 </div>
                 
@@ -181,8 +181,11 @@
 
         function loadAnimate(){
             var imgs = document.getElementsByTagName("img");
+            var imgDivs = document.getElementsByClassName("img-div");
             for(var i = 0; i < imgs.length; i++)
                 imgs[i].className = 'fadeIn';
+            for(var i = 0; i < imgDivs.length; i++)
+                imgDivs[i].className = 'fadeIn';
         }
 
         function nameFade(){
