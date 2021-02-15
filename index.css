@@ -33,6 +33,14 @@ p{
 img{
     width: 100%;
     pointer-events: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 /* #name{
