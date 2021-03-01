@@ -4,6 +4,7 @@ body{
     margin: 0;
     background-color:ghostwhite;
     opacity: 0;
+    overflow-x: hidden;
 }
 
 #main{
