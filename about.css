@@ -1,82 +1,177 @@
-#about-container{
-    width: 100vw;
-    height: 100vh;
-    grid-column: 3;
-    background-color: aliceblue;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#about{
-    width: 100vw;
+body{
+    margin: 0;
     height: auto;
-    padding-bottom: 60px;
+    background-color: #f0f8ff;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
-#about-img{
-    margin-left: 5vw;
-    width: 90vw;
+img{
+    width: 100%;
+    transition: transform 0.5s;
+    padding-bottom: 8px;
+    border-bottom: 8px solid black;
 }
-#about-body{
-    margin-left: 5vw;
-    width: 90vw;
-    font-size: 1.2em;
-    line-height: 2em;
-    text-align: justify;
+
+a{
+    text-decoration: none;
+    color: unset;
+    margin: 0;
+    padding: 0;
 }
-#about-body a{
-    /* color:rgb(200, 75, 75); */
-    color: rgb(90, 140, 68);
-    color: rgb(255, 75, 75);
-    text-decoration-line: underline;
-} #about-body a:hover{
-    color: rgb(255, 120, 120);
+
+h1{
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 56px;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
 }
-#about-cv-link{
-    text-align: right; 
-    padding: 0 0.4em 0 1em;
-    border-top: 2px solid black;
-    cursor: pointer;
-    color: rgb(90, 140, 68);
-    color: rgb(255, 75, 75);
-} #about-cv-link:hover{
-    color: rgb(255, 120, 120);
+
+h3{
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 0;
 }
-#about-cv-container{
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-#about-cv-text{
-    height: 80vh;
-    width: 90vw;
-    margin-left: 5vw;
-    padding-right: 5vw;
-    margin-top: 10vh;
-    color: aliceblue;
+
+p{
     text-align: left;
-    overflow-y: scroll;
-    font-weight: 400;
-    font-size: 1em;
-    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
 }
-#about-cv-text p{
-    margin-bottom: 1em;
+
+p a{
+    color: rgb(255, 75, 75);
 }
-#about-cv-x{
-    position: fixed;
-    top: 5vh;
-    right: 5vw;
-    font-family: monospace;
-    font-size: 1.2em;
+
+p a:hover{
+    color: rgb(255, 140, 140);
+}
+
+::selection{background-color: rgb(250, 174, 199);}
+::-moz-selection{background-color: rgb(250, 174, 199);}
+
+
+#link-section{
+    width: 80vw;
+    margin: 30px 0 30px 10vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+}
+
+.page-link{
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.4s;
+    margin-left: 18px;
+}
+
+.page-link:hover{
+    color: rgb(100, 100, 100);
+}
+#back:hover{
+    transform: rotate(4deg);
+    color: initial;
+}
+
+#cv-link{
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.5s;
+    margin-left: 26px;
+    margin-right: 8px;
+    color: rgb(255, 75, 75);
     cursor: pointer;
-    height: 1.4em;
-    padding-left: 1em;
-    padding-right: 1em;
-} #about-cv-x:hover{
-    opacity: 60%;
+}
+#cv-link:hover{
+    color: rgb(255, 140, 140);
+}
+
+
+
+#bio-section{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom: 180px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#bio{
+    width: 550px;
+}
+
+#who{
+    margin-top: -30px;
+}
+
+#bio-text{
+    font-family: 'Palatino','Georgia','Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    line-height: 36px;
+    text-align: left;
+}
+
+#bio-section img{
+    width: 400px;
+    height: 500px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 60px;
+}
+
+#bio-section img:hover{
+    transform: rotate(-2deg);
+}
+
+
+#cv-section{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom: 180px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#cv-section img{
+    width: 400px;
+    height: 225px;
+    margin-top: 80px;
+    position: sticky;
+    top: 80px;
+}
+
+#cv-section img:hover{
+    transform: rotate(2deg);
+}
+
+#cv{
+    width: 550px;
+}
+
+#cv-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
 }
