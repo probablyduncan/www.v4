@@ -383,6 +383,7 @@ h4{
 }
 .cloud-doublewide-left, .cloud-doublewide-right{
     width: 44vw;
+    height: calc(88vw / 3);
 }
 .cloud-doublewide-right{
     margin-left: 2vw;
