@@ -109,12 +109,12 @@
                 e.classList.remove('bob');
             }
 
-            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.       userAgent);
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && window.innerWidth < 586;
             if(isMobile){
                 
                 //links
-                document.getElementById('link-section').style.marginLeft = '5vw';
-                document.getElementById('link-section').style.width = '90vw';
+                document.getElementById('link-section').style.marginLeft = '6vw';
+                document.getElementById('link-section').style.width = '88vw';
                 document.getElementById('link-section').style.justifyContent = 'space-between';
 
                 document.getElementById('link-section').children[2].innerHTML = 'email';
