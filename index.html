@@ -60,10 +60,11 @@
                     <a id="cloud-link" onmouseover="skillOpacity(2)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,2)">cloud admirer</a>
                     <a id="drift-link" onmouseover="skillOpacity(3)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,3)">snow man</a>
                     <a id="pizza-link" onmouseover="skillOpacity(4)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,4)">pizza chef</a>
-                    <a id="cliff-link" onmouseover="skillOpacity(5)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,5)">cliff walker</a>
-                    <a id="wisco-link" onmouseover="skillOpacity(6)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,6)">wisconsinite</a>
-                    <a id="cart-link" onmouseover="skillOpacity(7)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,7)">cart advocate</a>
-                    <a id="birds-link" onmouseover="skillOpacity(8)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,8)">bird brain</a>
+                    <a id="wiki-link" onmouseover="skillOpacity(5)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,5)">commoner</a>
+                    <a id="cliff-link" onmouseover="skillOpacity(6)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,6)">cliff walker</a>
+                    <a id="wisco-link" onmouseover="skillOpacity(7)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,7)">wisconsinite</a>
+                    <a id="cart-link" onmouseover="skillOpacity(8)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,8)">cart advocate</a>
+                    <a id="birds-link" onmouseover="skillOpacity(9)" onmouseout="skillOpacity(currentContent)" onclick="selectSkill(this,9)">bird brain</a>
                 </div>
                 <div id="main-line"></div>
             </div>
@@ -362,6 +363,24 @@
                 </div>
             </div>
 
+            <div id="wiki" class="content">
+                <div id="wiki-row1" class="row row1" onLoad="fadeIn(this)">
+                    <div id="wiki-row1-left" class="img-column">
+                        <img onclick="lightbox(this)" onmouseover="imgHoverOn(this)" onmouseout="imgHoverOff(this)" loading="lazy" onLoad="fadeIn(this)" class="img-column-img" src="wiki.png" page="wiki" name="" year="">
+                    </div>
+                    <div id="wiki-row1-right" class="text-column">
+                        <h3 id="wiki-what" class="w">what</h3>
+                        <h1 id="wiki-title" class="title">I deep-dive the public domain.</h1>
+                        <p id="wiki-text" class="text">
+                            In Spring of 2021 I spent a month scouring <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>, Wikipedia's file repository in which every image, video, and audio file is freely usable, under a Creative Commons license or in the public domain. I created this film, for free, using 144 of those files.
+                        </p>
+                    </div>
+                </div>
+                <div id="wiki-film">
+                    <iframe id="wiki-film-player" src="https://www.youtube.com/embed/JRXZAaDxGCQ"></iframe>
+                </div>
+            </div>
+
             <div id="cliff" class="content">
                 <div id="cliff-row1" class="row row1 rows-below" onLoad="fadeIn(this)">
                     <div id="cliff-row1-left" class="img-column">
@@ -634,7 +653,7 @@
 
             var currentContent = 1;
 
-            var skillsListArr = ['simp','horiz','cloud','drift','pizza','cliff','wisco','cart','birds'];
+            var skillsListArr = ['simp','horiz','cloud','drift','pizza','wiki','cliff','wisco','cart','birds'];
             //get param from url, takes anything after '?' and selects that content
             var fullUrl = window.location.href;
             var index = fullUrl.indexOf('?');
