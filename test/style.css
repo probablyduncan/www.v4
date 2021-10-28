@@ -46,8 +46,15 @@ h4{
 
 #top-text-container{
     margin: 25px 0 20px calc(5% + 4px);
+    width: calc(90% - 4px);
     position: relative;
     user-select: none;
+}
+#top-text{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: center;
 }
 #home-button{
     color: black;
@@ -156,7 +163,6 @@ img{
     position: fixed;
     z-index: 1000;
     flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
 }
 .menu-visible{
@@ -172,7 +178,7 @@ img{
     position: absolute;
 }
 #menu{
-    margin-bottom: 50px;
+    margin-top: 85px;
     width: 200px;
     height: 400px;
     background-color:#fff5f0;
@@ -196,7 +202,11 @@ img{
     transition: color 0.25s;
     cursor: pointer;
     z-index: 1001;
+    user-select: none;
 }
 .menu-link:hover{
     color: #346cda;
+}
+.menu-link:active{
+    color: #d4e2ff;
 }
