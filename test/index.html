@@ -25,15 +25,16 @@
     </head>
     <body>
 
-        <div id="menu" class="menu-hidden">
+        <div id="menu-container" class="menu-hidden">
             <div id="menu-exit" onclick="exitMenu()"></div>
-            <div id="menu-background"></div>
-            <a class="menu-link">Home.</a>
-            <a class="menu-link">Story&CV.</a>
-            <a class="menu-link">Photography.</a>
-            <a class="menu-link">Short films.</a>
-            <a class="menu-link">Fullstack.</a>
-            <a class="menu-link">Design.</a>
+            <div id="menu">
+                <a class="menu-link">Home.</a>
+                <a class="menu-link">Story&CV.</a>
+                <a class="menu-link">Photography.</a>
+                <a class="menu-link">Short films.</a>
+                <a class="menu-link">Fullstack.</a>
+                <a class="menu-link">Design.</a>
+            </div>
             <!-- <a class="menu-link" onclick="exitMenu()">Exit menu.</a> -->
         </div>
 
@@ -92,12 +93,14 @@
 
             //menu functions
             function openMenu(){
-                document.getElementById('menu').classList.add('menu-visible');
-                document.getElementById('menu').classList.remove('menu-hidden');
+                //make menu visible
+                document.getElementById('menu-container').classList.add('menu-visible');
+                document.getElementById('menu-container').classList.remove('menu-hidden');
             }
             function exitMenu(){
-                document.getElementById('menu').classList.add('menu-hidden');
-                document.getElementById('menu').classList.remove('menu-visible');
+                //make menu invisible
+                document.getElementById('menu-container').classList.add('menu-hidden');
+                document.getElementById('menu-container').classList.remove('menu-visible');
             }
 
             //content image hover functions
