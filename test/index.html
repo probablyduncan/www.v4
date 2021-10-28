@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- 
+
+        Hi! I don't get many visitors down here. It's always good to see a new face.
+
+        Take a look around. If you want to make soemthing together, email me at duncanpetrie1@gmail.com.
+
+     -->
+
+    <head>
+        <title>DuncanPetrie.com</title>
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/CSS" href="style.css">
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+        <div id="menu" class="menu-hidden">
+            <div id="menu-background" onclick="exitMenu()"></div>
+            <a class="menu-link">Home.</a>
+            <a class="menu-link">Story&CV.</a>
+            <a class="menu-link">Photography.</a>
+            <a class="menu-link">Short Films.</a>
+            <a class="menu-link">Design.</a>
+            <a class="menu-link">Fullstack.</a>
+            <a class="menu-link" onclick="exitMenu()">Exit menu.</a>
+        </div>
+
+        <div id="wrapper">
+
+
+            <div id="top-text-container">
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a id="menu-button" onclick="openMenu()">MENU</a></h1>
+            </div>
+
+            <div id="intro-container">
+                <img class="shadow-img" src="daybreak4.jpg">
+                <h2 id="intro-text">Hello! I'm <a id="name-link" href="about/html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.<br><br>What have I<br>been up to?</h2>
+            </div>
+
+            <div id="content-container">
+                <div id="yearn" class="content-card">
+                    <img class="shadow-img si-hover" src="mooncall.jpg" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)">
+                    <h3 class="content-catagory" style="color: #e8859f;">ON YEARNING</h3>
+                    <h4 class="content-title">Traversing the<br>untraversable.</h4>
+                    <div class="content-line"></div>
+                </div>
+                <div id="wiki" class="content-card">
+                    <img class="shadow-img si-hover" src="commons.png" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)">
+                    <h3 class="content-catagory" style="color: #346cda;">FOR REEL</h3>
+                    <h4 class="content-title">Your hopes and dreams and<br>nightmares? I found them<br>on Wikimedia Commons.</h4>
+                    <div class="content-line"></div>
+                </div>
+                <div id="cloud" class="content-card">
+                    <img class="shadow-img si-hover" src="cloudswells.jpg" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)">
+                    <h3 class="content-catagory" style="color: #ff9200;">THE CUTTING EDGE</h3>
+                    <h4 class="content-title">Cloud discovered,<br>fluffiest in world.</h4>
+                    <div class="content-line"></div>
+                </div>
+                <div id="pizza" class="content-card">
+                    <img class="shadow-img si-hover" src="pizza.gif" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)">
+                    <h3 class="content-catagory" style="color: #ff4b4b;">THE CUTTING BOARD</h3>
+                    <h4 class="content-title">Man makes pizza, fast!</h4>
+                    <div class="content-line"></div>
+                </div>
+
+            </div>
+
+            <div id="links-container">
+                <a href="index.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">More projects. <span class="bl-span">>>></span></a>
+                <a href="https://www.instagram.com/probablyduncan/" target="blank" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">Instagram. <span class="bl-span">>>></span></a>
+                <a href="about.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">About me. <span class="bl-span">>>></span></a>
+                <a href="mailto:duncanpetrie1@gmail.com" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">Email. <span class="bl-span">>>></span></a>
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+
+            //menu functions
+            function openMenu(){
+                document.getElementById('menu').classList.add('menu-visible');
+                document.getElementById('menu').classList.remove('menu-hidden');
+            }
+            function exitMenu(){
+                document.getElementById('menu').classList.add('menu-hidden');
+                document.getElementById('menu').classList.remove('menu-visible');
+            }
+
+            //content image hover functions
+            function siMouseOver(e){
+                //on mouse over, add class to bottom line of content card which widens it
+                e.parentNode.children[3].classList.add('content-line-hover');
+            }
+            function siMouseOut(e){
+                //remove class from bottom line
+                e.parentNode.children[3].classList.remove('content-line-hover');
+            }
+
+
+            //bottom link hover functions
+            function blMouseOver(e){
+                //on mouse over, add class which lighten color of arrows and slide them right
+                e.children[0].classList.add('bl-hover');
+            }
+            function blMouseOut(e){
+                //on mouse out, remove hover class
+                e.children[0].classList.remove('bl-hover');
+            }
+    
+    
+        </script>
+
+
+        
+    </body>
+</html>
