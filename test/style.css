@@ -69,7 +69,10 @@ h4{
 #menu-button{
     color: #346cda;
     cursor: zoom-in;
-    transition: color 0.25s;
+    transition: color 0.25s opacity 0.25s;
+}
+.opacity80{
+    opacity: 80%;
 }
 #menu-button:hover{
     color: #6196ff;

@@ -42,7 +42,7 @@
 
 
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="openMenu()">MENU</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM/HOME</a><a id="menu-button" onclick="openMenu()">MENU</a></h1>
             </div>
 
             <div id="intro-container">
@@ -96,11 +96,13 @@
                 //make menu visible
                 document.getElementById('menu-container').classList.add('menu-visible');
                 document.getElementById('menu-container').classList.remove('menu-hidden');
+                document.getElementById('wrapper').classList.add('opacity80');
             }
             function exitMenu(){
                 //make menu invisible
                 document.getElementById('menu-container').classList.add('menu-hidden');
                 document.getElementById('menu-container').classList.remove('menu-visible');
+                document.getElementById('wrapper').classList.remove('opacity80');
             }
 
             //content image hover functions
