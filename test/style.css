@@ -29,6 +29,7 @@ h2{
     font-size: 24px;
     color: black;
     margin: 0;
+    line-height: 150%;
 }
 h3{
     font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
@@ -42,6 +43,36 @@ h4{
     font-size: 20px;
     color: black;
     margin: 0;
+    line-height: 140%;
+}
+p{
+    font-family: 'Zen Antique', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    line-height: 200%;
+    margin: 30px 0 30px calc(5% + 4px);
+}
+a{
+    text-decoration: none;
+    color: #346cda;
+    transition: color 0.25s;
+}
+a:hover{
+    color: #6196ff;
+}
+a:active{
+    color: #d4e2ff;
+}
+
+::selection{
+    background-color: #ee9700;
+    text-decoration: none;
+}
+::-moz-selection{
+    color: #FAFAFF;
+    background-color: #ee9700;
+    text-decoration: none;
 }
 
 
@@ -81,6 +112,7 @@ h4{
 
 img{
     width: 100%;
+    user-select: none;
 }
 
 .shadow-img{
@@ -96,7 +128,6 @@ img{
 .si-hover:hover{
     margin: -4px 0 2px calc(-4px + 5%);
     box-shadow: 8px 8px #222222;
-    cursor: ne-resize;
 }
 
 
@@ -105,7 +136,6 @@ img{
 }
 #intro-text{
     margin: 25px 0 0 calc(5% + 4px);
-    line-height: 150%;
 }
 #name-link{
     color: #ee9700;
@@ -120,12 +150,16 @@ img{
 .content-card{
     margin-top: 50px;
 }
+.content-card a{
+    cursor: ne-resize;
+}
 .content-catagory{
     margin: 12px 0 0 calc(5% + 4px);
+    user-select: none;
 }
 .content-title{
     margin: 8px 0 12px calc(5% + 4px);
-    line-height: 140%;
+    user-select: none;
 }
 .content-line{
     width: 80px;
@@ -150,6 +184,7 @@ img{
     font-size: 24px;
     display: block;
     margin-bottom: 35px;
+    user-select: none;
 }
 .bl-span{
     color: rgb(255, 75, 75);
@@ -214,4 +249,15 @@ img{
 }
 .menu-link:active{
     color: #d4e2ff;
+}
+
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #222222;
+    z-index: 2000;
+    /* transition: width 0.1s; */
 }

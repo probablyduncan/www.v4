@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>DuncanPetrie.com | Yearning</title>
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/CSS" href="style.css">
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
+
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body onscroll="scrollControl()">
+
+        <div id="wrapper">
+
+            <div id="progress-bar"></div>
+
+            <div id="top-text-container">
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="openMenu()">YEARNING</a></h1>
+            </div>
+
+            <div id="intro-container">
+                <img class="shadow-img si-hover" src="moon.jpg">
+                
+                <p>On a cool autumn dusk in 2020, <br>I ducked under a blackberry vine, <br>hopped a spattering of mud, and <br>emerged, finally, from a path <br>between hedgerows.
+                <br><br>
+                The sea spread before me, a quilt <br>of the patterns of the wind.</p>
+                <br><br>
+
+                <img class="shadow-img si-hover" src="quilt.jpg">
+                
+                <p>It was that time of year when <br>evening accelerates; it was <br>getting late so early now. I was <br>suddenly struck by profound desire. <br>A desire for what, I was not sure.
+                <br><br>
+                A desire to be <i>over there</i>, perhaps, <br>although I could not have said where <br><i>over there</i> was.
+                <br><br>
+
+                <!-- <img class="shadow-img si-hover" src="moonglint.jpg"> -->
+
+                I was on the edge of the world, and I <br>wanted to see beyond. It was a sort of <br>nostalgia, but not for any real past. <br>A nostalgia for the future, maybe, <br>the future that can no longer be.</p>
+                <br><br>
+
+                <img class="shadow-img si-hover" src="bird.jpg">
+
+                <p>In fall 2021, I wrote my undergraduate <br>dissertation about this feeling.
+                <br><br>
+                You can download it here: <a href="yearning.pdf">yearning.pdf</a>.</p>
+                <br><br>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+            
+            //scroll controller
+            function scrollControl(){
+                progressBar();
+            }
+
+            function progressBar(){
+                //window.pageYOffset -> amount scrolled
+                //document.body.scrollHeight -> total page height
+                //window.innerHeigh -> window height
+                document.getElementById('progress-bar').style.width = (100 * window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) + '%';
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
