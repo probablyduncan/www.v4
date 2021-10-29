@@ -29,9 +29,9 @@
         <div id="menu-container" class="menu-hidden">
             <div id="menu-exit" onclick="exitMenu()"></div>
             <div id="menu">
-                <a class="menu-link" href="index.html">Home.</a>
-                <a class="menu-link" href="index.html">Projects.</a>
-                <a class="menu-link" href="about.html">Story&CV.</a>
+                <!-- <a class="menu-link" href="index.html">Home.</a>
+                <a class="menu-link" href="index.html">Projects.</a> -->
+                <a class="menu-link" href="about.html">About.</a>
                 <a class="menu-link" href="photo.html">Photography.</a>
                 <a class="menu-link" href="films.html">Short films.</a>
                 <a class="menu-link" href="code.html">Fullstack.</a>
@@ -40,8 +40,10 @@
             <!-- <a class="menu-link" onclick="exitMenu()">Exit menu.</a> -->
         </div>
 
+
         <div id="wrapper">
 
+            <div id="progress-bar"></div>
 
             <div id="top-text-container">
                 <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="openMenu()">HOME</a></h1>
@@ -95,7 +97,7 @@
 
             //scroll control
             function scrollControl(){
-                
+                progressBar();
             }
 
             //menu functions
@@ -131,6 +133,15 @@
             function blMouseOut(e){
                 //on mouse out, remove hover class
                 e.children[0].classList.remove('bl-hover');
+            }
+
+
+            //updates scroll progress bar
+            function progressBar(){
+                //window.pageYOffset -> amount scrolled
+                //document.body.scrollHeight -> total page height
+                //window.innerHeigh -> window height
+                document.getElementById('progress-bar').style.width = (100 * window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) + '%';
             }
     
     

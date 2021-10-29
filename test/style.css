@@ -53,7 +53,7 @@ p{
     line-height: 200%;
     margin: 30px 0 30px calc(5% + 4px);
 }
-a{
+p a{
     text-decoration: none;
     color: #346cda;
     transition: color 0.25s;
