@@ -58,20 +58,19 @@ p a{
     color: #346cda;
     transition: color 0.25s;
 }
-a:hover{
+p a:hover{
     color: #6196ff;
 }
-a:active{
+p a:active{
     color: #d4e2ff;
 }
 
 ::selection{
-    background-color: #ee9700;
+    background-color: #ffe4e0;
     text-decoration: none;
 }
 ::-moz-selection{
-    color: #FAFAFF;
-    background-color: #ee9700;
+    background-color: #ffe4e0;
     text-decoration: none;
 }
 
@@ -103,12 +102,8 @@ a:active{
     cursor: zoom-in;
     transition: color 0.25s opacity 0.25s;
 }
-.opacity80{
-    opacity: 80%;
-}
-#menu-button:hover{
-    color: #6196ff;
-}
+#menu-button:hover{color: #6196ff;}
+#menu-button:active{color: #d4e2ff;}
 
 img{
     width: 100%;
@@ -117,6 +112,7 @@ img{
 
 .shadow-img{
     width: 90%;
+    height: auto;
     margin: -2px 0 0 calc(-2px + 5%);
     border: 2px solid black;
     box-shadow: 4px 4px #222222;
@@ -129,6 +125,41 @@ img{
     margin: -4px 0 2px calc(-4px + 5%);
     box-shadow: 8px 8px #222222;
 }
+#menu-img img{
+    margin-bottom: -6px;
+}
+#menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffe4e0;
+    transition: opacity 0.25s;
+}
+#menu-column-1{text-align: left;}
+#menu-column-2{text-align: right;}
+.menu-link{
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    color: #346cda;
+    transition: color 0.25s;
+    padding: 20px 30px 20px 30px;
+}
+.menu-link:hover{color: #6196ff;}
+.menu-link:active{color: #d4e2ff;}
+
+.menu-visible{
+    opacity: 1;
+}
+.menu-hidden{
+    opacity: 0;
+}.menu-hidden .menu-link{display: none;}
 
 
 #intro-container{
@@ -165,7 +196,7 @@ img{
     width: 80px;
     margin-left: calc(5% + 4px);
     border-top: 1px solid black;
-    transition: width 0.25s;
+    transition: width 0.3s;
 }
 .content-line-hover{
     width: calc(61.8%);
@@ -188,68 +219,18 @@ img{
 }
 .bl-span{
     color: rgb(255, 75, 75);
-    transition: color 0.25s, margin 0.25s;
+    transition: color 0.3s, padding 0.3s;
 }
 .bl-hover{
     color: rgb(255, 135, 135);
-    margin-left: 4px;
+    padding-left: 6px;
+}
+.bl-active{
+    padding-left: 60px;
 }
 
 
-#menu-container{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 1000;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-.menu-visible{
-    display: flex;
-}
-.menu-hidden{
-    display: none;
-}
-#menu-exit{
-    width: 100%;
-    height: 100%;
-    cursor: zoom-out;
-    position: absolute;
-}
-#menu{
-    margin-top: 85px;
-    width: 200px;
-    height: auto;
-    padding: 30px 0 35px 0;
-    background-color:#fff5f0;
-    border: 2px solid black;
-    position: absolute;
-    z-index: 1000;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.menu-link{
-    color: black;
-    text-decoration: none;
-    font-family: 'Merriweather', 'Times New Roman', Times, serif;
-    font-weight:normal;
-    font-size: 18px;
-    display: block;
-    margin: 0;
-    padding: 15px 20px 15px 20px;
-    transition: color 0.25s;
-    cursor: pointer;
-    z-index: 1001;
-    user-select: none;
-}
-.menu-link:hover{
-    color: #346cda;
-}
-.menu-link:active{
-    color: #d4e2ff;
-}
+
 
 #progress-bar{
     position: fixed;
@@ -260,4 +241,10 @@ img{
     background-color: #222222;
     z-index: 2000;
     /* transition: width 0.1s; */
+}
+
+
+
+.opacity80{
+    opacity: 80%;
 }

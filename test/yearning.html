@@ -3,6 +3,13 @@
 
     <head>
         <title>DuncanPetrie.com | Yearning</title>
+        <meta charset="UTF-8"/>
+
+        <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+
+        <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+
+        <meta name="author" content="Duncan Petrie">
 
         <!-- css -->
         <link rel="stylesheet" type="text/CSS" href="style.css">
@@ -23,11 +30,27 @@
             <div id="progress-bar"></div>
 
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="openMenu()">YEARNING</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="toggleMenu()">YEARNING</a></h1>
             </div>
 
             <div id="intro-container">
-                <img class="shadow-img si-hover" src="moon.jpg">
+                <div id="menu-img" class="shadow-img si-hover">
+                    <div id="menu" class="menu-hidden">
+                        <div id="menu-column-1">
+                            <a href="index.html" class="menu-link">HOME</a>
+                            <a href="projects.html" class="menu-link">PROJECTS</a>
+                            <a href="about.html" class="menu-link">ABOUT</a>
+                        </div>
+                        <div id="menu-column-2">
+                            <a href="photography.html" class="menu-link">PHOTOS</a>
+                            <a href="fullstack.html" class="menu-link">FULLSTACK</a>
+                            <a href="design.html" class="menu-link">DESIGN</a>
+                        </div>
+                    </div>
+                    <img src="moon.jpg">
+                </div>
+
+                
                 
                 <p>On a cool autumn dusk in 2020, <br>I ducked under a blackberry vine, <br>hopped a spattering of mud, and <br>emerged, finally, from a path <br>between hedgerows.
                 <br><br>
@@ -57,20 +80,10 @@
         </div>
 
         <script type="text/javascript">
-            
-            //scroll controller
-            function scrollControl(){
-                progressBar();
-            }
-
-            function progressBar(){
-                //window.pageYOffset -> amount scrolled
-                //document.body.scrollHeight -> total page height
-                //window.innerHeigh -> window height
-                document.getElementById('progress-bar').style.width = (100 * window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) + '%';
-            }
-
+            let menuOpenBool = false;
         </script>
+
+        <script src="functions.js"></script>
 
     </body>
 

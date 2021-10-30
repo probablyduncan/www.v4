@@ -11,6 +11,13 @@
 
     <head>
         <title>DuncanPetrie.com</title>
+        <meta charset="UTF-8"/>
+
+        <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+
+        <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+
+        <meta name="author" content="Duncan Petrie">
 
         <!-- css -->
         <link rel="stylesheet" type="text/CSS" href="style.css">
@@ -26,32 +33,34 @@
     </head>
     <body onscroll="scrollControl()">
 
-        <div id="menu-container" class="menu-hidden">
-            <div id="menu-exit" onclick="exitMenu()"></div>
-            <div id="menu">
-                <!-- <a class="menu-link" href="index.html">Home.</a>
-                <a class="menu-link" href="index.html">Projects.</a> -->
-                <a class="menu-link" href="about.html">About.</a>
-                <a class="menu-link" href="photo.html">Photography.</a>
-                <a class="menu-link" href="films.html">Short films.</a>
-                <a class="menu-link" href="code.html">Fullstack.</a>
-                <a class="menu-link" href="design.html">Design.</a>
-            </div>
-            <!-- <a class="menu-link" onclick="exitMenu()">Exit menu.</a> -->
-        </div>
-
-
         <div id="wrapper">
 
             <div id="progress-bar"></div>
 
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="openMenu()">HOME</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="toggleMenu()">HOME</a></h1>
             </div>
 
             <div id="intro-container">
-                <img class="shadow-img" src="daybreak4.jpg">
+                
+                <div id="menu-img" class="shadow-img si-hover">
+                    <div id="menu" class="menu-hidden">
+                        <div id="menu-column-1">
+                            <a href="index.html" class="menu-link">HOME</a>
+                            <a href="projects.html" class="menu-link">PROJECTS</a>
+                            <a href="about.html" class="menu-link">ABOUT</a>
+                        </div>
+                        <div id="menu-column-2">
+                            <a href="photography.html" class="menu-link">PHOTOS</a>
+                            <a href="fullstack.html" class="menu-link">FULLSTACK</a>
+                            <a href="design.html" class="menu-link">DESIGN</a>
+                        </div>
+                    </div>
+                    <img src="daybreak4.jpg">
+                </div>
+
                 <h2 id="intro-text">Hello! I'm <a id="name-link" href="about/html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.<br><br>What have I<br>been up to?</h2>
+
             </div>
 
             <div id="content-container">
@@ -83,10 +92,10 @@
             </div>
 
             <div id="links-container">
-                <a href="projects.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">More projects. <span class="bl-span">>>></span></a>
-                <a href="https://www.instagram.com/probablyduncan/" target="blank" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">Instagram. <span class="bl-span">>>></span></a>
-                <a href="about.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">About me. <span class="bl-span">>>></span></a>
-                <a href="mailto:duncanpetrie1@gmail.com" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)">Email. <span class="bl-span">>>></span></a>
+                <a href="projects.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">More projects. <span class="bl-span">>>></span></a>
+                <a href="https://www.instagram.com/probablyduncan/" target="blank" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">Instagram. <span class="bl-span">>>></span></a>
+                <a href="about.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">About me. <span class="bl-span">>>></span></a>
+                <a href="mailto:duncanpetrie1@gmail.com" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">Email. <span class="bl-span">>>></span></a>
             </div>
 
         </div>
@@ -95,58 +104,13 @@
 
         <script type="text/javascript">
 
-            //scroll control
-            function scrollControl(){
-                progressBar();
-            }
-
-            //menu functions
-            function openMenu(){
-                //make menu visible
-                document.getElementById('menu-container').classList.add('menu-visible');
-                document.getElementById('menu-container').classList.remove('menu-hidden');
-                document.getElementById('wrapper').classList.add('opacity80');
-            }
-            function exitMenu(){
-                //make menu invisible
-                document.getElementById('menu-container').classList.add('menu-hidden');
-                document.getElementById('menu-container').classList.remove('menu-visible');
-                document.getElementById('wrapper').classList.remove('opacity80');
-            }
-
-            //content image hover functions
-            function siMouseOver(e){
-                //on mouse over, add class to bottom line of content card which widens it
-                e.parentNode.children[3].classList.add('content-line-hover');
-            }
-            function siMouseOut(e){
-                //remove class from bottom line
-                e.parentNode.children[3].classList.remove('content-line-hover');
-            }
-
-
-            //bottom link hover functions
-            function blMouseOver(e){
-                //on mouse over, add class which lighten color of arrows and slide them right
-                e.children[0].classList.add('bl-hover');
-            }
-            function blMouseOut(e){
-                //on mouse out, remove hover class
-                e.children[0].classList.remove('bl-hover');
-            }
-
-
-            //updates scroll progress bar
-            function progressBar(){
-                //window.pageYOffset -> amount scrolled
-                //document.body.scrollHeight -> total page height
-                //window.innerHeigh -> window height
-                document.getElementById('progress-bar').style.width = (100 * window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) + '%';
-            }
+            let menuOpenBool = false;
+            flashMenuButton();
+            
     
     
         </script>
-
+        <script src="functions.js"></script>
 
         
     </body>
