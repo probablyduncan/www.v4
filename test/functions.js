@@ -1,12 +1,41 @@
-//scroll control
-function scrollControl(){
-    progressBar();
+//this is called once the body has loaded
+function afterLoadControl(){
+    fadeInBody()
+    flashMenuButton();
 }
+
 
 //flash menu button
 function flashMenuButton(){
-    document.getElementById('menu-button').style.opacity = '0';
+    //maybe flash an animation that switches the page name to (menu) and then back to the page name?
+    //document.getElementById('menu-button').style.opacity = '0';
+
+    setTimeout(() => {
+
+        let mb = document.getElementById('menu-button');
+        let str = mb.innerHTML;
+        mb.style.opacity = 0;
+
+        setTimeout(() => {
+            mb.innerHTML = '>MENU';
+            mb.style.opacity = '1';
+
+            setTimeout(() => {
+                mb.style.opacity = '0';
+
+                setTimeout(() => {
+                    mb.innerHTML = str;
+                    mb.style.opacity = '1';
+                }, 650);
+
+            }, 3000);
+            
+        }, 650);
+
+    }, 1000);
+    
 }
+
 
 //menu functions
 function toggleMenu(){
@@ -26,6 +55,8 @@ function openMenu(){
     //make menu visible
     document.getElementById('menu').classList.add('menu-visible');
     document.getElementById('menu').classList.remove('menu-hidden');
+    document.getElementById('menu-button').classList.remove('menu-button-inactive');
+    document.getElementById('menu-button').classList.add('menu-button-active');
     //document.getElementById('wrapper').classList.add('opacity80');
     menuOpenBool = true;
 }
@@ -33,9 +64,12 @@ function exitMenu(){
     //make menu invisible
     document.getElementById('menu').classList.add('menu-hidden');
     document.getElementById('menu').classList.remove('menu-visible');
+    document.getElementById('menu-button').classList.add('menu-button-inactive');
+    document.getElementById('menu-button').classList.remove('menu-button-active');
     //document.getElementById('wrapper').classList.remove('opacity80');
     menuOpenBool = false;
 }
+
 
 //content image hover functions
 function siMouseOver(e){
@@ -71,3 +105,29 @@ function progressBar(){
     //window.innerHeigh -> window height
     document.getElementById('progress-bar').style.width = Math.min((101 * window.pageYOffset / (document.body.scrollHeight - window.innerHeight)), 100) + '%';
 }
+
+function htmlSwap(e,str){
+    e.innerHTML = str;
+}
+
+//sets body opacity to 1
+function fadeInBody(){
+    document.body.style.opacity = '1';
+}
+
+
+/*
+    PROJECT CARD BUILDER
+
+    imgsrc: mooncall.jpg or whatever
+    catagory: on yearning or for reel or whatever, automatically converts to upper case 
+    color: color in hex (without #) for catagory, should go with image
+    title: full title, must be capitalized and with a period at the end
+    pagename: the page that this will link to (without .html). this will also be the card's id
+*/
+
+/*
+function buildProjectCard(imgsrc, catagory, color, title, pagename){
+    return `<div id="${pagename}" class="content-card"><a href="${pagename}.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="${imgsrc}"></a><h3 class="content-catagory" style="color: #${color};">${catagory.toUpperCase()}</h3><h4 class="content-title">${title}</h4><div class="content-line"></div></div>`;
+} 
+*/

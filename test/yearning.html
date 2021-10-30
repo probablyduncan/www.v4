@@ -23,14 +23,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body onscroll="scrollControl()">
+    <body onscroll="scrollControl()" onload="afterLoadControl()">
 
         <div id="wrapper">
 
             <div id="progress-bar"></div>
 
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" onclick="toggleMenu()">YEARNING</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">YEARNING</a></h1>
             </div>
 
             <div id="intro-container">
@@ -79,11 +79,20 @@
 
         </div>
 
+        <script src="functions.js"></script>
+
         <script type="text/javascript">
+            
             let menuOpenBool = false;
+
+            //scroll control
+            function scrollControl(){
+                progressBar();
+            }
+            
         </script>
 
-        <script src="functions.js"></script>
+        
 
     </body>
 
