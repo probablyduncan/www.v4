@@ -98,7 +98,6 @@ p a:active{
     color: rgba(0, 0, 0, 0.7);
 }
 #menu-button{
-    padding-left: 40px;
     transition: color 0.25s, opacity 0.25s linear;
 }
 .menu-button-inactive{
