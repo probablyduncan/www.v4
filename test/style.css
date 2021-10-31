@@ -13,7 +13,7 @@ body{
 }
 #wrapper{
     width: 95vw;
-    max-width: 480px;
+    max-width: 560px;
 }
 
 h1{
@@ -52,6 +52,7 @@ p{
     color: black;
     line-height: 200%;
     margin: 30px 0 30px calc(5% + 4px);
+    max-width: 320px;
 }
 p a{
     text-decoration: none;
@@ -98,14 +99,13 @@ p a:active{
     color: rgba(0, 0, 0, 0.7);
 }
 #menu-button{
+    color: #346cda;
     transition: color 0.25s, opacity 0.25s linear;
 }
 .menu-button-inactive{
-    color: #346cda;
     cursor: zoom-in;
 }
 .menu-button-active{
-    color: #6196ff;
     cursor: zoom-out;
 }
 #menu-button:hover{color: #6196ff;}
@@ -138,7 +138,6 @@ img{
     display: block;
 }
 #menu{
-    display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
@@ -163,12 +162,10 @@ img{
 .menu-link:hover{color: #6196ff;}
 .menu-link:active{color: #d4e2ff;}
 
-.menu-visible{
-    opacity: 1;
-}
-.menu-hidden{
-    opacity: 0;
-}.menu-hidden .menu-link{display: none;}
+.menu-visible{opacity: 1;}
+.menu-hidden{opacity: 0;}
+.menu-disabled{display: none;}
+.menu-enabled{display: flex;}
 
 
 #intro-container{

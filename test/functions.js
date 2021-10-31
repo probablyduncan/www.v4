@@ -17,20 +17,28 @@ function flashMenuButton(){
         mb.style.opacity = 0;
 
         setTimeout(() => {
-            mb.innerHTML = '>MENU';
+            mb.innerHTML = '-> MENU';
             mb.style.opacity = '1';
 
             setTimeout(() => {
-                mb.style.opacity = '0';
-
+                //mb.innerHTML = '>&nbsp;&nbsp;>MENU'
                 setTimeout(() => {
-                    mb.innerHTML = str;
-                    mb.style.opacity = '1';
-                }, 650);
+                    //mb.innerHTML = '>&nbsp;&nbsp;>&nbsp;&nbsp;>MENU'
 
-            }, 3000);
-            
-        }, 650);
+                    setTimeout(() => {
+                        mb.style.opacity = '0';
+
+                        setTimeout(() => {
+                            mb.innerHTML = str;
+                            mb.style.opacity = '1';
+                        }, 500);
+
+                    }, 700);
+
+                }, 700);
+            }, 700);
+
+        }, 500);
 
     }, 1000);
     
@@ -49,25 +57,40 @@ function toggleMenu(){
         openMenu();
         menuOpenBool = true;
     }
-    console.log(menuOpenBool);
+    //console.log(menuOpenBool);
 }
 function openMenu(){
-    //make menu visible
-    document.getElementById('menu').classList.add('menu-visible');
-    document.getElementById('menu').classList.remove('menu-hidden');
-    document.getElementById('menu-button').classList.remove('menu-button-inactive');
+    
+    //update menu button style
     document.getElementById('menu-button').classList.add('menu-button-active');
-    //document.getElementById('wrapper').classList.add('opacity80');
-    menuOpenBool = true;
+    document.getElementById('menu-button').classList.remove('menu-button-inactive');
+
+    //make menu visible (display none to display flex)
+    document.getElementById('menu').classList.remove('menu-disabled');
+    document.getElementById('menu').classList.add('menu-enabled');
+    //after that, fade in menu
+    setTimeout(() => {
+        document.getElementById('menu').classList.add('menu-visible');
+        document.getElementById('menu').classList.remove('menu-hidden');
+    }, 1);
+    
+    menuOpenBool = document.getElementById('menu').classList.contains('menu-enabled');
 }
 function exitMenu(){
+    //update menu button style
+    document.getElementById('menu-button').classList.add('menu-button-inactive');
+    document.getElementById('menu-button').classList.remove('menu-button-active');
+
     //make menu invisible
     document.getElementById('menu').classList.add('menu-hidden');
     document.getElementById('menu').classList.remove('menu-visible');
-    document.getElementById('menu-button').classList.add('menu-button-inactive');
-    document.getElementById('menu-button').classList.remove('menu-button-active');
-    //document.getElementById('wrapper').classList.remove('opacity80');
-    menuOpenBool = false;
+    setTimeout(() => {
+        document.getElementById('menu').classList.add('menu-disabled');
+        document.getElementById('menu').classList.remove('menu-enabled');
+    }, 500);
+    
+
+    menuOpenBool = document.getElementById('menu').classList.contains('menu-enabled');
 }
 
 
