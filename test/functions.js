@@ -1,3 +1,5 @@
+let menuOpenBool = false;
+
 //this is called once the body has loaded
 function afterLoadControl(){
     fadeInBody()
@@ -21,22 +23,15 @@ function flashMenuButton(){
             mb.style.opacity = '1';
 
             setTimeout(() => {
-                //mb.innerHTML = '>&nbsp;&nbsp;>MENU'
+                mb.style.opacity = '0';
+
                 setTimeout(() => {
-                    //mb.innerHTML = '>&nbsp;&nbsp;>&nbsp;&nbsp;>MENU'
+                    mb.innerHTML = str;
+                    mb.style.opacity = '1';
+                }, 500);
 
-                    setTimeout(() => {
-                        mb.style.opacity = '0';
+            }, 2000);
 
-                        setTimeout(() => {
-                            mb.innerHTML = str;
-                            mb.style.opacity = '1';
-                        }, 500);
-
-                    }, 700);
-
-                }, 700);
-            }, 700);
 
         }, 500);
 
@@ -87,10 +82,9 @@ function exitMenu(){
     setTimeout(() => {
         document.getElementById('menu').classList.add('menu-disabled');
         document.getElementById('menu').classList.remove('menu-enabled');
+        menuOpenBool = document.getElementById('menu').classList.contains('menu-enabled');
     }, 500);
     
-
-    menuOpenBool = document.getElementById('menu').classList.contains('menu-enabled');
 }
 
 
@@ -143,14 +137,14 @@ function fadeInBody(){
     PROJECT CARD BUILDER
 
     imgsrc: mooncall.jpg or whatever
-    catagory: on yearning or for reel or whatever, automatically converts to upper case 
+    category: on yearning or for reel or whatever, automatically converts to upper case 
     color: color in hex (without #) for catagory, should go with image
     title: full title, must be capitalized and with a period at the end
     pagename: the page that this will link to (without .html). this will also be the card's id
 */
 
-/*
-function buildProjectCard(imgsrc, catagory, color, title, pagename){
-    return `<div id="${pagename}" class="content-card"><a href="${pagename}.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="${imgsrc}"></a><h3 class="content-catagory" style="color: #${color};">${catagory.toUpperCase()}</h3><h4 class="content-title">${title}</h4><div class="content-line"></div></div>`;
+
+function buildProjectCard(imgsrc, category, color, title, pagename){    
+    return `<div id="${pagename}" class="content-card"><a href="${pagename}.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="${imgsrc}"></a><h3 class="content-catagory" style="color: #${color};">${category}</h3><h4 class="content-title">${title}</h4><div class="content-line"></div></div>`;
 } 
-*/
+

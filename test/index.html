@@ -21,11 +21,13 @@
 
         <!-- css -->
         <link rel="stylesheet" type="text/CSS" href="style.css">
+        <!-- javascript -->
+        <script src="functions.js"></script>
 
         <!-- fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique+Soft">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
 
         <!-- meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +49,7 @@
                     <div id="menu" class="menu-hidden menu-disabled">
                         <div id="menu-column-1">
                             <a href="index.html" class="menu-link">HOME</a>
-                            <a href="projects.html" class="menu-link">PROJECTS</a>
+                            <a href="https://www.instagram.com/probablyduncan/" class="menu-link">INSTAGRAM</a>
                             <a href="about.html" class="menu-link">ABOUT</a>
                         </div>
                         <div id="menu-column-2">
@@ -59,24 +61,25 @@
                     <img src="daybreak4.jpg">
                 </div>
 
-                <h2 id="intro-text">Hello! I'm <a id="name-link" href="about/html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.<br><br>What have I<br>been up to?</h2>
+                <h2 class="intro-text">Hello! I'm <a class="intro-link" href="about/html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.</h2>
+                <h2 class="intro-text">What have I<br>been up to?</h2>
 
             </div>
 
             <div id="content-container">
-                <div id="yearn" class="content-card">
+                <div id="yearning" class="content-card">
                     <a href="yearning.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="mooncall.jpg"></a>
                     <h3 class="content-catagory" style="color: #e8859f;">ON YEARNING</h3>
                     <h4 class="content-title">Traversing the<br>untraversable.</h4>
                     <div class="content-line"></div>
                 </div>
-                <div id="wiki" class="content-card">
+                <div id="commons" class="content-card">
                     <a href="commons.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="commons.png"></a>
                     <h3 class="content-catagory" style="color: #346cda;">FOR REEL</h3>
                     <h4 class="content-title">Your hopes and dreams and<br>nightmares? I found them<br>on Wikimedia Commons.</h4>
                     <div class="content-line"></div>
                 </div>
-                <div id="cloud" class="content-card">
+                <div id="fluffy" class="content-card">
                     <a href="fluffy.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="cloudswells.jpg"></a>
                     <h3 class="content-catagory" style="color: #ff9200;">THE CUTTING EDGE</h3>
                     <h4 class="content-title">Cloud discovered,<br>fluffiest in world.</h4>
@@ -88,23 +91,33 @@
                     <h4 class="content-title">Man makes pizza, fast!</h4>
                     <div class="content-line"></div>
                 </div>
+                <div id="cart" class="content-card">
+                    <a href="cart.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="cart.jpg"></a>
+                    <h3 class="content-catagory" style="color: #ed67ca;">TROLLEY FOLLY</h3>
+                    <h4 class="content-title">I mourn the forlorn carts.</h4>
+                    <div class="content-line"></div>
+                </div>
+                <div id="synesthesim" class="content-card">
+                    <a href="synesthesim.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="syn.gif"></a>
+                    <h3 class="content-catagory" style="color: #749636;">COLOR CODE</h3>
+                    <h4 class="content-title">Synesthesia alive!</h4>
+                    <div class="content-line"></div>
+                </div>
 
             </div>
 
             <div id="links-container">
-                <a href="projects.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">More projects. <span class="bl-span">>>></span></a>
-                <a href="https://www.instagram.com/probablyduncan/" target="blank" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">Instagram. <span class="bl-span">>>></span></a>
+                <!-- <a href="projects.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">More projects. <span class="bl-span">>>></span></a> -->
                 <a href="about.html" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">About me. <span class="bl-span">>>></span></a>
+                <a href="https://www.instagram.com/probablyduncan/" target="blank" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">Instagram. <span class="bl-span">>>></span></a>
                 <a href="mailto:duncanpetrie1@gmail.com" class="bottom-link" onmouseover="blMouseOver(this)" onmouseout="blMouseOut(this)" onmousedown="blActive(this)">Email. <span class="bl-span">>>></span></a>
             </div>
 
         </div>
 
 
-        <script src="functions.js"></script>
         <script type="text/javascript">
 
-            let menuOpenBool = false;
             
 
             //scroll control

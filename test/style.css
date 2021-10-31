@@ -13,7 +13,7 @@ body{
 }
 #wrapper{
     width: 95vw;
-    max-width: 560px;
+    max-width: 540px;
 }
 
 h1{
@@ -52,7 +52,7 @@ p{
     color: black;
     line-height: 200%;
     margin: 30px 0 30px calc(5% + 4px);
-    max-width: 320px;
+    width: 60%;
 }
 p a{
     text-decoration: none;
@@ -167,21 +167,17 @@ img{
 .menu-disabled{display: none;}
 .menu-enabled{display: flex;}
 
-
-#intro-container{
-    margin-top: 30px;
+.intro-text{
+    margin: 40px 0 0 calc(5% + 4px);
 }
-#intro-text{
-    margin: 25px 0 0 calc(5% + 4px);
-}
-#name-link{
+.intro-link{
     color: #ee9700;
     text-decoration: underline;
     transition: color 0.25s;
     cursor: pointer;
 }
-#name-link:hover{color: #ffb83c;}
-#name-link:active{color: #ffe2b0;}
+.intro-link:hover{color: #ffb83c;}
+.intro-link:active{color: #ffe2b0;}
 
 .content-card{
     margin-top: 50px;
@@ -246,12 +242,6 @@ img{
     background-color: #222222;
     z-index: 2000;
     /* transition: width 0.1s; */
-}
-
-
-
-.opacity80{
-    opacity: 80%;
 }
 
 
