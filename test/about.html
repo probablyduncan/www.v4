@@ -30,6 +30,7 @@
         <div id="wrapper">
 
             <div id="progress-bar"></div>
+            <span id="tooltip" class="tooltip-inactive"></span>
 
             <div id="top-text-container">
                 <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">ABOUT</a></h1>
@@ -41,7 +42,7 @@
                     <div id="menu" class="menu-hidden menu-disabled">
                         <div id="menu-column-1">
                             <a href="index.html" class="menu-link">HOME</a>
-                            <a href="https://www.instagram.com/probablyduncan/" class="menu-link">INSTAGRAM</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="blank" class="menu-link">INSTAGRAM</a>
                             <a href="about.html" class="menu-link">ABOUT</a>
                         </div>
                         <div id="menu-column-2">
@@ -50,7 +51,7 @@
                             <a href="resume.html" class="menu-link">RESUME</a>
                         </div>
                     </div>
-                    <img src="prints.jpg">
+                    <img src="prints.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Fingerprint under microscope, 2019.">
                 </div>
 
                 
@@ -62,7 +63,7 @@
                 <h2 class="intro-text">Something else about me</h2>
 
                 <br><br><br>
-                <img class="shadow-img si-hover" src="bio.jpg" onmouseover="" onmouseout="" alt="Self portrait, 2020.">
+                <img class="shadow-img si-hover" src="bio.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Self portrait, 2020.">
 
                 <h2 class="intro-text">Using abstraction, <br>spare and striking <br>composition, and <br>only the best natural <br>light, I simplify the <br>landscape.</h2>
 
@@ -80,10 +81,13 @@
                 
                 
                 <br><br><br>
-                <img class="shadow-img si-hover" src="cv.jpg" onmouseover="" onmouseout="" alt="Self portrait, 2020.">
-                <h2 class="intro-text">Get in touch: <a href="mailto:duncanpetrie1@gmail.com" class="intro-link">duncanpetrie1@gmail.com</a><br><a href="https://www.instagram.com/probablyduncan/" class="intro-link">@probablyduncan</a></h2>
+                <img class="shadow-img si-hover" src="cv.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Terceira, Portugal, 2020.<br>Credit: Trilhas Outdoors">
+                <h2 class="intro-text">Get in touch: <br><a href="mailto:duncanpetrie1@gmail.com" class="intro-link">duncanpetrie1@gmail.com</a><br><a href="https://www.instagram.com/probablyduncan/" class="intro-link">@probablyduncan</a></h2>
                 <br><br><br>
                 <br><br><br>
+
+
+                
                 
 
             </div>
@@ -97,6 +101,9 @@
             function scrollControl(){
                 progressBar();
             }
+
+            
+
     
         </script>
 

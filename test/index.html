@@ -37,7 +37,10 @@
 
         <div id="wrapper">
 
+            <!-- EMPTY DIVS FOR STUFF -->
+
             <div id="progress-bar"></div>
+            <span id="tooltip" class="tooltip-inactive"></span>
 
             <!-- TOPBAR -->
 
@@ -53,7 +56,7 @@
                     <div id="menu" class="menu-hidden menu-disabled">
                         <div id="menu-column-1">
                             <a href="index.html" class="menu-link">HOME</a>
-                            <a href="https://www.instagram.com/probablyduncan/" class="menu-link">INSTAGRAM</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="blank" class="menu-link">INSTAGRAM</a>
                             <a href="about.html" class="menu-link">ABOUT</a>
                         </div>
                         <div id="menu-column-2">
@@ -62,7 +65,7 @@
                             <a href="resume.html" class="menu-link">RESUME</a>
                         </div>
                     </div>
-                    <img src="daybreak4.jpg">
+                    <img src="daybreak4.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Algae-yellowed rocks in<br>Lake Michigan, 2020.">
                 </div>
 
                 <h2 class="intro-text">Hello! I'm <a class="intro-link" href="about.html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.</h2>
@@ -143,6 +146,8 @@
             function scrollControl(){
                 progressBar();
             }
+
+            
     
     
         </script>

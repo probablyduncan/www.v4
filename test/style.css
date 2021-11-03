@@ -232,7 +232,7 @@ img{
 
 
 
-
+/* bar across top of screen which progressively widens */
 #progress-bar{
     position: fixed;
     top: 0;
@@ -248,11 +248,38 @@ img{
 
 
 
+/* TOOLTIP */
+
+/* this is for the images that have tooltips */
+.tooltip-img{
+    cursor: none;
+}
+/* this is the tooltip itself */
+#tooltip{
+    background-color: #FAFAFF;
+    color: black;
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 4px;
+    border: 2px solid black;
+    pointer-events: none;
+    white-space: nowrap;
+}
+/* this is applied when hovering over a tooltip-img */
+.tooltip-active{
+    display: block;
+    position: fixed;
+    z-index: 10000;
+}
+/* this is the default state when tooltip is inactive */
+.tooltip-inactive{
+    display: none;
+}
 
 
 
 
-
+/* animation class to fade an element in */
 .fadeIn{
     
     -webkit-animation: fadeIn 1s;

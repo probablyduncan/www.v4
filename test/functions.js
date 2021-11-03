@@ -133,6 +133,48 @@ function fadeInBody(){
 }
 
 
+//TOOLTIP STUFF
+
+//initialize mouse coordinates
+let mouseX = 0;
+let mouseY = 0;
+
+//this calls each time the mouse moves
+//e.clientX and e.clientY are 
+window.onmousemove = (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    //console.log("x: " + mouseX + ". y: " + mouseY);
+}
+
+function startTooltip(e){
+    let t = document.getElementById('tooltip');
+    t.innerHTML = e.alt;
+    t.classList.remove('tooltip-inactive');
+    t.classList.add('tooltip-active');
+    document.body.style.cursor = 'none';
+}
+
+function stopTooltip(e){
+    let t = document.getElementById('tooltip');
+    t.classList.remove('tooltip-active');
+    t.classList.add('tooltip-inactive');
+    document.body.style.cursor = 'unset';
+}
+
+function moveTooltip(e){
+    let t = document.getElementById('tooltip');
+    t.style.top = mouseY + "px";
+    t.style.left = mouseX +"px";
+}
+
+
+
+
+
+
+
+
 /*
     PROJECT CARD BUILDER
 
