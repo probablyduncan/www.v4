@@ -1,4 +1,5 @@
 let menuOpenBool = false;
+let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 //this is called once the body has loaded
 function afterLoadControl(){
@@ -142,30 +143,41 @@ let mouseY = 0;
 //this calls each time the mouse moves
 //e.clientX and e.clientY are 
 window.onmousemove = (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    //console.log("x: " + mouseX + ". y: " + mouseY);
+    if(!isMobile){
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        console.log("onmousemove");
+    }
 }
 
 function startTooltip(e){
-    let t = document.getElementById('tooltip');
-    t.innerHTML = e.alt;
-    t.classList.remove('tooltip-inactive');
-    t.classList.add('tooltip-active');
-    document.body.style.cursor = 'none';
+    if(!isMobile){
+        let t = document.getElementById('tooltip');
+        t.innerHTML = e.alt;
+        t.classList.remove('tooltip-inactive');
+        t.classList.add('tooltip-active');
+        document.body.style.cursor = 'none';
+        console.log("start");
+    }
 }
 
 function stopTooltip(e){
-    let t = document.getElementById('tooltip');
-    t.classList.remove('tooltip-active');
-    t.classList.add('tooltip-inactive');
-    document.body.style.cursor = 'unset';
+    if(!isMobile){
+        let t = document.getElementById('tooltip');
+        t.classList.remove('tooltip-active');
+        t.classList.add('tooltip-inactive');
+        document.body.style.cursor = 'unset';
+        console.log("stop");
+    }
 }
 
 function moveTooltip(e){
-    let t = document.getElementById('tooltip');
-    t.style.top = mouseY + "px";
-    t.style.left = mouseX +"px";
+    if(!isMobile){
+        let t = document.getElementById('tooltip');
+        t.style.top = mouseY + "px";
+        t.style.left = mouseX +"px";
+        console.log("move");
+    }
 }
 
 
