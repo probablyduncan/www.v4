@@ -137,8 +137,8 @@ function fadeInBody(){
 //TOOLTIP STUFF
 
 //initialize mouse coordinates
-let mouseX = 0;
-let mouseY = 0;
+let mouseX = window.innerWidth + 10;
+let mouseY = window.innerHeight + 10;
 
 //this calls each time the mouse moves
 //e.clientX and e.clientY are 
@@ -146,7 +146,7 @@ window.onmousemove = (e) => {
     if(!isMobile){
         mouseX = e.clientX;
         mouseY = e.clientY;
-        console.log("onmousemove");
+        //console.log("onmousemove");
     }
 }
 
@@ -154,10 +154,11 @@ function startTooltip(e){
     if(!isMobile){
         let t = document.getElementById('tooltip');
         t.innerHTML = e.alt;
+        if(t.innerHTML == 'undefined') {t.innerHTML = e.getAttribute('alt');}
         t.classList.remove('tooltip-inactive');
         t.classList.add('tooltip-active');
         document.body.style.cursor = 'none';
-        console.log("start");
+        //console.log("start");
     }
 }
 
@@ -167,7 +168,7 @@ function stopTooltip(e){
         t.classList.remove('tooltip-active');
         t.classList.add('tooltip-inactive');
         document.body.style.cursor = 'unset';
-        console.log("stop");
+        //console.log("stop");
     }
 }
 
@@ -176,7 +177,7 @@ function moveTooltip(e){
         let t = document.getElementById('tooltip');
         t.style.top = mouseY + "px";
         t.style.left = mouseX +"px";
-        console.log("move");
+        //console.log("move");
     }
 }
 

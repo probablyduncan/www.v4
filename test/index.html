@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-    <!-- 
+        <!-- Hi! I don't get many visitors down here. It's always good to see a new face. -->
+        <!-- I made this site in Fall 2021. I wanted to do everything myself, so I didn't use any libraries; just pure HTML, CSS, and JS. -->
+        <!-- Take a look around. If you want to make something together, email me at duncanpetrie1@gmail.com. -->
 
-        Hi! I don't get many visitors down here. It's always good to see a new face.
-
-        Take a look around. If you want to make soemthing together, email me at duncanpetrie1@gmail.com.
-
-     -->
 
     <head>
         <title>DuncanPetrie.com</title>
@@ -56,19 +53,24 @@
                     <div id="menu" class="menu-hidden menu-disabled">
                         <div id="menu-column-1">
                             <a href="index.html" class="menu-link">HOME</a>
-                            <a href="https://www.instagram.com/probablyduncan/" target="blank" class="menu-link">INSTAGRAM</a>
                             <a href="about.html" class="menu-link">ABOUT</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="blank" class="menu-link">INSTAGRAM</a>
                         </div>
                         <div id="menu-column-2">
-                            <a href="photography.html" class="menu-link">PHOTOS</a>
+                            <a href="work.html" class="menu-link">ALL WORK</a>
                             <a href="mailto:duncanpetrie1@gmail.com" class="menu-link">EMAIL</a>
-                            <a href="resume.html" class="menu-link">RESUME</a>
+                            <a href="cv.html" class="menu-link">CV</a>
                         </div>
                     </div>
                     <img src="daybreak4.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Algae-yellowed rocks in<br>Lake Michigan, 2020.">
                 </div>
 
-                <h2 class="intro-text">Hello! I'm <a class="intro-link" href="about.html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.</h2>
+                <!-- <h2 class="intro-text">Hello! I'm <a class="intro-link" href="about.html">Duncan<br>Petrie</a>, developer,<br>designer, writer,<br>and photographer.</h2> -->
+
+                <h2 class="intro-text">Hello! I'm <a class="intro-link" href="about.html">Duncan<br>Petrie</a>, developer, <br>artist, writer, and<br> 
+                    <span href="" id="skill" onclick="refreshSkill()" style="user-select: none; cursor: pointer;">horizon chaser.</span>
+                </h2>
+                
                 <h2 class="intro-text">What have I<br>been up to?</h2>
 
             </div>
@@ -80,7 +82,7 @@
                 <div id="yearning" class="content-card">
                     <a href="yearning.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="bird.jpg"></a>
                     <h3 class="content-catagory" style="color: #e8859f;">ON YEARNING</h3>
-                    <h4 class="content-title">Traversing the<br>untraversable.</h4>
+                    <h4 class="content-title">Musings from the edge <br>of impassable vastness.</h4>
                     <div class="content-line"></div>
                 </div>
 
@@ -126,6 +128,13 @@
                     <div class="content-line"></div>
                 </div>
 
+                <div id="bigmap" class="content-card">
+                    <a href="bigmap.html" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="bigmapW2.jpg"></a>
+                    <h3 class="content-catagory" style="color: #ca82ca;">WORLDS AWAY</h3>
+                    <h4 class="content-title">Charting the wilds of my <br>yearning, churning mind.</h4>
+                    <div class="content-line"></div>
+                </div>
+
             </div>
 
             <div id="links-container">
@@ -140,12 +149,39 @@
 
         <script type="text/javascript">
 
+
+            let skills = [
+                ['pizza man', 'pizza.html'],
+                ['snow-romper', 'work.html?snow', 'Born of the cold'],
+                ['wisconsinite', 'work.html?wisco'],
+                ['horizon chaser', 'work.html?horiz'],
+                ['cart advocate', 'cart.html'],
+                ['synesthete', 'synesthesim.html'],
+                ['cloud admirer', 'fluffy.html'],
+                ['bird-brain', 'work.html?birds'],
+                ['yearner', 'yearning.html'],
+                ['commoner', 'commons.html'],
+                ['bird-hatter', 'birdhat.html']
+            ];
+
+            function refreshSkill(){
+                let old = document.getElementById('skill').innerHTML;
+                while(old == document.getElementById('skill').innerHTML)
+                {
+                    let r = Math.floor(Math.random() * skills.length);
+                    document.getElementById('skill').innerHTML = skills[r][0] + '.';
+                    document.getElementById('skill').alt = skills[r][2];
+                    //document.getElementById('skill').setAttribute('href', skills[r][1]);
+                }
+            }
             
 
             //scroll control
             function scrollControl(){
                 progressBar();
             }
+
+            
 
             
     

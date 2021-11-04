@@ -11,6 +11,11 @@ body{
     opacity: 0;
     transition: opacity 1s ease-in;
 }
+/* @media (min-width: 800px){
+    #wrapper{
+        margin-right: calc(100vw - 540px);
+    }
+} */
 #wrapper{
     width: 95vw;
     max-width: 540px;
@@ -206,7 +211,7 @@ img{
 
 
 #links-container{
-    margin: 130px 0 65px calc(5% + 4px);
+    margin: 65px 0 65px calc(5% + 4px);
 }
 .bottom-link{
     color: black;
@@ -251,9 +256,10 @@ img{
 /* TOOLTIP */
 
 /* this is for the images that have tooltips */
-.tooltip-img{
-    cursor: none;
+@media (hover:hover){
+    .tooltip-span{text-decoration: underline;}
 }
+
 /* this is the tooltip itself */
 #tooltip{
     background-color: #FAFAFF;
@@ -264,6 +270,8 @@ img{
     border: 2px solid black;
     pointer-events: none;
     white-space: nowrap;
+    top: 110vh;
+    left: 110vw;
 }
 /* this is applied when hovering over a tooltip-img */
 .tooltip-active{
