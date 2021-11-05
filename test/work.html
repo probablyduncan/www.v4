@@ -2,6 +2,19 @@
 <html>
     <head>
 
+
+        <!-- 
+
+
+            WHAT IF AT A CERTAIN WINDOW SIZE
+            the wrapper goes on the left and the current image shows up on the right, big
+
+
+         -->
+
+
+
+
         <title>DuncanPetrie.com</title>
         <meta charset="UTF-8"/>
 
@@ -35,14 +48,14 @@
 
             <!-- TOPBAR -->
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;/&nbsp;WORK</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">FILTERS</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" style="color: #346cba;" onclick="">WORK</a></h1>
             </div>
 
             <!-- INTRO STUFF -->
             <div id="intro-container">
 
                 <div id="menu-img" class="shadow-img si-hover">
-                    <div id="menu" class="menu-hidden menu-disabled">
+                    <div id="menu" class="menu-visible menu-enabled">
                         <div id="menu-column-1">
                             <span class="menu-link filter-link filter-active" onclick="categoryHandler(this, 1)">BEST WORK</span>
                             <span class="menu-link filter-link" onclick="categoryHandler(this, 0)">ALL WORK</span>
@@ -87,36 +100,40 @@
 
 const worksArr = [
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now."],
-    ['2.jpg', true, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
+    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now, 2017"],
+    ['2.jpg', false, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
     ['3.jpg', true, true, false, false, false, false, true, false, false, false, "Skeleton pier, 2017."],
-    ['4.jpg', false, false, false, true, false, false, false, false, false, true,],
+    ['4.jpg', false, false, false, true, false, false, false, false, false, true, "View from lunch, <br>Kjalarnes, 2017."],
     ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs screen door, 2017."],
-    ['6.jpg', false, true, false, false, false, true, false, false, false, false, "2018"],
-    ['7.jpg', false, true, false, false, false, true, false, false, false, false],
-    ['8.jpg', true, false, false, true, false, false, true, false, false, false],
-    ['9.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['10.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['11.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['12.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['13.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['14.jpg', false, false, false, false, false, false, false, false, false, true],
-    ['15.jpg', false, false, false, false, false, false, false, false, false, false],
-    ['16.jpg', false, false, false, false, true, false, false, false, false, true],
-    ['17.jpg', false, false, false, false, false, false, false, false, false, false],
-    ['18.jpg', false, true, false, false, true, false, false, false, false, false],
-    ['19.jpg', false, true, false, false, false, false, false, true, false, false],
-    ['20.jpg', true, false, false, true, false, false, false, false, false, false],
-    ['21.jpg', true, false, false, false, false, false, false, false, false, false],
-    ['22.jpg', false, false, false, false, false, false, false, false, false, false],
-    ['23.jpg', false, true, false, false, false, false, false, true, false, false],
-    ['24.jpg', true, true, false, false, true, false, false, false, false, false],
-    ['25.jpg', true, true, false, false, true, false, false, false, false, false],
-    ['26.jpg', true, true, false, false, false, false, false, true, false, false],
-    ['27.jpg', true, true, false, false, false, false, false, true, false, false],
-    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "Icewater rushes ashore, 2018"],
-    ['29.jpg', false, true, false, false, true, false, false, false, false, false],
+    ['6.jpg', false, true, false, false, false, true, false, false, false, false, "Icewater seeths, 2018."],
+    ['7.jpg', false, true, false, false, false, true, false, false, false, false, "Icebanks adrift, 2018."],
+    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light at Kalaloch, 2018"],
+    ['9.jpg', false, false, false, false, false, false, false, false, false, true, "Window, Stöng, 2018."],
+    ['10.jpg', false, false, false, false, false, false, false, false, false, true, "Drangurinn from <br>Sólheimasandur, 2018."],
+    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
+    ['11.jpg', false, false, false, false, false, false, false, false, false, true, "Sólheimasandur flats, 2018."],
+    ['12.jpg', false, false, false, false, false, false, false, false, false, true, "Basalt under Skaftafell, 2018."],
+    ['13.jpg', false, false, false, false, false, false, false, false, false, true, "Hitckhikers, highlands, 2018."],
+    ['14.jpg', false, false, false, false, false, false, false, false, false, true, "It's not a phase, mom, 2018."],
+    ['15.jpg', false, false, false, false, false, false, false, false, false, false, "Bascoitos, 2018."],
+    ['16.jpg', false, false, false, false, true, false, false, false, false, true, "Blatant metaphor, 2018."],
+    ['17.jpg', false, false, false, false, false, false, false, false, false, false, "Fourth, 2018."],
+    ['18.jpg', false, true, false, false, true, false, false, false, false, false, "Happiness, 2018."],
+    ['19.jpg', false, true, false, false, false, false, false, true, false, false, "Yardbirds, 2018."],
+    ['20.jpg', true, false, false, true, false, false, false, false, false, false, "Sun, doubly reflected, <br>Lincoln Center, 2018."],
+    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
+    ['21.jpg', false, false, false, false, false, false, false, false, false, false, "Flushing, Queens, 2018."],
+    ['22.jpg', false, false, false, false, false, false, false, false, false, false, "Ganesh Temple, Queens, 2018."],
+    ['23.jpg', false, true, false, false, false, false, false, true, false, false, "Yardbirds, 2018."],
+    ['24.jpg', true, true, false, false, true, false, false, false, false, false, "Prairie grass, setting sun, 2018."],
+    ['25.jpg', true, true, false, false, true, false, false, false, false, false, "Cattail prismatic, 2018."],
+    ['26.jpg', true, true, false, false, false, false, false, true, false, false, "Chimney swifts, 2018."],
+    ['word', true, true, false, false, false, false, false, true, true, false, "Crisp and swiftly, susurrus <br>And the whithered husks of corn <br>Beckon forth to rising moon <br>And to the winter still unborn"],
+    ['27.jpg', true, true, false, false, false, false, false, true, false, false, "Swift susurrus, 2018."],
+    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "First blue, 2018"],
+    ['29.jpg', false, true, false, false, true, false, false, false, false, false, "Oh, deer, 2018."],
     ['30.jpg', true, true, false, false, true, false, false, false, false, false, "A whitetail shakes off dew, 2018."]
+    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
     //['3.jpg', ]
 
 ];
@@ -140,14 +157,21 @@ const worksArr = [
 
                 //first, figure out whether or not the filter is active
                 let isActive = e.classList.contains('filter-active');
+
+                //OPTIONAL clear all others
+                //set all current filters to false
+                for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
+                //remove filter-active from filters
+                let tempFilterList = document.getElementById('menu-column-2').children;
+                for(let i = 0; i < tempFilterList.length; i++){tempFilterList[i].classList.remove('filter-active');}
                 
                 //if it is active, remove filter-active, and if not, add filter-active
                 if(isActive) e.classList.remove('filter-active');
                 else e.classList.add('filter-active');
 
-                currentFilters[n] = !currentFilters[n];
+                //set current filter to true only if filter is not being turned off
+                currentFilters[n] = !isActive;
 
-                console.log(currentFilters);
                 filter();
             }
 
@@ -252,9 +276,8 @@ const worksArr = [
                                     //for each filter, we see if the work also matches that filter
                                     //j matches the index of currentFilters
                                     //j+4 matches the index of worksArr
-                                    if(currentFilters[j] && worksArr[j+4]){
-                                        
-                                        display = true;
+                                    if(worksArr[i][j+4] == true && currentFilters[j] == true){
+                                        display = true; break;
                                     }
                                 }
                             }
@@ -266,7 +289,11 @@ const worksArr = [
 
                     //ok, now that we know whether or not to display the work:
                     if(display){
-                        wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${worksArr[i][11] != null ? worksArr[i][11] : worksArr[i][0]}" src="work/${worksArr[i][0]}"><div class="space"></div>`;
+                        if(worksArr[i][0] == 'word'){
+                            wc.innerHTML += `<h2 class="works-text">${worksArr[i][11]}</h2><div class="space"></div>`;
+                        } else {
+                            wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${worksArr[i][11] != null ? worksArr[i][11] : worksArr[i][0]}" src="work/${worksArr[i][0]}"><div class="space"></div>`;
+                        }
                     }
 
 

@@ -228,6 +228,9 @@ img{
 .filter-active:active{
     color: #ffc052;
 }
+.works-text{
+    margin-left: calc(5% + 4px);
+}
 
 
 
