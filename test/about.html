@@ -25,7 +25,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
-    <body onscroll="scrollControl()" onload="afterLoadControl()">
+    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')">
 
         <div id="wrapper">
 
@@ -33,22 +33,18 @@
             <span id="tooltip" class="tooltip-inactive"></span>
 
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">ABOUT</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;/&nbsp;ABOUT</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">MENU</a></h1>
             </div>
 
             <div id="intro-container">
                 
                 <div id="menu-img" class="shadow-img si-hover">
                     <div id="menu" class="menu-hidden menu-disabled">
-                        <div id="menu-column-1">
+                        <div id="menu-column-1" style="text-align: center;">
                             <a href="index.html" class="menu-link">HOME</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="_blank" class="menu-link">INSTAGRAM</a>
                             <a href="about.html" class="menu-link">ABOUT</a>
-                            <a href="https://www.instagram.com/probablyduncan/" target="blank" class="menu-link">INSTAGRAM</a>
-                        </div>
-                        <div id="menu-column-2">
-                            <a href="work.html" class="menu-link">ALL WORK</a>
-                            <a href="mailto:duncanpetrie1@gmail.com" class="menu-link">EMAIL</a>
-                            <a href="cv.html" class="menu-link">CV</a>
+                            <a href="work.html" class="menu-link">WORK</a>
                         </div>
                     </div>
                     <img src="bio.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Pretentious self portrait, 2020.">

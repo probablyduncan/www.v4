@@ -2,16 +2,18 @@ let menuOpenBool = false;
 let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 //this is called once the body has loaded
-function afterLoadControl(){
+function afterLoadControl(blinkStr){
     fadeInBody()
-    flashMenuButton();
+    flashMenuButton(blinkStr);
 }
 
 
 //flash menu button
-function flashMenuButton(){
+function flashMenuButton(blinkStr){
     //maybe flash an animation that switches the page name to (menu) and then back to the page name?
     //document.getElementById('menu-button').style.opacity = '0';
+
+    if(blinkStr == 'noblink') return;
 
     setTimeout(() => {
 
@@ -20,7 +22,7 @@ function flashMenuButton(){
         mb.style.opacity = 0;
 
         setTimeout(() => {
-            mb.innerHTML = '-> MENU';
+            mb.innerHTML = blinkStr;
             mb.style.opacity = '1';
 
             setTimeout(() => {

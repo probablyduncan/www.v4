@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>DuncanPetrie.com</title>
+        <meta charset="UTF-8"/>
+
+        <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+
+        <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+
+        <meta name="author" content="Duncan Petrie">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/CSS" href="style.css">
+        <!-- javascript -->
+        <script src="functions.js"></script>
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
+
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')">
+
+        <div id="wrapper">
+
+            <!-- EMPTY DIVS -->
+            <div id="progress-bar"></div>
+            <span id="tooltip" class="tooltip-inactive"></span>
+
+            <!-- TOPBAR -->
+            <div id="top-text-container">
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;/&nbsp;WORK</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">FILTERS</a></h1>
+            </div>
+
+            <!-- INTRO STUFF -->
+            <div id="intro-container">
+
+                <div id="menu-img" class="shadow-img si-hover">
+                    <div id="menu" class="menu-hidden menu-disabled">
+                        <div id="menu-column-1">
+                            <span class="menu-link filter-link filter-active" onclick="categoryHandler(this, 1)">BEST WORK</span>
+                            <span class="menu-link filter-link" onclick="categoryHandler(this, 0)">ALL WORK</span>
+                            <span class="menu-link filter-link" onclick="categoryHandler(this, 2)">WISCONSIN</span>
+                            <span class="menu-link filter-link" onclick="categoryHandler(this, 3)">CORNWALL</span>
+                            <br>
+                            <!-- <span class="menu-link filter-link"></span>
+                            <span class="menu-link filter-link"></span>
+                            <span class="menu-link filter-link"></span>
+                            <span class="menu-link filter-link"></span> -->
+                        </div>
+                        <div id="menu-column-2">
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 0)">CLOUDS</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 1)">TREES</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 2)">SNOW</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 3)">SEAS</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 4)">BIRDS</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 5)">WORDS</span>
+                            <span class="menu-link filter-link" onclick="filterHandler(this, 6)">MOUNTAINS</span>
+                        </div>
+                    </div>
+                    <img src="boughs.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Heligan Boughs, 2019.">
+                </div>
+                <div class="space"></div>
+
+            </div>
+
+
+            <div id="work-container">
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+        
+            //scroll control
+            function scrollControl(){
+                progressBar();
+            }
+
+
+const worksArr = [
+    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
+    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now."],
+    ['2.jpg', true, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
+    ['3.jpg', true, true, false, false, false, false, true, false, false, false, "Skeleton pier, 2017."],
+    ['4.jpg', false, false, false, true, false, false, false, false, false, true,],
+    ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs screen door, 2017."],
+    ['6.jpg', false, true, false, false, false, true, false, false, false, false, "2018"],
+    ['7.jpg', false, true, false, false, false, true, false, false, false, false],
+    ['8.jpg', true, false, false, true, false, false, true, false, false, false],
+    ['9.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['10.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['11.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['12.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['13.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['14.jpg', false, false, false, false, false, false, false, false, false, true],
+    ['15.jpg', false, false, false, false, false, false, false, false, false, false],
+    ['16.jpg', false, false, false, false, true, false, false, false, false, true],
+    ['17.jpg', false, false, false, false, false, false, false, false, false, false],
+    ['18.jpg', false, true, false, false, true, false, false, false, false, false],
+    ['19.jpg', false, true, false, false, false, false, false, true, false, false],
+    ['20.jpg', true, false, false, true, false, false, false, false, false, false],
+    ['21.jpg', true, false, false, false, false, false, false, false, false, false],
+    ['22.jpg', false, false, false, false, false, false, false, false, false, false],
+    ['23.jpg', false, true, false, false, false, false, false, true, false, false],
+    ['24.jpg', true, true, false, false, true, false, false, false, false, false],
+    ['25.jpg', true, true, false, false, true, false, false, false, false, false],
+    ['26.jpg', true, true, false, false, false, false, false, true, false, false],
+    ['27.jpg', true, true, false, false, false, false, false, true, false, false],
+    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "Icewater rushes ashore, 2018"],
+    ['29.jpg', false, true, false, false, true, false, false, false, false, false],
+    ['30.jpg', true, true, false, false, true, false, false, false, false, false, "A whitetail shakes off dew, 2018."]
+    //['3.jpg', ]
+
+];
+            
+
+            //categories are bestwork, wisconsin, and cornwall
+            //allwork is the default i guess?
+            //only one of these can be active at a time
+            let categories = [true, false, false];
+
+            //currentfilters are clouds, trees, snow, seas, birds, words, and mountains
+            //several of these can be active at once
+            let currentFilters = [false, false, false, false, false, false, false];
+
+
+            filter();
+
+            //this is called when clouds, trees, snow, etc are clicked
+            //it should toggle filter-active, change currentFilters, and call filter()
+            function filterHandler(e, n){
+
+                //first, figure out whether or not the filter is active
+                let isActive = e.classList.contains('filter-active');
+                
+                //if it is active, remove filter-active, and if not, add filter-active
+                if(isActive) e.classList.remove('filter-active');
+                else e.classList.add('filter-active');
+
+                currentFilters[n] = !currentFilters[n];
+
+                console.log(currentFilters);
+                filter();
+            }
+
+            //this is called when bestwork, allwork, wisconsin, cornwall are clicked
+            //it should toggle filter-active, change categories, and call filter()
+            //bestwork and allwork reset all filters, wisco and cornwall only reset each other
+            //either bestwork or allwork should always be active
+            function categoryHandler(e, n){
+                //this switch/case should only modify categories/currentfilters
+                //and also add/remove filter-active class, if necessary
+                switch(n){
+                    case 0: //allwork
+
+                        //set all categories to false
+                        for(let i = 0; i < categories.length; i++){categories[i] = false;}
+                        //set all current filters to false
+                        for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
+                        
+                        //clera all filter-active elements and add filter-active to allwork
+                        clearFilterActiveClass();
+                        e.classList.add('filter-active');
+
+                        break;
+                    case 1: //bestwork
+                        
+                        //set all categories to false
+                        for(let i = 0; i < categories.length; i++){categories[i] = false;}
+                        //set all current filters to false
+                        for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
+                        
+                        //set bestwork to true
+                        categories[0] = true;  
+
+                        //clear all other filter-active elements and add filter-active to bestwork
+                        clearFilterActiveClass();
+                        e.classList.add('filter-active');
+
+                        break;
+                    case 2: //wisco
+
+                        //set wisco to true and cornwall to false
+                        categories[1] = true; categories[2] = false;
+
+                        //add filter-active to wisco and remove it from cornwall
+                        e.classList.add('filter-active');
+                        e.nextElementSibling.classList.remove('filter-active');
+
+                        break;
+                    case 3: //cornwall
+
+                        //set cornwall to true and wisco to false
+                        categories[2] = true; categories[1] = false;
+
+                        //add filter-active to cornwall and remove it from wisco
+                        e.classList.add('filter-active');
+                        e.previousElementSibling.classList.remove('filter-active');
+
+                        break;
+                    default:
+                        //if invalid n, just do bestwork
+                        categoryHandler(e,1);
+                        break;
+
+                }
+
+                //console.log(categories);
+                filter();
+            }
+
+
+            //the purpose of filter() is to change works-container
+            function filter(){
+                //console.log(categories);
+                //console.log(currentFilters);
+
+                let wc = document.getElementById('work-container');
+
+                //first, clear works-container innerHTML
+                wc.innerHTML = "";
+
+                //then we go through worksArr and add each one to work-container
+                for(let i = worksArr.length - 1; i >= 0; i--){
+
+                    let display = false;    //this will be true if the work matches the filters
+
+                    //first, we check to make sure it fits with best/allworks
+
+                    //if bestworks is false (!categories[0]) or if the current work is best:
+                    if(!categories[0] || worksArr[i][1]){
+                        //this one is complicated. If both:
+                        //wisco isnt selected or work is wisco
+                        //AND
+                        //cornwall isnt selected or work is cornwall
+                        if( (!categories[1] || worksArr[i][2]) && (!categories[2] || worksArr[i][3]) ){
+                            //if no filters are selected, this is far enough, all remaining works are displayed
+                            if(currentFilters.indexOf(true) == -1)
+                            {
+                                display = true;
+                            } else {
+                                //if at least one filter is active, we check whether the work satisfies at least one of the filters
+                                for(let j = 0; j < currentFilters.length; j++){
+                                    //for each filter, we see if the work also matches that filter
+                                    //j matches the index of currentFilters
+                                    //j+4 matches the index of worksArr
+                                    if(currentFilters[j] && worksArr[j+4]){
+                                        
+                                        display = true;
+                                    }
+                                }
+                            }
+
+                            
+                        }
+
+                    }
+
+                    //ok, now that we know whether or not to display the work:
+                    if(display){
+                        wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${worksArr[i][11] != null ? worksArr[i][11] : worksArr[i][0]}" src="work/${worksArr[i][0]}"><div class="space"></div>`;
+                    }
+
+
+
+                }
+
+            }
+
+            
+
+
+            function clearFilterActiveClass(){
+                const active = [...document.getElementsByClassName('filter-active')];
+
+                for(let i = 0; i < active.length; i++){
+                    active[i].classList.remove('filter-active');
+                }
+            }
+
+            
+        </script>
+
+    </body>
+</html>

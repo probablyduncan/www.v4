@@ -207,6 +207,27 @@ img{
 .content-line-hover{
     width: calc(61.8%);
 }
+.space{
+    margin-top: 80px;
+}
+.filter-link{
+    cursor: pointer;
+    padding: 2px 6px 2px 6px;
+    margin: 38px 0 38px 0;
+    transition: none;
+    user-select: none;
+    width: auto;
+}
+.filter-active{
+    background-color: #346cda;
+    color: #fff5f0;
+}
+.filter-active:hover{
+    color: #ffe8dc;
+}
+.filter-active:active{
+    color: #ffc052;
+}
 
 
 
