@@ -359,11 +359,17 @@ const worksArr = [
                 }
             }
 
+            var oldWindowWidth = window.innerWidth;
             var resizeTimeout;
             function resizeReset(){
                 //console.log('resize called');
                 clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {filter();}, 400);
+                resizeTimeout = setTimeout(() => {
+                    if(oldWindowWidth != window.innerWidth){
+                        oldWindowWidth = window.innerWidth;
+                        filter();
+                    }
+                }, 400);
             }
 
             
