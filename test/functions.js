@@ -167,7 +167,7 @@ function startTooltip(e){
         t.classList.add('tooltip-active');
         //remove cursor
         document.body.style.cursor = 'none';
-        console.log("start");
+        //console.log("start");
     //}
 }
 
@@ -182,7 +182,7 @@ function stopTooltip(e){
         t.classList.add('tooltip-inactive');
         //reset cursor
         document.body.style.cursor = 'unset';
-        console.log("stop");
+        //console.log("stop");
     //}
 }
 
@@ -195,7 +195,7 @@ function moveTooltip(e){
         //set tooltip position
         t.style.top = mouseY + "px";
         t.style.left = mouseX +"px";
-        console.log("move");
+        //console.log("move");
     //}
 }
 

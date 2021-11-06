@@ -38,7 +38,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
-    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')">
+    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')" onresize="resizeReset()">
 
         <div id="wrapper">
 
@@ -48,7 +48,7 @@
 
             <!-- TOPBAR -->
             <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a><a id="menu-button" style="color: #346cba;" onclick="">WORK</a></h1>
+                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM</a><a id="menu-button" style="text-decoration: none;" href="" onclick="back()">BACK</a></h1>
             </div>
 
             <!-- INTRO STUFF -->
@@ -84,9 +84,11 @@
             </div>
 
 
-            <div id="work-container">
+            
 
-            </div>
+        </div>
+
+        <div id="work-container">
 
         </div>
 
@@ -104,10 +106,10 @@ const worksArr = [
     ['2.jpg', false, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
     ['3.jpg', true, true, false, false, false, false, true, false, false, false, "Skeleton pier, 2017."],
     ['4.jpg', false, false, false, true, false, false, false, false, false, true, "View from lunch, <br>Kjalarnes, 2017."],
-    ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs screen door, 2017."],
+    ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs <br>screen, 2017."],
     ['6.jpg', false, true, false, false, false, true, false, false, false, false, "Icewater seeths, 2018."],
     ['7.jpg', false, true, false, false, false, true, false, false, false, false, "Icebanks adrift, 2018."],
-    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light at Kalaloch, 2018."],
+    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light, Kalaloch, 2018."],
     ['9.jpg', false, false, false, false, false, false, false, false, false, true, "Window, Stöng, 2018."],
     ['10.jpg', false, false, false, false, false, false, false, false, false, true, "Drangurinn from <br>Sólheimasandur, 2018."],
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
@@ -244,63 +246,97 @@ const worksArr = [
 
             //the purpose of filter() is to change works-container
             function filter(){
-                //console.log(categories);
-                //console.log(currentFilters);
 
-                let wc = document.getElementById('work-container');
+                document.getElementById('work-container').style.opacity = '0';
+                
+                
+                setTimeout(() => {    
+                    const oldScrollPos = window.scrollY;
 
-                //first, clear works-container innerHTML
-                wc.innerHTML = "";
+                    let wc = document.getElementById('work-container');
 
-                //then we go through worksArr and add each one to work-container
-                for(let i = worksArr.length - 1; i >= 0; i--){
+                    //first, clear works-container innerHTML
+                    wc.innerHTML = "";
 
-                    let display = false;    //this will be true if the work matches the filters
+                    //then we go through worksArr and add each one to work-container
+                    for(let i = worksArr.length - 1; i >= 0; i--){
 
-                    //first, we check to make sure it fits with best/allworks
+                        let display = false;    //this will be true if the work matches the filters
 
-                    //if bestworks is false (!categories[0]) or if the current work is best:
-                    if(!categories[0] || worksArr[i][1]){
-                        //this one is complicated. If both:
-                        //wisco isnt selected or work is wisco
-                        //AND
-                        //cornwall isnt selected or work is cornwall
-                        if( (!categories[1] || worksArr[i][2]) && (!categories[2] || worksArr[i][3]) ){
-                            //if no filters are selected, this is far enough, all remaining works are displayed
-                            if(currentFilters.indexOf(true) == -1)
-                            {
-                                display = true;
-                            } else {
-                                //if at least one filter is active, we check whether the work satisfies at least one of the filters
-                                for(let j = 0; j < currentFilters.length; j++){
-                                    //for each filter, we see if the work also matches that filter
-                                    //j matches the index of currentFilters
-                                    //j+4 matches the index of worksArr
-                                    if(worksArr[i][j+4] == true && currentFilters[j] == true){
-                                        display = true; break;
+                        //first, we check to make sure it fits with best/allworks
+
+                        //if bestworks is false (!categories[0]) or if the current work is best:
+                        if(!categories[0] || worksArr[i][1]){
+                            //this one is complicated. If both:
+                            //wisco isnt selected or work is wisco
+                            //AND
+                            //cornwall isnt selected or work is cornwall
+                            if( (!categories[1] || worksArr[i][2]) && (!categories[2] || worksArr[i][3]) ){
+                                //if no filters are selected, this is far enough, all remaining works are displayed
+                                if(currentFilters.indexOf(true) == -1)
+                                {
+                                    display = true;
+                                } else {
+                                    //if at least one filter is active, we check whether the work satisfies at least one of the filters
+                                    for(let j = 0; j < currentFilters.length; j++){
+                                        //for each filter, we see if the work also matches that filter
+                                        //j matches the index of currentFilters
+                                        //j+4 matches the index of worksArr
+                                        if(worksArr[i][j+4] == true && currentFilters[j] == true){
+                                            display = true; break;
+                                        }
                                     }
                                 }
+
+                                
                             }
 
+                        }
+
+                        //ok, now that we know whether or not to display the work:
+                        if(display){
+                            //use the set caption; if that doesn't exist, just use the filename
+                            let caption = worksArr[i][11] != null ? worksArr[i][11] : "";
+
+                            // let rWidth = document.getElementById('menu').clientWidth - (Math.random() * 150);
+
+                            // //±range
+                            // //(window.innerWidth - document.getElementById('wrapper').style.width)/2
+                            // let rMargin = 1 * (window.innerWidth * 0.95 - document.getElementById('wrapper').clientWidth) / 2 - (document.getElementById('menu').clientWidth - rWidth);
+                            //rMargin = (Math.random() < 0.5) ? rMargin : -1*rMargin;
+                            // console.log("rM: " + rMargin);
+
+                            let rWidthDiff = (Math.random() * 100);
+                            let rWidth = document.getElementById('menu').clientWidth - rWidthDiff;
+
+                            rMargin = Math.random() * (document.getElementById('work-container').clientWidth - rWidth);
                             
+                            //Math.min(0, Math.random() * (document.getElementById('work-container').clientWidth - rWidth));
+
+                            //word margin
+                            let wordMargin = (document.getElementById('work-container').clientWidth - document.getElementById('wrapper').clientWidth) / 2 + document.getElementById('wrapper').clientWidth * 0.05 - 2;
+                            
+
+                            if(worksArr[i][0] == 'word'){
+                                wc.innerHTML += `<p class="works-text" style="margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
+                            } else {
+                                wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;">${caption}</p><div class="space"></div>`;
+                            }
+                            //break;
                         }
+
+
 
                     }
 
-                    //ok, now that we know whether or not to display the work:
-                    if(display){
-                        let caption = worksArr[i][11] != null ? worksArr[i][11] : "";
-                        let rMargin = 'calc(5% - 2 + ' + Math.max(0, window.innerWidth - 540) + 'px)';
-                        if(worksArr[i][0] == 'word'){
-                            wc.innerHTML += `<p class="works-text">${caption}</p><div class="space"></div>`;
-                        } else {
-                            wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: ${rMargin};"><p class="works-caption">${caption}</p><div class="space"></div>`;
-                        }
-                    }
+                    window.scrollTo(0, oldScrollPos);
+                    setTimeout(() => {
+                        document.getElementById('work-container').style.opacity = '1';
+                    }, 200);
 
+                }, 200);
 
-
-                }
+                
 
             }
 
@@ -313,6 +349,13 @@ const worksArr = [
                 for(let i = 0; i < active.length; i++){
                     active[i].classList.remove('filter-active');
                 }
+            }
+
+            var resizeTimeout;
+            function resizeReset(){
+                //console.log('resize called');
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {filter();}, 400);
             }
 
             
