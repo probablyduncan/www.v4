@@ -306,21 +306,16 @@ const worksArr = [
                             //use the set caption; if that doesn't exist, just use the filename
                             let caption = worksArr[i][11] != null ? worksArr[i][11] : "";
 
-                            // let rWidth = document.getElementById('menu').clientWidth - (Math.random() * 150);
-
-                            // //±range
-                            // //(window.innerWidth - document.getElementById('wrapper').style.width)/2
-                            // let rMargin = 1 * (window.innerWidth * 0.95 - document.getElementById('wrapper').clientWidth) / 2 - (document.getElementById('menu').clientWidth - rWidth);
-                            //rMargin = (Math.random() < 0.5) ? rMargin : -1*rMargin;
-                            // console.log("rM: " + rMargin);
-
+                            //image random width
                             let rWidthDiff = (Math.random() * 100);
                             let rWidth = document.getElementById('menu').clientWidth - rWidthDiff;
 
+                            //image random margin
                             rMargin = Math.random() * (document.getElementById('work-container').clientWidth - rWidth);
-                            
-                            //Math.min(0, Math.random() * (document.getElementById('work-container').clientWidth - rWidth));
 
+                            //image random tilt
+                            //rTilt = (Math.random() < 0.4) ? 0 : Math.random() * 2 - 2;
+                            
                             //word margin
                             let wordMargin = (document.getElementById('work-container').clientWidth - document.getElementById('wrapper').clientWidth) / 2 + document.getElementById('wrapper').clientWidth * 0.05 - 2;
                             
@@ -328,9 +323,8 @@ const worksArr = [
                             if(worksArr[i][0] == 'word'){
                                 wc.innerHTML += `<p class="works-text" style="margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
                             } else {
-                                wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;">${caption}</p><div class="space"></div>`;
+                                wc.innerHTML += `<img class="shadow-img si-hover" onclick="lightbox(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;">${caption}</p></div><div class="space">`;
                             }
-                            //break;
                         }
 
 
@@ -359,10 +353,12 @@ const worksArr = [
                 }
             }
 
+
+            //this reformats all images (width and margins)
+            //whenever the window is horizontally resized
             var oldWindowWidth = window.innerWidth;
             var resizeTimeout;
             function resizeReset(){
-                //console.log('resize called');
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
                     if(oldWindowWidth != window.innerWidth){

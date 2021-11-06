@@ -10,6 +10,7 @@ body{
     align-items: center;
     opacity: 0;
     transition: opacity 1s ease-in;
+    overflow-anchor: none;
 }
 /* @media (min-width: 800px){
     #wrapper{
@@ -169,6 +170,12 @@ img{
     transition: color 0.25s;
     padding: 20px 30px 20px 30px;
 }
+@media(min-width: 460px){
+    .menu-link{
+        font-size: 20px;
+        padding: 24px;
+    }
+}
 .menu-link:hover{color: #6196ff;}
 .menu-link:active{color: #d4e2ff;}
 
@@ -254,7 +261,7 @@ img{
 }
 #work-container{
     width: 85.5vw;
-    max-width: 720px;
+    max-width: 860px;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -290,9 +297,9 @@ img{
 /* bar across top of screen which progressively widens */
 #progress-bar{
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 2px;
+    top: -10px;
+    left: 0px;
+    height: 12px;
     width: 0%;
     background-color: #222222;
     z-index: 2000;
