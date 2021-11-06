@@ -1,5 +1,5 @@
 let menuOpenBool = false;
-let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+//let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 //this is called once the body has loaded
 function afterLoadControl(blinkStr){
@@ -145,42 +145,58 @@ let mouseY = window.innerHeight + 10;
 //this calls each time the mouse moves
 //e.clientX and e.clientY are 
 window.onmousemove = (e) => {
-    if(!isMobile){
+    //if(!isMobile){
         mouseX = e.clientX;
         mouseY = e.clientY;
         //console.log("onmousemove");
-    }
+    //}
 }
 
 function startTooltip(e){
-    if(!isMobile){
-        let t = document.getElementById('tooltip');
+    //t is the tooltip element
+    let t = document.getElementById('tooltip');
+    //when hover:hover, tooltip color is black
+    //when hover:none, tooltip color is #fafaff
+    //if(t.style.color == 'black'){
+        //set the tooltip innards to the image alt
         t.innerHTML = e.alt;
+        //this makes alt work even if it's not an image
         if(t.innerHTML == 'undefined') {t.innerHTML = e.getAttribute('alt');}
+        //set appropriate classes
         t.classList.remove('tooltip-inactive');
         t.classList.add('tooltip-active');
+        //remove cursor
         document.body.style.cursor = 'none';
-        //console.log("start");
-    }
+        console.log("start");
+    //}
 }
 
 function stopTooltip(e){
-    if(!isMobile){
-        let t = document.getElementById('tooltip');
+    //t is the tooltip element
+    let t = document.getElementById('tooltip');
+    //when hover:hover, tooltip color is black
+    //when hover:none, tooltip color is #fafaff
+    //if(t.style.color == 'black'){
+        //set appropriate classes
         t.classList.remove('tooltip-active');
         t.classList.add('tooltip-inactive');
+        //reset cursor
         document.body.style.cursor = 'unset';
-        //console.log("stop");
-    }
+        console.log("stop");
+    //}
 }
 
 function moveTooltip(e){
-    if(!isMobile){
-        let t = document.getElementById('tooltip');
+    //t is the tooltip element
+    let t = document.getElementById('tooltip');
+    //when hover:hover, tooltip color is black
+    //when hover:none, tooltip color is #fafaff
+    //if(t.style.color == 'black'){
+        //set tooltip position
         t.style.top = mouseY + "px";
         t.style.left = mouseX +"px";
-        //console.log("move");
-    }
+        console.log("move");
+    //}
 }
 
 

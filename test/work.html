@@ -100,14 +100,14 @@
 
 const worksArr = [
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now, 2017"],
+    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now, 2017."],
     ['2.jpg', false, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
     ['3.jpg', true, true, false, false, false, false, true, false, false, false, "Skeleton pier, 2017."],
     ['4.jpg', false, false, false, true, false, false, false, false, false, true, "View from lunch, <br>Kjalarnes, 2017."],
     ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs screen door, 2017."],
     ['6.jpg', false, true, false, false, false, true, false, false, false, false, "Icewater seeths, 2018."],
     ['7.jpg', false, true, false, false, false, true, false, false, false, false, "Icebanks adrift, 2018."],
-    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light at Kalaloch, 2018"],
+    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light at Kalaloch, 2018."],
     ['9.jpg', false, false, false, false, false, false, false, false, false, true, "Window, Stöng, 2018."],
     ['10.jpg', false, false, false, false, false, false, false, false, false, true, "Drangurinn from <br>Sólheimasandur, 2018."],
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
@@ -130,7 +130,7 @@ const worksArr = [
     ['26.jpg', true, true, false, false, false, false, false, true, false, false, "Chimney swifts, 2018."],
     ['word', true, true, false, false, false, false, false, true, true, false, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
     ['27.jpg', true, true, false, false, false, false, false, true, false, false, "Twigstep aftermath, 2018."],
-    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "First blue, 2018"],
+    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "First blue, 2018."],
     ['29.jpg', false, true, false, false, true, false, false, false, false, false, "Oh, deer, 2018."],
     ['30.jpg', true, true, false, false, true, false, false, false, false, false, "A whitetail shakes off dew, 2018."]
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
@@ -289,10 +289,12 @@ const worksArr = [
 
                     //ok, now that we know whether or not to display the work:
                     if(display){
+                        let caption = worksArr[i][11] != null ? worksArr[i][11] : "";
+                        let rMargin = 'calc(5% - 2 + ' + Math.max(0, window.innerWidth - 540) + 'px)';
                         if(worksArr[i][0] == 'word'){
-                            wc.innerHTML += `<h2 class="works-text">${worksArr[i][11]}</h2><div class="space"></div>`;
+                            wc.innerHTML += `<p class="works-text">${caption}</p><div class="space"></div>`;
                         } else {
-                            wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${worksArr[i][11] != null ? worksArr[i][11] : worksArr[i][0]}" src="work/${worksArr[i][0]}"><div class="space"></div>`;
+                            wc.innerHTML += `<img class="shadow-img si-hover" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: ${rMargin};"><p class="works-caption">${caption}</p><div class="space"></div>`;
                         }
                     }
 
