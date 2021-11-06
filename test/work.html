@@ -99,6 +99,14 @@
                 progressBar();
             }
 
+            //back button thing?
+            var backButton = document.getElementById('menu-button');
+            backButton.setAttribute('href', document.referrer);
+            backButton.onclick = function() {
+                history.back();
+                return false;
+            }
+
 
 const worksArr = [
     //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
