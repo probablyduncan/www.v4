@@ -38,68 +38,130 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
-    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')" onresize="resizeReset()">
+    <body onload="afterLoadControl('noblink')" onresize="resizeReset()">
 
-        <div id="wrapper">
+        <span id="tooltip" class="tooltip-inactive"></span>
 
-            <!-- EMPTY DIVS -->
-            <div id="progress-bar"></div>
-            <span id="tooltip" class="tooltip-inactive"></span>
-
-            <!-- TOPBAR -->
-            <div id="top-text-container">
-                <h1 id="top-text"><a id="home-button" href="index.html">DUNCANPETRIE.COM</a><a id="menu-button" style="text-decoration: none;" href="" onclick="back()">BACK</a></h1>
+        <div id="work-wrapper">
+            <div id="work-nav-container">
+                <a id="work-home-button" class="work-nav-button work-button" href="index.html">DUNCANPETRIE.COM</a>
+                <a id="work-back-button" class="work-nav-button work-button" href="" onclick="back()">BACK</a>
+                <!-- <a id="work-filter-button" class="work-nav-button work-button" onclick="toggleFilterMenu">FILTER</a> -->
             </div>
-
-            <!-- INTRO STUFF -->
-            <div id="intro-container">
-
-                <div id="menu-img" class="shadow-img si-hover" style="height: 520px;">
-                    <div id="menu" class="menu-visible menu-enabled">
-                        <div id="menu-column-1">
-                            <span class="menu-link filter-link filter-active" onclick="categoryHandler(this, 1)">BEST WORK</span>
-                            <span class="menu-link filter-link" onclick="categoryHandler(this, 0)">ALL WORK</span>
-                            <span class="menu-link filter-link" onclick="categoryHandler(this, 2)">WISCONSIN</span>
-                            <span class="menu-link filter-link" onclick="categoryHandler(this, 3)">CORNWALL</span>
-                            <br>
-                            <!-- <span class="menu-link filter-link"></span>
-                            <span class="menu-link filter-link"></span>
-                            <span class="menu-link filter-link"></span>
-                            <span class="menu-link filter-link"></span> -->
-                        </div>
-                        <div id="menu-column-2">
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 0)">CLOUDS</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 1)">TREES</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 2)">SNOW</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 3)">SEAS</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 4)">BIRDS</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 5)">WORDS</span>
-                            <span class="menu-link filter-link" onclick="filterHandler(this, 6)">MOUNTAINS</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="space"></div>
-
+            <div id="filter-menu" class="shadow-img si-hover">
+                <button class="filter-button work-button filter-active" onclick="filterHandler(this, 0)">BEST</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 1)">SAND&TALLPINES</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 2)">SEA/SKY/SCAPES</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 3)">SUNBLEACHED</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 4)">WORLD'S END</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 5)">WOODLANDS</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 6)">HALCYON</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 7)">RUSSET</button>
             </div>
-
-
-            
-
         </div>
 
-        <div id="work-container">
+        <div id="work-container"></div>
 
-        </div>
-
-        <script type="text/javascript">
-        
-            //scroll control
-            function scrollControl(){
-                progressBar();
+        <style>
+            /* ALL WORK-SPECIFIC CSS GOES HERE */
+            #work-wrapper{
+                width: 85.5vw;
+                max-width: 480px;
             }
 
+            /* NAV STUFF */
+            #work-nav-container{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                z-index: 1;
+                width: calc(100% - 4px);
+                margin-left: 2px;
+            }
+            .work-button{
+                font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 16px;
+                display: block;
+                text-decoration: none;
+                transition: color 0.25s;
+                margin: 0;
+            }
+            .work-nav-button{
+                padding: 20px 2px;
+            }
+            #work-home-button{
+                color: black;
+            }
+            #work-back-button{
+                color: #346cda;
+                cursor: pointer;
+            }
+
+            /* FILTER STUFF */
+            #filter-menu{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 20px;
+                width: calc(100% + 4px);
+                margin-left: -2px;
+                /* background-color: #fff5f0; */
+            }
+            .filter-button{
+                font-size: 20px;
+                background-color: unset;
+                border: none;
+                padding: 4px 16px 4px 16px;
+                margin: 0 0 25px 0;
+                color: #346cda;
+                cursor: pointer;
+                user-select: none;
+            }
+            .filter-button:hover{color: #6196ff;}
+            .filter-active{color:coral;}
+            .filter-active:hover{color: rgb(255, 155, 118);}
+
+            /* CONTENT STUFF */
+
+            #work-container{
+                margin-top: 80px;
+                width: 90vw;
+                max-width: 1080px;
+                transition: opacity 0.3s ease-in-out;
+            }
+            .works-caption{
+                display: block;
+                color: #444444;
+                font-size: 15px;
+                line-height: 150%;
+                margin-top: 4px;
+                text-align: right;
+            }
+            @media (hover:hover){
+                .works-caption{
+                    display: none;
+                }
+            }
+            .works-text{
+                font-size: 18px;
+                color: #222222;
+                margin: 0;
+                margin-bottom: 10px;
+                width: calc(90% - 4px);
+            }
+            .space{height: 80px;}
+            
+        </style>
+
+        <script type="text/javascript">
+
+            let currentFilter = 0;
+
             //back button thing?
-            var backButton = document.getElementById('menu-button');
+            var backButton = document.getElementById('work-back-button');
             backButton.setAttribute('href', document.referrer);
             backButton.onclick = function() {
                 history.back();
@@ -108,182 +170,92 @@
 
 
 const worksArr = [
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['1.jpg', false, true, false, false, true, true, false, false, false, false, "Gets late so early now, 2017."],
-    ['2.jpg', false, false, false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
-    ['3.jpg', true, true, false, false, false, false, true, false, false, false, "Skeleton pier, 2017."],
-    ['4.jpg', false, false, false, true, false, false, false, false, false, true, "View from lunch, <br>Kjalarnes, 2017."],
-    ['5.jpg', true, true, false, false, true, false, false, false, false, false, "Squirrel climbs <br>screen, 2017."],
-    ['7.jpg', true, true, false, false, false, true, false, false, false, false, "Icebanks adrift, 2018."],
-    ['8.jpg', true, false, false, true, false, false, true, false, false, false, "Last light, Kalaloch, 2018."],
-    ['9.jpg', false, false, false, false, false, false, false, false, false, true, "Window, Stöng, 2018."],
-    ['10.jpg', false, false, false, false, false, false, false, false, false, true, "Drangurinn from <br>Sólheimasandur, 2018."],
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    //['11.jpg', false, false, false, false, false, false, false, false, false, true, "Sólheimasandur flats, 2018."],
-    ['12.jpg', false, false, false, false, false, false, false, false, false, true, "Basalt below Skaftafell, 2018."],
-    ['13.jpg', false, false, false, false, false, false, false, false, false, true, "Hitckhikers, highlands, 2018."],
-    ['14.jpg', false, false, false, false, false, false, false, false, false, true, "It's not a phase, mom, 2018."],
-    ['15.jpg', false, false, false, false, false, false, false, false, false, false, "Biscoitos, 2018."],
-    ['16.jpg', false, false, false, false, true, false, false, false, false, true, "A blatant metaphor, 2018."],
-    //['18.jpg', false, true, false, false, true, false, false, false, false, false, "Happiness, 2018."],
-    //['19.jpg', false, true, false, false, false, false, false, true, false, false, "Yardbirds, 2018."],
-    ['20.jpg', true, false, false, true, false, false, false, false, false, false, "Sun, doubly reflected, <br>Lincoln Center, 2018."],
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['21.jpg', false, false, false, false, false, false, false, false, false, false, "Flushing, Queens, 2018."],
-    //['22.jpg', false, false, false, false, false, false, false, false, false, false, "Ganesh Temple, Queens, 2018."],
-    //['23.jpg', false, true, false, false, false, false, false, true, false, false, "Yardbirds, 2018."],
-    ['24.jpg', true, true, false, false, true, false, false, false, false, false, "Prairie grass, setting sun, 2018."],
-    ['25.jpg', true, true, false, false, true, false, false, false, false, false, "Cattail prismatic, 2018."],
-    ['26.jpg', true, true, false, false, false, false, false, true, false, false, "Chimney swifts, 2018."],
-    ['word', true, true, false, false, false, false, false, true, true, false, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
-    ['27.jpg', true, true, false, false, false, false, false, true, false, false, "Twigstep aftermath, 2018."],
-    ['28.jpg', true, true, false, false, false, false, true, false, false, false, "First blue, 2018."],
-    ['29.jpg', false, true, false, false, true, false, false, false, false, false, "Oh, deer, 2018."],
-    ['30.jpg', true, true, false, false, true, false, false, false, false, false, "A whitetail shakes off dew, 2018."],
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['31.jpg', true, true, false, false, false, false, true, false, false, false, "Icewater halcyon, 2019."],
-    ['32.jpg', true, true, false, false, true, true, false, true, false, false, "Downy woodpecker hard at work, 2019." ],
-    ['33.jpg', true, true, false, false, false, true, true, false, false, false, "Evening falls over ice floes, 2019." ],
-    ['34.jpg', true, true, false, false, true, true, false, false, false, false, "Quiet woods, 2019." ],
-    ['35.jpg', true, false, false, false, true, true, false, false, false, true, "Ear of deer, 2019." ],
-    ['37.jpg', false, true, false, false, false, false, false, true, false, false, "Yellow warbler takes flight, 2019." ],
-    ['38.jpg', false, true, false, false, false, false, false, true, false, false, "Loontail, up north, 2019." ],
-    ['39.jpg', true, true, false, false, false, false, false, false, false, false, "Fox cub, 2019." ],
-    ['40.jpg', true, true, false, false, false, false, false, true, false, false, "Russet call, 2019." ],
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['41.jpg', false, true, false, false, false, false, false, true, false, false, "Pelicans talk, 2019." ],
-    ['42.jpg', false, true, false, false, false, false, false, false, false, true, "Cabbage white, 2019."],
-    ['43.jpg', true, true, false, false, false, false, false, true, false, false, "Dinner, 2019." ],
-    //['44.jpg', false, true, false, false, false, false, false, true, false, false, "Wingbeat curve, 2019." ],
-    ['46.jpg', true, true, false, false, true, false, false, false, false, false, "Maple, 2019." ],
-    ['47.jpg', true, true, false, false, true, false, false, false, false, false, "Woods via bicycle, 2019." ],
-    ['48.jpg', false, true, false, false, false, false, false, true, false, false, "Cormorant, Horicon, 2019." ],
-    ['49.jpg', false, false, true, false, false, false, false, true, false, false, "Blackberry-beaked sparrow, 2019." ],
-    ['50.jpg', true, false, true, false, true, false, false, true, false, false, "Blue tit between apples, 2019." ],
-    //['src', best, wisc, corn, clouds, trees, snow, seas, birds, words, mountains],
-    ['51.jpg', false, false, true, false, true, false, false, false, false, false, "Shadows, banana leaf, 2019." ],
-    ['52.jpg', true, false, true, false, true, false, false, false, false, false, "Heligan boughs, 2019." ],
-    ['53.jpg', true, false, true, false, false, false, false, false, false, false, "Belted Galloway, Haytor, 2019." ],
-    ['54.jpg', false, false, true, false, true, false, false, false, false, false, "Spine of leaf, 2019." ],
-    ['55.jpg', false, false, true, false, true, false, false, false, false, false, "Tripod tumble, spinning shutter, 2019." ],
-    ['56.jpg', true, false, true, false, true, false, false, false, false, false, "Lime leaves, swirling current, 2019."],
+    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    ['1.jpg', false, false, false, false, false, false, true , false, "Gets late so early now, 2017."],
+    ['2.jpg', false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
+    ['3.jpg', true , false, true , false, true , false, true , false, "Skeleton pier, 2017."],
+    ['4.jpg', false, false, false, false, true , false, false, false, "View from lunch, <br>Kjalarnes, 2017."],
+    ['5.jpg', true , false, false, false, false, true , false, false, "Squirrel climbs <br>screen, 2017."],
+    ['7.jpg', true , false, false, false, true , false, true , false, "Icebanks adrift, 2018."],
+    ['8.jpg', true , false, true , false, true , false, false, false, "Last light, Kalaloch, 2018."],
+    ['9.jpg', false, false, false, false, true , false, false, false, "Window, Stöng, 2018."],
+    ['10.jpg', false, false, false, false, true , false, false, false, "Drangurinn from <br>Sólheimasandur, 2018."],
+    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    ['12.jpg', false, false, false, false, true , false, false, false, "Basalt below Skaftafell, 2018."],
+    ['13.jpg', false, false, false, false, true, false, false, false, "Hitckhikers, highlands, 2018."],
+    ['14.jpg', false, false, false, false, true, false, false, false, "It's not a phase, mom, 2018."],
+    ['15.jpg', true, false, false, true, true, false, false, false, "Biscoitos, 2018."],
+    ['16.jpg', false, false, false, false, false, true, false, false, "A blatant metaphor, 2018."],
+    ['20.jpg', true, false, false, false, false, false, false, false, "Sun, doubly reflected, <br>Lincoln Center, 2018."]
+    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    // ['21.jpg', false, false, false, false, false, false, false, false, "Flushing, Queens, 2018."],
+    // ['24.jpg', true, true, false, false, true, false, false, false, "Prairie grass, setting sun, 2018."],
+    // ['25.jpg', true, true, false, false, true, false, false, false, "Cattail prismatic, 2018."],
+    // ['26.jpg', true, true, false, false, false, false, false, true, "Chimney swifts, 2018."],
+    // ['word', true, true, false, false, false, false, false, true, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
+    // ['27.jpg', true, true, false, false, false, false, false, true, "Twigstep aftermath, 2018."],
+    // ['28.jpg', true, true, false, false, false, false, true, false, "First blue, 2018."],
+    // ['29.jpg', false, true, false, false, true, false, false, false, "Oh, deer, 2018."],
+    // ['30.jpg', true, true, false, false, true, false, false, false, "A whitetail shakes off dew, 2018."],
+    // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    // ['31.jpg', true, true, false, false, false, false, true, false, "Icewater halcyon, 2019."],
+    // ['32.jpg', true, true, false, false, true, true, false, true, "Downy woodpecker hard at work, 2019." ],
+    // ['33.jpg', true, true, false, false, false, true, true, false, "Evening falls over ice floes, 2019." ],
+    // ['34.jpg', true, true, false, false, true, true, false, false, "Quiet woods, 2019." ],
+    // ['35.jpg', true, false, false, false, true, true, false, false, "Ear of deer, 2019." ],
+    // ['37.jpg', false, true, false, false, false, false, false, true, "Yellow warbler takes flight, 2019." ],
+    // ['38.jpg', false, true, false, false, false, false, false, true, "Loontail, up north, 2019." ],
+    // ['39.jpg', true, true, false, false, false, false, false, false, "Fox cub, 2019." ],
+    // ['40.jpg', true, true, false, false, false, false, false, true, "Russet call, 2019." ],
+    // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    // ['41.jpg', false, true, false, false, false, false, false, true, "Pelicans talk, 2019." ],
+    // ['42.jpg', false, true, false, false, false, false, false, false, "Cabbage white, 2019."],
+    // ['43.jpg', true, true, false, false, false, false, false, true, "Dinner, 2019." ],
+    // ['46.jpg', true, true, false, false, true, false, false, false, "Maple, 2019." ],
+    // ['47.jpg', true, true, false, false, true, false, false, false, "Woods via bicycle, 2019." ],
+    // ['48.jpg', false, true, false, false, false, false, false, true, "Cormorant, Horicon, 2019." ],
+    // ['49.jpg', false, false, true, false, false, false, false, true, "Blackberry-beaked sparrow, 2019." ],
+    // ['50.jpg', true, false, true, false, true, false, false, true, "Blue tit between apples, 2019." ],
+    // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
+    // ['51.jpg', false, false, true, false, true, false, false, false, "Shadows, banana leaf, 2019." ],
+    // ['52.jpg', true, false, true, false, true, false, false, false, "Heligan boughs, 2019." ],
+    // ['53.jpg', true, false, true, false, false, false, false, false, "Belted Galloway, Haytor, 2019." ],
+    // ['54.jpg', false, false, true, false, true, false, false, false, "Spine of leaf, 2019." ],
+    // ['55.jpg', false, false, true, false, true, false, false, false, "Tripod tumble, spinning shutter, 2019." ],
+    // ['56.jpg', true, false, true, false, true, false, false, false, "Lime leaves, swirling current, 2019."]
 ];
             
 
-            //categories are bestwork, wisconsin, and cornwall
-            //allwork is the default i guess?
-            //only one of these can be active at a time
-            let categories = [true, false, false];
 
-            //currentfilters are clouds, trees, snow, seas, birds, words, and mountains
-            //several of these can be active at once
-            let currentFilters = [false, false, false, false, false, false, false];
+            filter(true);
 
-
-            filter();
-
-            //this is called when clouds, trees, snow, etc are clicked
-            //it should toggle filter-active, change currentFilters, and call filter()
+            //this is called when one of the filters is clicked
+            //it should update filter-active, change currentFilter, and call filter()
             function filterHandler(e, n){
 
-                //first, figure out whether or not the filter is active
-                let isActive = e.classList.contains('filter-active');
-
-                //OPTIONAL clear all others
-                //set all current filters to false
-                for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
-                //remove filter-active from filters
-                let tempFilterList = document.getElementById('menu-column-2').children;
-                for(let i = 0; i < tempFilterList.length; i++){tempFilterList[i].classList.remove('filter-active');}
-                
-                //if it is active, remove filter-active, and if not, add filter-active
-                if(isActive) e.classList.remove('filter-active');
-                else e.classList.add('filter-active');
-
-                //set current filter to true only if filter is not being turned off
-                currentFilters[n] = !isActive;
-
-                filter();
-            }
-
-            //this is called when bestwork, allwork, wisconsin, cornwall are clicked
-            //it should toggle filter-active, change categories, and call filter()
-            //bestwork and allwork reset all filters, wisco and cornwall only reset each other
-            //either bestwork or allwork should always be active
-            function categoryHandler(e, n){
-                //this switch/case should only modify categories/currentfilters
-                //and also add/remove filter-active class, if necessary
-                switch(n){
-                    case 0: //allwork
-
-                        //set all categories to false
-                        for(let i = 0; i < categories.length; i++){categories[i] = false;}
-                        //set all current filters to false
-                        for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
-                        
-                        //clera all filter-active elements and add filter-active to allwork
-                        clearFilterActiveClass();
-                        e.classList.add('filter-active');
-
-                        break;
-                    case 1: //bestwork
-                        
-                        //set all categories to false
-                        for(let i = 0; i < categories.length; i++){categories[i] = false;}
-                        //set all current filters to false
-                        for(let i = 0; i < currentFilters.length; i++){currentFilters[i] = false;}
-                        
-                        //set bestwork to true
-                        categories[0] = true;  
-
-                        //clear all other filter-active elements and add filter-active to bestwork
-                        clearFilterActiveClass();
-                        e.classList.add('filter-active');
-
-                        break;
-                    case 2: //wisco
-
-                        //set wisco to true and cornwall to false
-                        categories[1] = true; categories[2] = false;
-
-                        //add filter-active to wisco and remove it from cornwall
-                        e.classList.add('filter-active');
-                        e.nextElementSibling.classList.remove('filter-active');
-
-                        break;
-                    case 3: //cornwall
-
-                        //set cornwall to true and wisco to false
-                        categories[2] = true; categories[1] = false;
-
-                        //add filter-active to cornwall and remove it from wisco
-                        e.classList.add('filter-active');
-                        e.previousElementSibling.classList.remove('filter-active');
-
-                        break;
-                    default:
-                        //if invalid n, just do bestwork
-                        categoryHandler(e,1);
-                        break;
-
-                }
-
-                //console.log(categories);
-                filter();
+                //first, remove filter-active from the previous filter
+                document.getElementById('filter-menu').children[currentFilter].classList.remove('filter-active');
+                //add filter-active to the clicked filter
+                e.classList.add('filter-active');
+                //set the current filter to the clicked filter
+                currentFilter = n;
+                //re-fitler all works
+                filter(true);
             }
 
 
             //the purpose of filter() is to change works-container
-            function filter(){
-
-                document.getElementById('work-container').style.opacity = '0';
+            //resetScroll = true on menu clicks, resetScroll = false on resizing the window
+            //to preserve scrollPos
+            function filter(resetScroll){
+                let wc = document.getElementById('work-container');
+                //preserve scroll position on resize
+                const oldScrollPos = window.scrollY;
+                //fade out
+                wc.style.opacity = '0';
                 
-                
-                setTimeout(() => {    
-                    const oldScrollPos = window.scrollY;
-
-                    let wc = document.getElementById('work-container');
-
+                //after content has faded out, we re-filter
+                setTimeout(() => {   
                     //first, clear works-container innerHTML
                     wc.innerHTML = "";
 
@@ -291,54 +263,27 @@ const worksArr = [
                     for(let i = worksArr.length - 1; i >= 0; i--){
 
                         let display = false;    //this will be true if the work matches the filters
+                        //if the current work fits the current filter display = true
+                        if(worksArr[i][currentFilter + 1]) {display = true;}
 
-                        //first, we check to make sure it fits with best/allworks
-
-                        //if bestworks is false (!categories[0]) or if the current work is best:
-                        if(!categories[0] || worksArr[i][1]){
-                            //this one is complicated. If both:
-                            //wisco isnt selected or work is wisco
-                            //AND
-                            //cornwall isnt selected or work is cornwall
-                            if( (!categories[1] || worksArr[i][2]) && (!categories[2] || worksArr[i][3]) ){
-                                //if no filters are selected, this is far enough, all remaining works are displayed
-                                if(currentFilters.indexOf(true) == -1)
-                                {
-                                    display = true;
-                                } else {
-                                    //if at least one filter is active, we check whether the work satisfies at least one of the filters
-                                    for(let j = 0; j < currentFilters.length; j++){
-                                        //for each filter, we see if the work also matches that filter
-                                        //j matches the index of currentFilters
-                                        //j+4 matches the index of worksArr
-                                        if(worksArr[i][j+4] == true && currentFilters[j] == true){
-                                            display = true; break;
-                                        }
-                                    }
-                                }
-
-                                
-                            }
-
-                        }
-
-                        //ok, now that we know whether or not to display the work:
+                        //ok, now that we know whether or not to display the work
+                        //we display the work
                         if(display){
-                            //use the set caption; if that doesn't exist, just use the filename
-                            let caption = worksArr[i][11] != null ? worksArr[i][11] : "";
+                            //use the caption; if that doesn't exist, just use the filename
+                            let caption = worksArr[i][9] != null ? worksArr[i][9] : worksArr[i][0];
 
                             //image random width
-                            let rWidthDiff = (Math.random() * 100);
-                            let rWidth = document.getElementById('menu').clientWidth - rWidthDiff;
+                            let rWidthDiff = Math.random() * Math.min(100, wc.clientWidth * 0.5);
+                            let rWidth = document.getElementById('work-wrapper').clientWidth - rWidthDiff;
 
                             //image random margin
-                            rMargin = Math.random() * (document.getElementById('work-container').clientWidth - rWidth);
+                            rMargin = Math.random() * (wc.clientWidth - rWidth);
 
                             //image random tilt
                             //rTilt = (Math.random() < 0.4) ? 0 : Math.random() * 2 - 2;
                             
                             //word margin
-                            let wordMargin = (document.getElementById('work-container').clientWidth - document.getElementById('wrapper').clientWidth) / 2 + document.getElementById('wrapper').clientWidth * 0.05 - 2;
+                            let wordMargin = (wc.clientWidth - document.getElementById('work-wrapper').clientWidth) / 2 - 2;
                             
 
                             if(worksArr[i][0] == 'word'){
@@ -352,9 +297,9 @@ const worksArr = [
 
                     }
 
-                    window.scrollTo(0, oldScrollPos);
+                    if(resetScroll && !resetScroll) {window.scrollTo(0, 0)} else {window.scrollTo(0, oldScrollPos);}
                     setTimeout(() => {
-                        document.getElementById('work-container').style.opacity = '1';
+                        wc.style.opacity = '1';
                     }, 250);
 
                 }, 250);
@@ -384,9 +329,30 @@ const worksArr = [
                 resizeTimeout = setTimeout(() => {
                     if(oldWindowWidth != window.innerWidth){
                         oldWindowWidth = window.innerWidth;
-                        filter();
+                        filter(false);
                     }
                 }, 400);
+            }
+
+            //fun little random separator
+            //designed to polarize values
+            // where n is between 0 and one
+            // n=0.4 will return a random number between 0 - 0.4 or 0.4 - 0.999
+            // function spreadRandom(n){
+            //     return (Math.random() < 0.5) ? Math.random() * n : Math.random() * n + (1 - n);
+            // }
+
+            // bell curve theoretically
+            // where n is the centralizing weight
+            // n=2 is kind of bell-y, n=4 is much more bell-y, n=10 basically always returns 0.4-0.6, etc
+            function bellCurveRandom(n){
+                return (Math.random() < 0.5) ? 0.5 + Math.pow(Math.random(), n) / 2 : 0.5 - Math.pow(Math.random(), n) / 2;
+            }
+
+
+
+            function lightbox(e){
+
             }
 
             
