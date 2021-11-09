@@ -135,6 +135,10 @@ function fadeInBody(){
     document.body.style.opacity = '1';
 }
 
+function fadeInThis(e){
+    e.style.opacity = '1';
+}
+
 
 //TOOLTIP STUFF
 
