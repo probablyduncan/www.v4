@@ -44,7 +44,7 @@
 
         <div id="work-wrapper">
             <div id="work-nav-container">
-                <a id="work-home-button" class="work-nav-button work-button" href="index.html">DUNCANPETRIE.COM</a>
+                <a id="work-home-button" class="work-nav-button work-button" href="index.html" onmouseover="htmlSwap(this, '< - BACK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')" onmouseout="htmlSwap(this, 'DUNCANPETRIE.COM')">DUNCANPETRIE.COM</a>
                 <!-- <a id="work-back-button" class="work-nav-button work-button" href="" onclick="back()">BACK</a> -->
                 <a id="work-filter-button" class="work-nav-button work-button" onclick="toggleFilterMenu()">FILTER</a>
             </div>
@@ -108,12 +108,12 @@
                 justify-content: center;
                 align-items: center;
                 background-color: #fff5f0;
-                border: 3px solid black;
+                border: 4px solid black;
                 position: fixed;
-                width: 320px;
-                height: 540px;
-                right: calc(50vw - 160px);
-                top: calc(50vh - 270px);
+                width: calc(100vw - 8px);
+                height: calc(100vh - 8px);
+                right: 0;
+                top: 0;
                 z-index: 1000;
                 transition: opacity 0.5s;
                 opacity: 0;
