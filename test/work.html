@@ -285,6 +285,8 @@ const worksArr = [
 
                 toggleFilterMenu();
 
+                if(n == currentFilter) return;
+
                 //first, remove filter-active from the previous filter
                 document.getElementById('filter-menu').children[currentFilter].classList.remove('filter-active');
                 //add filter-active to the clicked filter
