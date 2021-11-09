@@ -44,7 +44,7 @@
 
         <div id="work-wrapper">
             <div id="work-nav-container">
-                <a id="work-home-button" class="work-nav-button work-button" href="" onmouseover="htmlSwap(this, '< - BACK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')" onmouseout="htmlSwap(this, 'DUNCANPETRIE.COM')" onclick="back()">DUNCANPETRIE.COM</a>
+                <a id="work-home-button" class="work-nav-button work-button" href="index.html" >DUNCANPETRIE.COM</a>
                 <!-- <a id="work-back-button" class="work-nav-button work-button" href="" onclick="back()">BACK</a> -->
                 <a id="work-filter-button" class="work-nav-button work-button" onclick="toggleFilterMenu()">FILTER</a>
             </div>
@@ -182,12 +182,12 @@
             let currentFilter = 0;
 
             //back button thing?
-            var backButton = document.getElementById('work-home-button');
-            backButton.setAttribute('href', document.referrer);
-            backButton.onclick = function() {
-                history.back();
-                return false;
-            }
+            // var backButton = document.getElementById('work-home-button');
+            // backButton.setAttribute('href', document.referrer);
+            // backButton.onclick = function() {
+            //     history.back();
+            //     return false;
+            // }
 
             let filterMenu = false;
             function toggleFilterMenu(){
