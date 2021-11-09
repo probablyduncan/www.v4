@@ -117,7 +117,7 @@ p a:active{
 #menu-button:hover{color: #6196ff;}
 #menu-button:active{color: #d4e2ff;}
 
-img{
+img, iframe{
     width: 100%;
     user-select: none;
 }
@@ -216,9 +216,12 @@ img{
     border-top: 1px solid black;
     transition: width 0.3s;
 }
-.content-line-hover{
-    width: calc(61.8%);
+@media (hover:hover){
+    .content-line-hover{
+        width: calc(61.8%);
+    }
 }
+
 
 
 
