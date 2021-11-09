@@ -168,7 +168,7 @@ img{
     text-decoration: none;
     color: #346cda;
     transition: color 0.25s;
-    padding: 20px 30px 20px 30px;
+    padding: 15px 30px 15px 30px;
 }
 @media(min-width: 460px){
     .menu-link{
