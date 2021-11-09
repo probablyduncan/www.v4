@@ -45,18 +45,18 @@
         <div id="work-wrapper">
             <div id="work-nav-container">
                 <a id="work-home-button" class="work-nav-button work-button" href="index.html">DUNCANPETRIE.COM</a>
-                <a id="work-back-button" class="work-nav-button work-button" href="" onclick="back()">BACK</a>
-                <!-- <a id="work-filter-button" class="work-nav-button work-button" onclick="toggleFilterMenu">FILTER</a> -->
+                <!-- <a id="work-back-button" class="work-nav-button work-button" href="" onclick="back()">BACK</a> -->
+                <a id="work-filter-button" class="work-nav-button work-button" onclick="toggleFilterMenu()">FILTER</a>
             </div>
-            <div id="filter-menu" class="shadow-img si-hover">
-                <button class="filter-button work-button filter-active" onclick="filterHandler(this, 0)">BEST</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 1)">SAND&TALLPINES</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 2)">SEA/SKY/SCAPES</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 3)">SUNBLEACHED</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 4)">WORLD'S END</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 5)">WOODLANDS</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 6)">HALCYON</button>
-                <button class="filter-button work-button" onclick="filterHandler(this, 7)">RUSSET</button>
+            <div id="filter-menu">
+                <button class="filter-button work-button filter-active" onclick="filterHandler(this, 0)">> BEST</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 1)">CLOUDS</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 2)">TREES</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 3)">SNOW</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 4)">SEAS</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 5)">FLEET</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 6)">STREET</button>
+                <button class="filter-button work-button" onclick="filterHandler(this, 7)">MOUNTAINS</button>
             </div>
         </div>
 
@@ -71,13 +71,7 @@
 
             /* NAV STUFF */
             #work-nav-container{
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                align-items: flex-start;
-                z-index: 1;
-                width: calc(100% - 4px);
-                margin-left: 2px;
+                
             }
             .work-button{
                 font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
@@ -87,49 +81,81 @@
                 text-decoration: none;
                 transition: color 0.25s;
                 margin: 0;
+                user-select: none;
             }
             .work-nav-button{
-                padding: 20px 2px;
+                padding: 20px 0;
             }
             #work-home-button{
+                position: fixed;
+                top: 0;
+                left: 7.25vw;
                 color: black;
             }
-            #work-back-button{
+            #work-back-button, #work-filter-button{
+                position: fixed;
+                top: 0;
+                right: 7.25vw;
                 color: #346cda;
                 cursor: pointer;
+                transition: opacity 0.5s;
             }
 
             /* FILTER STUFF */
             #filter-menu{
-                display: flex;
+                display: none;
                 flex-flow: column nowrap;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
-                padding-top: 20px;
-                width: calc(100% + 4px);
-                margin-left: -2px;
-                /* background-color: #fff5f0; */
+                background-color: #fff5f0;
+                border: 3px solid black;
+                position: fixed;
+                width: 320px;
+                height: 540px;
+                right: calc(50vw - 160px);
+                top: calc(50vh - 270px);
+                z-index: 1000;
+                transition: opacity 0.5s;
+                opacity: 0;
             }
             .filter-button{
                 font-size: 20px;
                 background-color: unset;
                 border: none;
                 padding: 4px 16px 4px 16px;
-                margin: 0 0 25px 0;
-                color: #346cda;
+                margin: -4px 0 25px 0;
+                color: black;
                 cursor: pointer;
                 user-select: none;
+                z-index: 1;
             }
-            .filter-button:hover{color: #6196ff;}
-            .filter-active{color:coral;}
-            .filter-active:hover{color: rgb(255, 155, 118);}
-
+            .filter-button:hover{color: #444444;}
+            .filter-active{color:#346cda;}
+            .filter-active:hover{color: #6196ff;}
+            .space{height: 50px;}
+            @media (min-width: 1280px) and (min-height: 580px){
+                #filter-menu{
+                    align-items: flex-end;
+                    top: 0px;
+                    padding-top: 20px;
+                    right: 7.25vw;
+                    background-color: unset;
+                    border: none;
+                    width: auto;
+                    height: auto;
+                }
+                .filter-button{
+                    font-size: 16px;
+                    margin-right: -16px
+                }
+                .space{height: 80px;}
+            }
             /* CONTENT STUFF */
 
             #work-container{
                 margin-top: 80px;
                 width: 90vw;
-                max-width: 1080px;
+                max-width: 860px;
                 transition: opacity 0.3s ease-in-out;
             }
             .works-caption{
@@ -149,10 +175,10 @@
                 font-size: 18px;
                 color: #222222;
                 margin: 0;
-                margin-bottom: 10px;
+                margin-bottom: 30px;
                 width: calc(90% - 4px);
+                margin-top: -10px;
             }
-            .space{height: 80px;}
             
         </style>
 
@@ -161,42 +187,66 @@
             let currentFilter = 0;
 
             //back button thing?
-            var backButton = document.getElementById('work-back-button');
-            backButton.setAttribute('href', document.referrer);
-            backButton.onclick = function() {
-                history.back();
-                return false;
+            // var backButton = document.getElementById('work-back-button');
+            // backButton.setAttribute('href', document.referrer);
+            // backButton.onclick = function() {
+            //     history.back();
+            //     return false;
+            // }
+
+            let filterMenu = false;
+            function toggleFilterMenu(){
+                let fm = document.getElementById('filter-menu');
+                let fb = document.getElementById('work-filter-button');
+                if(filterMenu){
+                    fb.style.display = 'block';
+                    fm.style.opacity = '0';
+                    setTimeout(() => {
+                        fb.style.opacity = '1';
+                        fm.style.display = 'none';
+                    }, 200);
+                    filterMenu = false;
+                } else {
+                    fb.style.opacity = '0';
+                    fm.style.display = 'flex';
+                    setTimeout(() => {
+                        fm.style.opacity = '1';
+                        fb.style.display = 'none';
+                    }, 10);
+                    filterMenu = true;
+                }
+                
             }
 
 
 const worksArr = [
-    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
-    ['1.jpg', false, false, false, false, false, false, true , false, "Gets late so early now, 2017."],
-    ['2.jpg', false, false, false, false, false, false, false, false, "Cargo, Seattle, 2017."],
-    ['3.jpg', true , false, true , false, true , false, true , false, "Skeleton pier, 2017."],
-    ['4.jpg', false, false, false, false, true , false, false, false, "View from lunch, <br>Kjalarnes, 2017."],
-    ['5.jpg', true , false, false, false, false, true , false, false, "Squirrel climbs <br>screen, 2017."],
-    ['7.jpg', true , false, false, false, true , false, true , false, "Icebanks adrift, 2018."],
-    ['8.jpg', true , false, true , false, true , false, false, false, "Last light, Kalaloch, 2018."],
-    ['9.jpg', false, false, false, false, true , false, false, false, "Window, Stöng, 2018."],
-    ['10.jpg', false, false, false, false, true , false, false, false, "Drangurinn from <br>Sólheimasandur, 2018."],
-    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
-    ['12.jpg', false, false, false, false, true , false, false, false, "Basalt below Skaftafell, 2018."],
-    ['13.jpg', false, false, false, false, true, false, false, false, "Hitckhikers, highlands, 2018."],
-    ['14.jpg', false, false, false, false, true, false, false, false, "It's not a phase, mom, 2018."],
-    ['15.jpg', true, false, false, true, true, false, false, false, "Biscoitos, 2018."],
-    ['16.jpg', false, false, false, false, false, true, false, false, "A blatant metaphor, 2018."],
-    ['20.jpg', true, false, false, false, false, false, false, false, "Sun, doubly reflected, <br>Lincoln Center, 2018."]
-    //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
-    // ['21.jpg', false, false, false, false, false, false, false, false, "Flushing, Queens, 2018."],
-    // ['24.jpg', true, true, false, false, true, false, false, false, "Prairie grass, setting sun, 2018."],
-    // ['25.jpg', true, true, false, false, true, false, false, false, "Cattail prismatic, 2018."],
-    // ['26.jpg', true, true, false, false, false, false, false, true, "Chimney swifts, 2018."],
-    // ['word', true, true, false, false, false, false, false, true, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
-    // ['27.jpg', true, true, false, false, false, false, false, true, "Twigstep aftermath, 2018."],
-    // ['28.jpg', true, true, false, false, false, false, true, false, "First blue, 2018."],
-    // ['29.jpg', false, true, false, false, true, false, false, false, "Oh, deer, 2018."],
-    // ['30.jpg', true, true, false, false, true, false, false, false, "A whitetail shakes off dew, 2018."],
+    //['src', best,  clouds, trees, snow, seas, fields, towns, mtns , caption]
+    ['1.jpg', false, false, true , true , false, false, false, false, "Gets late so early now, 2017."],
+    ['2.jpg', false, false, true , false, false, false, true , false, "Cargo, Seattle, 2017."],
+    ['3.jpg', true , false, false, false, true , false, false, false, "Skeleton pier, 2017."],
+    ['4.jpg', false, true , false, false, false, false, false, true , "View from lunch, <br>Kjalarnes, 2017."],
+    ['5.jpg', true , false, true , false, false, false, true , false, "Squirrel climbs <br>screen, 2017."],
+    ['7.jpg', true , false, false, true , true , false, false, false, "Icebanks adrift, 2018."],
+    ['8.jpg', true , true , false, false, true , false, false, false, "Last light, Kalaloch, 2018."],
+    ['9.jpg', false, false, false, false, false, false, false, true , "Window, Stöng, 2018."],
+    ['10.jpg', false, false, false, false, false, false, false, true , "Drangurinn from <br>Sólheimasandur, 2018."],
+    //['src',  best,  clouds, trees, snow, seas, fields, towns, mtns , caption]
+    ['12.jpg', false, false, false, false, false, false, false, true , "Basalt below Skaftafell, 2018."],
+    ['13.jpg', true , false, false, false, false, false, false, true , "Hitckhikers, highlands, 2018."],
+    ['14.jpg', false, false, false, false, false, false, false, true , "It's not a phase, mom, 2018."],
+    ['15.jpg', false, false, false, false, false, false, true , false, "Biscoitos, 2018."],
+    ['16.jpg', false, false, true , false, false, false, false, false, "A blatant metaphor, 2018."],
+    ['20.jpg', true , true , false, false, false, false, true , false, "Sun, doubly reflected, <br>Lincoln Center, 2018."],
+    //['src',  best,  clouds, trees, snow, seas, fields, towns, mtns , caption]
+    ['21.jpg', false, false, false, false, false, false, true , false, "Flushing, Queens, 2018."],
+    ['24.jpg', true , false, false, false, false, true , false, false, "Prairie grass, setting sun, 2018."],
+    ['25.jpg', true , false, false, false, false, true , false, false, "Cattail prismatic, 2018."],
+    ['26.jpg', true , false, false, false, false, true , false, false, "Chimney swifts, 2018."],
+    ['word',   true , false, false, false, false, true , false, false, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
+    ['27.jpg', true , false, false, false, false, true , false, false, "Twigstep aftermath, 2018."],
+    ['28.jpg', true, false , false, false, true , false, false, false, "First blue, 2018."],
+    ['29.jpg', false, false, true , false, false, false, false, false, "Oh, deer, 2018."],
+    ['30.jpg', true , false, true , false, false, false, false, false, "A whitetail shakes off dew, 2018."]
     // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
     // ['31.jpg', true, true, false, false, false, false, true, false, "Icewater halcyon, 2019."],
     // ['32.jpg', true, true, false, false, true, true, false, true, "Downy woodpecker hard at work, 2019." ],
@@ -233,6 +283,8 @@ const worksArr = [
             //it should update filter-active, change currentFilter, and call filter()
             function filterHandler(e, n){
 
+                toggleFilterMenu();
+
                 //first, remove filter-active from the previous filter
                 document.getElementById('filter-menu').children[currentFilter].classList.remove('filter-active');
                 //add filter-active to the clicked filter
@@ -259,6 +311,7 @@ const worksArr = [
                     //first, clear works-container innerHTML
                     wc.innerHTML = "";
 
+                    let first = true;
                     //then we go through worksArr and add each one to work-container
                     for(let i = worksArr.length - 1; i >= 0; i--){
 
@@ -274,16 +327,18 @@ const worksArr = [
 
                             //image random width
                             let rWidthDiff = Math.random() * Math.min(100, wc.clientWidth * 0.5);
-                            let rWidth = document.getElementById('work-wrapper').clientWidth - rWidthDiff;
+                            if(first) {rWidthDiff = 0; first = false;}
+                            let rWidth = Math.min(480, window.innerWidth * 0.855) - rWidthDiff;
 
                             //image random margin
-                            rMargin = Math.random() * (wc.clientWidth - rWidth);
+                            rMargin = bellCurveRandom(1.2) * (wc.clientWidth - rWidth);
 
                             //image random tilt
                             //rTilt = (Math.random() < 0.4) ? 0 : Math.random() * 2 - 2;
+
                             
                             //word margin
-                            let wordMargin = (wc.clientWidth - document.getElementById('work-wrapper').clientWidth) / 2 - 2;
+                            let wordMargin = (wc.clientWidth - Math.min(480, window.innerWidth * 0.855)) / 2 - 2;
                             
 
                             if(worksArr[i][0] == 'word'){
