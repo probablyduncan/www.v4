@@ -84,13 +84,13 @@
                 padding: 20px 0;
             }
             #work-home-button{
-                position: fixed;
+                position: absolute;
                 top: 0;
                 left: 7.25vw;
                 color: black;
             }
             #work-back-button, #work-filter-button{
-                position: fixed;
+                position: absolute;
                 top: 0;
                 right: 7.25vw;
                 color: #346cda;
@@ -138,6 +138,9 @@
                     background-color: unset;
                     width: auto;
                     height: auto;
+                }
+                #work-home-button, #work-back-button{
+                    position: fixed;
                 }
                 .filter-button{
                     font-size: 16px;
@@ -223,16 +226,16 @@ const worksArr = [
     ['5.jpg', true , false, true , false, false, false, false, false, "Squirrel climbs <br>screen, 2017."],
     ['7.jpg', true , false, false, true , true , false, false, false, "Icebanks adrift, 2018."],
     ['8.jpg', true , true , false, false, true , false, false, false, "Last light, Kalaloch, 2018."],
+    //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
     ['10.jpg', false, false, false, false, false, false, false, true , "Drangurinn from <br>Sólheimasandur, 2018."],
-    //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
     ['12.jpg', false, false, false, false, false, false, false, true , "Basalt below Skaftafell, 2018."],
-    ['9.jpg', false, false, false, false, false, false, false, true , "Window, Stöng, 2018."],
+    ['9.jpg' , false, false, false, false, false, false, false, true , "Window, Stöng, 2018."],
     ['14.jpg', false, false, false, false, false, false, false, true , "It's not a phase, mom, 2018."],
     ['13.jpg', true , false, false, false, false, false, false, true , "Hitckhikers, highlands, 2018."],
     ['15.jpg', false, false, false, false, false, false, true , false, "Biscoitos, 2018."],
     ['16.jpg', false, false, true , false, false, false, false, false, "A blatant metaphor, 2018."],
-    ['20.jpg', true , true , false, false, false, false, true , false, "Sun, doubly reflected, <br>Lincoln Center, 2018."],
     //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['20.jpg', true , true , false, false, false, false, true , false, "Sun, doubly reflected, <br>Lincoln Center, 2018."],
     ['21.jpg', false, false, false, false, false, false, true , false, "Flushing, Queens, 2018."],
     ['24.jpg', true , false, false, false, false, true , false, false, "Prairie grass, setting sun, 2018."],
     ['25.jpg', true , false, false, false, false, true , false, false, "Cattail prismatic, 2018."],
@@ -241,33 +244,82 @@ const worksArr = [
     ['27.jpg', true , false, false, false, false, true , false, false, "Twigstep aftermath, 2018."],
     ['28.jpg', true, false , false, false, true , false, false, false, "First blue, 2018."],
     ['29.jpg', false, false, true , false, false, false, false, false, "Oh, deer, 2018."],
-    ['30.jpg', true , false, true , false, false, false, false, false, "A whitetail shakes off dew, 2018."]
-    // //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
-    // ['31.jpg', true, true, false, false, false, false, true, false, "Icewater halcyon, 2019."],
-    // ['32.jpg', true, true, false, false, true, true, false, true, "Downy woodpecker hard at work, 2019." ],
-    // ['33.jpg', true, true, false, false, false, true, true, false, "Evening falls over ice floes, 2019." ],
-    // ['34.jpg', true, true, false, false, true, true, false, false, "Quiet woods, 2019." ],
-    // ['35.jpg', true, false, false, false, true, true, false, false, "Ear of deer, 2019." ],
-    // ['37.jpg', false, true, false, false, false, false, false, true, "Yellow warbler takes flight, 2019." ],
-    // ['38.jpg', false, true, false, false, false, false, false, true, "Loontail, up north, 2019." ],
-    // ['39.jpg', true, true, false, false, false, false, false, false, "Fox cub, 2019." ],
-    // ['40.jpg', true, true, false, false, false, false, false, true, "Russet call, 2019." ],
-    // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
-    // ['41.jpg', false, true, false, false, false, false, false, true, "Pelicans talk, 2019." ],
-    // ['42.jpg', false, true, false, false, false, false, false, false, "Cabbage white, 2019."],
-    // ['43.jpg', true, true, false, false, false, false, false, true, "Dinner, 2019." ],
-    // ['46.jpg', true, true, false, false, true, false, false, false, "Maple, 2019." ],
-    // ['47.jpg', true, true, false, false, true, false, false, false, "Woods via bicycle, 2019." ],
-    // ['48.jpg', false, true, false, false, false, false, false, true, "Cormorant, Horicon, 2019." ],
-    // ['49.jpg', false, false, true, false, false, false, false, true, "Blackberry-beaked sparrow, 2019." ],
-    // ['50.jpg', true, false, true, false, true, false, false, true, "Blue tit between apples, 2019." ],
-    // //['src', best, s&tp, sea/sky, sunbl, wrend,  woods, halcy, russ, caption]
-    // ['51.jpg', false, false, true, false, true, false, false, false, "Shadows, banana leaf, 2019." ],
-    // ['52.jpg', true, false, true, false, true, false, false, false, "Heligan boughs, 2019." ],
-    // ['53.jpg', true, false, true, false, false, false, false, false, "Belted Galloway, Haytor, 2019." ],
-    // ['54.jpg', false, false, true, false, true, false, false, false, "Spine of leaf, 2019." ],
-    // ['55.jpg', false, false, true, false, true, false, false, false, "Tripod tumble, spinning shutter, 2019." ],
-    // ['56.jpg', true, false, true, false, true, false, false, false, "Lime leaves, swirling current, 2019."]
+    //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['30.jpg', true , false, true , false, false, false, false, false, "A whitetail shakes off dew, 2018."],
+    ['31.jpg', false, false, false, false, true , false, false, false, "Icewater halcyon, 2019."],
+    ['32.jpg', true , false, true , false, false, false, false, false, "Downy woodpecker hard at work, 2019." ],
+    ['33.jpg', true , false, false, false, true , false, false, false, "Evening falls over ice floes, 2019." ],
+    ['34.jpg', true , false, true , true , false, false, false, false, "Quiet woods, 2019." ],
+    ['35.jpg', false, false, true , false, false, true , false, true , "Ear of deer, 2019." ],
+    ['37.jpg', false, false, false, false, false, false, false, false, "Yellow warbler takes flight, 2019." ],
+    ['38.jpg', false, false, false, false, false, false, false, false, "Loontail, up north, 2019." ],
+    ['39.jpg', true , false, true , false, false, false, false, false, "Fox cub, 2019." ],
+    //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['40.jpg', true , false, false, false, false, true , false, false, "Russet call, 2019." ],
+    ['41.jpg', false, false, false, false, false, false, false, false, "Pelicans talk, 2019." ],
+    ['42.jpg', false, false, true , false, false, false, false, false, "Cabbage white, 2019."],
+    ['43.jpg', true , false, true , false, false, false, false, false, "Dinner, 2019." ],
+    ['46.jpg', true , false, true , false, false, false, false, false, "Maple, 2019." ],
+    ['47.jpg', true , false, true , false, false, false, false, false, "Woods via bicycle, 2019." ],
+    ['48.jpg', false, false, false, false, false, true , false, false, "Cormorant, Horicon, 2019." ],
+    ['49.jpg', false, false, false, false, false, true , false, false, "Berry-beaked sparrow, 2019." ],
+    //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['50.jpg', true , false, true , false, false, false, false, false, "Blue tit between apples, 2019." ],
+    ['51.jpg', false, false, true , false, false, false, false, false, "Shadows, banana leaf, 2019." ],
+    ['52.jpg', true , false, true , false, false, false, false, false, "Heligan boughs, 2019." ],
+    ['53.jpg', true , false, false, false, false, false, false, true , "Belted Galloway, Haytor, 2019." ],
+    ['54.jpg', false, false, true , false, false, false, false, false, "Spine of leaf, 2019." ],
+    ['55.jpg', false, false, true , false, false, false, false, false, "Tripod tumble, spinning shutter, 2019." ],
+    ['56.jpg', true , false, true , false, false, false, false, false, "Lime leaves, swirling current, 2019."],
+    //['57.jpg', false, false, false, false, true , false, false, false, ""],
+    ['58.jpg', true , false, false, false, true , false, false, false, ""],
+    //['59.jpg', false, false, false, false, true , false, false, false, ""],
+    //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    //['60.jpg', false, false, false, false, false, false, false, false, ""],
+    ['61.jpg', false, false, false, false, true , false, false, false, "Wave breaks, 2020."],
+    ['62.jpg', false, false, true , false, false, true , false, false, "Robin"],
+    ['63.jpg', true , false, true , false, false, false, false, false, ""],
+    ['64.jpg', true , false, false, false, false, true , false, false, ""],
+    ['65.jpg', true , false, false, false, false, true , false, false, ""],
+    ['66.jpg', true , false, false, false, false, false, false, false, "Quaaack. 2020."],
+    ['67.jpg', true , false, true , false, false, true , false, false, ""],
+    ['68.jpg', true , false, false, false, true , false, false, false, ""],
+    ['69.jpg', true , true , false, false, true , false, false, false, ""],
+    //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['70.jpg', false, false, false, false, true , false, false, false, ""],
+    ['71.jpg', false, true , false, false, false, false, false, false, ""],
+    ['72.jpg', true , true , true , false, true , false, false, false, ""],
+    ['73.jpg', false, true , false, false, true , false, false, false, ""],
+    ['74.jpg', true , true , false, false, true , false, false, false, ""],
+    ['75.jpg', false, true , false, false, true , false, false, false, ""],
+    ['76.jpg', true , false, true , false, false, false, false, false, ""],
+    ['77.jpg', false, false, false, false, true , false, false, false, ""],
+    ['78.jpg', false, false, false, false, true , false, false, false, ""],
+    ['79.jpg', true , false, false, false, true , false, false, false, ""],
+    //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['80.jpg', true , false, true , false, false, true , false, false, ""],
+    ['81.jpg', false, false, false, false, true , false, false, false, ""],
+    ['82.jpg', true , false, false, false, true , false, false, false, ""],
+    ['83.jpg', false, false, false, false, true , false, false, false, ""],
+    ['84.jpg', true , false, false, false, true , false, false, false, ""],
+    ['85.jpg', true , true , false, false, true , false, false, false, ""],
+    ['86.jpg', false, false, false, false, true , false, false, false, ""],
+    ['87.jpg', false, false, false, false, true , false, false, false, ""],
+    ['88.jpg', false, false, true , true , false, false, false, true , ""],
+    //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['91.jpg', false, false, false, true , false, false, false, false, ""],
+    ['89.jpg', false, false, true , true , false, false, false, true , "Snow dapples the silent wood, 2020."],
+    ['90.jpg', true , false, false, true , false, false, false, true , ""],
+    ['97.jpg', false, true , false, false, false, false, false, false, ""],
+    ['98.jpg', false, false, false, false, true , false, false, false, ""],
+    ['99.jpg', true , true , false, false, false, false, false, false, ""],
+    //['src'  ,  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['100.jpg', false, false, false, false, true , false, false, false, ""],
+    ['101.jpg', false, false, false, false, true , false, false, false, ""],
+    ['102.jpg', false, false, false, false, true , false, false, false, ""],
+    ['103.jpg', true , true , false, false, false, false, false, false, ""],
+    ['104.jpg', false, true , false, false, false, false, false, false, ""]
+    
 ];
             
 
@@ -320,7 +372,7 @@ const worksArr = [
                         //we display the work
                         if(display){
                             //use the caption; if that doesn't exist, just use the filename
-                            let caption = worksArr[i][9] != null ? worksArr[i][9] : worksArr[i][0];
+                            let caption = worksArr[i][9] != null && worksArr[i][9] != "" ? worksArr[i][9] : worksArr[i][0];
 
                             //image random width
                             let rWidthDiff = Math.random() * Math.min(100, wc.clientWidth * 0.5);

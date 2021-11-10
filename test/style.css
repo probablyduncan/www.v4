@@ -200,7 +200,7 @@ img, iframe{
     margin-top: 50px;
 }
 .content-card a{
-    cursor: ne-resize;
+    cursor: pointer;
 }
 .content-catagory{
     margin: 12px 0 0 calc(5% + 4px);
