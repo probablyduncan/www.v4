@@ -163,6 +163,7 @@
                 line-height: 150%;
                 margin-top: 4px;
                 text-align: right;
+                transition: opacity 0.25s;
             }
             @media (hover:hover){
                 .works-caption{
@@ -393,7 +394,7 @@ const worksArr = [
                             if(worksArr[i][0] == 'word'){
                                 wc.innerHTML += `<p class="works-text" style="margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
                             } else {
-                                wc.innerHTML += `<img class="shadow-img si-hover" onclick="lightbox(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;">${caption}</p></div><div class="space">`;
+                                wc.innerHTML += `<img class="shadow-img si-hover" onclick="toggleCaption(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;">${caption}</p></div><div class="space">`;
                             }
                         }
 
@@ -454,6 +455,13 @@ const worksArr = [
             }
 
 
+            //this toggles the opacity of the caption of a work when the work is clicked
+            function toggleCaption(e){
+                let caption = e.nextSibling;
+                if(caption.style.display != 'none'){
+                    (caption.style.opacity == '0') ? caption.style.opacity = '1' : caption.style.opacity = '0';
+                }
+            }
 
             function lightbox(e){
 
