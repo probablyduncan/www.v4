@@ -47,7 +47,7 @@
                             <a href="mailto:duncanpetrie1@gmail.com" class="menu-link">EMAIL</a>
                         </div>
                     </div>
-                    <img src="bigmapW2 crop 1.jpeg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="The Eagle's Talon, Elewir, and the southlands.">
+                    <img src="bigmapW2 full.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Visions of afar.">
                 </div>
 
                 <p>
@@ -63,16 +63,35 @@
                 </p>
                 <br><br><br>
 
-                <img class="shadow-img si-hover" src="bigmapW2 crop 2.jpeg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Sunken Édya and the great sea Berehlias.">
+                <img class="shadow-img si-hover" src="old1.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="My first map, 2016.">
 
                 <p>
                     It started with a world. After all, I needed something to map.
                     <br><br>
+                    Over many years, this world grew, took shape, sprouted cities and legend and beasts of yore. Every year or two I'd start a new map. Each iteration had more detail, more names, more meat between the mountain ranges.
                 </p>
+                <br><br><br>
 
+                <img class="shadow-img si-hover" src="old2.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="A world emerges, 2018.">
 
+                <p>
+                    I tried many different styles. For a while, I flirted with realism, but neither I nor my computer's fans could handle that many pixels.
+                </p>
+                <br><br><br>
+
+                <img class="shadow-img si-hover" src="old3.png" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Experimenting, 2019.">
 
                 <br><br><br>
+
+                <img class="shadow-img si-hover" src="old4.png" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Too much detail. 2019.">
+
+                <p>
+                    Eventually, I settled on a vibrant, stylized palette based on watercolor maps I'd seen in antique shops. I've been working on the current one for about two years now. Some months I work on it a lot, and some I barely touch it, but it's always there, ready for another weird name.
+                    <br><br>
+                    See the full map here: <a href="bigmapW2 full.jpg" target="_blank" title="File: bigmapW2.jpg">bigmapW2.jpg</a>.
+                </p>
+
+                
                 <br><br><br>
 
             </div>
@@ -84,6 +103,7 @@
 
         <style>
             #map{
+                display: none;
                 width: 90vw;
                 height: 90vh;
                 margin-bottom: 5vh;
@@ -93,11 +113,15 @@
                 border: 2px solid black;
                 background-image: url("bigmapW2\ full.jpg");
                 background-position: 50% 50%;
-                background-size: 200%;
+                background-size: 100%;
                 background-repeat: no-repeat;
+                transition: background-position 0.2s, background-size 0.2s;
             }
             #map:active{
                 cursor: grabbing;
+            }
+            @media (hover:hover){
+                #map{display: block;}
             }
         </style>
 
@@ -109,6 +133,7 @@
 
             let map = document.getElementById('map');
             let mouseDown = false;
+            let zoomed = false;
             let mouseDownX = 0;
             let mouseDownY = 0;
 
@@ -119,12 +144,12 @@
             let offsetY = 0;
             //console.log(map.backgroundPosition);
 
-            function mapZoom(){
-
-            }
             function mapDrag(){
                 if(mouseDown){
-                    map.style.backgroundPosition = "calc(50% + " + Math.floor(mouseX - mouseDownX + offsetX) + "px) calc(50% + " + Math.floor(mouseY - mouseDownY + offsetY) + "px)";
+                    let xPos = Math.floor(mouseX - mouseDownX + offsetX);
+                    let yPos = Math.floor(mouseY - mouseDownY + offsetY);
+                    console.log(xPos + ", " + yPos);
+                    map.style.backgroundPosition = "calc(50% + " + xPos + "px) calc(50% + " + yPos + "px)";
                     //console.log(map.style.backgroundPosition);
                 }
             }
@@ -135,6 +160,7 @@
             }
             function mapMouseUp(){
                 mouseDown = false;
+                if(mouseX == mouseDownX && mouseY == mouseDownY) {mapToggleZoom()}
                 offsetX += Math.floor(mouseX - mouseDownX);
                 offsetY += Math.floor(mouseY - mouseDownY);
                 // posX = parseInt(map.style.backgroundPositionX.substring(0, map.style.backgroundPositionX.indexOf('px')));
@@ -142,7 +168,19 @@
                 // console.log(posX + ", " + posY);
             }
             function mapMouseLeave(){
-                mapMouseUp();
+                if(mouseDown){mapMouseUp();}
+            }
+
+            function mapToggleZoom(){
+                if(map.style.backgroundSize == '200%') {
+                    zoomed = false; 
+                    map.style.backgroundSize = '100%';
+                    map.style.backgroundPosition = '50% 50%';
+                } else {
+                    zoomed = true; 
+                    map.style.backgroundSize = '200%';
+                    //map.style.backgroundPosition = '50% 50%';
+                }
             }
 
             
