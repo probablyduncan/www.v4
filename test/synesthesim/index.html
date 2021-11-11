@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>DuncanPetrie.com | Synesthesim</title>
+        <meta charset="UTF-8"/>
+
+        <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+
+        <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+
+        <meta name="author" content="Duncan Petrie">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/CSS" href="../style.css">
+        <!-- javascript -->
+        <script src="../functions.js"></script>
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
+
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')">
+
+        <div id="wrapper">
+
+            <div id="progress-bar"></div>
+            <span id="tooltip" class="tooltip-inactive"></span>
+
+            <div id="top-text-container">
+                <h1 id="top-text"><a id="home-button" href="../index.html">DUNCANPETRIE.COM</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">MENU</a></h1>
+            </div>
+
+            <div id="intro-container">
+                
+                <div id="menu-img" class="shadow-img si-hover">
+                    <div id="menu" class="menu-hidden menu-disabled">
+                        <div id="menu-column-1" style="text-align: center;">
+                            <a href="../work.html" class="menu-link">WORK</a>
+                            <a href="../index.html#projects" class="menu-link">PROJECTS</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="_blank" class="menu-link">INSTAGRAM</a>
+                            <a href="mailto:duncanpetrie1@gmail.com" class="menu-link">EMAIL</a>
+                        </div>
+                    </div>
+                    <img src="letters1.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Some letters are even, like H and R, <br>while others, like G and P, are odd.">
+                </div>
+
+                <p>
+                    I have a few types of <a href="https://en.wikipedia.org/wiki/Synesthesia" target="_blank" title="wikipedia.org/wiki/Synesthesia">synesthesia</a>, but by far the strongest is grapheme-color, in which I associate letters, numbers, and other symbols with certain colors.
+                    <br><br>
+                    Some colors, like the orange-ish red of 'P' and 'M', appear throughout the alphabet, while others are specific to a single letter, like the yellow of 'S'.
+                    <br><br>
+                    Letters color words. The first letter is the most important, but certain others after it effect hue, brightness, etc. Words, for me, are gradients more than single colors (a color journey, if you will).
+                    <br><br>
+                    For example, 'Duncan' is green because 'D' is <span style="color: rgb(81, 116, 47);">green</span>. The 'U' (<span style="color: rgb(71, 51, 21);">brown</span>) muddies that green, but the 'A' (<span style="color: rgb(162, 218, 106);">lighter green</span>) brightens the word again. So reading 'Duncan' starts green, dips to brown, and returns to green.
+                </p>
+                <p>
+                    A bit like this:
+                    <span style="color: rgb(81, 116, 47);">D</span><span style="color: rgb(87, 55, 28);">u</span><span style="color: rgb(64, 80, 24);">n</span><span style="color: rgb(110, 91, 31);">c</span><span style="color: rgb(162, 218, 106);">a</span><span style="color: rgb(132, 180, 84);">n</span>
+                </p>
+                <br><br><br>
+                <img class="shadow-img si-hover" src="letters2.jpg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="A section of the shape of the alphabet.">
+                
+                    
+                
+                <p>
+                    Bored during the first summer of Covid, I began exploring these associations. I found colors and textures for each letter, and plotted the <a href="https://en.wikipedia.org/wiki/Synesthesia#Spatial_sequence_synesthesia" target="_blank" title="wikipedia.org/wiki/Synesthesia#Spatial_sequence_synesthesia">spacial sequence</a> of the alphabet.
+                    <br><br>
+                    The problem with these, however, was that they were static. I wanted movement, to simulate the synesthetic experience of reading and writing. So I started coding.
+                    <br><br>
+                    This project, written in Java in May of 2020, displays bursts of color whenever a letter is typed. It's very simple, and a bit of an exaggeration, but it does what I intended.
+                </p>
+
+                <br><br><br>
+                <img class="shadow-img si-hover" src="syn.gif" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="This is my computer password.<br> Go ahead, try and guess it.">
+
+                <p>
+                    You can see the project and try the program yourself on my <a href="https://github.com/probablyduncan/synesthesim" target="_blank" title="github.com/probablyduncan/synesthesim">Github</a>.
+                    <br><br>
+                    Or, just download <a href="synesthesim.jar" title="synesthesim.jar">synesthesim.jar</a>.
+                </p>
+
+
+                <br><br><br>
+                <br><br><br>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            //document.getElementById('ytplayer').style.height = document.getElementById('ytplayer').clientWidth * 9 / 16 + "px";
+
+            //scroll control
+            function scrollControl(){
+                progressBar();
+            }
+
+            
+
+    
+        </script>
+
+    </body>
+</html>
