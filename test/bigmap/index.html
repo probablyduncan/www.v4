@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>DuncanPetrie.com | Bigmap</title>
+        <meta charset="UTF-8"/>
+
+        <meta name="description" content="Abstract/Impressionist Photography | On the hunt for plants and birds and rocks and things">
+
+        <meta name="keywords" content="Duncan, Petrie, Photography, Abstract, Impressionist, Impressionism, Wildlife, Wisconsin, Milwaukee, Falmouth, Lake Michigan, water, blur, icm, intentional, camera, movement, probablyduncan">
+
+        <meta name="author" content="Duncan Petrie">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/CSS" href="../style.css">
+        <!-- javascript -->
+        <script src="../functions.js"></script>
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
+
+        <!-- meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body onscroll="scrollControl()" onload="afterLoadControl('noblink')">
+
+        <div id="wrapper">
+
+            <div id="progress-bar"></div>
+            <span id="tooltip" class="tooltip-inactive"></span>
+
+            <div id="top-text-container">
+                <h1 id="top-text"><a id="home-button" href="../index.html">DUNCANPETRIE.COM</a><a id="menu-button" class="menu-button-inactive" onclick="toggleMenu()">MENU</a></h1>
+            </div>
+
+            <div id="intro-container">
+                
+                <div id="menu-img" class="shadow-img si-hover">
+                    <div id="menu" class="menu-hidden menu-disabled">
+                        <div id="menu-column-1" style="text-align: center;">
+                            <a href="../work.html" class="menu-link">WORK</a>
+                            <a href="../index.html#projects" class="menu-link">PROJECTS</a>
+                            <a href="https://www.instagram.com/probablyduncan/" target="_blank" class="menu-link">INSTAGRAM</a>
+                            <a href="mailto:duncanpetrie1@gmail.com" class="menu-link">EMAIL</a>
+                        </div>
+                    </div>
+                    <img src="bigmapW2 crop 1.jpeg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="The Eagle's Talon, Elewir, and the southlands.">
+                </div>
+
+                <p>
+                    
+                    I've always loved maps.                    
+                    <br><br>
+                    I've had maps on my walls since before I can remember: world maps, maps of places I've been, maps of places I want to go. They're like windows, windows you don't need curtains for.
+                    <br><br>
+                    I've spent more of my life than I care to admit looking at maps. There's always something new to see, and even familiar names feel like discoveries.
+                    <br><br>
+                    So, it was only natural that I create my own.
+                
+                </p>
+                <br><br><br>
+
+                <img class="shadow-img si-hover" src="bigmapW2 crop 2.jpeg" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="Sunken Édya and the great sea Berehlias.">
+
+                <p>
+                    It started with a world. After all, I needed something to map.
+                    <br><br>
+                </p>
+
+
+
+                <br><br><br>
+                <br><br><br>
+
+            </div>
+
+        </div>
+
+        <div id="map" onmousemove="mapDrag()" onmousedown="mapMouseDown()" onmouseup="mapMouseUp()" onmouseleave="mapMouseLeave()">
+        </div>
+
+        <style>
+            #map{
+                width: 90vw;
+                height: 90vh;
+                margin-bottom: 5vh;
+                user-select: none;
+                cursor: grab;
+                background-color: whitesmoke;
+                border: 2px solid black;
+                background-image: url("bigmapW2\ full.jpg");
+                background-position: 50% 50%;
+                background-size: 200%;
+                background-repeat: no-repeat;
+            }
+            #map:active{
+                cursor: grabbing;
+            }
+        </style>
+
+        <script type="text/javascript">
+            //scroll control
+            function scrollControl(){
+                progressBar();
+            }
+
+            let map = document.getElementById('map');
+            let mouseDown = false;
+            let mouseDownX = 0;
+            let mouseDownY = 0;
+
+            //posX and posY store the current position of the map, and are 
+            //let posX = window.innerWidth * 0.45;
+            //let posY = window.innerHeight * 0.45;
+            let offsetX = 0;
+            let offsetY = 0;
+            //console.log(map.backgroundPosition);
+
+            function mapZoom(){
+
+            }
+            function mapDrag(){
+                if(mouseDown){
+                    map.style.backgroundPosition = "calc(50% + " + Math.floor(mouseX - mouseDownX + offsetX) + "px) calc(50% + " + Math.floor(mouseY - mouseDownY + offsetY) + "px)";
+                    //console.log(map.style.backgroundPosition);
+                }
+            }
+            function mapMouseDown(){
+                mouseDown = true;
+                mouseDownX = mouseX;
+                mouseDownY = mouseY;
+            }
+            function mapMouseUp(){
+                mouseDown = false;
+                offsetX += Math.floor(mouseX - mouseDownX);
+                offsetY += Math.floor(mouseY - mouseDownY);
+                // posX = parseInt(map.style.backgroundPositionX.substring(0, map.style.backgroundPositionX.indexOf('px')));
+                // posY = parseInt(map.style.backgroundPositionY.substring(0, map.style.backgroundPositionY.indexOf('px')));
+                // console.log(posX + ", " + posY);
+            }
+            function mapMouseLeave(){
+                mapMouseUp();
+            }
+
+            
+
+    
+        </script>
+
+    </body>
+</html>
