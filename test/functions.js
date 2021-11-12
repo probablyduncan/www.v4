@@ -143,8 +143,8 @@ function fadeInThis(e){
 //TOOLTIP STUFF
 
 //initialize mouse coordinates
-let mouseX = window.innerWidth + 10;
-let mouseY = window.innerHeight + 10;
+let mouseX = window.innerWidth;
+let mouseY = window.innerHeight;
 
 //this calls each time the mouse moves
 //e.clientX and e.clientY are 
