@@ -126,12 +126,12 @@
                     width: auto;
                     height: auto;
                 }
-                #work-home-button, #work-back-button{
+                #work-home-button, #work-filter-button{
                     position: fixed;
                 }
                 .filter-button{
                     font-size: 16px;
-                    margin-right: -16px
+                    margin-right: -16px;
                 }
                 .space{height: 80px;}
             }
@@ -227,8 +227,8 @@ const worksArr = [
     ['21.jpg', false, false, false, false, false, false, true , false, "Flushing, Queens, 2018."],
     ['24.jpg', false, false, false, false, false, true , false, false, "Prairie grass, setting sun, 2018."],
     ['25.jpg', true , false, false, false, false, true , false, false, "Cattail prismatic, 2018."],
-    ['26.jpg', true , false, false, false, false, true , false, false, "Chimney swifts, 2018."],
-    ['word',   true , false, false, false, false, true , false, false, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
+    ['26.jpg', false, false, false, false, false, true , false, false, "Chimney swifts, 2018."],
+    ['word',   false, false, false, false, false, true , false, false, "<i>Crisp and swiftly, susurrus <br>And whithered husks of corn <br>Beckon forth to rising moon <br>And to the silent snow unborn</i>"],
     ['27.jpg', true , false, false, false, false, true , false, false, "Twigstep aftermath, 2018."],
     ['28.jpg', true, false , false, false, true , false, false, false, "First blue, 2018."],
     //['29.jpg', false, false, true , false, false, false, false, false, "Oh, deer, 2018."],
@@ -255,42 +255,77 @@ const worksArr = [
     ['54.jpg', false, false, true , false, false, false, false, false, "Spine of leaf, 2019." ],
     ['55.jpg', false, false, true , false, false, false, false, false, "Tripod tumble, spinning shutter, 2019." ],
     ['56.jpg', true , false, true , false, false, false, false, false, "Lime leaves, swirling current, 2019."],
-    ['58.jpg', false, false, false, false, true , false, false, false, ""],
+    ['58.jpg', false, false, false, false, true , false, false, false, "Afterglow, 2020."],
     //['src',  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
-    ['63.jpg', true , false, true , false, false, false, false, false, ""],
-    ['64.jpg', false, false, false, false, false, true , false, false, ""],
-    ['65.jpg', false, false, false, false, false, true , false, false, ""],
+    ['63.jpg', true , false, true , false, false, false, false, false, "Working from home, 2020"],
+    ['64.jpg', false, false, false, false, false, true , false, false, "Meadowlark, 2020."],
+    ['65.jpg', false, false, false, false, false, true , false, false, "Blackbird, last call, 2020."],
     //['66.jpg', false, false, false, false, false, false, false, false, "Quaaack. 2020."],
-    ['67.jpg', true , false, true , false, false, true , false, false, ""],
-    ['68.jpg', true , false, false, false, true , false, false, false, ""],
-    ['69.jpg', false, true , false, false, true , false, false, false, ""],
+    ['67.jpg', true , false, true , false, false, true , false, false, "Blackbird, young maple, 2020."],
+    ['68.jpg', true , false, false, false, true , false, false, false, "Ripple, Door, 2020."],
+    ['69.jpg', false, false, false, false, true , false, false, false, "First exhale, 2020."],
     //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
     //['71.jpg', false, true , false, false, false, false, false, false, ""],
-    ['72.jpg', true , true , true , false, true , false, false, false, ""],
-    ['74.jpg', false, true , false, false, true , false, false, false, ""],
-    ['75.jpg', false, true , false, false, true , false, false, false, ""],
-    ['76.jpg', false, false, true , false, false, false, false, false, ""],
+    ['72.jpg', true , false, true , false, true , false, false, false, "Daybreak, Door, 2020."],
+    ['74.jpg', false, false, false, false, true , false, false, false, "Rainshadow, Door, 2020."],
+    ['75.jpg', false, false, false, false, true , false, false, false, "Magenta headland, 2020."],
+    ['76.jpg', false, false, true , false, false, false, false, false, "Daybreak among bog cedars, 2020."],
     //['78.jpg', false, false, false, false, true , false, false, false, ""],
-    ['79.jpg', false, false, false, false, true , false, false, false, ""],
+    ['79.jpg', false, false, false, false, true , false, false, false, "Firefog sunset, 2020."],
     //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
-    ['80.jpg', false, false, true , false, false, true , false, false, ""],
-    ['81.jpg', false, false, false, false, true , false, false, false, ""],
-    ['82.jpg', true , false, false, false, true , false, false, false, ""],
-    ['83.jpg', false, false, false, false, true , false, false, false, ""],
-    ['84.jpg', true , false, false, false, true , false, false, false, ""],
-    ['85.jpg', false, true , false, false, true , false, false, false, ""],
-    ['88.jpg', false, false, false, true , false, false, false, true , ""],
+    ['80.jpg', false, false, true , false, false, true , false, false, "White pine, dusk, 2020."],
+    //['81.jpg', false, false, false, false, true , false, false, false, ""],
+    ['82.jpg', true , false, false, false, true , false, false, false, "Tideline, 2020."],
+    ['83.jpg', false, false, false, false, true , false, false, false, "Waterlines, 2020."],
+    ['84.jpg', false, false, false, false, true , false, false, false, "Mistwater, 2020."],
+    ['85.jpg', false, true , false, false, true , false, false, false, "The lingering, 2020."],
+    ['88.jpg', false, false, false, true , false, false, false, true , "Powderpatterns, 2020."],
     //['src' , best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
-    ['91.jpg', false, false, false, true , false, false, false, false, ""],
+    ['91.jpg', false, false, false, true , false, false, false, false, "Snowspine, 2020."],
     ['89.jpg', false, false, true , true , false, false, false, false, "Snow dapples the silent wood, 2020."],
-    ['90.jpg', true , false, false, true , false, false, false, true , ""],
-    ['97.jpg', false, true , false, false, false, false, false, false, ""],
-    ['98.jpg', false, false, false, false, true , false, false, false, ""],
-    ['99.jpg', true , true , false, false, false, false, false, false, ""],
+    ['90.jpg', true , false, false, true , false, false, false, true , "Snowdrift shadowlines, 2020."],
+    ['97.jpg', false, true , false, false, false, false, false, false, "The fluffiest cloud, 2021."],
+    ['98.jpg', false, false, false, false, true , false, false, false, "Old rollers, 2021."],
+    ['99.jpg', true , true , false, false, false, false, false, false, "The toenail moon, 2021."],
     //['src'  ,  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
-    ['103.jpg', false, true , false, false, false, false, false, false, ""],
-    ['104.jpg', false, true , false, false, false, false, false, false, ""]
-    
+    //['103.jpg', false, true , false, false, false, false, false, false, ""],
+    //['104.jpg', false, true , false, false, false, false, false, false, ""],
+    ['105.jpg', false, true , false, false, false, true , false, false,  "Strangers, 2021."],
+    ['106.jpg', false, false, false, false, true , false, false, false, "Horizon stripe, 2021."],
+    ['107.jpg', false, false, false, false, true , false, false, false, "Melted moonlight, 2021."],
+    ['108.jpg', true , false, false, false, true , false, false, false, "Moonglint, 2021."],
+    ['109.jpg', false, false, false, false, false, true , false, false, "Moonlit duneline, 2021."],
+    //['src'  ,  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    //['110.jpg', false, false, false, false, false, false, false, false, ""],
+    ['111.jpg', true , false, false, false, false, false, false, false, "Blossom ghost, 2021."],
+    ['112.jpg', false, true , false, false, false, false, false, false, "The bugs! 2021."],
+    ['113.jpg', false, false, false, false, true , false, false, false, "Afterglow, Door, 2021."],
+    ['114.jpg', true , false, false, false, true , false, false, false, "Gloaming, Door, 2021."],
+    ['115.jpg', true , true , false, false, false, false, false, false, "The funniest photography, 2021."],
+    ['116.jpg', false, false, false, false, true , false, false, false, "Windreach, 2021."],
+    ['117.jpg', true , true , false, false, false, false, false, false, "Westward, Door, 2021"],
+    ['118.jpg', false, false, false, false, false, false, false, true , "Island lake, 2021."],
+    ['119.jpg', false, true , false, false, false, false, false, false, "Magenta skyline, 2021."],
+    //['src'  ,  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['120.jpg', false, false, false, false, true , false, false, false, "Moonrise, Rosemullion, 2021."],
+    ['word', false, false, false, false, true, false, false, false, "From the fading lands of faraway the tide is rolling in<br>As the vague and dull horizon lurks beyond the evening dim<br>Look! Upon a wave, a bottle glinting like a star<br>What message does it bring to us from foggiest afar?"],
+    ['121.jpg', false, false, false, false, true , false, false, false, "Foggiest afar, 2021."],
+    ['122.jpg', false, true , false, false, false, false, false, false, "There the Elflands lie, 2021."],
+    ['123.jpg', true , false, false, false, false, false, true , false, "Falmouth Hotel, 2021."],
+    ['124.jpg', true , false, false, false, true , true , false, false, "Flaxengrass, 2021."],
+    ['125.jpg', false, false, false, false, true , false, false, false, "Thunderhead, fallen, on the sea, 2021."],
+    //['126.jpg', false, false, false, false, true , false, false, false, ""],
+    ['127.jpg', true , false, false, false, false, false, true , false, "Bus-stop to lingoland, 2021."],
+    ['word', false, false, false, false, false, false, true, false, "Out the window through the branches of the maples in the churchyard: sorrowed singing of the bells, ‘tis another day gone by<br>And it gets so late so early in this candlelit November, all those hours of the night to wish I could’ve asked him why<br>And the wind against the windowpanes, the tapping of my pen upon a barely started letter which I cannot seem to end<br>And the leaves they swirl like dancers in the road between the people, collars turned against the autumn and there go the bells again"],
+    ['128.jpg', true , false, false, false, false, false, true , false, "Churchyard salute, 2021."],
+    ['129.jpg', false, false, true , false, false, false, false, false, "Longnecked pine, 2021."],
+    //['src'  ,  best,  clouds, trees, snow, seas,  fleet, street, mtns, caption]
+    ['130-1.jpg', true, false, false, false, false, false, false, false, "Jubilee pool, 2021."],
+    ['130.jpg', false, false, false, false, false, false, true , false, "Jubilee pool, 2021."],
+    ['131.jpg', true , false, false, false, false, false, true , false, "Vacant post, 2021."],
+    ['132.jpg', true , true , false, false, false, false, false, false, "Swells roll in from the east, 2021."],
+    ['133.jpg', false, false, false, false, false, false, true , false, "Cathedral dance, 2021."],
+    ['134.jpg', false, false, true , false, false, false, true , false, "Deep woods, 2021."]
 ];
             
 
@@ -358,11 +393,12 @@ const worksArr = [
 
                             
                             //word margin
+                            let wordWidth = Math.min(480, window.innerWidth * 0.855);
                             let wordMargin = (wc.clientWidth - Math.min(480, window.innerWidth * 0.855)) / 2 - 2;
                             
 
                             if(worksArr[i][0] == 'word'){
-                                wc.innerHTML += `<p class="works-text" style="margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
+                                wc.innerHTML += `<p class="works-text" style="width: ${wordWidth}px; margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
                             } else {
                                 wc.innerHTML += `<img onload="fadeInThis(this)" loading="lazy" class="shadow-img si-hover" onclick="toggleCaption(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;">${caption}</p></div><div class="space">`;
                             }
