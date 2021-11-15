@@ -401,7 +401,7 @@ const worksArr = [
                             if(worksArr[i][0] == 'word'){
                                 wc.innerHTML += `<p class="works-text" style="width: ${wordWidth}px; margin-left:${wordMargin}px;">${caption}</p><div class="space"></div>`;
                             } else {
-                                wc.innerHTML += `<img onload="fadeInThis(this)" loading="lazy" class="shadow-img si-hover" onclick="toggleCaption(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="work/${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;">${caption}</p></div><div class="space">`;
+                                wc.innerHTML += `<img onload="fadeInThis(this)" loading="lazy" class="shadow-img si-hover" onclick="toggleCaption(this)" onmouseover="startTooltip(this)" onmouseout="stopTooltip(this)" onmousemove="moveTooltip(this)" alt="${caption}" src="${worksArr[i][0]}" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;"><p class="works-caption" style="margin-left: calc(${rMargin}px); width: ${rWidth}px; opacity: 0;">${caption}</p></div><div class="space">`;
                             }
                         }
 
