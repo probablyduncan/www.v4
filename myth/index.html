@@ -113,6 +113,8 @@
 
         <style>
 
+            /* THIS STUFF IS SPECIFIC TO MYTH */
+
             #menu-img{
                 border: 2px solid #434953;
                 box-shadow: 4px 4px #434953;
@@ -123,6 +125,12 @@
             #home-button{ color: #434953; }
             #home-button:hover{ color: rgb(113, 130, 133); }
 
+
+
+
+            /* THIS STUFF CAN BE ROLLED OVER TO STYLE.CSS */
+
+
             #content-container{
                 display: flex;
                 flex-flow: column nowrap;
@@ -130,13 +138,13 @@
                 margin-bottom: 120px;
             }
 
-            .img-big, #content-container img{
+            #content-container img{
                 width: 120%;
-                max-width: 90vw;
+                max-width: 85vw;
             }
 
             #content-container .img-wide{
-                width: 90vw;
+                width: 85vw;
                 max-width: 140vh;
             }
 
@@ -155,15 +163,6 @@
                 line-height: 38px;
                 letter-spacing: 0.8px;
                 text-align: left;
-            }
-
-            @media (max-width: 560px){
-                .img-wide{
-                    width: 90vw;
-                }
-                p{
-                    text-align: left;
-                }
             }
 
 
