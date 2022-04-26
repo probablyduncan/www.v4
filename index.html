@@ -24,7 +24,6 @@
         <!-- fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Antique">
 
         <!-- meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,7 +78,14 @@
 
             <!-- CONTENT CARDS -->
 
-            <div id="content-container">
+            <div id="card-container">
+
+                <div id="myth" class="content-card">
+                    <a href="myth/" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="myth/thumb.jpg"></a>
+                    <h3 class="content-catagory" style="color: rgb(190, 105, 95);">LINGERMYTH</h3>
+                    <h4 class="content-title">Echoes of old in the<br>cracks of the new.</h4>
+                    <div class="content-line"></div>
+                </div>
 
                 <div id="yearning" class="content-card">
                     <a href="yearning/" style="color: unset;" onmouseover="siMouseOver(this)" onmouseout="siMouseOut(this)"><img class="shadow-img si-hover" src="yearning/bird.jpg"></a>
@@ -149,6 +155,22 @@
 
         </div>
 
+        <style>
+            #tooltip{
+                background-color: #FAFAFF;
+                color: black;
+                font-family: 'Merriweather', linotype-didot, 'Times New Roman', Times, serif;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 4px 8px;
+                border: 2px solid black;
+                pointer-events: none;
+                white-space: nowrap;
+                top: 110vh;
+                left: 110vw;
+            }
+
+        </style>
 
         <script type="text/javascript">
 

@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ewb8kkc.css");
+
 body{
     margin: 0;
     height: auto;
@@ -65,6 +67,15 @@ p{
     font-weight: 500;
     line-height: 38px;
     letter-spacing: 0.6px; */
+
+    color: #434953;
+    font-family: linotype-didot, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 38px;
+    letter-spacing: 0.8px;
+    text-align: left;
 }
 p a{
     text-decoration: none;
@@ -231,6 +242,40 @@ img, iframe{
 
 
 
+
+
+#content-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+#content-container img{
+    width: 90%;
+    max-width: 85vw;
+}
+
+#content-container .img-wide{
+    width: 85vw;
+    max-width: 140vh;
+}
+
+#content-container p{
+    margin: 80px 0 80px 0;
+    width: 320px;
+    max-width: 65vw;
+}
+
+
+
+
+
+
+
+
+
+
 #links-container{
     margin: 65px 0 65px calc(5% + 4px);
 }
@@ -287,15 +332,20 @@ img, iframe{
 /* this is the tooltip itself */
 #tooltip{
     background-color: #FAFAFF;
-    font-family: 'Merriweather', 'Times New Roman', Times, serif;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 4px 8px;
-    border: 2px solid black;
+    padding: 5px 8px 4px 8px;
+    border: 2px solid #434953;
     pointer-events: none;
     white-space: nowrap;
     top: 110vh;
     left: 110vw;
+
+    font-family: linotype-didot, serif;
+    color: #434953;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    border-width: 1.5px;
 }
 /* this is applied when hovering over a tooltip-img */
 .tooltip-active{
