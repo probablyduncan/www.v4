@@ -137,7 +137,6 @@
             //let posY = window.innerHeight * 0.45;
             let offsetX = 0;
             let offsetY = 0;
-            //console.log(map.backgroundPosition);
 
             function mapDrag(){
                 if(mouseDown){
@@ -145,7 +144,6 @@
                     let yPos = Math.floor(mouseY - mouseDownY + offsetY);
                     console.log(xPos + ", " + yPos);
                     map.style.backgroundPosition = "calc(50% + " + xPos + "px) calc(50% + " + yPos + "px)";
-                    //console.log(map.style.backgroundPosition);
                 }
             }
             function mapMouseDown(){
@@ -160,7 +158,6 @@
                 offsetY += Math.floor(mouseY - mouseDownY);
                 // posX = parseInt(map.style.backgroundPositionX.substring(0, map.style.backgroundPositionX.indexOf('px')));
                 // posY = parseInt(map.style.backgroundPositionY.substring(0, map.style.backgroundPositionY.indexOf('px')));
-                // console.log(posX + ", " + posY);
             }
             function mapMouseLeave(){
                 if(mouseDown){mapMouseUp();}
