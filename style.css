@@ -358,12 +358,12 @@ img, iframe{
     display: none;
 }
 /* this is to make sure devices that can't hover don't hvae the tooltip */
-@media (hover:none){
+/* @media (hover:none){
     #tooltip{
         display: none;
         color: white;
     }
-}
+} */
 
 
 
